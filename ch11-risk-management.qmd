@@ -60,7 +60,9 @@ Singapore and Australia have largely sidestepped this problem by moving to self-
 
 ### Institutional Risks
 
-Investors operating within institutions face an additional layer of risk that individual investors generally avoid. ::: {.callout-note}
+Investors operating within institutions face an additional layer of risk that individual investors generally avoid.
+
+::: {.callout-note}
 ## Quick Refresher — Duration and Asset-Liability Mismatch
 **Duration** measures how sensitive a bond's (or liability's) present value is to changes in interest rates. Longer duration means bigger price swings when rates move. An **asset-liability mismatch** occurs when the duration of a fund's assets differs from the duration of its obligations — if rates change, one side moves more than the other, creating a funding gap. Pension funds try to match durations so rate changes affect both sides equally.
 :::
