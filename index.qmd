@@ -9,18 +9,51 @@ These lecture notes are adapted from the **Investments and Asset Management** co
 
 Each chapter corresponds to one lecture session, covering all 14 sessions in the course. Chapters built from lecture transcripts preserve the conversational style, real-world examples, and class discussions from the original lectures. Chapters derived primarily from lecture slides present the same frameworks and concepts in a more structured format.
 
+## Course Overview
+
+This course provides a comprehensive exploration of investment and asset management, covering their real-world applications, with a special focus on how technology and social trends are reshaping the asset management landscape. We examine traditional investment strategies alongside emerging approaches, preparing students to navigate the rapidly evolving world of finance.
+
+The course aims to equip students with the knowledge and skills to critically evaluate investment theories and apply them to real-world scenarios beyond a textbook treatment. By engaging with current market issues and debates, students develop the ability to make informed investment decisions and navigate the asset management industry effectively.
+
+## Learning Objectives
+
+By the end of this course, students will be able to:
+
+1. **Critically evaluate** real-world investment decisions and analyze current market issues through an analytic lens
+2. **Financially plan** your future with appropriate portfolio construction and risk management, including understanding drivers of returns and the impact of macroeconomic factors
+3. **Evaluate the role** of different investments such as stocks, bonds, gold, real estate, and cryptocurrencies in a diversified portfolio
+4. **Analyze** the evolving landscape of active vs. passive management, comparing different investment vehicles like unit trusts, ETFs, and private funds
+5. **Analyze the structure and dynamics** of the asset management industry, such as the influence of technological disruption and changing investor preferences
+6. **Identify ethical considerations** in modern investment practices, including fiduciary duty of investment advisers, and the social impacts of socially responsible investing
+
+## Who This Book Is For
+
+This book is suitable for MBA and MiM students with diverse career aspirations and varying levels of financial expertise. Whether you aspire to become a banker, portfolio manager, launch a fintech startup, or simply become a more astute individual investor saving for retirement, this material provides the tools to navigate the complex landscape of modern investing --- appealing to both the supply and demand side of investment management and financial advice. While no advanced finance background or mathematics is required, the focus on real-world applications and emerging trends ensures that even readers with prior finance experience will find it challenging and engaging.
+
+**Prerequisites:** Basic equity, bond, and option concepts. Basic algebra and statistical concepts such as mean, variance, covariance, and simple linear regression.
+
 ## How to Use This Book
 
 Each chapter corresponds to one lecture session. The chapter numbers match the original session numbers for easy cross-referencing with course materials. Within each chapter you will find:
 
 - **Core concepts** structured around the session's guiding questions
 - **Practical examples** drawn from real markets, funds, and current events
+- **Worked numerical examples** in collapsible boxes you can expand for step-by-step calculations
+- **Real-world case studies** connecting theory to actual events and decisions
 - **Key takeaways** summarizing the most important points
-- **Further reading** for those who want to go deeper
+- **Further reading** --- mandatory and recommended --- for those who want to go deeper
 
 ::: {.callout-note}
 These notes are meant to complement---not replace---the original course materials, readings, and in-class exercises. They work best as a review resource alongside the assigned readings listed at the end of each chapter.
 :::
+
+## Reference Texts
+
+No textbook is required. The following are all recommended if you intend to pursue a career in investment management:
+
+- Ang, A. (2014). *Asset Management: A Systematic Approach to Factor Investing.* Oxford University Press.
+- Bodie, Z., Kane, A., and Marcus, A. (2014). *Investments.* 10th Global Edition, McGraw-Hill.
+- Berk, J., and DeMarzo, P. (2017). *Corporate Finance.* 4th Edition, Pearson.
 
 ## About the Instructor
 

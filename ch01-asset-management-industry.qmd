@@ -53,12 +53,6 @@ This matters enormously for anyone building new financial products or platforms.
 The distinction between investing and speculating is not just philosophical — it has legal implications. If trading in an asset is primarily for the dopamine hit rather than an expectation of profit, it is difficult to characterize as an investment in the legal sense. The surface behavior — submitting a buy order — can look identical. What differs is the intention and structure. A "play account" that is down 70% is best thought of as tuition, not a portfolio.
 :::
 
-::: {.callout-note}
-## A Note on AI in This Course
-
-AI tools — ChatGPT, Claude, and similar systems — are actively encouraged in this course for understanding complex concepts, exploring different perspectives, generating examples, and checking your work. Think of them as a financial teaching assistant that is always available. The important caveat: you own the output. You must be able to explain your reasoning, verify any calculations AI generates, and cross-check AI explanations against course materials. The burden is higher, not lower, because AI can produce plausible-sounding errors with no warning. Knowing enough finance to catch those errors is part of what this course develops. We will also discuss during the course how AI itself is reshaping the asset management industry — see Session 14.
-:::
-
 ## The Structure of Global Financial Markets
 
 Financial markets serve several functions simultaneously: they aggregate and transmit information through prices, enable intertemporal consumption smoothing, allocate capital from those who have it to those who can use it productively, and facilitate risk sharing from those who want to avoid it to those who are willing to bear it. A sixth function — stewardship of resources — is implicit in any discussion of sustainable or long-horizon investing and will resurface in Sessions 11 and 12. The fifth function — the separation of ownership and control — underlies much of what we will discuss throughout the course.

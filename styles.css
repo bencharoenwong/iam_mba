@@ -1,0 +1,6 @@
+/* Justified body text */
+body {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

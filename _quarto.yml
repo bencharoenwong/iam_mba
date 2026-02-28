@@ -43,6 +43,7 @@ format:
     toc-depth: 3
     number-sections: false
     code-fold: true
+    css: styles.css
   pdf:
     documentclass: scrbook
     papersize: letter
