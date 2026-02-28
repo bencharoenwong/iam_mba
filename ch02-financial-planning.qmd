@@ -1,6 +1,6 @@
 # Session 02: Financial Planning and Investor Needs
 
-The entire financial services industry — $112 trillion in assets under management, thousands of products, decades of academic research — exists to solve a problem that sounds deceptively simple: matching what investors have today with what they need in the future. Session 01 showed you the machinery: the industry structure, the fee models, the principal-agent dynamics. This session asks a prior question. Before we worry about which stocks to buy or which fund to hire, what does the investor actually need? It turns out that question is harder to answer than almost anyone admits. Getting it wrong is also one of the most reliable ways to end up financially worse off despite doing everything else right.
+The entire financial services industry — $112 trillion in assets under management, thousands of products, decades of academic research — exists to solve a problem that sounds deceptively simple: matching what investors have today with what they need in the future. Chapter 1 showed you the machinery: the industry structure, the fee models, the principal-agent dynamics. This chapter asks a prior question. Before we worry about which stocks to buy or which fund to hire, what does the investor actually need? It turns out that question is harder to answer than almost anyone admits. Getting it wrong is also one of the most reliable ways to end up financially worse off despite doing everything else right.
 
 ## What Does "Successful" Mean?
 
@@ -28,7 +28,7 @@ If you are an international career professional — which describes most INSEAD 
 
 ## The Financial Planning Framework
 
-Here is the key insight that tends to be lost in the product-focused discussions that dominate financial services marketing: at no point in this session do we discuss which stock to buy. That conversation comes later. The planning process has to happen first, and it involves a specific sequence.
+Here is the key insight that tends to be lost in the product-focused discussions that dominate financial services marketing: at no point in this chapter do we discuss which stock to buy. That conversation comes later. The planning process has to happen first, and it involves a specific sequence.
 
 Define goals. Develop a financial plan. Formulate an investment strategy. Then, and only then, choose products.
 
@@ -343,7 +343,7 @@ The technical mistakes — inappropriate asset location, poor estate planning do
 
 ## The Asset Manager's Actual Role
 
-One last point that bridges back to Session 01. Most asset managers, including many that market themselves as wealth managers, do not provide financial planning. What they provide is investment management: portfolio construction, risk management, and execution. Those are valuable services, but they sit in the third and fourth stages of the planning process (formulate investment strategy, choose products), not in the first two.
+One last point that bridges back to Chapter 1. Most asset managers, including many that market themselves as wealth managers, do not provide financial planning. What they provide is investment management: portfolio construction, risk management, and execution. Those are valuable services, but they sit in the third and fourth stages of the planning process (formulate investment strategy, choose products), not in the first two.
 
 A client who arrives at an asset manager with no written financial goals is asking the manager to skip ahead to the product layer. The manager, whose revenue model is tied to assets under management and product sales, has limited incentive to push back. The result is what you see across the retail financial services industry: clients with well-constructed portfolios optimized for benchmarks that have no relationship to their actual financial goals.
 

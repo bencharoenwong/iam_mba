@@ -4,13 +4,13 @@ Cathie Wood's ARK Innovation ETF made headlines for years. During the post-COVID
 
 ## From Portfolio Theory to the Market Portfolio
 
-To understand the active-passive debate, we need to start where the last session ended: portfolio theory and what it implies about how rational investors should allocate capital.
+To understand the active-passive debate, we need to start where the last chapter ended: portfolio theory and what it implies about how rational investors should allocate capital.
 
-Recall the punchline from the portfolio optimization exercise. When we fed twenty years of historical return data into the optimizer and let it run, the result was approximately 100% equity, mostly S&P 500. A big driver of that outcome is the extraordinary performance of US equities over the past decade — post-2008 has been one of the best runs for equities in modern history. COVID looked like it might derail everything, and the market ended 2020 up roughly 18%. 2022 was down 20%, but that recovered quickly. On a twenty-year horizon relevant to most investors in this class, the optimizer basically said: US equities, full stop.
+As we saw in the previous chapter, mean-variance optimization applied to twenty years of historical data points overwhelmingly toward US equities — a result driven largely by the extraordinary post-2008 run.
 
 One important caveat about mean-variance optimization in practice: it is sensitive to the quality of inputs, particularly the covariance matrix. Covariance matrices estimated from historical data are extremely unstable over time. An input that looks reasonable over one period can flip dramatically in another. This is why applying the optimizer to single stocks tends to produce garbage — single-name return distributions are far from normal, and the covariance structure between individual stocks shifts constantly. The optimizer works somewhat better for funds, because fund return distributions are more reasonable and the assumption of normality is less egregious, though still not literally true.
 
-There is active research — including in the machine learning literature — aimed at producing more stable covariance estimates. One approach, used at the author's hedge fund, is to project returns into a factor space rather than estimating covariance between individual assets directly. The idea is that factors have much more stable covariance structures than the underlying securities, which is one reason we will spend the next session discussing factor investing.
+There is active research — including in the machine learning literature — aimed at producing more stable covariance estimates. One approach, used at the author's hedge fund, is to project returns into a factor space rather than estimating covariance between individual assets directly. The idea is that factors have much more stable covariance structures than the underlying securities, which is one reason the next chapter is devoted to factor investing.
 
 ### The Two-Fund Separation Theorem
 
@@ -68,7 +68,7 @@ Index managers face a fundamental trade-off: **full replication** — buying eve
 
 ## Active Management Is a Zero-Sum Game
 
-With the CAPM as a benchmark, we can ask the central question of this session directly: does active management add value?
+With the CAPM as a benchmark, we can ask the central question of this chapter directly: does active management add value?
 
 William Sharpe's 1991 paper, "The Arithmetic of Active Management," establishes the baseline with pure logic, requiring no assumptions about rationality or market efficiency. The argument is accounting:
 
@@ -125,9 +125,7 @@ If some managers genuinely have skill, why do we observe so few with persistent 
 
 Suppose a fund generates 3% alpha after costs. Word gets out. Investors pour capital in. The fund now manages thirty times what it did before. The manager's three great ideas — the ones generating the alpha — cannot absorb thirty times the capital at the same terms. The manager must deploy capital into progressively less attractive opportunities. Trading costs rise as position sizes grow. The fund has to hire analysts; the fourth-best hire is by definition worse than the first three. Mechanically, alpha erodes.
 
-The equilibrium result, formalized by Berk and Green (2004), is that funds with genuine alpha attract inflows until the alpha is exactly equal to the management fee. Investors earn zero net alpha in expectation, even though some managers have real skill. The skilled managers capture their skill in the form of fees, not in excess returns to investors.
-
-> "In equilibrium, funds that have been around a long time that have high fees generally have no alpha. But if you add back the management fee, that's their alpha. They are earning their keep — because if they don't, the fund will disappear."
+The equilibrium result, formalized by Berk and Green (2004), is that funds with genuine alpha attract inflows until the alpha is exactly equal to the management fee. Investors earn zero net alpha in expectation, even though some managers have real skill. The skilled managers capture their skill in the form of fees, not in excess returns to investors. In other words, established funds with high fees generally show no alpha — but add back the management fee and that is their alpha. They are earning their keep, because if they were not, the fund would disappear.
 
 This also explains why the fraction with zero or negative net alpha is so high. Beyond the Berk-Green mechanism, a large fraction of fund flows are captive: investors at banks like JPMorgan Chase who hold checking accounts, mortgages, and investment accounts at the same institution face high switching costs and may not actively monitor fund performance. Captive flows allow underperforming funds to persist far longer than they would in a perfectly competitive market. In the data, banks with captive depositor relationships tend to run funds that underperform systematically.
 
@@ -173,7 +171,7 @@ Before evaluating active managers, it helps to map what "active management" enco
 - *Sector allocation*: overweighting or underweighting sectors relative to a benchmark, or rotating across sectors
 - *Stock picking*: identifying securities above or below the Security Market Line (SML) through analysis — discounted cash flow models, dividend discount models, comparable-company multiples, and qualitative judgment
 
-**Quantitative strategies** — including the factor investing we will cover in the next session — use systematic signals derived from financial data. This includes the well-documented anomalies (value, size, quality, momentum) and more exotic strategies such as market-neutral long-short portfolios targeting absolute returns.
+**Quantitative strategies** — including the factor investing we will cover in the next chapter — use systematic signals derived from financial data. This includes the well-documented anomalies (value, size, quality, momentum) and more exotic strategies such as market-neutral long-short portfolios targeting absolute returns.
 
 **Technical strategies** rely on price and volume patterns: charts, filter rules, momentum signals, and related approaches. These do not rely on fundamental analysis but on the hypothesis that price history contains predictive information.
 
@@ -225,7 +223,7 @@ For the triple-leveraged ETF (3x S&P), the expected beta is approximately 2.8. T
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
-The ability to run this regression and interpret the output is tested in investment management interviews. "Walk me through how you'd evaluate a fund manager" is a standard question. The right answer is: run the CAPM regression, examine alpha, beta, $R^2$, and the information ratio. Do not evaluate a manager on raw returns without adjusting for market exposure and risk. This is the single most important technical skill from this session.
+The ability to run this regression and interpret the output is tested in investment management interviews. "Walk me through how you'd evaluate a fund manager" is a standard question. The right answer is: run the CAPM regression, examine alpha, beta, $R^2$, and the information ratio. Do not evaluate a manager on raw returns without adjusting for market exposure and risk. This is the single most important technical skill from this chapter.
 :::
 
 ## The Market Efficiency Question
@@ -300,7 +298,7 @@ The proliferation of ETF products does not mean investors have more good options
 
 ## Passive Investing and the Market Equilibrium Problem
 
-If passive investing dominates for most investors, a natural question arises: what happens if everyone goes passive? Howard's point in class is exactly right — someone has to do the information discovery. If no active investor is doing fundamental research, prices drift away from fundamentals and the active strategy becomes more profitable, which attracts active capital back in. The system self-regulates.
+If passive investing dominates for most investors, a natural question arises: what happens if everyone goes passive? The objection is exactly right — someone has to do the information discovery. If no active investor is doing fundamental research, prices drift away from fundamentals and the active strategy becomes more profitable, which attracts active capital back in. The system self-regulates.
 
 The implication is that the right fraction of passive investing in aggregate is less than 100%. We need active investors to keep prices reasonably informative. The question is what equilibrium fraction of active versus passive produces market prices that are good signals for capital allocation. That fraction is not known with precision, but most estimates suggest we are nowhere near the point where passive saturation becomes a problem.
 
@@ -316,13 +314,13 @@ These developments mean that the information environment facing a retail investo
 
 ## Factor Investing as a Bridge
 
-The next session will extend this framework by expanding the benchmark. The CAPM gives us one "Lego brick" — market exposure. Factor models give us three to five bricks. Most active funds, when benchmarked against a factor model rather than just the market, show even less alpha than the CAPM regression suggests. Warren Buffett's Berkshire Hathaway, analyzed against a factor model, turns out to be largely a combination of value, quality, and low-volatility exposures — systematic factors that can be replicated cheaply rather than evidence of stock-picking genius.
+The next chapter will extend this framework by expanding the benchmark. The CAPM gives us one "Lego brick" — market exposure. Factor models give us three to five bricks. Most active funds, when benchmarked against a factor model rather than just the market, show even less alpha than the CAPM regression suggests. Warren Buffett's Berkshire Hathaway, analyzed against a factor model, turns out to be largely a combination of value, quality, and low-volatility exposures — systematic factors that can be replicated cheaply rather than evidence of stock-picking genius.
 
 This reframing does not diminish Buffett's achievement — he identified these factors decades before academics formalized them. But it does change how we should evaluate active managers. The question is not just "did you beat the S&P 500?" but "did you beat a passive portfolio with the same factor exposures?" That is a much harder hurdle to clear.
 
 The concept extends to the benchmarking of entire asset management products. A private equity fund earning 12% annualized when the market is up 15% is underperforming, not outperforming. A hedge fund earning 8% with a Sharpe of 0.4 is not impressive if a simple combination of value and momentum factors achieves the same with lower fees. The regression framework we used for ARK is just the beginning.
 
-## Addendum: CAGR and Volatility Drag
+## CAGR and Volatility Drag
 
 A technical point that trips up many investors comparing fund performance is the difference between the arithmetic mean return and the compound annual growth rate (CAGR). They are not the same, and the difference matters for evaluating both active and passive strategies.
 
@@ -366,6 +364,12 @@ $$
 When comparing fund performance, always verify whether the reported figures are time-weighted (arithmetic average) or money-weighted (closer to CAGR). For buy-and-hold investors, CAGR is the economically relevant number. A fund that reports "average annual returns of 12%" but has 40% annual volatility may be delivering CAGR well below 10%. This discrepancy is not a disclosure error — it is a mathematical fact — but it is routinely overlooked in fund marketing.
 :::
 
+## How Retail Investors Actually Pick Funds
+
+How do most retail investors actually evaluate active managers? Two mechanisms dominate. The first is Morningstar ratings — a star-rating system that functions, as one characterization puts it, as "Yelp for funds." Morningstar ratings are based primarily on past risk-adjusted returns, which means they are backward-looking. The evidence that high Morningstar ratings predict future outperformance is weak: funds rated five stars do modestly better than one-star funds in subsequent periods, but most of the difference reflects factor exposures rather than manager skill, and the persistence is too small to justify the higher fees that four- and five-star funds typically charge.
+
+The second mechanism is financial advisers. Advisers face their own incentive structures — some are compensated through commissions on fund sales, creating an obvious conflict of interest. Fee-only advisers (who charge a flat fee or percentage of assets rather than commissions) have stronger incentives to recommend products in their clients' interest, but even fee-only advisers can be subject to performance-chasing and overconfidence in manager selection. The practical advice is straightforward: understand how your adviser is compensated and what benchmark they use to evaluate the funds they recommend.
+
 ## Key Takeaways
 
 - The two-fund separation theorem implies that if investors are rational and markets are efficient, the optimal portfolio for any investor is a combination of the risk-free asset and the market portfolio. Deviations from the market require a specific justification tied to how an investor differs from the average.
@@ -378,12 +382,6 @@ When comparing fund performance, always verify whether the reported figures are 
 
 - Market efficiency is not binary. Costly information acquisition implies some active management must pay — but only for the investors doing the work, not for the average mutual fund holder.
 - **For you as an investor or client:** Default to low-cost index funds. If you hire an active manager, demand the regression output showing their alpha, beta, and R-squared against a factor benchmark — not just raw returns. Ask what their active share is, and whether their fees are justified by genuine alpha or simply factor exposure you could replicate for a fraction of the cost.
-
-## How Retail Investors Actually Pick Funds
-
-A final practical note: how do most retail investors actually evaluate active managers? Two mechanisms dominate. The first is Morningstar ratings — a star-rating system that functions, as one characterization puts it, as "Yelp for funds." Morningstar ratings are based primarily on past risk-adjusted returns, which means they are backward-looking. The evidence that high Morningstar ratings predict future outperformance is weak: funds rated five stars do modestly better than one-star funds in subsequent periods, but most of the difference reflects factor exposures rather than manager skill, and the persistence is too small to justify the higher fees that four- and five-star funds typically charge.
-
-The second mechanism is financial advisers. Advisers face their own incentive structures — some are compensated through commissions on fund sales, creating an obvious conflict of interest. Fee-only advisers (who charge a flat fee or percentage of assets rather than commissions) have stronger incentives to recommend products in their clients' interest, but even fee-only advisers can be subject to performance-chasing and overconfidence in manager selection. The practical advice is straightforward: understand how your adviser is compensated and what benchmark they use to evaluate the funds they recommend.
 
 ## Further Reading
 

@@ -2,7 +2,7 @@
 
 In January 2021, a forum of retail investors on Reddit — posting under names like "DeepFuckingValue" and trading through a zero-commission app on their phones — moved the stock price of a struggling video game retailer by several hundred percent. Hedge funds that had shorted the stock lost billions. The story became a film. The protagonist was lionized on CNBC. A congressional hearing was convened. For a few weeks, it genuinely felt like the internet had figured out how to beat Wall Street at its own game.
 
-It had not. But the episode crystallized a set of questions that anyone serious about markets needs to answer: What actually happened when commissions went to zero? Does giving everyone access to trading tools improve outcomes? Who benefits when more people participate in financial markets — and who bears the costs? This session sits in uncomfortable territory, because the honest answers cut against both the "democratization is always good" narrative and the "retail investors are just dumb money" dismissal.
+It had not. But the episode crystallized a set of questions that anyone serious about markets needs to answer: What actually happened when commissions went to zero? Does giving everyone access to trading tools improve outcomes? Who benefits when more people participate in financial markets — and who bears the costs? This chapter sits in uncomfortable territory, because the honest answers cut against both the "democratization is always good" narrative and the "retail investors are just dumb money" dismissal.
 
 ## The Zero-Commission Revolution
 
@@ -12,7 +12,7 @@ Robinhood eliminated this. When it launched zero-commission trading in 2014 and 
 
 The question the industry asks quieter is: how does Robinhood actually make money?
 
-The answer is **payment for order flow (PFOF)** — a mechanism we covered in Session 03's discussion of market structure. In brief: Robinhood routes your order to a market maker (like Citadel Securities) who pays for the privilege of being your counterparty. The market maker profits from the spread; you pay zero commission but may receive a slightly worse execution price. Whether the net effect is good or bad for retail investors depends on trade size and liquidity — the details are in the previous session.
+The answer is **payment for order flow (PFOF)** — a mechanism we covered in Chapter 3's discussion of market structure. In brief: Robinhood routes your order to a market maker (like Citadel Securities) who pays for the privilege of being your counterparty. The market maker profits from the spread; you pay zero commission but may receive a slightly worse execution price. Whether the net effect is good or bad for retail investors depends on trade size and liquidity — the details are in the previous chapter.
 
 ::: {.callout-tip}
 ## Practitioner Insight
@@ -28,7 +28,7 @@ Here is a formula worth internalizing before we go further:
 
 $$\text{Performance} = f(\text{Strategy}, \text{Behavior})$$
 
-Most of this course focuses on strategy — which assets to hold, how to diversify, how to evaluate fund managers, when factor exposures are priced or mispriced. But behavior is the other variable, and for retail investors it often dominates.
+Most of this book focuses on strategy — which assets to hold, how to diversify, how to evaluate fund managers, when factor exposures are priced or mispriced. But behavior is the other variable, and for retail investors it often dominates.
 
 The DALBAR research group tracks the returns that average equity fund investors actually earn versus what the funds themselves return. The gap is persistent and substantial. In 2023 — a good year for equities, with the S&P 500 returning 26.3% — the average equity fund investor earned 20.8%, a gap of 5.5 percentage points. This is not because the funds were bad. It is because investors bought high and sold low, timing their entries and exits poorly.
 
@@ -46,7 +46,7 @@ The natural interpretation is not that individual investors are uniquely irratio
 
 ## The Phone Problem
 
-Mobile apps made trading not just cheaper but frictionless. You can now execute a trade in a few taps while waiting for a coffee. The question the slides pose is worth sitting with: is faster data retrieval and display necessarily better?
+Mobile apps made trading not just cheaper but frictionless. You can now execute a trade in a few taps while waiting for a coffee. The question is worth sitting with: is faster data retrieval and display necessarily better?
 
 If investors were fully rational, yes. More information, delivered faster, should improve decisions. But we have strong evidence that the access device matters in ways that pure rationality cannot explain.
 
@@ -68,7 +68,7 @@ GameStop in early 2021 was simultaneously several things: a genuine short squeez
 
 The mechanics were not complicated. A group of retail investors coordinated on Reddit's WallStreetBets forum to buy a heavily shorted stock. As the price rose, short sellers faced mounting losses and were forced to buy shares to cover their positions, which pushed the price higher, which forced more covering. The gamma squeeze — options market makers hedging their short gamma exposure by buying the underlying — added fuel. Hedge funds including Melvin Capital lost billions. Robinhood temporarily restricted buying, which generated enormous controversy and regulatory attention.
 
-The question that matters for this course is not "who won?" The answer there is mostly: not the retail investors who bought at the peak. The question is what this episode reveals about market structure and investor behavior.
+The question that matters is not "who won?" The answer there is mostly: not the retail investors who bought at the peak. The question is what this episode reveals about market structure and investor behavior.
 
 Matt Levine made the relevant observation: disclosure requirements work because *somebody* reads the disclosures. The assumption built into securities law is that public markets have sophisticated participants — hedge funds, institutional investors, arbitrageurs — who will read 10-Ks, process the information, and compete to make prices rational. Retail investors benefit from this process without doing any of it themselves. But meme stocks challenged this model. In a heavily retail-owned, heavily shorted stock with significant attention from WallStreetBets, the usual price discovery mechanism was disrupted. The "sophisticated participants" providing the equilibrating force were overwhelmed.
 

@@ -2,7 +2,7 @@
 
 If you handed a portfolio manager tomorrow's headlines and asked them to trade on the information, most retail investors would still lose money. Give that same information to a macro fund manager and they print money. The difference is not access to information — it is knowing how to structure the trade, how to size it, and how to think systematically about what drives returns. That gap between information and execution is exactly where factor investing lives. It is a framework that asks a deceptively simple question: what actually explains the returns we observe, and can we access those return drivers cheaply, transparently, and at scale?
 
-This session builds the analytical infrastructure to answer that question. We start with how to read regression output — the tool used to decompose any return series — and then use that foundation to understand the major factor premiums, how they are combined in practice, and why the standard story of "alpha" keeps shrinking as the toolkit expands.
+This chapter builds the analytical infrastructure to answer that question. We start with how to read regression output — the tool used to decompose any return series — and then use that foundation to understand the major factor premiums, how they are combined in practice, and why the standard story of "alpha" keeps shrinking as the toolkit expands.
 
 ## Reading Regression Output: Alpha, Beta, and What They Actually Mean
 
@@ -31,7 +31,7 @@ The second is the expense ratio. The SPY — the most liquid security in the wor
 ::: {.callout-important}
 ## Common Misconception
 
-Volatility drag is often cited as the primary explanation for why leveraged ETFs underperform their stated multiple over time. That explanation applies to the compound annual growth rate (CAGR) but not to simple average returns. The CAGR will be worse than the arithmetic average because of volatility drag, but the regression beta is estimated on simple returns — so the gap between 2.8 and 3.0 is explained primarily by borrowing costs and fees, not by the arithmetic-versus-geometric return distinction.
+Volatility drag is often cited as the primary explanation for why leveraged ETFs underperform their stated multiple over time, but as discussed in Chapter 7, the drag applies to compound growth rates, not simple average returns. The regression beta is estimated on simple returns — so the gap between 2.8 and 3.0 is explained primarily by borrowing costs and fees.
 :::
 
 What does the R-squared of 0.944 tell us? It means 94.4% of the variation in the ETF's monthly returns is explained by variation in the S&P 500 returns. The square root of R-squared gives the correlation coefficient — approximately 0.97. The fund is doing almost exactly what it claims: delivering high-beta exposure to the S&P 500. There is no alpha being marketed here. The product is selling beta — specifically, more beta than any single stock typically delivers — and charging for it because leverage is not free.
@@ -124,17 +124,15 @@ Each factor in the Fama-French family is constructed as a **zero-cost long-short
 Each has spawned corresponding passive vehicles: iShares S&P 500 Value ETF (IVE) and Vanguard Small-Cap Value ETF (VBR) for the Fama-French factors; iShares MSCI USA Momentum Factor ETF (MTUM) and AQR Momentum funds for UMD; iShares MSCI USA Quality Factor ETF (QUAL) and Invesco S&P 500 Quality ETF (SPHQ) for the quality and profitability factors.
 :::
 
-Mark Carhart, whose University of Chicago dissertation added a fourth factor in 1997: momentum. Stocks that have performed well over the past twelve months, excluding the most recent month, tend to continue outperforming — a pattern that has replicated across asset classes and international markets.
+Mark Carhart added a fourth factor in 1997, building on his University of Chicago dissertation: momentum. Stocks that have performed well over the past twelve months, excluding the most recent month, tend to continue outperforming — a pattern that has replicated across asset classes and international markets.
 
 In 2015 Fama and French updated the model again, adding profitability (quality) and investment factors. High-quality firms — those with strong and stable cash flows — tend to outperform over the long run. Notably, the value factor HML is partially subsumed once RMW and CMA are included — profitability and investment together explain much of what the raw book-to-market ratio was capturing.
 
 The current state is that these core factors — market, size, value, momentum, and quality — explain roughly 95% of what drives cross-sectional variation in equity returns. The remaining 5% has attracted thousands of published "new factors," most of which are rediscoveries of existing signals, artifacts of data mining, or genuine but tiny effects that decay quickly once discovered.
 
-The scale of the problem is precise. Academics have documented over 250 equity factors in published research, with practitioners adding more. Hou, Xue, and Zhang assembled a data library of 447 anomalies and found that 286 of them (64%) are insignificant at the 5% level and 380 (85%) insignificant at the 1% level. Of the 161 statistically significant anomalies that survived this screening, 115 — 71% — are explained by just five factors. The published factor count has expanded because academic incentives reward novelty, not because the signal universe has genuinely grown. Average factor return decay post-publication is approximately 35% (McLean and Pontiff, 2016, *Journal of Finance*) over the following year, which reflects a combination of statistical overfitting and genuine arbitrage as capital flows in. BlackRock manages over $210 billion in factor strategies across more than 100 funds — an industry that large creates sufficient capital that meaningful decay of documented premiums is the expected outcome.
+The scale of the problem is well-documented. Academics have documented over 250 equity factors in published research, with practitioners adding more. Hou, Xue, and Zhang assembled a data library of 447 anomalies and found that 286 of them (64%) are insignificant at the 5% level and 380 (85%) insignificant at the 1% level. Of the 161 statistically significant anomalies that survived this screening, 115 — 71% — are explained by just five factors. The published factor count has expanded because academic incentives reward novelty, not because the signal universe has genuinely grown. Average factor return decay post-publication is approximately 35% (McLean and Pontiff, 2016, *Journal of Finance*) over the following year, which reflects a combination of statistical overfitting and genuine arbitrage as capital flows in. BlackRock manages over $210 billion in factor strategies across more than 100 funds — an industry that large creates sufficient capital that meaningful decay of documented premiums is the expected outcome.
 
-> "My first job at Citadel was to set up the system to do this so they don't end up overpaying their managers — because managers would sneak in momentum. We'd say: no, we already knew that. Give me something else. Give me a real edge. Don't just rediscover something I coded three years ago."
-
-That pressure is the right frame for thinking about factor investing from the allocator's perspective: as the toolkit of investable factors expands, the alpha that any manager can claim keeps shrinking.
+Large allocators enforce this rigorously. A risk analytics team at a multi-strategy fund, for example, might decompose every portfolio manager's returns into known factors before evaluating performance — and if the "alpha" turns out to be momentum exposure, the response is straightforward: that is a factor we already own cheaply; show us something we cannot replicate. That pressure is the right frame for thinking about factor investing from the allocator's perspective: as the toolkit of investable factors expands, the alpha that any manager can claim keeps shrinking.
 
 ## Expected Returns and the Price-Return Relationship
 
@@ -150,9 +148,7 @@ A higher price today ($P_t$) must either predict a proportionally higher future 
 
 The answer comes from thinking about risk appetite. An asset that pays off when investors are "hungry" — when times are bad, jobs are scarce, portfolios are down — is valuable precisely because it provides insurance. Investors are willing to pay a high price for it, accepting a lower average return. An asset that pays off when times are good is less valued as insurance; investors need to be bribed with higher average returns to hold it.
 
-> "The good returns happen when no one is there to buy them. That's why the good returns are there."
-
-This matters practically for long-horizon investors. Goldman Sachs has published estimates suggesting US equity expected returns over the next decade are around 3% real annually — partly a consequence of the extraordinary run-up in equity prices that has already happened. Financial plans built on historical 8% average returns may need revision.
+The good returns happen precisely when no one is there to buy — that is why they are there. This matters practically for long-horizon investors. Goldman Sachs has published estimates suggesting US equity expected returns over the next decade are around 3% real annually — partly a consequence of the extraordinary run-up in equity prices that has already happened. Financial plans built on historical 8% average returns may need revision.
 
 ::: {.callout-important}
 ## Common Misconception
@@ -168,7 +164,7 @@ There is a persistent and legitimate debate about why factor premiums exist. The
 
 The risk-based explanation says that factor premiums compensate investors for bearing genuine economic risk. Value stocks — cheap, beaten-down companies — are disproportionately exposed to economic downturns. When the economy contracts and new technology disrupts industries, it is the boring cash-flow businesses that suffer most relative to the growth companies that thrive precisely because of the new technology. Investors holding value stocks are exposed to that disruption risk, and the premium is compensation for bearing it.
 
-Consider the analogy: a large Indonesian cigarette conglomerate — the hand-rolled, loose-leaf kind — is deeply exposed to the risk that vaping and nicotine pouches replace traditional tobacco consumption. A technology company benefits from that same disruption. The conglomerate is a value stock. It trades cheap because the market implicitly prices in the risk that its business model becomes obsolete. If you hold value stocks, you are holding a portfolio of companies that are negatively exposed to technology progress. The value premium is what the market pays you to bear that exposure.
+Consider the analogy: a traditional tobacco conglomerate is deeply exposed to the risk that vaping and nicotine pouches replace traditional cigarette consumption. A technology company benefits from that same disruption. The conglomerate is a value stock. It trades cheap because the market implicitly prices in the risk that its business model becomes obsolete. If you hold value stocks, you are holding a portfolio of companies that are negatively exposed to technology progress. The value premium is what the market pays you to bear that exposure.
 
 The behavioral explanation says that value stocks are cheap because investors are systematically too pessimistic about them and too optimistic about glamour stocks. The market overextrapolates recent trends — it assumes NVIDIA will keep dominating and the railroad company will keep declining — and then corrects when fundamentals reassert themselves over three-to-five-year horizons.
 
@@ -281,13 +277,11 @@ Machine learning has entered this space, and the pitch is that algorithms can le
 
 But practitioners are right to be skeptical of in-sample Sharpe ratios above two. When factors are discovered, they decay. The return to any publicly documented factor starts declining from the moment of publication, as capital flows into the trade and compresses the premium. A machine learning system trained on historical data will find combinations of signals that look extraordinary in backtests and often prove disappointing out of sample.
 
-> "I was at a conference talking to classmates. 'Yeah, I'm going to start a machine learning fund.' Good luck. You think the Sharpe ratio of two is real? You learn very fast when you have to do the apology tour for your investors."
-
-The honest appraisal is that machine learning is genuinely useful for the ensemble problem — learning weights across a large set of well-specified signals — and much less useful for discovering new signals that will survive out of sample. The signals themselves still require economic intuition to survive.
+The reality is that impressive backtest Sharpe ratios rarely survive contact with live capital — and the managers who learn this lesson tend to learn it expensively. The honest appraisal is that machine learning is genuinely useful for the ensemble problem — learning weights across a large set of well-specified signals — and much less useful for discovering new signals that will survive out of sample. The signals themselves still require economic intuition to survive.
 
 ## How Fee Structures and Jargon Exploit Rather Than Inform
 
-Every concept covered in this session has a direct implication for how investors are charged — and how those charges can be disguised.
+Every concept covered in this chapter has a direct implication for how investors are charged — and how those charges can be disguised.
 
 The leverage ETF example is clear: you are paying 90 basis points annually for an asset that could be replicated by an allocation decision in your existing portfolio. The fee is not nothing — the product does provide genuine convenience — but the cost-benefit calculation should be made explicitly.
 

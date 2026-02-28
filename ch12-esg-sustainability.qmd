@@ -2,7 +2,7 @@
 
 Every few years, an idea captures the asset management industry's imagination so completely that it becomes impossible to ignore, whether you believe in it or not. ESG investing is the current version of that phenomenon. Assets managed under some version of an ESG mandate have surged to the tens of trillions globally. Regulatory frameworks in Europe now require funds to classify themselves by sustainability intent. BlackRock — the largest asset manager in the world, with over $10 trillion under management — made climate risk a central investment thesis. And yet, ESG ratings from competing agencies disagree with each other so thoroughly that a single company can simultaneously receive a top score from one rater and near-bottom from another.
 
-This session is about understanding what is actually going on. We are going to separate the marketing from the economics, be honest about what the evidence shows, and think carefully about how non-financial objectives — whether ethical, religious, or sustainability-related — interact with the portfolio construction framework we have spent the last eleven sessions building.
+This chapter is about understanding what is actually going on. We are going to separate the marketing from the economics, be honest about what the evidence shows, and think carefully about how non-financial objectives — whether ethical, religious, or sustainability-related — interact with the portfolio construction framework we have spent the last eleven chapters building.
 
 ## The Friedman Starting Point
 
@@ -122,7 +122,7 @@ What does the data actually say?
 
 **Green Bonds** trade at a small but consistent premium over conventional bonds — roughly 1 to 6 basis points lower yield at issuance, and 2 to 4 basis points lower yield in secondary markets. The premium is larger for corporate issuers than sovereigns, larger in euro markets than dollar markets, and larger when third-party verification is attached. This greenium is real but small. Investors are accepting lower yield in exchange for the non-financial benefit of directing capital to labeled green projects.
 
-**Stocks** tell a more nuanced story. High ESG-rated stocks show lower expected returns of roughly 20 to 40 basis points per month in cross-sectional studies, though this is correlated with other return predictors. The important paper here is Pastor, Stambaugh, and Taylor (2021), which establishes the equilibrium framework: green stocks should underperform in expectation because they are priced higher by ESG-conscious investors. The realized outperformance during 2012–2020 reflects an unexpected shift in climate preferences, not a violation of the theory.
+**Stocks** tell a more nuanced story. High ESG-rated stocks show lower expected returns on the order of tens of basis points per month in cross-sectional studies, depending on the specification, though this is correlated with other return predictors. The important paper here is Pastor, Stambaugh, and Taylor (2021), which establishes the equilibrium framework: green stocks should underperform in expectation because they are priced higher by ESG-conscious investors. The realized outperformance during 2012–2020 reflects an unexpected shift in climate preferences, not a violation of the theory.
 
 **Sin stocks** (tobacco, alcohol, gambling, weapons) tend to earn above-average returns — Hong and Kacperczyk (2009) document this carefully. The mechanism is exclusion-driven mispricing: because many institutions refuse to hold sin stocks for non-financial reasons, these stocks require a higher return to clear the market. This is exactly what the cost-of-capital framework predicts.
 
@@ -149,12 +149,12 @@ Without specifying X and Y, the ESG preference is a marketing statement, not an 
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
-Greenwashing — labeling a product as sustainable without substantive portfolio differences from a conventional fund — is increasingly a regulatory enforcement target. The SEC's ESG fund naming rules and the EU's SFDR classification requirements are both attempts to impose accountability on sustainability labels. As a practitioner, understanding the difference between Article 8 and Article 9 funds under SFDR, or knowing what the SEC requires in an ESG-labeled fund's prospectus, is a compliance requirement in addition to being a portfolio management judgment. The reputational and legal costs of mis-labeling are real.
+Greenwashing — labeling a product as sustainable without substantive portfolio differences from a conventional fund — is increasingly a regulatory enforcement target. The SEC's ESG fund naming rules and the EU's SFDR classification requirements are both attempts to impose accountability on sustainability labels. As a practitioner, understanding the difference between Article 8 and Article 9 funds under SFDR, or knowing what the SEC requires in an ESG-labeled fund's prospectus, is a compliance requirement in addition to being a portfolio management judgment.
 :::
 
 ## Key Takeaways
 
-- ESG is not a single thing. Environmental, social, and governance dimensions have different levels of financial materiality, different measurability, and different mechanisms by which they affect firm value. Governance is the most consistently financially material. Treating a composite ESG score as a unified signal is analytically lazy.
+- ESG is not a single thing. Environmental, social, and governance dimensions have different levels of financial materiality, different measurability, and different mechanisms by which they affect firm value. Governance is the most consistently financially material. Treating a composite ESG score as a unified signal obscures the component — governance — that is most consistently material.
 
 - In equilibrium, widespread ESG preferences should produce lower expected returns on green assets and higher expected returns on brown assets. The historical outperformance of ESG stocks during 2012–2020 reflects an unexpected shift in climate concern, not evidence against this theory. Do not confuse one-time revaluations with persistent return premia.
 

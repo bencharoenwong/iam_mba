@@ -1,12 +1,12 @@
 # Session 14: AI and Complexity in Asset Management
 
-Marc Andreessen declared in 2011 that software is eating the world. Satya Nadella — a Chicago Booth graduate, incidentally — recently declared that SaaS is dead, implying something is eating software. Whether you think these are visionary proclamations or Silicon Valley hype cycles, the underlying observation matters for finance: the tools we use to manage money are being rebuilt from scratch, and that has consequences for every concept we have covered in this course. The question we end on is deceptively simple: can machines invest?
+Marc Andreessen declared in 2011 that software is eating the world. Satya Nadella — a Chicago Booth graduate, incidentally — recently declared that SaaS is dead, implying something is eating software. Hype or not, the underlying observation matters for finance: the tools we use to manage money are being rebuilt from scratch, and that has consequences for every concept we have covered in this course. The question we end on is deceptively simple: can machines invest?
 
-The short answer is that machines can do parts of investing extremely well and other parts catastrophically badly, and the industry is still figuring out which is which. This session ties together everything — market efficiency, factor investing, the principal-agent problem, behavioral biases — through the lens of what happens when you throw a trillion-dollar industry at modern AI.
+The short answer is that machines can do parts of investing extremely well and other parts catastrophically badly, and the industry is still figuring out which is which. This chapter ties together everything — market efficiency, factor investing, the principal-agent problem, behavioral biases — through the lens of what happens when you throw a trillion-dollar industry at modern AI.
 
 ## What We Mean by Complexity
 
-Before we can evaluate machine learning in finance, we need a precise definition of complexity. In the ML context, **complexity is the ratio of model parameters to available data points**. A simple regression with five predictors and five thousand observations has a complexity ratio of 0.001. A neural network with ten million parameters trained on five thousand observations has a complexity ratio of two thousand. Both are "models" in the statistical sense. They behave very differently.
+Before we can evaluate machine learning in finance, we need a precise definition of complexity. **One useful way to measure complexity is the ratio of model parameters to available data points**. A simple regression with five predictors and five thousand observations has a complexity ratio of 0.001. A neural network with ten million parameters trained on five thousand observations has a complexity ratio of two thousand. Both are "models" in the statistical sense. They behave very differently.
 
 Formally, the **bias-variance tradeoff** governs this: a model's expected prediction error decomposes as:
 
@@ -83,13 +83,15 @@ Transformer-based models (like BERT and GPT) read text by attending to the conte
 
 **Transformer architectures** — the technology underlying BERT, GPT, and their successors — represent a qualitative shift. These models capture contextual meaning: "bank" in a sentence about rivers means something different from "bank" in a sentence about interest rates, and modern language models track that distinction.
 
-The research implications are substantial. Calls with uncertain language, 10-Ks with unusual complexity, earnings announcements with hedged forward guidance — these all contain information that traditional quantitative models never extracted. The question is whether that information is priced. If markets are processing it through analysts and informed traders, the alpha from NLP is arbitraged away quickly. If markets are slow to process text signals, the alpha lasts longer.
+Calls with uncertain language, 10-Ks with unusual complexity, earnings announcements with hedged forward guidance — these all contain information that traditional quantitative models never extracted. The question is whether that information is priced. If markets are processing it through analysts and informed traders, the alpha from NLP is arbitraged away quickly. If markets are slow to process text signals, the alpha lasts longer.
 
 ::: {.callout-note}
 ## Academic Reference
 
 Cao, Jiang, Wang, and Yang (2024) study the complementarity between human analysts and AI in stock analysis (*Journal of Financial Economics*). Their finding is embedded in the title: the optimal arrangement is "man + machine," not "man vs. machine." AI tools improve analyst accuracy; the combination outperforms either alone. This has direct implications for how you should think about careers in investment research.
 :::
+
+NLP and ML models have reshaped how institutional investors process information. But the same technology wave also transformed the other end of the market — how ordinary investors access financial advice and portfolio management.
 
 ## Wealth Management 3.0 and the Robo-Advisor Problem
 
@@ -119,7 +121,7 @@ In an analysis of over 100,000 retail investors, some patterns are striking and 
 
 ## What AI Does Well (and the Limits)
 
-Let us be concrete about where machine learning adds genuine value in asset management and where the promises outrun the reality.
+Machine learning adds genuine value in specific areas of asset management, but the promises outrun the reality in others.
 
 **Where ML genuinely works:**
 
@@ -133,7 +135,7 @@ Let us be concrete about where machine learning adds genuine value in asset mana
 
 **Where ML fails or underperforms:**
 
-*Low signal-to-noise ratio.* Finance has among the worst signal-to-noise ratios of any domain where ML is applied. Stock returns are mostly noise. Even the best-documented return predictors explain a few percent of cross-sectional variance. ML does not solve this problem; it just exploits it more efficiently.
+*Low signal-to-noise ratio.* Finance has among the worst signal-to-noise ratios of any domain where ML is applied. Cross-sectional return variation is dominated by noise — even the best predictors explain only a few percent of variance. ML does not solve this problem; it just exploits it more efficiently.
 
 *Regime change.* A model trained before 2020 had never seen a pandemic. A model trained before 2022 had never seen 500 basis points of Fed hikes in 12 months. Training data that does not include the regimes you care about most — tail events, liquidity crises, paradigm shifts — produces models that fail exactly when you need them.
 
@@ -175,9 +177,11 @@ The course has traced a consistent arc: markets are mostly efficient, active man
 
 - The optimal structure for investment research is human-machine complementarity: machines handle breadth, consistency, and information aggregation; humans provide contextual judgment, relationship intelligence, and oversight of model behavior. The question is not whether AI will replace investment professionals but which parts of the job it will take over first.
 
+AI does not invalidate anything covered in this book — it sharpens it. Market efficiency, factor investing, behavioral biases, and the principal-agent problem all still govern how money is managed. What changes is the speed and scale at which these forces operate. That makes this a natural point to step back and ask what the entire course adds up to.
+
 ## Looking Back, Looking Forward
 
-This course began with a question: what is investing, and whose interests does the industry actually serve? Fourteen sessions later, the answer is clearer — and more nuanced — than any slogan can capture. Markets are largely efficient, which means most active managers cannot beat them after fees. But efficiency is maintained precisely because some managers do the costly work of gathering information, which keeps prices honest for everyone else. The science of diversification and factor investing gives you the tools to earn the market return at near-zero cost — and the evidence shows that earning the market return already puts you ahead of most investors, including many professionals. The art of security selection and risk management exists, but it requires genuine edges that are rare, expensive to maintain, and hard to distinguish from luck. And the emergence of AI is raising the bar for everyone: the information-processing advantage that once justified active fees is increasingly available to machines at a fraction of the cost.
+This course began with a question: what is investing, and whose interests does the industry actually serve? Fourteen chapters later, the answer is clearer — and more nuanced — than any slogan can capture. Markets are largely efficient, which means most active managers cannot beat them after fees. But efficiency is maintained precisely because some managers do the costly work of gathering information, which keeps prices honest for everyone else. The science of diversification and factor investing gives you the tools to earn the market return at near-zero cost — and the evidence shows that earning the market return already puts you ahead of most investors, including many professionals. The art of security selection and risk management exists, but it requires genuine edges that are rare, expensive to maintain, and hard to distinguish from luck. And the emergence of AI is raising the bar for everyone: the information-processing advantage that once justified active fees is increasingly available to machines at a fraction of the cost.
 
 For most readers of this book — future executives, board members, and clients of asset managers — the practical synthesis is this: build a financial plan, invest passively, manage your behavior, and ask hard questions of anyone who wants to charge you for alpha. The concepts in this course are not just academic — they are the tools that protect your wealth from an industry that does not always have your interests at heart.
 

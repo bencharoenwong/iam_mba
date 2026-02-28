@@ -2,13 +2,11 @@
 
 On January 7th, 2025, the U.S. economy reported a blowout jobs number — far more positions added in December than analysts expected. The stock market fell. If you had been handed that headline the night before and asked to position your portfolio, what would you have done? Most people would have gone long. Most people would have lost money. In a controlled experiment, non-professionals given tomorrow's financial headlines get the direction of the market wrong roughly 70% of the time. Hedge fund managers, given the same headlines, make money consistently. The difference is not information — it is the framework for interpreting it. A strong jobs report means rates stay higher for longer, which compresses equity valuations. The economy and the stock market are not the same thing, and understanding why is the starting point for understanding market efficiency.
 
-This session covers two related but distinct problems. The first is theoretical: what does it mean for markets to be efficient, and what evidence do we have that they are? The second is practical: if markets are largely efficient, why do so many investors — retail and professional alike — fail to earn even the market return? The answer to both questions turns out to hinge on the same underlying mechanism: how information gets produced, distributed, and ultimately reflected in prices.
+This chapter covers two related but distinct problems. The first is theoretical: what does it mean for markets to be efficient, and what evidence do we have that they are? The second is practical: if markets are largely efficient, why do so many investors — retail and professional alike — fail to earn even the market return? The answer to both questions turns out to hinge on the same underlying mechanism: how information gets produced, distributed, and ultimately reflected in prices.
 
-A connecting thread runs through both problems: investors systematically allocate capital in ways that deviate from what theory predicts, and those deviations are persistent and costly. The most basic example, before we even get to trading behavior, is home bias — the tendency of investors to overwhelmingly allocate to their own country's equity market regardless of how small a fraction of global opportunity that market represents. Vanguard data shows that American investors hold roughly 90% of their equity portfolio in U.S. stocks. Singapore investors hold roughly 90% in Singapore stocks, even though Singapore represents a tiny fraction of global market capitalization. The same pattern holds for Vietnam, Indonesia, Thailand, Malaysia — markets with perhaps 50 liquid stocks where most of the country's investable wealth still sits.
+A connecting thread runs through both problems: investors systematically allocate capital in ways that deviate from what theory predicts, and those deviations are persistent and costly. The most basic example, before we even get to trading behavior, is home bias — the tendency of investors to overwhelmingly allocate to their own country's equity market regardless of how small a fraction of global opportunity that market represents. Vanguard data shows that American investors hold roughly 90% of their equity portfolio in U.S. stocks. Singapore investors hold roughly 90% in Singapore stocks, even though Singapore represents a tiny fraction of global market capitalization. The same pattern holds across Southeast Asian markets — Vietnam, Indonesia, Thailand, Malaysia — many of which have relatively concentrated listed equity universes where most of the country's investable wealth still sits.
 
 The standard explanations — capital controls, currency risk, information advantages from familiarity — account for some but not all of the phenomenon. Capital controls are real in markets like India, where regulation caps overseas investment through mutual funds. But in markets with no binding regulatory constraint, investors still overallocate domestically. Even within the United States, investors in Illinois overweight Illinois-headquartered companies relative to what diversification would recommend. At some level, familiarity itself functions as a bias. And crucially, the information advantage from familiarity does not translate into better returns — local investors in their home markets do not systematically outperform — which means the concentration comes at a cost in diversification without the compensating benefit of superior information.
-
----
 
 ## The Logic of Market Efficiency
 
@@ -54,8 +52,6 @@ Commodity markets offer another illustration. Unlike listed equities, trading on
 
 These examples illustrate something important: the market is not just averaging the opinions of uninformed participants. It is aggregating the views of people who are deeply, specifically informed about narrow domains — aerospace engineering, political intelligence, commodity yields — and who have strong financial incentive to be right. The market's processing speed and accuracy reflect the quality of the information environment feeding into it, not some intrinsic computational intelligence of prices.
 
----
-
 ## Where Efficiency Breaks Down
 
 If markets were perfectly efficient at all times, this would be a short chapter. They are not. The question is whether the deviations from efficiency are systematic enough to exploit, or whether they represent noise that corrects before any trader can profit from it.
@@ -73,7 +69,7 @@ Gromb and Vayanos (2010) provide the canonical treatment of limits of arbitrage 
 
 The conditions under which mispricings persist can be organized into five categories: (1) **information acquisition costs** — the cost of discovering a mispricing may exceed the expected profit from correcting it; (2) **trading costs and restrictions** — commissions, short-sale constraints, and capital controls limit the practical ability to bet against overpriced assets; (3) **implementation delays** — by the time a fund raises capital, establishes a position, and waits for convergence, the opportunity may have closed or the fund may face redemptions; (4) **behavioral biases that are systematic rather than idiosyncratic** — individual irrational behavior cancels out across investors, but biases shared by large groups can move prices persistently; and (5) **market structure constraints** — illiquid markets, small trading populations, or regulatory restrictions that limit the set of participants who can trade. Not every apparent anomaly reflects all five; the diagnostic question is which constraint is actually binding in a given case.
 
-A subtler friction is the pervasiveness of insider trading in markets with weak enforcement. Research on Mexican equity markets examined price behavior around major corporate events — share issuances, buybacks, M&A announcements, earnings surprises. In efficient markets, prices should move sharply at the announcement. In Mexico, prices did not move at all. The information had already been incorporated by insiders before the public announcement. The announcement had no news content because the information was no longer private. Paradoxically, rampant insider trading can produce price patterns that superficially resemble efficiency — prices move to fair value quickly — while the mechanism is the opposite of the competitive information production that Fama had in mind.
+A subtler friction is the pervasiveness of insider trading in markets where enforcement has historically been less stringent. Research on Mexican equity markets examined price behavior around major corporate events — share issuances, buybacks, M&A announcements, earnings surprises. In efficient markets, prices should move sharply at the announcement. In Mexico, prices did not move at all. The information had already been incorporated by insiders before the public announcement. The announcement had no news content because the information was no longer private. Paradoxically, widespread insider trading can produce price patterns that superficially resemble efficiency — prices move to fair value quickly — while the mechanism is the opposite of the competitive information production that Fama had in mind.
 
 ::: {.callout-note}
 ## Academic Reference
@@ -94,7 +90,7 @@ The corollary is that in markets with very little active participation — thin 
 
 Before cataloguing cognitive anomalies, it is worth noting a systematic reason to be skeptical of many claimed anomalies in the literature: HARKing, which stands for Hypothesizing After Results are Known. The practice involves examining a dataset, finding a pattern, and then constructing a theory that predicts that pattern — in that order, while presenting it as if the theory came first. The result is ex-post rationalization presented as ex-ante insight.
 
-HARKing matters for market efficiency because the primary evidence against efficiency comes from claimed anomalies — patterns in asset returns that should not exist if prices reflect information. Many such patterns, on scrutiny, reflect some combination of multiple testing bias (examine enough variables and some will appear significant by chance), overfitting (a model that describes the past perfectly is calibrated to noise, not signal), false discovery through unreported null results (journals publish anomalies, not confirmations of efficiency), and survivorship bias in which investment themes (the visible ones are those that worked after the fact, not before). The slide deck for this session lists disruptive investment themes and complex trading rules as canonical examples: the themes that look compelling today were selected partly because they performed well recently, which does not imply they will continue to do so.
+HARKing matters for market efficiency because the primary evidence against efficiency comes from claimed anomalies — patterns in asset returns that should not exist if prices reflect information. Many such patterns, on scrutiny, reflect some combination of multiple testing bias (examine enough variables and some will appear significant by chance), overfitting (a model that describes the past perfectly is calibrated to noise, not signal), false discovery through unreported null results (journals publish anomalies, not confirmations of efficiency), and survivorship bias in which investment themes (the visible ones are those that worked after the fact, not before). The slide deck for this chapter lists disruptive investment themes and complex trading rules as canonical examples: the themes that look compelling today were selected partly because they performed well recently, which does not imply they will continue to do so.
 
 The practical protection against HARKing is to maintain a trading log and journal entries with ex-ante hypotheses before examining results — and to treat any strategy that was first identified through data mining with appropriate skepticism, regardless of how compelling the post-hoc narrative sounds. The anomalies discussed below — non-proportional thinking, behavioral biases, structural constraints — survive because they have documented mechanisms and have been tested out-of-sample. Many claimed anomalies in the empirical finance literature do not clear that bar.
 
@@ -120,11 +116,7 @@ The Zoom case from 2020 is perhaps the most dramatic example of this kind of err
 Market efficiency does not mean prices are always correct. It means that deviations from fair value are unpredictable and difficult to exploit systematically. Evidence of occasional large mispricings — meme stocks, crypto assets, name confusion — is entirely consistent with the EMH. The relevant question is whether those mispricings were foreseeable and actionable in advance.
 :::
 
----
-
-The financial planning framework from the previous session — target corpus, the 4% withdrawal rule, salary growth as the dominant lever — provides the baseline for what follows. If you have not yet worked through those mechanics, review Session 02 before continuing. The question for this session is: given a sound financial plan, how should you actually invest?
-
----
+The financial planning framework from Chapter 2 — target corpus, the 4% withdrawal rule, salary growth as the dominant lever — provides the baseline for what follows. Given a sound financial plan, the question becomes: how should you actually invest?
 
 ## Retail Investors and the Behavior Gap
 
@@ -169,9 +161,9 @@ Isaac Newton's experience with the South Sea Company in 1720 is a sobering histo
 Understanding the limits of arbitrage and the sources of the behavior gap is directly relevant to roles in asset management, wealth management, and financial advisory. Clients routinely make the behavioral errors described here. The ability to identify those errors, explain the mechanism clearly, and keep clients from acting on them is one of the highest-value services a financial advisor can provide.
 :::
 
----
-
 ## Technology, Democratization, and New Risks
+
+We return to the democratization of finance in more detail in the next chapter, which examines zero-commission trading, meme stocks, and platform design as standalone topics. What follows here is a brief overview of how these developments relate to market efficiency.
 
 The past decade has produced a fundamental shift in retail market participation. The combination of zero-commission trading, fractional shares, mobile-first interfaces, and social media has lowered the barrier to market entry to essentially zero. This is largely a positive development — for a long time, access to financial markets was confined to the wealthy. More participation means better price discovery, more liquidity, and greater social inclusion in wealth creation.
 
@@ -209,21 +201,17 @@ The regulatory challenge is real. Saying "I bought GameStop today" on TikTok is 
 
 One partial corrective mechanism that has emerged is community-based fact-checking on social platforms. Whether this scales to the volume and velocity of financial misinformation on social media remains an open question.
 
----
-
 ## What Efficiency Means for Strategy
 
 The practical implication of market efficiency — qualified by the anomalies and structural frictions described above — is not that there is nothing to do. It is that the task of individual investors and the task of institutional investors are fundamentally different.
 
 For individual investors, the evidence strongly supports passive, low-cost, diversified investing as the baseline strategy. The behavior gap of 5 to 6 percentage points per year means that the typical retail investor who attempts to beat the market instead loses several percentage points relative to simply holding an index. Financial planning — determining the right savings rate, asset allocation, and withdrawal strategy — generates vastly more expected wealth than investment selection.
 
-For institutional investors, the existence of information frictions, behavioral anomalies, and structural constraints means that skilled, well-resourced managers can generate returns above the benchmark. But the evidence suggests that this is genuinely difficult, that skill is hard to distinguish from luck in short-run data, and that the average active fund underperforms its benchmark after fees. The question of active versus passive management will be addressed in detail in subsequent sessions.
+For institutional investors, the existence of information frictions, behavioral anomalies, and structural constraints means that skilled, well-resourced managers can generate returns above the benchmark. But the evidence suggests that this is genuinely difficult, that skill is hard to distinguish from luck in short-run data, and that the average active fund underperforms its benchmark after fees. The question of active versus passive management will be addressed in detail in subsequent chapters.
 
 The unifying insight is that market prices are, on average, good summaries of available information — not because every investor is rational but because the competitive process of information production and trading pushes prices toward fair value. The exceptions are real and sometimes tradeable, but exploiting them requires genuine information advantages, low transaction costs, and the institutional capacity to hold positions through drawdowns that would force retail investors to capitulate.
 
 > "Do your financial plan. Then invest passively. That's the punchline. We're going to spend most of our time talking about active management — but it should not take most of your money."
-
----
 
 ## Key Takeaways
 
@@ -234,13 +222,11 @@ The unifying insight is that market prices are, on average, good summaries of av
 - Technology has lowered barriers to market participation, which is broadly beneficial, but has also created new mechanisms for loss: zero-friction trading increases trading frequency, mobile interfaces encourage impulsive decisions, and social media creates a severely biased information environment.
 - For most investors: maximize labor income, save early and consistently, invest in low-cost diversified index funds, and do not trade in response to short-term market moves.
 
----
-
 ## Further Reading
 
 **Mandatory**
 
-- Vanguard Case (Harvard Business School). The foundational case for this session, covering Vanguard's approach to passive investing, fund structure, and the evidence for market efficiency.
+- Vanguard Case (Harvard Business School). The foundational case for this chapter, covering Vanguard's approach to passive investing, fund structure, and the evidence for market efficiency.
 - Fama, Eugene F. "Two Pillars of Asset Pricing." Nobel Prize Lecture (2013). The definitive statement of efficient markets and factor pricing from the field's founding theorist.
 
 **Recommended**

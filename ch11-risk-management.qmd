@@ -2,7 +2,7 @@
 
 Long Term Capital Management had two Nobel laureates on its team. It had Myron Scholes, Fischer Black's co-author. It had Robert Merton, who will remind you he figured out the formula first. Armed with the most sophisticated risk models of their era, they built one of the most profitable hedge funds of the 1990s. Then, in 1998, it collapsed. The firm that was supposed to have quantified risk better than anyone turned out to have missed almost everything that mattered. A decade later, nearly identical mistakes — wrong distributional assumptions, underestimated correlations — blew up the mortgage-backed securities market. We keep re-learning the same lesson: formal risk models capture only a slice of the risk landscape, and often not the most important slice.
 
-This chapter expands the definition of risk beyond portfolio volatility and factor betas. We cover the full taxonomy of risks that investors actually face — from the intrinsic risks embedded in assets, to the consumption-relative risks that depend entirely on who you are, to the institutional and behavioral risks that destroy returns without showing up in any covariance matrix.
+The definition of risk extends well beyond portfolio volatility and factor betas. Investors face intrinsic risks embedded in the assets themselves, consumption-relative risks that depend entirely on who they are, and institutional and behavioral risks that destroy returns without showing up in any covariance matrix.
 
 ## From Volatility to Consumption: Rethinking What Risk Means
 
@@ -108,7 +108,7 @@ Charoenwong & Feng (2016) examine whether higher-frequency return data always im
 
 Underlying this distinction is an important conceptual split. Risk can be **known** — you can estimate a distribution, compute a variance, and price it. Or it can be **unknown**, what the economist Frank Knight called Knightian uncertainty: situations where you cannot even specify the probability distribution because the event type is genuinely novel. Model-based risk management handles known risk well. It handles Knightian uncertainty poorly, almost by definition. The confusion between the two — treating quantified volatility as if it were a complete account of uncertainty — is the epistemological error at the heart of most major risk management failures.
 
-The deeper problem is that the most dangerous risks tend to be the ones that are hardest to model. Unknown unknowns — Trump tweets, geopolitical shocks, regulatory reversals — do not appear in historical covariance matrices because they have not happened before in the same form. Overconfidence in what the model captures creates blind spots in exactly the categories of risk that can cause catastrophic loss.
+The deeper problem is that the most dangerous risks tend to be the ones that are hardest to model. Unknown unknowns — unexpected policy announcements via social media, geopolitical shocks, regulatory reversals — do not appear in historical covariance matrices because they have not happened before in the same form. Overconfidence in what the model captures creates blind spots in exactly the categories of risk that can cause catastrophic loss.
 
 ::: {.callout-note}
 ## Risk Metrics by Context
@@ -173,7 +173,7 @@ A practical but underappreciated skill in investing is evaluating the quality of
 
 The linguistic problem is that probabilistic words do not have standard meanings. When an analyst says something is "likely," different readers interpret that as anywhere from 55% to 85% probability. "Almost certain" clusters around 90% in most surveys; "possible" is closer to 60%; "unlikely" might be 20% to one person and 40% to another. This dispersion in interpretation means that the same research note can generate very different trading decisions across readers who are all reading carefully.
 
-The dispersion is not randomly distributed. Survey research finds that men and women systematically interpret probabilistic language differently — assigning meaningfully different numerical probabilities to the same words. The differences do not appear to stem from language translation issues or age; they are relatively robust across groups when controlling for those factors. The practical implication for investment communication is uncomfortable: a research note addressed to a mixed audience is being read as multiple different forecasts simultaneously, depending on who is reading it.
+The dispersion is not randomly distributed. Survey research finds that individuals systematically interpret probabilistic language differently depending on background, professional experience, and demographic characteristics — assigning meaningfully different numerical probabilities to the same words. The differences do not appear to stem from language translation issues alone; they are relatively robust across groups when controlling for age and other factors. The practical implication for investment communication is uncomfortable: a research note addressed to a diverse audience is being read as multiple different forecasts simultaneously, depending on who is reading it.
 
 ::: {.callout-tip}
 ## The Four-Component Forecast Test
@@ -184,10 +184,8 @@ Before acting on any investment forecast — from a bank, a research house, or a
 3. **Probability:** Is there any quantification of confidence, even loosely?
 4. **Time horizon:** Over what specific period is the prediction expected to hold?
 
-Most sell-side forecasts fail on at least two of these dimensions. When you learn to notice the absence, you stop treating the narrative as information and start reading it as marketing.
+Most sell-side forecasts fail on at least two of these dimensions — the probability dimension is almost universally missing. When you learn to notice the absence, you stop treating the narrative as information and start reading it as a market-making document that creates the impression of insight without committing to anything testable.
 :::
-
-Most sell-side forecasts fail on at least two of these four dimensions. The probability dimension is almost universally missing. When you learn to notice the absence of these components, you start reading research reports very differently — you stop treating the narrative as information and start reading it as a market-making document that creates the impression of insight without committing to anything testable.
 
 ::: {.callout-important}
 ## Common Misconception
@@ -196,7 +194,7 @@ Regulatory disclosure requirements exist not because mandated disclosures are in
 
 ## Building a Complete Risk Picture
 
-Pulling together the taxonomy: risk stems from multiple sources, some of which can be modeled and some of which fundamentally cannot. The practical discipline is not to build a comprehensive model of all risks — that is impossible — but to develop a structured habit of asking what you might be missing.
+Risk stems from multiple sources, some of which can be modeled and some of which fundamentally cannot. The practical discipline is not to build a comprehensive model of all risks — that is impossible — but to develop a structured habit of asking what you might be missing.
 
 For individual investors, the most consequential risks in roughly descending order of practical importance are:
 

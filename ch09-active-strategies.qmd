@@ -1,8 +1,8 @@
 # Session 09: Active Strategies and Finding an Edge
 
-Everyone wants alpha. The problem is that alpha — genuinely superior risk-adjusted returns that cannot be explained by exposure to known factors — is definitionally scarce. If everyone could systematically outperform, the benchmark would just move up, and you are back to square one. This session is about what it actually takes to generate investment returns above what you would get from buying a diversified portfolio of factor exposures and going to sleep. We are moving from Theme 2, where we treated investing as a science of building portfolios from known risks, into Theme 3, where we confront the harder question: can human judgment and organizational capability add value on top of that?
+Everyone wants alpha. The problem is that alpha — genuinely superior risk-adjusted returns that cannot be explained by exposure to known factors — is definitionally scarce. If everyone could systematically outperform, the benchmark would just move up, and you are back to square one. This chapter is about what it actually takes to generate investment returns above what you would get from buying a diversified portfolio of factor exposures and going to sleep. We are moving from Theme 2, where we treated investing as a science of building portfolios from known risks, into Theme 3, where we confront the harder question: can human judgment and organizational capability add value on top of that?
 
-The honest starting point is to acknowledge that the bar has risen substantially. Everything we covered in the factor investing session — value, momentum, quality, low volatility — was once called "manager skill." Now it is a cheap ETF. That is the nature of the discovery process in financial economics: the moment a return premium is published and documented, it starts getting arbitraged, and what was once proprietary becomes commoditized. Active management cannot stand still.
+The honest starting point is to acknowledge that the bar has risen substantially. Everything we covered in the factor investing chapter — value, momentum, quality, low volatility — was once called "manager skill." Now it is a cheap ETF. That is the nature of the discovery process in financial economics: the moment a return premium is published and documented, it starts getting arbitraged, and what was once proprietary becomes commoditized. Active management cannot stand still.
 
 ## What Factor Investing Did to the Active Management Business
 
@@ -20,7 +20,7 @@ This creates a genuine puzzle. If active managers mostly just harvest beta, why 
 
 ## A Taxonomy of Investment Edges
 
-Let us be precise about what we mean by "edge." The slides identify four distinct types, and understanding which type you are claiming matters enormously for how durable that edge will be.
+The slides identify four distinct types of edge, and understanding which type you are claiming matters enormously for how durable that edge will be.
 
 **Informational edge** is the classic picture of active management — you know something the market does not. This is increasingly difficult and legally constrained. Insider trading law is the obvious constraint, but even non-material information asymmetries have narrowed dramatically as data has become commoditized and analytical capabilities have democratized. What was once a Goldman analyst calling up a CFO contact is now an alternative data vendor selling satellite imagery of parking lots to five hundred funds simultaneously. When the same information is sold to everyone, no one has an edge.
 
@@ -62,7 +62,7 @@ Identifying a market inefficiency in the data is not the same as having a tradea
 
 ## Capacity Constraints: The Scale Problem
 
-This brings us to one of the most important practical constraints in active management: capacity. Returns to scale in active management are not uniform. Some aspects benefit from scale; most of the alpha-generating activity does not.
+Capacity is one of the most important practical constraints in active management. Returns to scale are not uniform — some aspects benefit from scale, but most of the alpha-generating activity does not.
 
 The market impact cost of a trade grows with the square root of trade size. A fund that doubles in assets does not double its transaction costs — it increases them by more, because larger positions require more liquidity and move prices further against you. This means that strategies which generate attractive returns at small scale become economically unattractive at large scale.
 
@@ -82,33 +82,17 @@ This is a frequently tested concept in CFA exams and comes up constantly in port
 
 ## Combining Small Edges: The Ensemble Approach
 
-Here is something that professional quantitative managers know but that rarely gets discussed explicitly: almost no individual trading signal is large enough to be worth trading on its own. After transaction costs, the expected alpha from any single well-known anomaly is small — often within the noise. But the combination of many small, uncorrelated signals can generate meaningful net alpha, for the same reason diversification works in portfolio construction.
+Almost no individual trading signal is large enough to be worth trading on its own. After transaction costs, the expected alpha from any single well-known anomaly is small — often within the noise. But the combination of many small, uncorrelated signals can generate meaningful net alpha, for the same reason diversification works in portfolio construction. The intuition is identical to what we covered in asset allocation: if signals are genuinely uncorrelated, combining them yields a higher Sharpe ratio and allows shared transaction cost budgets rather than paying the full cost separately for each signal.
 
-The intuition is identical to what we covered in asset allocation. If you have three signals each with 2% expected gross alpha, and they are perfectly correlated, combining them gives you the same 2% alpha at roughly the same trading costs — no benefit from combination. But if those signals are genuinely uncorrelated, combining them gives you a higher Sharpe ratio and, critically, allows you to implement them with shared transaction cost budgets rather than paying the full cost separately for each signal.
-
-Blitz, Hanauer, Honarvar, Huisman, and van Vliet (forthcoming, *Journal of Financial Economics*) document this explicitly. Individual short-term signals — reversals, industry momentum, analyst revisions, seasonality, idiosyncratic volatility — generate roughly 6% gross alpha when traded individually. Combined, they generate approximately 12% gross alpha. The doubling is not from some mysterious synergy; it is pure diversification. The combined portfolio has lower turnover per unit of signal than the sum of individual portfolios, and the combined signal strength is more robust to any single signal decaying.
-
-The implementation details matter as much as the signal selection. Sophisticated buy/sell rules — for example, only initiating a position when a stock is at the 10th percentile of combined signal rank, but holding it until it reaches the 50th — substantially reduce turnover and thus transaction costs, while preserving most of the alpha. Trading only when the combined signal strength exceeds a transaction cost threshold prevents you from churning positions for marginal gains that do not cover the round-trip cost.
-
-::: {.callout-tip}
-## Practitioner Insight
-
-The ensemble approach is why the distinction between systematic and discretionary active management is meaningful but not absolute. A systematic fund running hundreds of signals is essentially doing mechanically what the best fundamental managers do intuitively — combining multiple independent views on a stock into a single aggregate signal. The difference is that the systematic fund can do it at scale across thousands of securities simultaneously, with explicit control over position sizing and trading costs. The discretionary fund can incorporate qualitative and non-quantifiable information that the systematic fund cannot. The frontier between the two approaches has blurred significantly as fundamental shops build quantitative screens and quant shops add qualitative overlays.
-:::
+This ensemble principle — and its implications for portfolio construction, trading rules, and signal weighting — is developed in detail in the next chapter.
 
 ## The Signal-to-Noise Problem and Information Structure
 
-The slides touch on a subtle but important result about how sophisticated market participants process information. When a trader receives a positive signal about a stock, the informativeness of that signal depends on what prices have done recently. If the stock has already risen, the signal is more likely to reflect information that others have already acted upon — stale news. If the stock has fallen despite the positive signal, the signal is more likely to be genuinely novel.
-
-The implication is that rational traders should not simply act on raw signals — they should condition their trading aggressiveness on the prior price path. After a price increase, buy orders from informed traders generate smaller price adjustments (prices already reflect some of the information), while sell orders generate larger adjustments (new information coming in from the downside is more surprising). This asymmetry generates a testable prediction: returns should be negatively skewed after price increases and positively skewed after price decreases.
-
-This is not just a theoretical curiosity. It has direct implications for how you design a systematic trading strategy. The raw signal matters less than the *residual* information content of that signal — what you know that the current price does not already reflect. Building that conditioning structure into a strategy is what separates a thoughtful systematic approach from a naive factor screen.
+When a trader receives a positive signal about a stock, the informativeness of that signal depends on what prices have done recently. If the stock has already risen, the signal is more likely to reflect information that others have already acted upon — stale news. If the stock has fallen despite the positive signal, the signal may be genuinely novel. The raw signal matters less than its *residual* information content — what you know that the current price does not already reflect. Building that conditioning structure into a strategy is what separates a thoughtful systematic approach from a naive factor screen. The microstructure of how this works — asymmetric price impact, predictable return skewness, and the implications for trading aggressiveness — is developed in the next chapter.
 
 ## Costs of Pursuing an Edge — Including the Non-Financial Ones
 
-One of the more unusual aspects of the slides is a reference to the Hindenburg Research farewell letter, where the firm's founder reflects on the personal costs of running an intense investment research operation. It is worth taking seriously.
-
-Active management — particularly the short-selling and activist research that Hindenburg did — is not just financially costly in terms of data, infrastructure, and talent. It consumes attention, relationships, and in some cases, safety. The slide's inclusion of this quote is a reminder that the decision to pursue active management professionally is not purely an expected-value calculation. The distribution of outcomes matters, the path matters, and the personal costs are real.
+The Hindenburg Research farewell letter captures this vividly. Nate Anderson, the firm's founder, reflected on the personal costs of running an intense short-selling and activist research operation — costs in attention, relationships, and safety that no Sharpe ratio measures. The decision to pursue active management professionally is not purely an expected-value calculation. The distribution of outcomes matters, the path matters, and the personal costs are real.
 
 > "I probably could have had it all along had I let myself, but I needed to put myself through a bit of hell first."
 
@@ -116,7 +100,7 @@ For MBA students entering investment management, the lesson is this: only invest
 
 ## AI and the Next Round of Edge Erosion
 
-The final topic is one with a long arc. Artificial intelligence is already reshaping the information-processing capacity of active managers. Large language models can read and synthesize earnings calls, analyst reports, and news at a scale no human team can match. Computer vision can extract signals from satellite and sensor data. Graph neural networks can map relationship structures across supply chains and ownership networks.
+Artificial intelligence is already reshaping the information-processing capacity of active managers. Large language models can read and synthesize earnings calls, analyst reports, and news at a scale no human team can match. Computer vision can extract signals from satellite and sensor data. Graph neural networks can map relationship structures across supply chains and ownership networks.
 
 The competitive dynamic, however, is familiar. AI tools are not proprietary by default. If you are using publicly available AI tools in the same way as every other fund, you do not have an edge — you have kept pace with the median. The edge comes from building specialized models trained on proprietary data that others do not have, from developing novel ways of framing the investment question that AI can then help answer, or from moving faster than competitors in adopting and adapting new capabilities.
 

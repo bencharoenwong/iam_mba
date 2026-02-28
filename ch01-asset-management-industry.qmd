@@ -1,19 +1,8 @@
 # Session 01: The Asset Management Industry
 
-When you open a bank account in Singapore and look at the investment products on offer, the options can be genuinely bad. Not "slightly suboptimal" bad — bad in a way that reveals something fundamental about how the asset management industry works, and whose interests it actually serves. That observation is what pushed one finance professor to set up his own fund. It is also a useful entry point into this course, which is less about learning to pick stocks and more about understanding the institutional machinery that sits between you and your money.
+When you open a bank account in Singapore and look at the investment products on offer, the options can be genuinely bad. Not "slightly suboptimal" bad — bad in a way that reveals something fundamental about how the asset management industry works, and whose interests it actually serves. That observation is what pushed one finance professor to set up his own fund. It is also a useful entry point into this book, which is less about learning to pick stocks and more about understanding the institutional machinery that sits between you and your money.
 
-This session establishes the foundational framework. We start with a question that sounds deceptively simple — what is investing? — and use it to unpack the structure of the global asset management industry, the principal-agent problems embedded in financial advisory relationships, and the historical evolution of an industry that now manages roughly $112 trillion in assets.
-
-### Course Structure
-
-The course is organized around four themes that progress from the human and behavioral dimensions of investing toward the more technical and cutting-edge:
-
-- **Theme 1 — Investing as a Human Problem** (Sessions 1–4): The asset management industry, financial planning, market efficiency, and the democratization of investing.
-- **Theme 2 — Investing as a Science** (Sessions 5–8): Asset allocation, Modern Portfolio Theory, active vs. passive management, and factor investing.
-- **Theme 3 — Investing as an Art** (Sessions 9–11): Active management strategies and evaluation, security selection, and risk management in practice.
-- **Theme 4 — State of the Art** (Sessions 12–14): Non-financial considerations (ESG and beyond), alternative investments, and the impact of AI on asset management.
-
-The course has six objectives: evaluate real-world investment decisions and current market issues; build a personal financial plan with appropriate portfolio construction and risk management; evaluate individual asset classes (stocks, bonds, gold, real estate, cryptocurrency) in a portfolio context; analyze the active vs. passive management debate; analyze the structure and dynamics of the asset management industry; and identify ethical considerations in modern investment practice.
+This chapter establishes the foundational framework. We start with a question that sounds deceptively simple — what is investing? — and use it to unpack the structure of the global asset management industry, the principal-agent problems embedded in financial advisory relationships, and the historical evolution of an industry that now manages roughly $112 trillion in assets.
 
 ## What Is Investing?
 
@@ -21,18 +10,18 @@ Investing, at its most basic, involves moving resources through time. You give s
 
 This observation extends to any portfolio decision. If you hold cash, you are making an investment choice. Sitting on cash is not the absence of a strategy — it is a strategy, and generally not a good one when inflation is running. As one student put it during the opening discussion: there is always an opportunity cost if you do not invest in something.
 
-To make the opportunity cost concrete: the slides for this session include a full DCF of the INSEAD MBA itself. With tuition of roughly €107,600, living expenses of €30,000, and ten months of forgone pre-MBA salary of approximately €58,000, the all-in Year 0 investment is around €195,000. Assuming a pre-MBA salary of €70,000 growing at 3% annually and a post-MBA median salary of €111,400 growing at 5% annually, discounted at 8% over a 20-year horizon, the NPV is roughly €550,000–€650,000, with an IRR of 25–30% and a payback period of four to five years.
+To make the opportunity cost concrete: the slides for this chapter include a full DCF of the INSEAD MBA itself. With tuition of roughly €107,600, living expenses of €30,000, and ten months of forgone pre-MBA salary of approximately €58,000, the all-in Year 0 investment is around €195,000. Assuming a pre-MBA salary of €70,000 growing at 3% annually and a post-MBA median salary of €111,400 growing at 5% annually, discounted at 8% over a 20-year horizon, the NPV is roughly €550,000–€650,000, with an IRR of 25–30% and a payback period of four to five years.
 
 ::: {.callout-note}
 ## Quick Refresher — NPV, IRR, and DCF
-A discounted cash flow (DCF) analysis values future cash flows by discounting them back to today at a chosen rate. The **net present value (NPV)** is the sum of those discounted cash flows minus the initial investment — positive NPV means the investment creates value. The **internal rate of return (IRR)** is the discount rate that makes the NPV exactly zero — it is the implied annual return. Both are covered in introductory corporate finance; we use them here to frame investing decisions throughout the course.
+A discounted cash flow (DCF) analysis values future cash flows by discounting them back to today at a chosen rate. The **net present value (NPV)** is the sum of those discounted cash flows minus the initial investment — positive NPV means the investment creates value. The **internal rate of return (IRR)** is the discount rate that makes the NPV exactly zero — it is the implied annual return. Both are covered in introductory corporate finance; we use them here to frame investing decisions throughout the book.
 :::
 
 The MBA clears the investment bar by a wide margin — but only because the opportunity cost is being measured correctly. Students from higher pre-MBA salary bands see lower NPVs, since the incremental lift over the counterfactual is smaller. The model also excludes optionality, network access, and geographic mobility, all of which the IRR framework cannot capture. That limitation is a preview of a broader theme: quantitative frameworks are essential, but they never tell the full story.
 
-The concept of productive use matters here. From an investor's perspective, a productive investment generates adequate returns for the level of risk taken. Higher returns, all else equal, are better — but "all else equal" rarely holds in practice. The efficient frontier defines the boundary of what is achievable given a particular level of risk; you cannot beat it by definition. We will spend substantial time on this later in the course.
+The concept of productive use matters here. From an investor's perspective, a productive investment generates adequate returns for the level of risk taken. Higher returns, all else equal, are better — but "all else equal" rarely holds in practice. The efficient frontier defines the boundary of what is achievable given a particular level of risk; you cannot beat it by definition. We will spend substantial time on this in later chapters.
 
-A word on ESG before moving on. The industry tends to bundle environmental, social, and governance concerns into a single acronym, but this grouping is conceptually sloppy. Whether your board has eleven members is a governance structure, not an outcome. Whether your shareholders or regulators sue you — that is the outcome. The distinction matters when we eventually extend portfolio theory to incorporate non-financial objectives in later sessions.
+A word on ESG before moving on. The industry tends to bundle environmental, social, and governance concerns into a single acronym, but this grouping is conceptually sloppy. Whether your board has eleven members is a governance structure, not an outcome. Whether your shareholders or regulators sue you — that is the outcome. The distinction matters when we eventually extend portfolio theory to incorporate non-financial objectives in later chapters.
 
 ### The Legal Definition of an Investment
 
@@ -55,7 +44,7 @@ The distinction between investing and speculating is not just philosophical — 
 
 ## The Structure of Global Financial Markets
 
-Financial markets serve several functions simultaneously: they aggregate and transmit information through prices, enable intertemporal consumption smoothing, allocate capital from those who have it to those who can use it productively, and facilitate risk sharing from those who want to avoid it to those who are willing to bear it. A sixth function — stewardship of resources — is implicit in any discussion of sustainable or long-horizon investing and will resurface in Sessions 11 and 12. The fifth function — the separation of ownership and control — underlies much of what we will discuss throughout the course.
+Financial markets serve several functions simultaneously: they aggregate and transmit information through prices, enable intertemporal consumption smoothing, allocate capital from those who have it to those who can use it productively, and facilitate risk sharing from those who want to avoid it to those who are willing to bear it. A sixth function — stewardship of resources — is implicit in any discussion of sustainable or long-horizon investing and will resurface in Chapters 11 and 12. The fifth function — the separation of ownership and control — underlies much of what we will discuss throughout the book.
 
 The reason shareholders rather than debt holders control most public companies is not an accident of nature. It is a design choice embedded in corporate law, and it reflects a specific answer to an agency problem. Debt holders, if given control, would optimize for one thing: not going bankrupt. They do not care whether the firm is developing a transformative new product. A company controlled by debt holders would produce conservative, financially stable businesses — and very little growth. Equity holders, by contrast, receive the full upside if the firm's value increases beyond the debt obligation. That residual claim creates the incentive to take risks and pursue growth. The law chose the structure that best promotes firm value creation.
 
@@ -63,14 +52,14 @@ The reason shareholders rather than debt holders control most public companies i
 
 Looking at 100 years of market history clarifies how the global opportunity set has evolved. Before World War One, the United States accounted for about 15% of global market capitalization. Post-WWII American economic dominance pushed that share dramatically higher. Japan surged through the 1980s on extreme valuations and then gave much of it back. Today, North America represents approximately 65% of the MSCI All Country World Index (ACWI), and that share is still growing.
 
-China — including mainland China, Hong Kong, and Taiwan — sits at roughly 6% combined, a figure that surprises most people given China's economic size. The gap is partly explained by free float adjustment. The MSCI does not weight countries by their total market capitalization; it weights them by *free float-adjusted* market capitalization, which excludes shares that are closely held and not actually available for trading on public exchanges. Markets with high family ownership or significant state ownership — characteristics common in emerging markets — get penalized in this weighting. As of June 2025, approximately $5.6 trillion in assets was benchmarked to the MSCI ACWI IMI (Investable Market Index), a version of the index that also includes small-cap stocks. That adjustment is driven by practical liquidity concerns, not by portfolio theory. No textbook derivation arrives at "free float-adjusted market cap" as the optimal allocation rule. GDP-weighting, by contrast, would push allocations meaningfully toward emerging and developing markets — a different answer to the question of what the "right" global portfolio looks like.
+Greater China — mainland China, Hong Kong, and Taiwan — sits at roughly 6% combined, a figure that surprises most people given China's economic size. The gap is partly explained by free float adjustment. The MSCI does not weight countries by their total market capitalization; it weights them by *free float-adjusted* market capitalization, which excludes shares that are closely held and not actually available for trading on public exchanges. Markets with high family ownership or significant state ownership — characteristics common in emerging markets — receive lower weight under this methodology. As of June 2025, approximately $5.6 trillion in assets was benchmarked to the MSCI ACWI IMI (Investable Market Index), a version of the index that also includes small-cap stocks. That adjustment is driven by practical liquidity concerns, not by portfolio theory. No textbook derivation arrives at "free float-adjusted market cap" as the optimal allocation rule. GDP-weighting, by contrast, would push allocations meaningfully toward emerging and developing markets — a different answer to the question of what the "right" global portfolio looks like.
 
 The practical implication is that if you simply buy the global index, you are getting the investable equity market — but that is not the same as getting proportional exposure to global economic output. Countries with restrictive capital controls, limited public markets, or high state ownership are systematically underweighted. Whether that gap represents a risk or an opportunity is a question we will return to.
 
 ::: {.callout-note}
 ## Academic Reference
 
-The MSCI ACWI and its free float methodology are discussed extensively in Ang, Chapter 15. The distinction between market-cap weighting as a theoretical optimum (derivable from the CAPM under specific conditions) versus free float adjustment as a practical implementation choice is worth keeping in mind throughout the course.
+The MSCI ACWI and its free float methodology are discussed extensively in Ang, Chapter 15. The distinction between market-cap weighting as a theoretical optimum (derivable from the CAPM under specific conditions) versus free float adjustment as a practical implementation choice is worth keeping in mind throughout the book.
 :::
 
 ### Long-Run Returns: The Equity-Housing Comparison
@@ -111,7 +100,7 @@ The day-to-day work of most asset managers, however, looks very different from t
 ::: {.callout-note}
 ## Key Challenges in Asset Management
 
-The structural tensions in the industry are worth naming explicitly: fees that are high relative to documented value added; the persistent difficulty of generating alpha consistently over time; the principal-agent problem between owners and managers; and increasing competitive pressure from low-cost passive options. These four challenges appear throughout the course — they are not incidental to the industry, they are constitutive of it.
+The structural tensions in the industry are worth naming explicitly: fees that are high relative to documented value added; the persistent difficulty of generating alpha consistently over time; the principal-agent problem between owners and managers; and increasing competitive pressure from low-cost passive options. These four challenges appear throughout the book — they are not incidental to the industry, they are constitutive of it.
 :::
 
 
@@ -149,7 +138,7 @@ Charoenwong, Kwan, and Umar (2019) in the *American Economic Review* examine whe
 
 ## The Historical Evolution of Asset Management
 
-Asset management as a profession predates modern finance by millennia. The concept originates in Ancient Greece, where servants were entrusted with managing the estates of the wealthy — often while the owner was away at war. The fiduciary relationship has always been defined by one party placing assets in the hands of another and trusting them to act in the principal's interest. The consequences for failure were more direct in ancient times; one Japanese bank apparently kept on its website well into the modern era a commitment that any employee who misappropriated client funds would be required to make restitution from personal assets and commit ritual suicide. They no longer enforce the latter, but they kept it as a statement of the trust relationship that defines the industry.
+Asset management as a profession predates modern finance by millennia. The concept originates in Ancient Greece, where servants were entrusted with managing the estates of the wealthy — often while the owner was away at war. The fiduciary relationship has always been defined by one party placing assets in the hands of another and trusting them to act in the principal's interest. The consequences for failure were more direct in ancient times. Some Japanese financial institutions historically emphasized the gravity of fiduciary duty by referencing extreme personal consequences for breach of trust — a reflection of how seriously the custodial relationship has been treated across different cultures and eras.
 
 The industry grew significantly during medieval Europe as the aristocracy engaged in estate planning around military campaigns. If you were going to war, you needed someone to manage your assets in your absence — and potentially after your death. The Medici family built their wealth and influence partly through financing governments, often backing both sides of a conflict. We now call that diversification.
 
@@ -169,9 +158,9 @@ In chronological terms, the asset management industry as we know it is surprisin
 - **1978**: The Revenue Act of 1978 permitted employees to defer compensation into tax-advantaged accounts, creating the legal basis for the 401(k). This decision reshaped the defined-benefit to defined-contribution shift that transformed both household finance and the institutional demand for asset management.
 - **1990**: The first ETF listed — in Canada. Actively managed ETFs followed much later, in 2008.
 - **2010**: Robo-advisors emerge, applying 1952 portfolio theory through better algorithms and user interfaces. Betterment launched first, followed by Wealthfront.
-- **2014 onward**: Commission-free trading apps (Robinhood and its successors), which we examine in detail in Session 02.
+- **2014 onward**: Commission-free trading apps (Robinhood and its successors), which we examine in detail in Chapter 2.
 
-The trajectory reflects several forces working simultaneously. Academic research has consistently shown that active management, on average, does not add value after fees — a finding that drove the explosive growth of passive investing. At the same time, technology has progressively democratized access. Regulatory pressures have pushed toward greater transparency. Client demands have shifted toward lower fees and ESG integration. And competitive dynamics — fee compression and consolidation — have reshaped who survives in the industry. Each of these forces corresponds to specific sessions in the course: the active/passive debate in Sessions 7 and 8; democratization in Session 4; ESG in Session 12; alternatives and risk management in Sessions 11 and 13; and AI in Session 14. The first index fund was available only to institutional investors. Today, anyone with a smartphone can buy a globally diversified portfolio for a few dollars and an expense ratio of 3–5 basis points.
+The trajectory reflects several forces working simultaneously. Academic research has consistently shown that active management, on average, does not add value after fees — a finding that drove the explosive growth of passive investing. At the same time, technology has progressively democratized access. Regulatory pressures have pushed toward greater transparency. Client demands have shifted toward lower fees and ESG integration. And competitive dynamics — fee compression and consolidation — have reshaped who survives in the industry. Each of these forces corresponds to specific chapters: the active/passive debate in Chapters 7 and 8; democratization in Chapter 4; ESG in Chapter 12; alternatives and risk management in Chapters 11 and 13; and AI in Chapter 14. The first index fund was available only to institutional investors. Today, anyone with a smartphone can buy a globally diversified portfolio for a few dollars and an expense ratio of 3–5 basis points.
 
 ::: {.callout-tip}
 ## Practitioner Insight
@@ -181,7 +170,7 @@ The security that trades with the highest volume in the world is the SPDR S&P 50
 
 ## The ARK Exercise: Measuring Value Added
 
-The in-class exercise for this session uses ARK Investment Management's flagship ETF (ARKK) as a case study. ARK, run by Cathie Wood, became famous for its aggressive bets on disruptive technology platforms — artificial intelligence, energy storage, robotics, genomic sequencing, and blockchain technology. The fund posted extraordinary returns in 2020 and experienced substantial drawdowns thereafter.
+The exercise for this chapter uses ARK Investment Management's flagship ETF (ARKK) as a case study. ARK, run by Cathie Wood, became famous for its aggressive bets on disruptive technology platforms — artificial intelligence, energy storage, robotics, genomic sequencing, and blockchain technology. The fund posted extraordinary returns in 2020 and experienced substantial drawdowns thereafter.
 
 The exercise asks students to do something deceptively simple: calculate the fund's average returns from 2015 through 2023, then calculate actual dollar returns before and after fees, using actual monthly return and AUM data from Refinitiv.
 
@@ -191,11 +180,11 @@ Average percentage returns and dollar-weighted returns are not the same thing. I
 
 > "Today, we believe the world economy is undergoing the largest technological transformation in history, thanks to five innovation platforms evolving at the same time."
 
-This is the kind of language that appears in fund marketing. By the end of this session, you should already have the tools to ask the right follow-up question: what were the actual returns, for the actual dollars invested, over the actual holding period of the average investor in this fund?
+This is the kind of language that appears in fund marketing. By the end of this chapter, you should already have the tools to ask the right follow-up question: what were the actual returns, for the actual dollars invested, over the actual holding period of the average investor in this fund?
 
 ## Open Questions in Asset Management
 
-The structural problems introduced in this session do not have clean answers — they are live questions that practitioners, regulators, and researchers continue to work on. Four are worth keeping in front of you throughout the course:
+The structural problems introduced in this chapter do not have clean answers — they are live questions that practitioners, regulators, and researchers continue to work on. Four are worth keeping in front of you throughout the book:
 
 1. **How to align interests between principals and agents?** Compensation design, regulatory mandates, and disclosure requirements are all partial solutions, each with their own failure modes.
 2. **Where does active management add most value?** The evidence that active management underperforms passive on average does not mean it adds no value anywhere. Identifying where and when it matters is an empirical question.

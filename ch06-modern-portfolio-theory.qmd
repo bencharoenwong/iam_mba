@@ -1,8 +1,8 @@
 # Session 06: Modern Portfolio Theory
 
-In 1952, Harry Markowitz published a paper called "Portfolio Selection" in the *Journal of Finance*. It was 14 pages. It won him the Nobel Prize. The core insight — that what matters is not how risky each individual asset is, but how they move together — seems obvious in retrospect. Most good ideas do. Before Markowitz, portfolio management was essentially glorified stock picking: find good companies, buy them, hope for the best. What Markowitz did was reframe the entire question. The problem is not "find the best asset." The problem is "find the best portfolio." That shift in perspective is the foundation of everything in this session.
+In 1952, Harry Markowitz published a paper called "Portfolio Selection" in the *Journal of Finance*. It was 14 pages. It won him the Nobel Prize. The core insight — that what matters is not how risky each individual asset is, but how they move together — seems obvious in retrospect. Most good ideas do. Before Markowitz, portfolio management was essentially glorified stock picking: find good companies, buy them, hope for the best. What Markowitz did was reframe the entire question. The problem is not "find the best asset." The problem is "find the best portfolio." That shift in perspective is the foundation of everything in this chapter.
 
-We are now formalizing the diversification intuition from Session 05 into a framework you can actually use. The math is not terribly hard — mostly linear algebra and some calculus — but the economic logic underneath it is what you need to internalize.
+We are now formalizing the diversification intuition from Chapter 5 into a framework you can actually use. The math is standard — mostly linear algebra and some calculus — but the economic logic underneath it is what you need to internalize.
 
 ## The Investment Opportunity Set
 
@@ -95,7 +95,7 @@ The optimal equity allocation drops from 65% to just 16%. This is why volatility
 **Step 4 — What about a more aggressive investor?** If Sarah's colleague Tom has $A = 1.5$ (half as risk-averse):
 $$y^* = \frac{0.05}{1.5 \times 0.0256} = 1.30$$
 
-Tom would optimally use 30% leverage — borrowing to invest 130% in equities. This is the theoretical justification for leveraged portfolios, though in practice borrowing costs reduce the attractiveness (as we saw with leveraged ETFs in Session 08).
+Tom would optimally use 30% leverage — borrowing to invest 130% in equities. This is the theoretical justification for leveraged portfolios, though in practice borrowing costs reduce the attractiveness (as we will see with leveraged ETFs in Chapter 8).
 :::
 
 ## CAPM: What Happens in Equilibrium
@@ -154,7 +154,7 @@ The CAPM is clean in theory and troubled in practice: empirical tests consistent
 ::: {.callout-note}
 ## Academic Reference
 
-Sharpe (1964), Lintner (1965), and Mossin (1966) derived CAPM more or less simultaneously. The model is elegant but empirically troubled — the market portfolio is unobservable, beta alone explains cross-sectional return differences poorly, and average returns of low-beta stocks are too high relative to the prediction. These failures motivate the factor investing literature in Session 08.
+Sharpe (1964), Lintner (1965), and Mossin (1966) derived CAPM more or less simultaneously. The model is elegant but empirically troubled — the market portfolio is unobservable, beta alone explains cross-sectional return differences poorly, and average returns of low-beta stocks are too high relative to the prediction. These failures motivate the factor investing literature in Chapter 8.
 :::
 
 ## Practical Limitations of Mean-Variance Optimization
@@ -167,7 +167,7 @@ Mean-variance optimization rests on a coherent theoretical foundation, but its p
 
 **Covariance matrix instability.** With $N$ assets, you need to estimate $N(N+1)/2$ parameters. For $N = 100$ assets, that is 5,050 parameters — estimated from, say, 60 months of data. This is a classic high-dimension, low-sample problem, and the resulting estimates are noisy. Worse, if $N > T$ (more assets than time periods), the matrix is not even invertible without regularization.
 
-**The 1/N puzzle.** Victor DeMiguel and co-authors (2009) showed that a naive equal-weight portfolio ("1/N") outperforms most mean-variance optimal portfolios out-of-sample across 14 empirical datasets. The reason is simple: the estimation errors in sophisticated optimizers are large enough to offset the theoretical gains from optimization. This is a humbling result. We will return to it when discussing passive management.
+**The 1/N puzzle.** Perhaps the most humbling result: a naive equal-weight portfolio often outperforms sophisticated optimization out of sample. The details of this finding, and what it implies for practice, are worth examining (see the case study below).
 
 ::: {.callout-tip collapse="true"}
 ## Real-World Case: When Sophistication Backfires

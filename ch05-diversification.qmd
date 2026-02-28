@@ -1,12 +1,12 @@
 # Session 05: Diversification — The Only Free Lunch
 
-Harry Markowitz called diversification the only free lunch in finance. That is not a throwaway line. In most markets, getting more of something good requires paying for it — higher expected return means accepting more risk. Diversification is the rare exception: you can reduce risk without giving up expected return, simply by combining assets that do not move together perfectly. The math is elementary; what is remarkable is how consistently investors fail to act on it. Most retail portfolios are badly underdiversified. Many professional portfolios are less diversified than their managers believe. And even sophisticated institutions routinely confuse holding a large number of positions with actually being diversified. This session builds the conceptual and mathematical foundation for understanding why diversification works, what its limits are, and what "properly diversified" actually means in practice.
+Harry Markowitz called diversification the only free lunch in finance. That is not a throwaway line. In most markets, getting more of something good requires paying for it — higher expected return means accepting more risk. Diversification is the rare exception: you can reduce risk without giving up expected return, simply by combining assets that do not move together perfectly. The math is elementary; what is remarkable is how consistently investors fail to act on it. Most retail portfolios are badly underdiversified. Many professional portfolios are less diversified than their managers believe. And even sophisticated institutions routinely confuse holding a large number of positions with actually being diversified. This chapter builds the conceptual and mathematical foundation for understanding why diversification works, what its limits are, and what "properly diversified" actually means in practice.
 
-We open Theme 2 of the course — Investing as a Science. The previous sessions established that markets are largely, but not perfectly, efficient, and that investor behavior regularly deviates from what theory predicts. This session shifts the focus: even setting aside whether you can pick good stocks, how should you combine whatever assets you own? That question is portfolio construction, and diversification is its central principle.
+The previous chapters established that markets are largely, but not perfectly, efficient, and that investor behavior regularly deviates from what theory predicts. This chapter shifts the focus: even setting aside whether you can pick good stocks, how should you combine whatever assets you own? That question is portfolio construction, and diversification is its central principle.
 
 ## Risk Preferences and the Utility of Wealth
 
-Before we can talk about how to construct portfolios, we need a framework for thinking about what investors actually want. The standard model makes four assumptions that together define a risk-averse investor:
+Before we can talk about how to construct portfolios, we need a framework for thinking about what investors actually want. The standard model makes five assumptions that together define a risk-averse investor:
 
 1. More wealth is preferred to less.
 2. Less risk is preferred to more risk, all else equal.
@@ -49,15 +49,13 @@ $$\sigma_p^2 = w^2 \sigma_A^2 + (1 - w)^2 \sigma_B^2 + 2 w (1-w) \sigma_{AB}$$
 
 where $\sigma_{AB} = \text{Cov}(r_A, r_B) = \rho_{AB} \cdot \sigma_A \cdot \sigma_B$, and $\rho_{AB}$ is the correlation between the two assets.
 
-The diversification benefit is captured by a simple inequality: when $\rho_{AB} < 1$,
+This formula is the mathematical reason diversification works. The expected return of the portfolio is a weighted average of the component expected returns — you get nothing extra, but you give nothing up. Portfolio variance, by contrast, depends critically on $\rho_{AB}$. When assets are imperfectly correlated ($\rho < 1$), the portfolio standard deviation is strictly less than the weighted average of the individual standard deviations:
 
 $$
 \sigma_p < w \cdot \sigma_A + (1-w) \cdot \sigma_B
 $$
 
-Portfolio standard deviation is strictly less than the weighted average of individual standard deviations. The gap between the two sides is the free lunch.
-
-This formula is the mathematical reason diversification works. The expected return of the portfolio is a weighted average of the component expected returns — you get nothing extra, but you give nothing up. Portfolio variance, by contrast, depends critically on $\rho_{AB}$. When assets are imperfectly correlated ($\rho < 1$), the portfolio variance is strictly less than the weighted average of the individual variances. You are getting the same expected return with less risk. That is the free lunch.
+You are getting the same expected return with less risk. The gap between the two sides of this inequality is the free lunch.
 
 The extreme cases are instructive:
 
@@ -117,7 +115,7 @@ Systematic risk includes things like: changes in interest rates affecting all bo
 ::: {.callout-important}
 ## Common Misconception
 
-Diversification eliminates idiosyncratic risk, not risk. This seems obvious but leads to a critical implication: in a world where all investors are rational and can diversify, the market should not reward you for bearing idiosyncratic risk. You are taking a risk that you could have eliminated for free. The market therefore prices only systematic risk — the component that survives diversification. This logic is the foundation of the Capital Asset Pricing Model, which we cover in the next session. The implication for practice: concentrating your portfolio in a few stocks because you "know them well" means bearing idiosyncratic risk that you are almost certainly not being compensated for.
+Diversification eliminates idiosyncratic risk, not risk. This seems obvious but leads to a critical implication: in a world where all investors are rational and can diversify, the market should not reward you for bearing idiosyncratic risk. You are taking a risk that you could have eliminated for free. The market therefore prices only systematic risk — the component that survives diversification. This logic is the foundation of the Capital Asset Pricing Model, which we cover in the next chapter. The implication for practice: concentrating your portfolio in a few stocks because you "know them well" means bearing idiosyncratic risk that you are almost certainly not being compensated for.
 :::
 
 ::: {.callout-tip collapse="true"}
@@ -173,11 +171,13 @@ The practical implication is that diversification requires thinking about the *c
 Statman (1987) in the *Journal of Financial and Quantitative Analysis* is the definitive study on optimal portfolio size for U.S. stocks. Goetzmann and Kumar (2008) in the *Review of Finance* document that retail investors hold severely underdiversified portfolios — typically 3 to 4 stocks — and that this underdiversification is costly, reducing their risk-adjusted returns substantially. The finding is not that retail investors hold too few stocks per se, but that the stocks they hold are highly correlated with each other, reflecting familiarity bias rather than genuine diversification.
 :::
 
+The mathematics of diversification tells you how many stocks to hold and why. But the case for diversification extends beyond the math — it also explains why investors who hold diversified portfolios make better decisions over time.
+
 ## Diversification Creates Staying Power
 
 There is a behavioral argument for diversification that is distinct from the mathematical one, and it matters enormously in practice.
 
-Concentrated portfolios fail not only because of the mathematics of risk — they fail because most investors cannot psychologically tolerate the volatility they generate. A portfolio of three stocks can easily be down 40% in a year on firm-specific bad news. That kind of drawdown triggers panic selling. It creates permanent psychological trauma. Behavioral economics tells us that the pain of loss is roughly twice as intense as the pleasure of equivalent gain — which means a portfolio that swings violently creates massive psychological disutility even if the long-run expected return is the same as a diversified portfolio.
+Concentrated portfolios fail not only because of the mathematics of risk — they fail because most investors cannot psychologically tolerate the volatility they generate. A portfolio of three stocks can easily be down 40% in a year on firm-specific bad news. That kind of drawdown triggers panic selling. It causes lasting damage to the investor's willingness to stay in the market. Behavioral economics tells us that the pain of loss is roughly twice as intense as the pleasure of equivalent gain — which means a portfolio that swings violently creates massive psychological disutility even if the long-run expected return is the same as a diversified portfolio.
 
 A diversified portfolio provides what practitioners call *staying power*: the psychological capacity to remain invested through inevitable periods of drawdown. The mathematics of long-run compounding are unforgiving — missing the best 10 days of a 20-year market cycle dramatically reduces terminal wealth. But you can only capture the long-run return if you actually stay invested. Diversification makes that easier by smoothing the return path, reducing the magnitude of individual position collapses, and ensuring that some part of the portfolio is working even when another is not.
 
@@ -203,7 +203,7 @@ In theory, this is straightforward. In practice, international diversification c
 
 **Currency risk.** Holding Japanese equities in a USD-denominated portfolio introduces yen/dollar exposure. Whether to hedge this exposure is a genuine decision with real costs. Currency forwards and options are not free, and the carry cost of systematic hedging erodes a significant portion of the diversification benefit in some markets.
 
-**Information asymmetry.** The home bias documented in the market efficiency session is partly explained by information advantages — local investors know their markets better. The counterargument is that for large-cap stocks in liquid markets, this advantage has largely been arbitraged away.
+**Information asymmetry.** The home bias documented in the market efficiency chapter is partly explained by information advantages — local investors know their markets better. The counterargument is that for large-cap stocks in liquid markets, this advantage has largely been arbitraged away.
 
 **Correlation dynamics.** Emerging market correlations with developed market equities were consistently lower through the 1990s. As global capital flows grew and financial integration deepened, those correlations increased. They jumped sharply during the 1997 Asian financial crisis, the 1998 LTCM crisis, the 2008 global financial crisis, and the 2020 pandemic selloff. Global diversification provides genuine benefits in normal times but less benefit precisely when you most need it.
 
@@ -225,7 +225,7 @@ Diversification is powerful but not unlimited. Several structural constraints pr
 
 **Concentration is sometimes intentional.** Warren Buffett's famous counter to the diversification principle — "keep all your eggs in one basket, but watch that basket closely" — is not simply wrong. For investors with genuine information advantages in specific companies, concentration reflects the economic value of that information. The problem is that most investors who think they have such advantages do not. The empirical evidence is consistent: retail investors who trade actively on perceived information advantages underperform diversified passive strategies, net of costs. Buffett's approach is defensible for Buffett. It is not a template.
 
-Strategic asset allocation across major classes — domestic equities, international equities, fixed income, real estate, commodities, alternatives — is the practical extension of diversification to the full investment opportunity set. The correlation structure across these classes, their historical return and volatility patterns, and their liquidity characteristics are inputs to the optimization problem we examine in the next session.
+Strategic asset allocation across major classes — domestic equities, international equities, fixed income, real estate, commodities, alternatives — is the practical extension of diversification to the full investment opportunity set. The correlation structure across these classes, their historical return and volatility patterns, and their liquidity characteristics are inputs to the optimization problem we examine in the next chapter.
 
 ## Key Takeaways
 
@@ -240,7 +240,7 @@ Strategic asset allocation across major classes — domestic equities, internati
 **Mandatory**
 
 - Bodie, Kane, and Marcus, Chapter 7 — the standard treatment of optimal risky portfolios and the efficient frontier, covering both the two-asset and N-asset cases in full mathematical detail.
-- Ang, Chapter 3 — risk factors as the language of systematic risk; essential context for the factor investing session in Session 8.
+- Ang, Chapter 3 — risk factors as the language of systematic risk; essential context for the factor investing discussion in Chapter 8.
 
 **Recommended**
 
