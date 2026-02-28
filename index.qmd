@@ -24,4 +24,6 @@ These notes are meant to complement---not replace---the original course material
 
 ## About the Instructor
 
-Ben Charoenwong is an Associate Professor of Finance at INSEAD. His research spans financial regulation, investment management, and the intersection of technology and finance. He also runs a quantitative hedge fund, which informs much of the practical perspective in these lectures.
+**Ben Charoenwong** is an Associate Professor of Finance at INSEAD and an affiliated faculty member with the Asian Institute of Digital Finance. His research focuses on financial regulation, fintech, and networks, and has been published in the *American Economic Review*, *Journal of Financial Economics*, *Science Advances*, *Review of Finance*, and *Manufacturing and Service Operations Management*. His work has been cited in policy reports by the United States Securities and Exchange Commission, the French Council of Economic Analysis, and the Japanese Cabinet Office, as well as industry reports by the CFA Institute.
+
+Ben completed a Ph.D. in Finance and MBA at the University of Chicago Booth School of Business, and a B.S. in (Honors) Economics, (Honors) Statistics, and Financial Mathematics from the University of Michigan -- Ann Arbor. He was previously an assistant professor at the National University of Singapore. Before academia, he worked at Citadel Securities and LEK Consulting. He is also co-founder of [Chicago Global](https://chicago.global), a quantitative investment management firm, which informs much of the practical perspective in these lectures.

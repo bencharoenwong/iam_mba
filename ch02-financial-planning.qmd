@@ -116,6 +116,14 @@ viewof horizonYears = Inputs.range([10, 50], {
 
 ```{ojs}
 //| echo: false
+html`<div style="background: #f0f4f8; border-radius: 8px; padding: 14px 18px; margin: 8px 0 16px 0; font-size: 0.97em; line-height: 1.5; border-left: 4px solid steelblue;">
+<strong>Current settings:</strong>
+Starting with <strong>$${initialPortfolio.toLocaleString()}</strong>, withdrawing <strong>${(withdrawalRate * 100).toFixed(1)}%</strong> per year ($${Math.round(initialPortfolio * withdrawalRate).toLocaleString()}/yr initially), expecting <strong>${(expectedReturn * 100).toFixed(1)}%</strong> nominal return with <strong>${(volatility * 100).toFixed(0)}%</strong> volatility over <strong>${horizonYears} years</strong>.
+</div>`
+```
+
+```{ojs}
+//| echo: false
 simulation = {
   const nSim = 1000;
   const allBalances = Array.from({length: horizonYears + 1}, () => []);
@@ -197,6 +205,22 @@ html`<div style="font-size: 1.05em; margin-top: 8px;">
 <span style="color: #666; font-size: 0.9em;">Light band: 10th–90th percentile. Dark band: 25th–75th percentile. Blue line: median path.</span>
 </div>`
 ```
+
+::: {.callout-important}
+## What Should You Observe?
+
+**The fan chart is positively skewed** — the upside tail (distance from the median to the 90th percentile) is much wider than the downside tail (distance from the median to the 10th percentile). This is not a bug; it reflects the *multiplicative* nature of compounding returns. Good years compound on top of each other, creating an increasingly wide spread of possible wealth outcomes. The best paths pull away exponentially while the worst paths are bounded below by zero.
+
+Try these experiments to build intuition:
+
+1. **Increase volatility from 15% to 25%** while keeping expected return at 7%. Watch the fan widen dramatically and the success rate drop — even though the *average* return hasn't changed. This is volatility drag in action: the geometric (compounded) return is always lower than the arithmetic (average) return, and the gap grows with the square of volatility.
+
+2. **Compare 4% vs. 5% withdrawal rates.** A single percentage point can cut the survival probability by 15–25 points. This is why the 4% rule is conservative on purpose.
+
+3. **Set volatility to 5% (bond-like)** and notice the fan nearly collapses to a line. Low volatility means the median path and the actual path are close — but the expected return is also lower, so the portfolio may still run out.
+
+The key takeaway: **the median outcome is not your plan.** The 10th percentile is your plan. Financial planning means ensuring the *bad* scenarios are survivable, not that the *average* scenario looks good.
+:::
 
 :::
 
