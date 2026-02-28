@@ -1,6 +1,6 @@
 # Preface {.unnumbered}
 
-These lecture notes are adapted from the **Investments and Asset Management** course taught at INSEAD's Singapore campus during January--February 2025. The course is designed for MBA students and covers 14 sessions organized around four themes:
+These lecture notes are adapted from the **Investments and Asset Management** course taught at INSEAD's Singapore campus during January--February 2026. The course is designed for MBA students and covers 14 sessions organized around four themes:
 
 1. **Investing as a Human Problem** --- the asset management industry, financial planning, behavioral biases, market efficiency, and the democratization of finance
 2. **Investing as a Science** --- diversification, modern portfolio theory, active vs. passive management, factor investing

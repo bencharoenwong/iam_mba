@@ -4,10 +4,9 @@ project:
 
 book:
   title: "Investments and Asset Management"
-  subtitle: "Lecture Notes — INSEAD MBA, Singapore 2025"
+  subtitle: "Lecture Notes — INSEAD MBA, Singapore 2026"
   author: "Ben Charoenwong"
-  date: "2025"
-  date-format: "YYYY"
+  date: "February 28, 2026"
   chapters:
     - index.qmd
     - part: "Theme 1: Investing as a Human Problem"
