@@ -12,7 +12,7 @@ The standard explanations — capital controls, currency risk, information advan
 
 ## The Logic of Market Efficiency
 
-Eugene Fama won the Nobel Prize in Economics in 2013 for codifying what most practitioners had observed intuitively but never rigorously defined. He died in January 2024. His formulation is worth quoting directly:
+Eugene Fama won the Nobel Prize in Economics in 2013 for codifying what most practitioners had observed intuitively but never rigorously defined. His formulation is worth quoting directly:
 
 > "In an efficient market, competition among the many intelligent participants leads to a situation where, at any point in time, actual prices of securities already reflect the effects of information based on both events that have already occurred and events which, as of now, the market expects to take place in the future."
 
@@ -195,7 +195,7 @@ Bed Bath & Beyond, which explicitly told investors it was filing for bankruptcy,
 
 ### Platform Design and the Architecture of Bad Decisions
 
-Research comparing trading behavior across desktop and mobile interfaces finds a consistent pattern: investors take more risk and trade more frequently on mobile applications than on web or desktop platforms. The explanation is likely some combination of interface design (apps are built to maximize engagement) and context (mobile trading happens in moments of spare time, commutes, and emotional states rather than deliberate desk-based sessions). Robinhood was fined \$750 million for, among other violations, displaying confetti animations when users purchased options contracts — a design choice that framed speculative financial products as celebratory rather than consequential. A subsequent action resulted in an additional \$7.5 million fine.
+Research comparing trading behavior across desktop and mobile interfaces finds a consistent pattern: investors take more risk and trade more frequently on mobile applications than on web or desktop platforms. The explanation is likely some combination of interface design (apps are built to maximize engagement) and context (mobile trading happens in moments of spare time, commutes, and emotional states rather than deliberate desk-based sessions). Robinhood was fined approximately $70 million by FINRA in 2021 ($57 million in penalties plus $12.6 million in restitution) for, among other violations, providing false or misleading information and approving customers for unsuitable options trading. The platform's confetti animations when users purchased options contracts — a design choice that framed speculative financial products as celebratory rather than consequential — drew particular criticism. A subsequent Massachusetts settlement in 2024 resulted in an additional $7.5 million fine over gamification practices.
 
 Some platforms also use push notifications to prompt trading decisions: "Your position is down 30% — tap to review." The notification architecture of mobile investing apps is engineered to produce action, and action, in the context of a market that punishes panic, is typically harmful.
 

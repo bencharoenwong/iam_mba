@@ -120,11 +120,48 @@ Systematic risk includes things like: changes in interest rates affecting all bo
 Diversification eliminates idiosyncratic risk, not risk. This seems obvious but leads to a critical implication: in a world where all investors are rational and can diversify, the market should not reward you for bearing idiosyncratic risk. You are taking a risk that you could have eliminated for free. The market therefore prices only systematic risk — the component that survives diversification. This logic is the foundation of the Capital Asset Pricing Model, which we cover in the next session. The implication for practice: concentrating your portfolio in a few stocks because you "know them well" means bearing idiosyncratic risk that you are almost certainly not being compensated for.
 :::
 
+::: {.callout-tip collapse="true"}
+## Real-World Case: Enron and the Cost of Concentration
+
+In December 2000, Enron was the seventh-largest company in the United States by revenue. Its stock traded above $80. Employees were encouraged to hold Enron stock in their 401(k) retirement accounts, and many did — enthusiastically. By some estimates, over 60% of the average Enron employee's retirement savings were in company stock.
+
+When Enron filed for bankruptcy in December 2001 — following the revelation of massive accounting fraud — the stock fell to under $1. Employees lost an estimated $1.2 billion in retirement savings. Many were in their 50s and 60s with no time to recover.
+
+The financial lesson is a direct application of the idiosyncratic-versus-systematic distinction. Enron employees had concentrated exposure to a single firm's idiosyncratic risk — *and* that risk was correlated with their human capital (their jobs). When the firm failed, they lost both their income and their savings simultaneously. A diversified portfolio would not have prevented the job loss, but it would have preserved the retirement savings. The Pension Protection Act of 2006 was passed partly in response, giving employees the right to diversify out of company stock in their retirement plans.
+:::
+
 ## How Many Stocks Do You Actually Need?
 
 The empirical answer to this question has been studied carefully. The key paper is Statman (1987), which shows that the benefits of diversification are largely exhausted by somewhere between 30 and 40 stocks, though the exact number depends on what level of residual idiosyncratic risk you find acceptable.
 
 The curve is sharply convex. Going from 1 stock to 2 eliminates roughly 46% of the diversifiable risk. Going from 2 to 3 eliminates another 22%. By the time you reach 20 stocks, you have removed perhaps 95% of the idiosyncratic risk that was available to remove. Adding the 21st stock gives you very little incremental benefit. The marginal diversification benefit declines rapidly.
+
+::: {.callout-note collapse="true"}
+## Worked Example: Diversification with Two Stocks
+
+Suppose Stock A has expected return 10% and standard deviation 25%, and Stock B has expected return 8% and standard deviation 20%. You invest 60% in A and 40% in B.
+
+**Expected return** is straightforward:
+$$E(r_p) = 0.6 \times 10\% + 0.4 \times 8\% = 9.2\%$$
+
+**Portfolio risk** depends critically on the correlation $\rho_{AB}$:
+
+| Correlation ($\rho$) | Portfolio Std Dev ($\sigma_p$) | Risk Reduction vs. Weighted Avg |
+|:---:|:---:|:---:|
+| 1.0 | 23.0% | 0% |
+| 0.5 | 20.2% | 12.2% |
+| 0.0 | 17.1% | 25.7% |
+| −0.5 | 13.3% | 42.2% |
+
+The weighted average of individual standard deviations is $0.6 \times 25\% + 0.4 \times 20\% = 23.0\%$. At $\rho = 0.5$ — a typical correlation between two stocks in different sectors — portfolio risk drops to 20.2%, a meaningful reduction achieved simply by holding both rather than concentrating in one. At $\rho = 0$, the reduction is even larger.
+
+**Calculation for** $\rho = 0.5$:
+$$\sigma_p^2 = (0.6)^2(0.25)^2 + (0.4)^2(0.20)^2 + 2(0.6)(0.4)(0.5)(0.25)(0.20)$$
+$$= 0.0225 + 0.0064 + 0.012 = 0.0409$$
+$$\sigma_p = \sqrt{0.0409} = 20.2\%$$
+
+The free lunch: expected return stayed at 9.2% regardless of correlation, but risk fell from 23.0% to 20.2% — a 12% reduction from diversification alone.
+:::
 
 But here is the catch from Lesson 1 of portfolio mathematics: the number of stocks is not the right metric. What matters is the correlation structure. Fifty internet stocks in 2000 provided almost no diversification. They were all sensitive to the same factor — the re-rating of growth expectations for technology companies. When that factor reversed, they fell together. A portfolio of 10 stocks spanning genuinely different industries and geographies may well be more diversified than a portfolio of 50 stocks concentrated in one sector.
 

@@ -73,6 +73,31 @@ A rough empirical calibration: typical investors in the population seem to exhib
 The risk aversion parameter $A$ shows up again in factor investing, derivatives pricing, and portfolio construction. Know the formula, but more importantly understand what it implies: risk appetite, expected returns, and volatility all interact. A client who says "I want high returns but low risk" is not expressing a preference — they are expressing a wish. The optimization is a constraint, not a menu.
 :::
 
+::: {.callout-note collapse="true"}
+## Worked Example: How Much Should You Invest in Equities?
+
+**Setup:** Sarah has $500,000 to invest. The risk-free rate is 4% (one-year T-bills). She is considering the Vanguard Total World Stock ETF as her risky portfolio, which has an expected return of 9% and a standard deviation of 16%. Her risk aversion parameter is $A = 3$.
+
+**Step 1 — Optimal allocation to equities:**
+$$y^* = \frac{E(r_P) - r_f}{A \cdot \sigma_P^2} = \frac{0.09 - 0.04}{3 \times 0.16^2} = \frac{0.05}{0.0768} = 0.651$$
+
+Sarah should put 65.1% in equities ($325,500) and 34.9% in T-bills ($174,500).
+
+**Step 2 — Portfolio characteristics:**
+$$E(r_c) = 0.04 + 0.651 \times (0.09 - 0.04) = 0.04 + 0.0326 = 7.26\%$$
+$$\sigma_c = 0.651 \times 0.16 = 10.4\%$$
+
+**Step 3 — What if volatility spikes?** Suppose a crisis hits and expected volatility doubles to 32%:
+$$y^* = \frac{0.05}{3 \times 0.32^2} = \frac{0.05}{0.3072} = 0.163$$
+
+The optimal equity allocation drops from 65% to just 16%. This is why volatility-targeting strategies reduce equity exposure during crises — the formula says to, and the economic logic (higher uncertainty, same expected return) supports it.
+
+**Step 4 — What about a more aggressive investor?** If Sarah's colleague Tom has $A = 1.5$ (half as risk-averse):
+$$y^* = \frac{0.05}{1.5 \times 0.0256} = 1.30$$
+
+Tom would optimally use 30% leverage — borrowing to invest 130% in equities. This is the theoretical justification for leveraged portfolios, though in practice borrowing costs reduce the attractiveness (as we saw with leveraged ETFs in Session 08).
+:::
+
 ## CAPM: What Happens in Equilibrium
 
 So far we have been solving the problem of a single investor choosing optimally. Now ask: what if *all* investors do this simultaneously? This is where the **Capital Asset Pricing Model (CAPM)** comes from.
@@ -143,6 +168,16 @@ Mean-variance optimization rests on a coherent theoretical foundation, but its p
 **Covariance matrix instability.** With $N$ assets, you need to estimate $N(N+1)/2$ parameters. For $N = 100$ assets, that is 5,050 parameters — estimated from, say, 60 months of data. This is a classic high-dimension, low-sample problem, and the resulting estimates are noisy. Worse, if $N > T$ (more assets than time periods), the matrix is not even invertible without regularization.
 
 **The 1/N puzzle.** Victor DeMiguel and co-authors (2009) showed that a naive equal-weight portfolio ("1/N") outperforms most mean-variance optimal portfolios out-of-sample across 14 empirical datasets. The reason is simple: the estimation errors in sophisticated optimizers are large enough to offset the theoretical gains from optimization. This is a humbling result. We will return to it when discussing passive management.
+
+::: {.callout-tip collapse="true"}
+## Real-World Case: When Sophistication Backfires
+
+In 2009, DeMiguel, Garlappi, and Uppal tested 14 different portfolio optimization strategies against the simplest possible benchmark: splitting your money equally across all available assets (the "1/N" strategy). The optimizers included mean-variance, Bayesian approaches, moment restrictions, and various shrinkage estimators — the full arsenal of quantitative portfolio theory.
+
+The result was humbling: none of the 14 optimized strategies consistently beat 1/N out of sample across their datasets. The reason is not that the theory is wrong — it is that the theory requires inputs (expected returns, variances, covariances) that we estimate with substantial error. The optimizer dutifully finds the "best" portfolio given those inputs, but since the inputs are noisy, the optimizer effectively maximizes error.
+
+The practical takeaway is not to abandon optimization entirely, but to treat it with appropriate humility. Many institutional investors now use "constrained" optimization — limiting how far the optimizer can deviate from equal weighting or a benchmark — precisely to avoid the wild allocations that unconstrained optimization produces. The best optimization is one that knows its own limits.
+:::
 
 The result does not imply that optimization is always inferior — it implies that reducing estimation error is the critical challenge. When expected return inputs are shrunk toward equal expectations and covariance matrices are regularized, optimized portfolios can outperform 1/N.
 

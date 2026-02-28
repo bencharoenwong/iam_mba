@@ -5,3 +5,5 @@
 !index.qmd
 .Rhistory
 .Rproj.user
+
+**/*.quarto_ipynb

@@ -26,7 +26,7 @@ The fund documents say the product aims to deliver three times the daily return 
 
 The first is the cost of capital. The ETF achieves its leverage through futures contracts. A futures contract is implicitly a borrowing arrangement — you put up $10 and get $30 of exposure. That implicit borrowing happens at the risk-free rate plus a spread. The math for the optimal portfolio on the efficient frontier assumed you could borrow at the risk-free rate. In reality, you pay more, and that spread drags returns down continuously.
 
-The second is the expense ratio. The SPY — the most liquid security in the world — charges about 9 basis points annually. The triple-leveraged ETF charges roughly 75 basis points. That fee is not paid quarterly. It accrues daily into the net asset value, which means the drag is continuous. Multiply the monthly alpha estimate by 12 and you recover approximately the expense ratio: the negative alpha is not a failure of execution — it is the fee.
+The second is the expense ratio. The SPY — the most liquid security in the world — charges about 9 basis points annually. The triple-leveraged ETF charges roughly 90 basis points. That fee is not paid quarterly. It accrues daily into the net asset value, which means the drag is continuous. Multiply the monthly alpha estimate by 12 and you recover approximately the expense ratio: the negative alpha is not a failure of execution — it is the fee.
 
 ::: {.callout-important}
 ## Common Misconception
@@ -68,6 +68,39 @@ where $\hat{\sigma}_\varepsilon$ is the standard deviation of the regression res
 **Step 4 — Test statistical significance:** The t-statistic is $t = IR \times \sqrt{T}$, where $T$ is the number of periods. A t-statistic below 2 means you cannot reject $\alpha = 0$ — the manager may just be lucky.
 :::
 
+::: {.callout-note collapse="true"}
+## Worked Example: Is This Fund Manager Skilled?
+
+**Setup:** You run a three-factor regression on Fund X's monthly excess returns over 60 months:
+
+$$r_X - r_f = 0.35\% + 1.12(r_M - r_f) + 0.25 \cdot \text{SMB} - 0.15 \cdot \text{HML} + \varepsilon$$
+
+The residual standard error (RSE) is 1.8% per month.
+
+**Step 1 — Read the factor loadings:**
+
+- Market beta = 1.12: the fund takes 12% more market risk than the index. In a month where the market is up 5%, this fund tends to be up about 5.6% from market exposure alone.
+- SMB loading = +0.25: tilted toward small caps. When small stocks outperform large by 1%, this adds 0.25% to the fund.
+- HML loading = −0.15: tilted toward growth (negative value loading). When value outperforms growth by 1%, this fund loses 0.15%.
+
+**Step 2 — Assess the alpha:**
+
+Monthly alpha = 0.35%, which annualizes to $0.35\% \times 12 = 4.2\%$. Sounds impressive.
+
+**Step 3 — Test statistical significance:**
+
+$$\text{Information Ratio} = \frac{0.35\%}{1.8\%} = 0.194$$
+$$t\text{-statistic} = 0.194 \times \sqrt{60} = 1.50$$
+
+A t-statistic of 1.50 is below the conventional threshold of 2.0. We cannot reject the hypothesis that the true alpha is zero. Despite the 4.2% annualized alpha *estimate*, there is roughly a 14% probability this arose purely from luck.
+
+**Step 4 — Compute the Sharpe ratio of alpha:**
+
+$$\text{Sharpe}(\hat{\alpha}) = \frac{0.35\%}{1.8\%} \times \sqrt{12} = 0.67$$
+
+A Sharpe of 0.67 on the alpha component is decent but not exceptional. For context, a Sharpe below 0.5 suggests the fund adds no value; above 1.0 would be genuinely impressive. This fund sits in the ambiguous zone — potentially skilled, but the evidence is not conclusive over 60 months. You would need roughly $\left(\frac{2.0}{0.194}\right)^2 \approx 106$ months (about 9 years) of data to reach statistical significance at this information ratio.
+:::
+
 ## From CAPM to Factor Models: A Short History
 
 The capital asset pricing model told us that the only thing that matters for expected returns is exposure to the market. For a brief period in the 1970s, that seemed like a reasonable description of the world. Then finance professors started asking an uncomfortable question: if CAPM is the right model, why can I make money with strategies it says should earn nothing?
@@ -91,7 +124,7 @@ Each factor in the Fama-French family is constructed as a **zero-cost long-short
 Each has spawned corresponding passive vehicles: iShares S&P 500 Value ETF (IVE) and Vanguard Small-Cap Value ETF (VBR) for the Fama-French factors; iShares MSCI USA Momentum Factor ETF (MTUM) and AQR Momentum funds for UMD; iShares MSCI USA Quality Factor ETF (QUAL) and Invesco S&P 500 Quality ETF (SPHQ) for the quality and profitability factors.
 :::
 
-Mark Carhart, then at the University of Chicago, added a fourth factor in 1997: momentum. Stocks that have performed well over the past twelve months, excluding the most recent month, tend to continue outperforming — a pattern that has replicated across asset classes and international markets.
+Mark Carhart, whose University of Chicago dissertation added a fourth factor in 1997: momentum. Stocks that have performed well over the past twelve months, excluding the most recent month, tend to continue outperforming — a pattern that has replicated across asset classes and international markets.
 
 In 2015 Fama and French updated the model again, adding profitability (quality) and investment factors. High-quality firms — those with strong and stable cash flows — tend to outperform over the long run. Notably, the value factor HML is partially subsumed once RMW and CMA are included — profitability and investment together explain much of what the raw book-to-market ratio was capturing.
 
@@ -141,7 +174,7 @@ The behavioral explanation says that value stocks are cheap because investors ar
 
 ### The ICAPM Foundation: Why Multiple Factors Are Theoretically Necessary
 
-The risk-based account of factor premiums has a formal theoretical home. Robert Merton's Intertemporal Capital Asset Pricing Model (ICAPM), for which he shared the 1997 Nobel Prize, is the equilibrium framework that explains why multiple factors belong in expected return equations even in a world of rational investors.
+The risk-based account of factor premiums has a formal theoretical home. Robert Merton's Intertemporal Capital Asset Pricing Model (ICAPM) — developed in 1973, part of the broader body of work for which he shared the 1997 Nobel Prize (formally awarded for the Black-Scholes-Merton option pricing model) — is the equilibrium framework that explains why multiple factors belong in expected return equations even in a world of rational investors.
 
 The standard CAPM assumes investors care only about wealth at the end of a single period. The ICAPM relaxes that assumption. In Merton's model, investors live across multiple periods and care about two things: current wealth and the quality of future investment opportunities. An investor who retires in thirty years is not indifferent between two portfolios with the same mean and variance today if one hedges better against a deterioration in future investment opportunities — say, a sustained rise in real interest rates that would reduce the returns available for reinvestment.
 
@@ -256,7 +289,7 @@ The honest appraisal is that machine learning is genuinely useful for the ensemb
 
 Every concept covered in this session has a direct implication for how investors are charged — and how those charges can be disguised.
 
-The leverage ETF example is clear: you are paying 75 basis points annually for an asset that could be replicated by an allocation decision in your existing portfolio. The fee is not nothing — the product does provide genuine convenience — but the cost-benefit calculation should be made explicitly.
+The leverage ETF example is clear: you are paying 90 basis points annually for an asset that could be replicated by an allocation decision in your existing portfolio. The fee is not nothing — the product does provide genuine convenience — but the cost-benefit calculation should be made explicitly.
 
 The factor framework makes a more general point. When a manager describes their strategy in complex language — "we employ a dynamic multi-asset tail-risk-adjusted entropy optimization" — the right response is not to be impressed. It is to ask for the return series and run the regression. If the factor model captures 80% of the variance with common, cheap factors, the manager should be paid common, cheap prices.
 
@@ -272,6 +305,27 @@ Several systematic strategies that masquerade as alpha are, in fact, factor expo
 ## Common Misconception
 
 Alpha is not "good performance." Alpha is performance that cannot be explained by the exposures your benchmark allows. If the agreed benchmark is only the market return (CAPM), then factor returns appear as alpha. If the agreed benchmark includes factors, genuine alpha is what remains after controlling for all of them. The alpha you care about is alpha relative to the cheapest investable alternative — not alpha relative to a deliberately limited benchmark. Managers have a strong incentive to use the narrowest possible benchmark.
+:::
+
+::: {.callout-tip collapse="true"}
+## Real-World Case: The Hedge Fund That Was Selling Beta at Alpha Prices
+
+A large pension fund was paying 2-and-20 (2% management fee plus 20% of profits) to a long/short equity hedge fund that had delivered 12% annualized returns over five years. The fund's marketing materials emphasized "proprietary stock selection" and "deep fundamental research."
+
+When the pension fund's new CIO ran a factor regression on the hedge fund's monthly returns, the results were revealing:
+
+| Factor | Loading | Interpretation |
+|:---|:---:|:---|
+| Market ($\beta_M$) | 0.75 | 75% net long equity exposure |
+| HML (value) | 0.32 | Significant tilt toward cheap stocks |
+| SMB (size) | 0.18 | Mild small-cap tilt |
+| UMD (momentum) | 0.21 | Chasing recent winners |
+| Alpha ($\hat{\alpha}$) | 0.08% / month | ~1.0% annualized, t-stat = 0.7 |
+| $R^2$ | 0.82 | 82% explained by known factors |
+
+The 12% annual return decomposed as: ~5.5% from market beta, ~2.5% from value exposure, ~1.5% from size and momentum, ~1.5% from the risk-free rate, and ~1.0% from residual alpha — which was statistically indistinguishable from zero ($t = 0.7$, well below the 2.0 threshold).
+
+The pension fund could have replicated 82% of the strategy's behavior using factor ETFs costing roughly 15 basis points per year instead of the ~300 basis points (2% management + ~1% performance fee on average) they were actually paying. The CIO renegotiated to a flat 50 basis point fee — still generous for what was essentially factor exposure — and redirected the fee savings to a genuinely uncorrelated strategy.
 :::
 
 ## The Shrinking Alpha and Why That Is Good News

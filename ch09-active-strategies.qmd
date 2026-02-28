@@ -141,7 +141,7 @@ Kacperczyk, Nieuwerburgh, and Veldkamp (2014) document that fund manager skill i
 ### Mandatory
 
 - Ang, A. *Asset Management: A Systematic Approach to Factor Investing*, Chapter 10 (Alpha and Beta).
-- Grossman, S. J., & Stiglitz, J. E. (1980). On the impossibility of informationally efficient markets. *American Economic Review*, 70(3), 393--408.
+- Grossman, S. J., & Stiglitz, J. E. (1980). On the impossibility of informationally efficient markets. *American Economic Review*, 70(3), 393--418.
 
 ### Recommended
 

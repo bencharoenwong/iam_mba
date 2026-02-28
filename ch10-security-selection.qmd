@@ -63,7 +63,7 @@ The `shift(4)` skips the most recent four weeks (approximately one month). The `
 The modal return in a dataset of 11 million stock-week observations is zero. If you randomly sample a stock, the most common outcome is no price change at all — because most stocks in a global dataset are illiquid and do not trade most days. Before running any momentum strategy on global data, filter for adequate liquidity. The signal also requires at least 12 months of history; newly listed stocks cannot be scored and should be excluded rather than imputed.
 :::
 
-What does the strategy actually find? The results vary substantially by market. The signal works well in Israel, Eastern Europe, Greater China (Hong Kong, China, Taiwan), Scandinavia, Singapore, Spain, Portugal, Italy, the UK, Ireland, and Canada. It does not work in the United States or Japan.
+What does the strategy actually find? The results vary substantially by market. The signal works well in Israel, Eastern Europe, Greater China (Hong Kong, China, Taiwan), Scandinavia, Singapore, Spain, Portugal, Italy, the UK, Ireland, and Canada. It has weakened substantially in the United States and Japan in recent decades, likely due to increased arbitrage activity.
 
 Japan's failure is well-documented and partially understood — institutional cross-shareholdings, limited retail participation, and a pattern of corporate innovation that differs from the US and Europe all contribute. The US case is more interesting and more recent: momentum worked in America through the early 2000s, then its performance has increasingly been subsumed by the market factor itself. The US market is now essentially long momentum — the largest, most widely held stocks have been the recent winners for years. Running a separate momentum strategy in that environment captures market beta more than it captures a distinct momentum premium.
 
@@ -240,7 +240,7 @@ What technology has not changed — and probably cannot change — is the fundam
 
 - Jiang, J., Kelly, B. T., & Xiu, D. (2023). (Re-)Imag(in)ing price trends. *Journal of Finance, 78*(6), 3193–3249.
 
-- He, G., & Litterman, R. (2002). The intuition behind Black-Litterman model portfolios. *Goldman Sachs Investment Management Research.* *(On incorporating views into a market-equilibrium portfolio framework)*
+- He, G., & Litterman, R. (1999). The intuition behind Black-Litterman model portfolios. *Goldman Sachs Investment Management Research.* *(On incorporating views into a market-equilibrium portfolio framework)*
 
 - Blitz, D., Hanauer, M. X., Honarvar, I., Huisman, R., & van Vliet, P. (2024). Beyond Fama-French factors: Alpha from short-term signals. *Journal of Financial Economics, forthcoming.* *(On ensemble signal combination and the gap between individual and combined signal alpha)*
 

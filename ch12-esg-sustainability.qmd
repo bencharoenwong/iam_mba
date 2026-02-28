@@ -60,7 +60,7 @@ The practical implication: even non-ESG investors should care about ESG informat
 
 ## ESG Ratings: A Measurement Problem
 
-Here is something the industry does not advertise loudly: ESG ratings from different providers disagree with each other dramatically. Berg, Koelbel, and Rigobon (2022) document the aggregate confusion. The correlation between ESG ratings from major agencies — MSCI, Sustainalytics, Refinitiv, S&P Trucost — is roughly 0.3 to 0.6. For comparison, credit ratings from Moody's and S&P correlate at above 0.9.
+Here is something the industry does not advertise loudly: ESG ratings from different providers disagree with each other dramatically. Berg, Koelbel, and Rigobon (2022) document the aggregate confusion. The correlation between ESG ratings from major agencies — MSCI, Sustainalytics, Refinitiv, S&P Trucost — is approximately 0.4 to 0.7. For comparison, credit ratings from Moody's and S&P correlate at above 0.9.
 
 The disagreement comes from three sources:
 
@@ -129,7 +129,7 @@ What does the data actually say?
 ::: {.callout-note}
 ## Academic Reference
 
-Pastor, Stambaugh, and Taylor's (2021) *Sustainable Investing in Equilibrium* is the key theoretical paper. It derives what ESG-driven demand implies for equilibrium returns: green assets have lower expected returns, brown assets have higher expected returns, and realized returns can deviate from expectations when ESG preferences shift unexpectedly. The subsequent *Dissecting Green Returns* (2022) paper decomposes the 2012–2020 outperformance into expected and unexpected components — the former is negative, the latter is positive and explains the full measured result.
+Pastor, Stambaugh, and Taylor's (2021) *Sustainable Investing in Equilibrium* is the key theoretical paper. It derives what ESG-driven demand implies for equilibrium returns: green assets have lower expected returns, brown assets have higher expected returns, and realized returns can deviate from expectations when ESG preferences shift unexpectedly. The subsequent *Dissecting Green Returns* (2023) paper decomposes the 2012–2020 outperformance into expected and unexpected components — the former is negative, the latter is positive and explains the full measured result.
 :::
 
 The factor story matters here too. Quality stocks — high profitability, conservative investment, strong governance — tend to perform well. The quality factor (RMW, or robust-minus-weak profitability) in the Fama-French framework captures some of what composite ESG scores capture, particularly the governance component. This means some of the apparent return advantage of ESG investing is not ESG per se — it is exposure to quality. You can get that exposure without the rest of the ESG framework if you want it.
@@ -158,7 +158,7 @@ Greenwashing — labeling a product as sustainable without substantive portfolio
 
 - In equilibrium, widespread ESG preferences should produce lower expected returns on green assets and higher expected returns on brown assets. The historical outperformance of ESG stocks during 2012–2020 reflects an unexpected shift in climate concern, not evidence against this theory. Do not confuse one-time revaluations with persistent return premia.
 
-- ESG rating divergence is severe — correlations between major raters are 0.3 to 0.6. The data source you use matters enormously. S&P Trucost is stronger for environmental measurement; governance data from traditional financial sources is often better than composite ESG scores.
+- ESG rating divergence is severe — correlations between major raters are approximately 0.4 to 0.7. The data source you use matters enormously. S&P Trucost is stronger for environmental measurement; governance data from traditional financial sources is often better than composite ESG scores.
 
 - Implementation choice has real financial consequences. Exclusion sacrifices diversification and gives up shareholder voice. Engagement preserves both but requires genuine institutional leverage to be effective. Thematic investing maximizes non-financial impact but concentrates risk.
 
@@ -170,12 +170,12 @@ Greenwashing — labeling a product as sustainable without substantive portfolio
 
 - Ang, A. *Asset Management: A Systematic Approach to Factor Investing.* Chapter 16 (ESG Investing). Oxford University Press.
 
-- Pastor, L., Stambaugh, R. F., & Taylor, L. A. (2021). Sustainable investing in equilibrium. *Journal of Financial Economics*, 142(2), 550–571.
+- Pastor, L., Stambaugh, R. F., & Taylor, L. A. (2021). Sustainable investing in equilibrium. *Journal of Financial Economics*, 142(2), 550–574.
 
 ### Recommended
 
 - Berg, F., Koelbel, J. F., & Rigobon, R. (2022). Aggregate confusion: The divergence of ESG ratings. *Review of Finance*, 26(6), 1315–1344.
 
-- Hong, H., & Kacperczyk, M. (2009). The price of sin: The effects of social norms on markets. *Journal of Financial Economics*, 93(1), 15–36.
+- Hong, H., & Kacperczyk, M. (2009). The price of sin: The effects of social norms on markets. *Journal of Financial Economics*, 93(1), 15–42.
 
 - Hartzmark, S. M., & Sussman, A. B. (2019). Do investors value sustainability? A natural experiment examining ranking and fund flows. *The Journal of Finance*, 74(6), 2789–2837.

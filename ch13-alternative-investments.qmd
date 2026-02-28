@@ -1,6 +1,6 @@
 # Session 13: Alternative Investments: Beyond Stocks and Bonds
 
-When Robinhood announced it would offer "entertainment investing" — letting users bet on soccer games and the Super Bowl through its app — the SEC moved quickly. You cannot rebrand gambling as an asset class simply by calling it one. Robinhood backed down. Crypto.com did not. They launched sports betting through their platform anyway. The episode captures something essential about the alternative investments landscape: it sits at the intersection of financial innovation, regulatory arbitrage, and, occasionally, outright sleight of hand. Understanding which is which is one of the most valuable skills an investor can develop.
+When Robinhood announced it would offer "entertainment investing" — letting users bet on soccer games and the Super Bowl through its app — the CFTC moved quickly. You cannot rebrand gambling as an asset class simply by calling it one. Robinhood backed down. Crypto.com did not. They launched sports betting through their platform anyway. The episode captures something essential about the alternative investments landscape: it sits at the intersection of financial innovation, regulatory arbitrage, and, occasionally, outright sleight of hand. Understanding which is which is one of the most valuable skills an investor can develop.
 
 ## What Counts as an Alternative Investment
 
@@ -40,7 +40,7 @@ The reported historical performance of private equity and hedge funds reflects t
 
 ## The Valuation Illusion in Private Markets
 
-The Norwegian Government Pension Fund Global offers a vivid illustration of how private market valuations can mislead. In 2020, the fund reported overall returns of 10.9%. Dig into the real estate segment and the numbers tell an interesting story: listed real estate investment trusts (REITs) — publicly traded vehicles that must distribute at least 95% of rental income to shareholders — fell roughly 15% during the year. The fund's unlisted private real estate, by contrast, reported a loss of only 0.1%.
+The Norwegian Government Pension Fund Global offers a vivid illustration of how private market valuations can mislead. In 2020, the fund reported overall returns of 10.9%. Dig into the real estate segment and the numbers tell an interesting story: listed real estate investment trusts (REITs) — publicly traded vehicles that must distribute at least 90% of taxable income to shareholders — fell roughly 15% during the year. The fund's unlisted private real estate, by contrast, reported a loss of only about 1.7%.
 
 The math is hard to take at face value. When listed real estate falls 15%, the underlying properties do not remain unaffected. What actually happens in private markets during stress is that liquidity disappears before prices move. No one wants to buy, and no one is forced to sell at a market-clearing price, so the reported book value stays flat. The losses are real — they are just deferred.
 
@@ -64,7 +64,7 @@ Internal rate of return is the discount rate that sets the net present value of 
 In private equity, the **general partner (GP)** is the fund manager who makes investment decisions and bears unlimited liability. **Limited partners (LPs)** are the investors who commit capital — pension funds, endowments, family offices — and face liability only up to their investment. **Carried interest ("carry")** is the GP's share of investment profits, typically 20%. If a fund returns $120M on $100M invested, the carry is 20% of the $20M profit ($4M to the GP, $16M to LPs). The **hurdle rate** is the minimum return LPs must receive before carry kicks in — typically 8%. These terms recur throughout this chapter.
 :::
 
-The Asian private equity market has historically used a hurdle rate of around 30-35% as the threshold for deal-by-deal returns. That number reflects the illiquidity premium, leverage, and the operational improvements GPs claim they can deliver. As markets have matured and competition has increased, hurdle rates at some large funds have compressed.
+The Asian private equity market has historically used a target deal-level IRR of around 30–35% as the threshold for deal-by-deal returns. That number reflects the illiquidity premium, leverage, and the operational improvements GPs claim they can deliver. As markets have matured and competition has increased, hurdle rates at some large funds have compressed.
 
 A simple two-period example illustrates the basic mechanics. Suppose a project costs $100 million at time zero and returns $130 million at time one. The unlevered IRR is 30%. Now suppose the equipment manufacturer financing the project is willing to lend $80 million at zero coupon, requiring $100 million repayment at time one. The investor need only contribute $20 million of equity. When the project pays off, $100 million retires the loan and the investor pockets $30 million. IRR on the equity invested: 50%.
 
@@ -175,6 +175,39 @@ $$
 
 A PME greater than 1 means the LP did better than the benchmark after accounting for the opportunity cost of locked-up capital. A PME below 1 means the public market would have been a better choice.
 
+::: {.callout-note collapse="true"}
+## Worked Example: Computing a Public Market Equivalent
+
+**Setup:** You invested in a PE fund with the following cash flows. The S&P 500 is your benchmark.
+
+| Year | Cash Flow | S&P 500 Annual Return | Cumulative S&P Growth to Year 5 |
+|:---:|:---:|:---:|:---:|
+| 0 | −$100,000 (capital call) | — | $(1.10)(1.15)(0.85)(1.20)(1.08) = 1.354$ |
+| 1 | −$50,000 (capital call) | 10% | $(1.15)(0.85)(1.20)(1.08) = 1.267$ |
+| 2 | +$20,000 (distribution) | 15% | $(0.85)(1.20)(1.08) = 1.101$ |
+| 3 | $0 | −15% | $(1.20)(1.08) = 1.296$ |
+| 4 | +$80,000 (distribution) | 20% | $(1.08) = 1.080$ |
+| 5 | +$120,000 (distribution) | 8% | $1.000$ |
+
+**Step 1 — Future-value all cash flows to Year 5:**
+
+*Capital calls (what you could have invested in S&P):*
+$$\text{FV of calls} = 100{,}000 \times 1.354 + 50{,}000 \times 1.267 = 135{,}400 + 63{,}350 = \$198{,}750$$
+
+*Distributions (what you received and could have reinvested in S&P):*
+$$\text{FV of distributions} = 20{,}000 \times 1.101 + 80{,}000 \times 1.080 + 120{,}000 \times 1.000$$
+$$= 22{,}020 + 86{,}400 + 120{,}000 = \$228{,}420$$
+
+**Step 2 — Compute the PME:**
+$$\text{PME} = \frac{228{,}420}{198{,}750} = 1.149$$
+
+**Interpretation:** PME = 1.15 means the PE fund outperformed a hypothetical strategy of investing each capital call in the S&P 500 by about 15%. After accounting for the opportunity cost of locked-up capital, the fund added value.
+
+**Step 3 — Adjust for fees:** If the GP charges 20% carried interest on profits above an 8% hurdle, the net PME to the LP would be lower. This is why net-of-fee PME — not gross PME — is the number that matters for allocation decisions.
+
+**Contrast with IRR:** The fund's IRR is approximately 18% (solve for the discount rate that sets NPV of all cash flows to zero). That 18% sounds impressive, but it does not tell you whether you would have been better off in the S&P 500. The PME does.
+:::
+
 The choice of benchmark matters. A PME using the S&P 500 is appropriate for a US large-cap buyout fund. An ASEAN PE fund should be benchmarked against ASEAN public equity — the relevant opportunity set for the LP making the allocation decision. The risk adjustment matters too. The average PE fund has a market beta of approximately 1.0, so the S&P 500 is a reasonable risk-equivalent benchmark. The average VC fund has a beta closer to 1.4, meaning a straight S&P comparison flatters the VC's performance — the appropriate benchmark is a levered version of the index.
 
 Consider two investments, each requiring $100 million:
@@ -206,6 +239,18 @@ The conventional rule of thumb is that alternatives should constitute no more th
 ::: {.callout-important}
 ## Common Misconception
 The endowment model's success at Yale and Harvard reflects decades of relationship-building, proprietary deal flow, and access to top-quartile managers that most investors cannot replicate. When an endowment model fund is available to any retail investor through a feeder vehicle, the alpha has likely already been competed away. The model's outperformance is inseparable from access advantages that do not democratize easily.
+:::
+
+::: {.callout-tip collapse="true"}
+## Real-World Case: The Woodbridge Ponzi Scheme and Why Access Barriers Exist
+
+In 2017, the SEC shut down Woodbridge Group of Companies, a $1.2 billion Ponzi scheme that had raised money from over 8,600 investors — many of them retirees — through unregistered securities marketed as "first-position commercial loans" paying 5–10% annual returns.
+
+The scheme worked precisely because the investors lacked the sophistication to evaluate what they were buying. The "loans" did not exist. Returns to early investors were paid from new investor capital. The fund's marketing materials were slick, the returns were consistent, and the sales agents were persuasive. By the time the SEC intervened, investors had lost over $1 billion.
+
+Accredited investor rules exist not because regulators believe wealthy people are smarter, but because they can absorb losses. The SEC's threshold ($200,000 income or $1 million net worth excluding primary residence) is a rough proxy for the ability to lose an entire investment without financial ruin. Singapore's approach is different — the Monetary Authority of Singapore allows access through lower minimums (as low as SGD 200,000 for accredited investors) but requires intermediaries to assess customer knowledge and experience.
+
+The deeper lesson: when an alternative investment product is being *marketed to you* rather than accessed through your own network, the probability that it contains genuine alpha is low. Products with real edge do not need salespeople — they have waiting lists.
 :::
 
 ## Evaluating Alternative Investment Opportunities

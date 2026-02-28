@@ -8,7 +8,7 @@ It had not. But the episode crystallized a set of questions that anyone serious 
 
 For most of financial market history, trading cost real money. Traditional brokerages charged $20 to $50 per trade, and private banks charged more. Those fees were not accidental — they served as a natural friction device that kept casual speculators from overtrading. If you want to buy 50 shares of a $20 stock, a $25 commission represents a 2.5% immediate drag on your position. That creates a useful pause.
 
-Robinhood eliminated this. When it launched zero-commission trading in 2013 and the major incumbents matched within a few years, the per-trade cost became zero. The pitch was obvious and compelling: why should ordinary people pay fees that institutions do not? Why should building wealth be gated behind minimum investment requirements and per-trade tolls?
+Robinhood eliminated this. When it launched zero-commission trading in 2014 and the major incumbents matched within a few years, the per-trade cost became zero. The pitch was obvious and compelling: why should ordinary people pay fees that institutions do not? Why should building wealth be gated behind minimum investment requirements and per-trade tolls?
 
 The question the industry asks quieter is: how does Robinhood actually make money?
 
@@ -40,7 +40,7 @@ The foundational academic work here is Barber and Odean (2000), who analyzed 66,
 Barber and Odean's 2000 Journal of Finance paper established the empirical case that retail trading activity is on average value-destroying for the trader. A companion paper — "Boys Will Be Boys" — found that single men trade 67% more than single women and perform significantly worse, with overconfidence as the primary explanation. This is perhaps the most replicated finding in behavioral finance.
 :::
 
-The pattern appears internationally. In Taiwan, individual investor losses amount to 2.2% of GDP annually. In Brazil, 97% of equity futures day traders lose money. On eToro, a social trading platform that publishes aggregate performance statistics, more than 80% of individual traders lose money. The 70% figure for FX traders comes from SEC comments during a rulemaking process.
+The pattern appears internationally. In Taiwan, individual investor losses amount to 2.2% of GDP annually. In Brazil, 97% of equity futures day traders lose money. On eToro, a social trading platform that publishes aggregate performance statistics, more than 80% of individual traders lose money. The 70% figure for FX traders comes from CFTC comments during a rulemaking process.
 
 The natural interpretation is not that individual investors are uniquely irrational. It is that they are facing informed counterparties who have information advantages, faster technology, and in many cases are literally trading against retail order flow by design. When a market maker pays for your order, they are presumably getting something valuable from it.
 

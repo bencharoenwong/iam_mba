@@ -164,16 +164,18 @@ An earlier precursor often overlooked: in 12th-century France, *courtiers de cha
 In chronological terms, the asset management industry as we know it is surprisingly young:
 
 - **1774**: The first pooled investment vehicle created in Amsterdam — arguably the earliest precursor to the modern mutual fund.
-- **1873**: The first formal investment trust established.
+- **1868**: The first formal investment trust — the Foreign and Colonial Government Trust — established in London.
 - **1924**: The first mutual funds created in the United States. All were actively managed — there was no concept of simply buying the market.
 - **1930s**: Capital Group founded. (The firm is currently led by INSEAD alumni.)
 - **1940**: The Investment Company Act passed in the United States, establishing the foundational regulatory framework for pooled investment vehicles.
-- **1952**: Both Modern Portfolio Theory (Harry Markowitz) and the hedge fund structure (Alfred Jones, with his 2-and-20 fee arrangement) date to this year — a remarkable concentration of foundational innovation.
-- **1971**: The first index fund created. When Vanguard's Jack Bogle launched his index fund to the public, he raised $11 million — a grand total against which the current $15+ trillion Vanguard manages today is almost surreal. Bogle could not convince investors that not trying to beat the market was a valid strategy.
+- **1949**: Alfred Jones launches the first hedge fund, introducing the 2-and-20 fee arrangement (2% management fee, 20% of profits).
+- **1952**: Harry Markowitz publishes "Portfolio Selection" in the *Journal of Finance*, founding Modern Portfolio Theory.
+- **1971**: The first index fund created — by Wells Fargo for the Samsonite pension fund, an institutional product not available to individual investors.
+- **1976**: Vanguard's Jack Bogle launched the First Index Investment Trust, the first index fund available to the public. He raised $11 million — a grand total against which the roughly $9 trillion Vanguard manages today is almost surreal. Bogle could not convince investors that not trying to beat the market was a valid strategy.
 - **1978**: The Revenue Act of 1978 permitted employees to defer compensation into tax-advantaged accounts, creating the legal basis for the 401(k). This decision reshaped the defined-benefit to defined-contribution shift that transformed both household finance and the institutional demand for asset management.
 - **1990**: The first ETF listed — in Canada. Actively managed ETFs followed much later, in 2008.
 - **2010**: Robo-advisors emerge, applying 1952 portfolio theory through better algorithms and user interfaces. Betterment launched first, followed by Wealthfront.
-- **2013 onward**: Commission-free trading apps (Robinhood and its successors), which we examine in detail in Session 02.
+- **2014 onward**: Commission-free trading apps (Robinhood and its successors), which we examine in detail in Session 02.
 
 The trajectory reflects several forces working simultaneously. Academic research has consistently shown that active management, on average, does not add value after fees — a finding that drove the explosive growth of passive investing. At the same time, technology has progressively democratized access. Regulatory pressures have pushed toward greater transparency. Client demands have shifted toward lower fees and ESG integration. And competitive dynamics — fee compression and consolidation — have reshaped who survives in the industry. Each of these forces corresponds to specific sessions in the course: the active/passive debate in Sessions 7 and 8; democratization in Session 4; ESG in Session 12; alternatives and risk management in Sessions 11 and 13; and AI in Session 14. The first index fund was available only to institutional investors. Today, anyone with a smartphone can buy a globally diversified portfolio for a few dollars and an expense ratio of 3–5 basis points.
 
