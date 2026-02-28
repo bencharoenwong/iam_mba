@@ -1,0 +1,228 @@
+# Session 01: The Asset Management Industry
+
+When you open a bank account in Singapore and look at the investment products on offer, the options can be genuinely bad. Not "slightly suboptimal" bad — bad in a way that reveals something fundamental about how the asset management industry works, and whose interests it actually serves. That observation is what pushed one finance professor to set up his own fund. It is also a useful entry point into this course, which is less about learning to pick stocks and more about understanding the institutional machinery that sits between you and your money.
+
+This session establishes the foundational framework. We start with a question that sounds deceptively simple — what is investing? — and use it to unpack the structure of the global asset management industry, the principal-agent problems embedded in financial advisory relationships, and the historical evolution of an industry that now manages roughly $112 trillion in assets.
+
+### Course Structure
+
+The course is organized around four themes that progress from the human and behavioral dimensions of investing toward the more technical and cutting-edge:
+
+- **Theme 1 — Investing as a Human Problem** (Sessions 1–4): The asset management industry, financial planning, market efficiency, and the democratization of investing.
+- **Theme 2 — Investing as a Science** (Sessions 5–8): Asset allocation, Modern Portfolio Theory, active vs. passive management, and factor investing.
+- **Theme 3 — Investing as an Art** (Sessions 9–11): Active management strategies and evaluation, security selection, and risk management in practice.
+- **Theme 4 — State of the Art** (Sessions 12–14): Non-financial considerations (ESG and beyond), alternative investments, and the impact of AI on asset management.
+
+The course has six objectives: evaluate real-world investment decisions and current market issues; build a personal financial plan with appropriate portfolio construction and risk management; evaluate individual asset classes (stocks, bonds, gold, real estate, cryptocurrency) in a portfolio context; analyze the active vs. passive management debate; analyze the structure and dynamics of the asset management industry; and identify ethical considerations in modern investment practice.
+
+## What Is Investing?
+
+Investing, at its most basic, involves moving resources through time. You give something up today — money, time, consumption — in exchange for something in the future. The moment you are foregoing something, that implies a cost. MBA students, for instance, are here rather than working and earning income. The sticker price of the program is only part of the real cost; the forgone salary is the other part. That is called the opportunity cost, and it applies whether or not you make it explicit.
+
+This observation extends to any portfolio decision. If you hold cash, you are making an investment choice. Sitting on cash is not the absence of a strategy — it is a strategy, and generally not a good one when inflation is running. As one student put it during the opening discussion: there is always an opportunity cost if you do not invest in something.
+
+To make the opportunity cost concrete: the slides for this session include a full DCF of the INSEAD MBA itself. With tuition of roughly €107,600, living expenses of €30,000, and ten months of forgone pre-MBA salary of approximately €58,000, the all-in Year 0 investment is around €195,000. Assuming a pre-MBA salary of €70,000 growing at 3% annually and a post-MBA median salary of €111,400 growing at 5% annually, discounted at 8% over a 20-year horizon, the NPV is roughly €550,000–€650,000, with an IRR of 25–30% and a payback period of four to five years.
+
+::: {.callout-note}
+## Quick Refresher — NPV, IRR, and DCF
+A discounted cash flow (DCF) analysis values future cash flows by discounting them back to today at a chosen rate. The **net present value (NPV)** is the sum of those discounted cash flows minus the initial investment — positive NPV means the investment creates value. The **internal rate of return (IRR)** is the discount rate that makes the NPV exactly zero — it is the implied annual return. Both are covered in introductory corporate finance; we use them here to frame investing decisions throughout the course.
+:::
+
+The MBA clears the investment bar by a wide margin — but only because the opportunity cost is being measured correctly. Students from higher pre-MBA salary bands see lower NPVs, since the incremental lift over the counterfactual is smaller. The model also excludes optionality, network access, and geographic mobility, all of which the IRR framework cannot capture. That limitation is a preview of a broader theme: quantitative frameworks are essential, but they never tell the full story.
+
+The concept of productive use matters here. From an investor's perspective, a productive investment generates adequate returns for the level of risk taken. Higher returns, all else equal, are better — but "all else equal" rarely holds in practice. The efficient frontier defines the boundary of what is achievable given a particular level of risk; you cannot beat it by definition. We will spend substantial time on this later in the course.
+
+A word on ESG before moving on. The industry tends to bundle environmental, social, and governance concerns into a single acronym, but this grouping is conceptually sloppy. Whether your board has eleven members is a governance structure, not an outcome. Whether your shareholders or regulators sue you — that is the outcome. The distinction matters when we eventually extend portfolio theory to incorporate non-financial objectives in later sessions.
+
+### The Legal Definition of an Investment
+
+Not everything that looks like an investment meets the legal test applied in the United States and adopted as a guideline internationally. The Howey Test, derived from a 1946 Supreme Court case, identifies four features that together constitute a security:
+
+1. It involves money
+2. It involves a common enterprise — that is, a pooling of capital
+3. There is an expectation of profit
+4. The profit is derived from the efforts of others
+
+The pooling of capital is the critical trigger. If you give your friend access to your brokerage account to trade on your behalf, and you pay them for it — that is a private arrangement and legal in its simplicity. The moment capital from multiple investors is pooled together, a regulatory framework kicks in. Anti-money laundering requirements, know-your-client obligations, and securities law all attach at that point.
+
+This matters enormously for anyone building new financial products or platforms. Founders creating digital platforms and new tokenized instruments often do not realize they may be offering something that is regulated. Crypto provides the sharpest current example. If you accept public capital on TikTok to invest in some new token, you are almost certainly triggering securities regulation, regardless of whether you labeled it an "investment." The borderline cases — large controlling stakes, board seats, tokens where the holder provides ongoing effort — are genuinely difficult, and courts continue to wrestle with them. The cost of being first into new markets is that you are the first to run into new regulations.
+
+::: {.callout-important}
+## Common Misconception
+
+The distinction between investing and speculating is not just philosophical — it has legal implications. If trading in an asset is primarily for the dopamine hit rather than an expectation of profit, it is difficult to characterize as an investment in the legal sense. The surface behavior — submitting a buy order — can look identical. What differs is the intention and structure. A "play account" that is down 70% is best thought of as tuition, not a portfolio.
+:::
+
+::: {.callout-note}
+## A Note on AI in This Course
+
+AI tools — ChatGPT, Claude, and similar systems — are actively encouraged in this course for understanding complex concepts, exploring different perspectives, generating examples, and checking your work. Think of them as a financial teaching assistant that is always available. The important caveat: you own the output. You must be able to explain your reasoning, verify any calculations AI generates, and cross-check AI explanations against course materials. The burden is higher, not lower, because AI can produce plausible-sounding errors with no warning. Knowing enough finance to catch those errors is part of what this course develops. We will also discuss during the course how AI itself is reshaping the asset management industry — see Session 14.
+:::
+
+## The Structure of Global Financial Markets
+
+Financial markets serve several functions simultaneously: they aggregate and transmit information through prices, enable intertemporal consumption smoothing, allocate capital from those who have it to those who can use it productively, and facilitate risk sharing from those who want to avoid it to those who are willing to bear it. A sixth function — stewardship of resources — is implicit in any discussion of sustainable or long-horizon investing and will resurface in Sessions 11 and 12. The fifth function — the separation of ownership and control — underlies much of what we will discuss throughout the course.
+
+The reason shareholders rather than debt holders control most public companies is not an accident of nature. It is a design choice embedded in corporate law, and it reflects a specific answer to an agency problem. Debt holders, if given control, would optimize for one thing: not going bankrupt. They do not care whether the firm is developing a transformative new product. A company controlled by debt holders would produce conservative, financially stable businesses — and very little growth. Equity holders, by contrast, receive the full upside if the firm's value increases beyond the debt obligation. That residual claim creates the incentive to take risks and pursue growth. The law chose the structure that best promotes firm value creation.
+
+### The Global Investment Opportunity Set
+
+Looking at 100 years of market history clarifies how the global opportunity set has evolved. Before World War One, the United States accounted for about 15% of global market capitalization. Post-WWII American economic dominance pushed that share dramatically higher. Japan surged through the 1980s on extreme valuations and then gave much of it back. Today, North America represents approximately 65% of the MSCI All Country World Index (ACWI), and that share is still growing.
+
+China — including mainland China, Hong Kong, and Taiwan — sits at roughly 6% combined, a figure that surprises most people given China's economic size. The gap is partly explained by free float adjustment. The MSCI does not weight countries by their total market capitalization; it weights them by *free float-adjusted* market capitalization, which excludes shares that are closely held and not actually available for trading on public exchanges. Markets with high family ownership or significant state ownership — characteristics common in emerging markets — get penalized in this weighting. As of June 2025, approximately $5.6 trillion in assets was benchmarked to the MSCI ACWI IMI (Investable Market Index), a version of the index that also includes small-cap stocks. That adjustment is driven by practical liquidity concerns, not by portfolio theory. No textbook derivation arrives at "free float-adjusted market cap" as the optimal allocation rule. GDP-weighting, by contrast, would push allocations meaningfully toward emerging and developing markets — a different answer to the question of what the "right" global portfolio looks like.
+
+The practical implication is that if you simply buy the global index, you are getting the investable equity market — but that is not the same as getting proportional exposure to global economic output. Countries with restrictive capital controls, limited public markets, or high state ownership are systematically underweighted. Whether that gap represents a risk or an opportunity is a question we will return to.
+
+::: {.callout-note}
+## Academic Reference
+
+The MSCI ACWI and its free float methodology are discussed extensively in Ang, Chapter 15. The distinction between market-cap weighting as a theoretical optimum (derivable from the CAPM under specific conditions) versus free float adjustment as a practical implementation choice is worth keeping in mind throughout the course.
+:::
+
+### Long-Run Returns: The Equity-Housing Comparison
+
+A question posed to the class: over the past 120 years across 16 advanced economies, which asset class had higher returns — equities or residential real estate?
+
+The data, drawn from roughly 1870 to 2017, reveals that the two are essentially indistinguishable. Real equity total returns averaged 6.82% annually, with a standard deviation of about 22%. Real housing returns averaged 6.92%. The class survey, conducted before seeing the data, landed surprisingly close to this range.
+
+This is useful calibration for financial planning purposes. An assumption of 6–7% real returns on equities is not aggressive. What *is* aggressive is expecting consistently higher — an entrepreneur saying their business returns 18% on equity and asking a fund manager to match it in liquid markets. Achieving that level of return requires either accepting significantly more risk in the form of volatility, accepting more tail risk, or both. There is no free lunch.
+
+The long-run return on precious metals — gold, silver, diamonds — averages approximately zero in real terms. They are stores of value, not growth assets.
+
+::: {.callout-note}
+## Data Source
+
+These return estimates come from Jordà, Knoll, Kuvshinov, Schularick, and Taylor, "The Rate of Return on Everything, 1870–2015," *Quarterly Journal of Economics*, 2019. The study covers 16 advanced economies: Australia, Belgium, Denmark, Finland, France, Germany, Italy, Japan, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, the United Kingdom, and the United States. The equity and housing figures decompose total returns into a yield component (dividends and rent, respectively) and a capital gain component — a decomposition that matters when evaluating the source of long-run performance.
+:::
+
+
+## The Principal-Agent Problem in Asset Management
+
+The asset management industry is, at its core, a principal-agent industry. Asset owners — individuals, pension funds, endowments, sovereign wealth funds — are the principals. Asset managers and financial advisors are the agents. The interests of these two parties are not automatically aligned.
+
+The total industry manages approximately $112 trillion (as of 2022). The split is more precise than the traditional/alternatives label suggests: traditional managers — mutual funds, ETFs, and separately managed accounts investing in publicly traded stocks and bonds — accounted for approximately $84.9 trillion, while alternative managers — hedge funds, private equity, private credit, and real assets — accounted for approximately $27.1 trillion. There is a long-run trend where asset classes that begin as "alternative" gradually become mainstream as technology improves, regulations adapt, and investor familiarity grows. Real estate investment trusts (REITs) are a classic example; inflation-linked bonds are another.
+
+The industry ecosystem is broader than just asset owners and asset managers. Service providers — custodian banks, prime brokers, and fund administrators — underpin the infrastructure that asset managers depend on. Regulators (the SEC, central banks, and their equivalents in each jurisdiction) provide oversight at the level of managers, investment vehicles, and service providers simultaneously. Understanding where along this chain a given business sits matters for understanding both its economics and its regulatory obligations.
+
+### Why Use an Asset Manager?
+
+The formal functions of a modern asset manager can be grouped into three categories. First, *portfolio management*: asset allocation and security selection, risk management and diversification, trading and execution, and ongoing rebalancing and monitoring. Second, *access and scale*: pooling capital enables broader diversification and access to institutional-quality investments that would be unavailable to individuals, along with better trading terms and lower transaction costs. Third, *expertise and resources*: investment research, market monitoring, due diligence, risk management infrastructure, and regulatory compliance.
+
+The honest answer is that asset managers solve a complexity problem. The investment opportunity set is enormous. Understanding which instruments are appropriate for your situation, how to construct a diversified portfolio, when to rebalance, how to think about tax efficiency — these are non-trivial tasks. Asset managers provide expertise, infrastructure, and access.
+
+The access point matters more than it sounds. Private market investments — stakes in private companies, real estate deals, infrastructure projects — are not available to the public through a brokerage account. They are allocated through relationships. A fund that receives a pitch for SpaceX private shares should ask itself: how many other funds declined before this came to us? That question is not cynicism; it is a direct application of the market for lemons. The most lucrative private market deals go to those with the best proprietary deal flow — meaning genuine information or relationship advantages that got them to the deal before anyone else. A cold pitch from a stranger is almost by definition not that.
+
+The day-to-day work of most asset managers, however, looks very different from the idealized version. In practice, the role involves maintaining compliance documentation, sending quarterly reports, and managing client emotions during drawdowns. The value added in security selection is secondary to the value added in keeping clients invested through volatility.
+
+::: {.callout-note}
+## Key Challenges in Asset Management
+
+The structural tensions in the industry are worth naming explicitly: fees that are high relative to documented value added; the persistent difficulty of generating alpha consistently over time; the principal-agent problem between owners and managers; and increasing competitive pressure from low-cost passive options. These four challenges appear throughout the course — they are not incidental to the industry, they are constitutive of it.
+:::
+
+
+### How Financial Advisors Are Paid — and What That Implies
+
+The compensation structure of financial advisors is the central mechanism through which the principal-agent problem manifests for retail investors. Two broad models exist: fee-based and commission-based.
+
+Commission-based advisors earn money when they sell a product. The product that sells most commonly in Singapore and Hong Kong is the investment-linked insurance product (ILP). These instruments combine life insurance with an equity allocation. The commission structure on ILPs is not 1%, not 2%, not 5% — it is 50% of the first six years of premiums. After signing, the advisor disappears for approximately six years (while earning trailing commissions), then reappears to sell the client more product. The design of these contracts reinforces this pattern: if a client stops paying within the first six years, they often recover 10–20 cents on the dollar, if that.
+
+> "If you let them guide you, it may not be in your best interest."
+
+This is the asymmetry that investors need to internalize. An advisor on a commission structure is not required to recommend the best product for you; they are required to recommend a product that is suitable for you, which is a much lower bar.
+
+The regulatory treatment of this asymmetry varies substantially across jurisdictions:
+
+- **United States, Taiwan, Philippines**: Investment advisors have a *fiduciary duty* — a legal obligation to act in the client's best interest, with mandatory disclosure of conflicts of interest.
+- **European Union**: Disclosure required; protections are generally between the US and Asian standards.
+- **Singapore, Hong Kong**: No fiduciary duty for most advisors. Disclosure of commissions is *not* required proactively — only if the client explicitly asks. Contracts for private bank clients in Asia are materially different from contracts for the same bank's US or European clients.
+
+The practical implication: in Singapore, an advisor can charge whatever commission the client will sign for. The protection is informational — you can ask, and they must answer truthfully — but the burden is on the investor to know what questions to ask.
+
+::: {.callout-warning}
+## Career Relevance
+
+If you are going into financial services in Asia, you will encounter these compensation structures directly. If you are a client of financial services in Asia, you need to know which questions to ask before signing anything. Key questions: How are you compensated on this product? Is there a commission? What is the surrender value after one year? After three years? After six years? What are the management fees on the underlying funds?
+
+In the United States, you can look up any registered investment adviser on the SEC's database and see their Form ADV, which discloses fees, conflicts, and disciplinary history. In Singapore, MAS licensing information is public, but fee disclosure is not automatic.
+:::
+
+::: {.callout-note}
+## Academic Reference
+
+Charoenwong, Kwan, and Umar (2019) in the *American Economic Review* examine whether regulatory jurisdiction affects the quality of investment-adviser regulation — a direct empirical treatment of the cross-jurisdictional differences discussed here. Charoenwong, Kowaleski, Kwan, and Sutherland (2024) in the *Journal of Financial Economics* examine RegTech and regulatory compliance, which is increasingly relevant as technology transforms how oversight works in this industry.
+:::
+
+## The Historical Evolution of Asset Management
+
+Asset management as a profession predates modern finance by millennia. The concept originates in Ancient Greece, where servants were entrusted with managing the estates of the wealthy — often while the owner was away at war. The fiduciary relationship has always been defined by one party placing assets in the hands of another and trusting them to act in the principal's interest. The consequences for failure were more direct in ancient times; one Japanese bank apparently kept on its website well into the modern era a commitment that any employee who misappropriated client funds would be required to make restitution from personal assets and commit ritual suicide. They no longer enforce the latter, but they kept it as a statement of the trust relationship that defines the industry.
+
+The industry grew significantly during medieval Europe as the aristocracy engaged in estate planning around military campaigns. If you were going to war, you needed someone to manage your assets in your absence — and potentially after your death. The Medici family built their wealth and influence partly through financing governments, often backing both sides of a conflict. We now call that diversification.
+
+An earlier precursor often overlooked: in 12th-century France, *courtiers de change* — exchange brokers — managed the agricultural debts of rural communities on behalf of banks, acting as financial intermediaries for local economies. This predates the Medici by roughly two centuries and represents an early formal instance of third-party financial intermediation rather than purely private estate management. Informal commodities trading had begun even earlier, with gatherings in Belgium in the late 13th century that foreshadow modern exchanges.
+
+In chronological terms, the asset management industry as we know it is surprisingly young:
+
+- **1774**: The first pooled investment vehicle created in Amsterdam — arguably the earliest precursor to the modern mutual fund.
+- **1873**: The first formal investment trust established.
+- **1924**: The first mutual funds created in the United States. All were actively managed — there was no concept of simply buying the market.
+- **1930s**: Capital Group founded. (The firm is currently led by INSEAD alumni.)
+- **1940**: The Investment Company Act passed in the United States, establishing the foundational regulatory framework for pooled investment vehicles.
+- **1952**: Both Modern Portfolio Theory (Harry Markowitz) and the hedge fund structure (Alfred Jones, with his 2-and-20 fee arrangement) date to this year — a remarkable concentration of foundational innovation.
+- **1971**: The first index fund created. When Vanguard's Jack Bogle launched his index fund to the public, he raised $11 million — a grand total against which the current $15+ trillion Vanguard manages today is almost surreal. Bogle could not convince investors that not trying to beat the market was a valid strategy.
+- **1978**: The Revenue Act of 1978 permitted employees to defer compensation into tax-advantaged accounts, creating the legal basis for the 401(k). This decision reshaped the defined-benefit to defined-contribution shift that transformed both household finance and the institutional demand for asset management.
+- **1990**: The first ETF listed — in Canada. Actively managed ETFs followed much later, in 2008.
+- **2010**: Robo-advisors emerge, applying 1952 portfolio theory through better algorithms and user interfaces. Betterment launched first, followed by Wealthfront.
+- **2013 onward**: Commission-free trading apps (Robinhood and its successors), which we examine in detail in Session 02.
+
+The trajectory reflects several forces working simultaneously. Academic research has consistently shown that active management, on average, does not add value after fees — a finding that drove the explosive growth of passive investing. At the same time, technology has progressively democratized access. Regulatory pressures have pushed toward greater transparency. Client demands have shifted toward lower fees and ESG integration. And competitive dynamics — fee compression and consolidation — have reshaped who survives in the industry. Each of these forces corresponds to specific sessions in the course: the active/passive debate in Sessions 7 and 8; democratization in Session 4; ESG in Session 12; alternatives and risk management in Sessions 11 and 13; and AI in Session 14. The first index fund was available only to institutional investors. Today, anyone with a smartphone can buy a globally diversified portfolio for a few dollars and an expense ratio of 3–5 basis points.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+The security that trades with the highest volume in the world is the SPDR S&P 500 ETF (SPY) — an instrument designed specifically for passive, buy-and-hold investing. The paradox is that it is also the most actively traded security. Calling something "passive" describes the index-tracking strategy, not the behavior of investors who use it. When we ask whether a strategy is active or passive, we need to be clear about whether we mean the underlying instrument or the investor's behavior. These are not the same thing.
+:::
+
+## The ARK Exercise: Measuring Value Added
+
+The in-class exercise for this session uses ARK Investment Management's flagship ETF (ARKK) as a case study. ARK, run by Cathie Wood, became famous for its aggressive bets on disruptive technology platforms — artificial intelligence, energy storage, robotics, genomic sequencing, and blockchain technology. The fund posted extraordinary returns in 2020 and experienced substantial drawdowns thereafter.
+
+The exercise asks students to do something deceptively simple: calculate the fund's average returns from 2015 through 2023, then calculate actual dollar returns before and after fees, using actual monthly return and AUM data from Refinitiv.
+
+The reason this exercise matters is methodological. There are four distinct ways to measure investment returns: the simple return (equivalent to the time-weighted return for a single period), the Compound Annual Growth Rate (CAGR), the Internal Rate of Return (IRR), and the money-weighted return. These are not interchangeable. For a single investor with no cash flows, they converge. For a fund experiencing large inflows and outflows over time — which describes almost every well-known fund — they diverge, sometimes dramatically.
+
+Average percentage returns and dollar-weighted returns are not the same thing. If a fund has great returns when it is small and poor returns when it is large — which is precisely what happened with ARK — the dollar-weighted return experienced by the average investor is far worse than the time-weighted return published in the fund's marketing materials. The exercise sets up the framework for evaluating what asset managers actually deliver, not what they claim to deliver.
+
+> "Today, we believe the world economy is undergoing the largest technological transformation in history, thanks to five innovation platforms evolving at the same time."
+
+This is the kind of language that appears in fund marketing. By the end of this session, you should already have the tools to ask the right follow-up question: what were the actual returns, for the actual dollars invested, over the actual holding period of the average investor in this fund?
+
+## Open Questions in Asset Management
+
+The structural problems introduced in this session do not have clean answers — they are live questions that practitioners, regulators, and researchers continue to work on. Four are worth keeping in front of you throughout the course:
+
+1. **How to align interests between principals and agents?** Compensation design, regulatory mandates, and disclosure requirements are all partial solutions, each with their own failure modes.
+2. **Where does active management add most value?** The evidence that active management underperforms passive on average does not mean it adds no value anywhere. Identifying where and when it matters is an empirical question.
+3. **What is the optimal balance between human judgment and systematic approaches?** Machine learning and quantitative models are increasingly embedded in investment processes — but the failure modes of systematic approaches differ from those of human judgment, not disappear.
+4. **How to serve retail investors better?** Access has improved dramatically; alignment of incentives has improved less. The gap between what investors receive and what they could receive remains substantial, particularly in jurisdictions without fiduciary standards.
+
+## Key Takeaways
+
+- Investing means foregoing something today for a return in the future; the moment you pool others' capital, regulatory frameworks attach. Not having a financial plan is itself a plan — and usually a poor one.
+- The global investment opportunity set is dominated by North American equities (65% of MSCI ACWI), with emerging markets systematically underweighted due to free float adjustment methodology. Over 120 years, equity and residential real estate have delivered statistically indistinguishable real returns of approximately 6.9%.
+- The asset management industry is a principal-agent industry. Commission structures — especially in Asia — create incentives for advisors that are not aligned with client interests. Investment-linked insurance products with 50% front-loaded commissions are the canonical example.
+- Fiduciary duty exists in the US, Taiwan, and the Philippines but not in Singapore or Hong Kong. In jurisdictions without fiduciary duty, the burden of asking the right questions falls entirely on the investor.
+- The modern asset management industry is younger than most people think. Index funds date only to 1971; robo-advisors to 2010. The shift from active to passive management is one of the most consequential structural changes in financial markets over the past fifty years.
+
+## Further Reading
+
+**Mandatory:**
+
+- BNY Mellon. *The Future of Asset Management.*
+- Arnott, Rob. *Asset Management: Past, Present, and Future of Modern Finance* (JPM Series).
+
+**Recommended:**
+
+- Ang, Andrew. *Asset Management: A Systematic Approach to Factor Investing*, Chapter 15.
+- Charoenwong, B., Kwan, A., and Umar, T. (2019). Does regulatory jurisdiction affect the quality of investment-adviser regulation? *American Economic Review*.
+- Charoenwong, B., Kowaleski, Z., Kwan, A., and Sutherland, A. (2024). RegTech. *Journal of Financial Economics*.

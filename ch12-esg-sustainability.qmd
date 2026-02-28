@@ -1,0 +1,181 @@
+# Session 12: Non-Financial Considerations — ESG and Sustainability in Investing
+
+Every few years, an idea captures the asset management industry's imagination so completely that it becomes impossible to ignore, whether you believe in it or not. ESG investing is the current version of that phenomenon. Assets managed under some version of an ESG mandate have surged to the tens of trillions globally. Regulatory frameworks in Europe now require funds to classify themselves by sustainability intent. BlackRock — the largest asset manager in the world, with over $10 trillion under management — made climate risk a central investment thesis. And yet, ESG ratings from competing agencies disagree with each other so thoroughly that a single company can simultaneously receive a top score from one rater and near-bottom from another.
+
+This session is about understanding what is actually going on. We are going to separate the marketing from the economics, be honest about what the evidence shows, and think carefully about how non-financial objectives — whether ethical, religious, or sustainability-related — interact with the portfolio construction framework we have spent the last eleven sessions building.
+
+## The Friedman Starting Point
+
+Before jumping to ESG frameworks and ratings methodology, it is worth being honest about the foundational question: what is finance actually for?
+
+Milton Friedman's 1970 New York Times essay staked out the maximally clean position: the social responsibility of a corporation is to increase its profits, full stop. A corporate executive who diverts company resources toward social causes — however worthy — is essentially spending other people's money without their consent. The shareholders who own the firm did not authorize that expenditure. If those shareholders want to make charitable contributions, they can do so with their own dividend income. That is their decision to make, not the executive's.
+
+> "There is one and only one social responsibility of business — to use its resources and engage in activities designed to increase its profits so long as it stays within the rules of the game."
+>
+> — Milton Friedman, *New York Times*, 1970
+
+This is not an immoral position. It is actually a serious argument grounded in agency theory. An executive who unilaterally pursues non-financial objectives is acting as a principal, not an agent. The problem is that it rests on assumptions — well-functioning legal systems, no externalities, no public goods problems — that do not fully describe reality. If a firm's operations impose costs on third parties that are never priced into the market, the profit-maximization objective is delivering exactly the wrong social outcome.
+
+The modern ESG debate is, at its core, this disagreement running at institutional scale. Understanding both sides with clarity is more useful than picking a team.
+
+## A Brief History of the ESG Idea
+
+Sustainable investing did not begin with UN frameworks or climate conferences. Its roots are in religious communities — Quakers in the 18th century refused to invest in businesses connected to the slave trade or the production of weapons. Methodist principles in the same era discouraged investment in alcohol and tobacco. These were exclusionary approaches driven by explicit moral beliefs, not financial calculations.
+
+The modern wave arrived in stages. The social movements of the 1960s and 1970s — opposition to the Vietnam War, the civil rights movement, anti-apartheid campaigns — led to the first wave of institutional divestment decisions. South African exposure became politically untenable for many US university endowments. The 1990s brought Corporate Social Responsibility as a formal management discipline. And then, in 2006, the UN Principles for Responsible Investment (PRI) formalized ESG as a framework that roughly 5,000 asset managers have now signed onto.
+
+The 2010s brought the Paris Agreement (2015) and the Sustainable Development Goals (SDGs), which gave ESG a specific policy backdrop. The 2020s brought regulatory teeth: the EU's Sustainable Finance Disclosure Regulation (SFDR) classifies investment products into tiers — Article 6 (basic ESG risk disclosure), Article 8 (promoting environmental or social characteristics), and Article 9 (explicit sustainable investment objectives). The SEC in the United States has proposed climate disclosure rules requiring Scope 1, 2, and material Scope 3 emissions reporting. Norway's Government Pension Fund Global (GPFG), the world's largest sovereign wealth fund, maintains an active exclusion list and publishes the reasoning behind each exclusion decision.
+
+::: {.callout-note}
+## Academic Reference
+
+The history of ESG is explored in Ang Chapter 16, which situates modern ESG within the broader context of asset pricing and factor models. The key empirical work on exclusionary screening effects — what happens to returns when you rule out certain sectors — goes back to Hong and Kacperczyk (2009), who document that sin stocks (alcohol, tobacco, gambling, weapons) earn higher returns than the market predicts, precisely because many institutions refuse to hold them. The required return is compensation for the stigma.
+:::
+
+## Two Frameworks for Thinking About ESG and Returns
+
+Here is the central question in the academic literature: if ESG investing is common enough to move prices, what does that imply for expected returns?
+
+There are two dominant frameworks, and they point in opposite directions on what ESG investing does for your portfolio financially.
+
+**The Risk-Mitigation Framework** treats ESG scores as signals of future risk. A company with strong environmental practices is better prepared for regulatory changes, resource constraints, and liability exposure. A company with strong governance is less likely to blow up due to fraud or misaligned management incentives. Under this view, high ESG scores predict lower downside risk and therefore better risk-adjusted returns going forward. The ESG screen is identifying companies with better unpriced fundamentals.
+
+**The Cost of Capital Framework** starts from a different premise. If enough investors collectively prefer green assets and avoid brown ones, they bid up the prices of ESG-favored companies. Higher prices today mean lower expected future returns — that is just arithmetic. The flip side is that the companies being avoided face a higher cost of capital (lower prices, so they have to offer higher expected returns to attract investment). Under this view, being an ESG investor has a real financial cost — you are accepting lower expected returns in exchange for the non-financial benefit of holding sustainable assets.
+
+These frameworks are not mutually exclusive, but they have opposite implications for portfolio construction. The risk-mitigation view says tilt toward ESG leaders and capture better risk-adjusted returns. The cost of capital view says you face a genuine trade-off: you can drive capital toward sustainable activities, but you should not pretend there is no financial cost.
+
+::: {.callout-important}
+## Common Misconception
+
+The claim that "ESG investing does not sacrifice returns" is often made by asset managers marketing ESG products. In equilibrium, it cannot be both true that (1) enough investors prefer ESG assets to affect prices, and (2) ESG investors earn the same or better returns as everyone else. If ESG preferences move prices, then by definition ESG-favored assets are more expensive and have lower expected returns. The historical outperformance of ESG stocks during 2012–2020 documented by Pastor, Stambaugh, and Taylor (2021) is explained by an *unexpected* increase in climate concern during that period — a one-time upward revaluation, not a persistent return premium.
+:::
+
+The ICAPM gives us a clean way to incorporate this. The optimal portfolio weight is:
+
+$$w^* = \frac{\mu - r_f}{A\sigma^2} + \frac{1}{\sigma^2} \text{cov}(r_p, F)$$
+
+where $F$ is a climate or sustainability risk factor. The first term is the familiar mean-variance demand. The second is hedging demand — investors want exposure to assets that perform well when climate outcomes are bad. If a stock hedges climate risk (positive covariance with adverse climate states), investors bid up its price, accepting lower expected returns in exchange. That is the cost-of-capital effect, derived from first principles.
+
+The practical implication: even non-ESG investors should care about ESG information if it forecasts future cash flows or discount rates. The channel is financial materiality, not moral preference.
+
+## ESG Ratings: A Measurement Problem
+
+Here is something the industry does not advertise loudly: ESG ratings from different providers disagree with each other dramatically. Berg, Koelbel, and Rigobon (2022) document the aggregate confusion. The correlation between ESG ratings from major agencies — MSCI, Sustainalytics, Refinitiv, S&P Trucost — is roughly 0.3 to 0.6. For comparison, credit ratings from Moody's and S&P correlate at above 0.9.
+
+The disagreement comes from three sources:
+
+1. **Scope disagreement** — different providers measure different attributes. One agency might track water usage; another might not.
+2. **Measurement disagreement** — even for the same attribute, providers use different raw data sources and methodologies.
+3. **Weighting disagreement** — how much weight to put on carbon emissions versus board diversity versus supply chain labor practices.
+
+The third source is the most pernicious, because it embeds value judgments into what looks like objective scoring. A company that scores well on climate metrics but poorly on labor practices will get a very different aggregate score depending on how the rater weights those dimensions — and there is no obvious "correct" answer to how to weigh them.
+
+::: {.callout-warning}
+## Exam/Career Relevance
+
+If you end up running a sustainable portfolio, or advising clients who want ESG exposure, the first practical question is: which ESG data source are you using and why? MSCI ESG Ratings have wide coverage and industry-specific materiality weighting. S&P Trucost is widely regarded as the strongest source specifically for environmental data (carbon and resource usage), though their estimates for non-disclosing companies are model-based and correlate mechanically with company size and industry. Sustainalytics tends to emphasize governance more heavily. Understanding what your data actually measures — and what it does not — is not a data science detail. It is a core investment judgment.
+:::
+
+## ESG Is an Unfortunate Acronym
+
+This is worth stating plainly: bundling environmental, social, and governance concerns into a single number is conceptually confused. The three dimensions are not equivalent in terms of measurability, financial materiality, or the mechanism by which they affect firm value.
+
+A better way to think about the structure is: **Governance is the input; Environmental, Social, and Financial outcomes are the outputs.**
+
+Good governance — board accountability, management incentive alignment, audit quality, minority shareholder protections — is the mechanism through which firms make better decisions. It is not an outcome in itself. Whether you measure how many board members are independent or whether you measure whether shareholders can actually vote out a bad management team — the latter is the thing you care about. The former is just a proxy, and a noisy one.
+
+Once you frame it this way, the financial materiality of ESG becomes clearer:
+
+- **Environmental:** Reducing waste is genuinely economical. Regulatory risk from carbon-intensive operations is real and increasing. Consumer willingness to pay for sustainable products varies by market but is non-trivial in high-income economies.
+- **Social:** Employee satisfaction data has predictive content for stock returns. Edmans (2011) shows that firms on the "100 Best Companies to Work For" list outperform the market by 2–3% per year. Becker's (1957) discrimination model implies that firms that discriminate forgo talent — a real financial cost, not just an ethical failing.
+- **Governance:** This is the most financially material dimension and the best established empirically. Gompers, Ishii, and Metrick (2003) construct a governance index and show it strongly predicts subsequent returns. The accrual anomaly (Sloan 1996) is essentially a governance failure — management exploiting accounting discretion at shareholders' expense.
+
+The upshot is that the "E" and "S" in ESG are financially material when they reflect real operating risks or capabilities, and they are noise when they reflect box-checking for regulatory compliance. The "G" is financially material almost always. This is why a common critique of composite ESG scores is that they obscure the component that actually matters most.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+The Tesla ESG controversy illustrates the measurement problem perfectly. Tesla was excluded from the S&P 500 ESG Index in 2022 despite manufacturing electric vehicles — the canonical "green" product. The reason was governance failures and workplace conditions, not its carbon footprint. A composite ESG score treating all dimensions equally can produce outcomes that directly contradict the stated purpose of the rating. This is not an edge case; it is a predictable consequence of aggregating incommensurable dimensions.
+:::
+
+## Implementation: How ESG Actually Gets Done
+
+If you decide non-financial considerations belong in a portfolio, there are four main implementation approaches, with meaningfully different financial implications.
+
+**Negative Screening** excludes companies or sectors that violate specified criteria. This can be absolute (no tobacco, ever) or norm-based (exclude companies violating UN Global Compact principles) or optimization-based (exclude the bottom quintile of ESG scores while tracking the index). The financial cost depends on how many securities you exclude and how correlated they are with factors you are deliberately trying to hold. Excluding tobacco and alcohol reduces your exposure to high-quality, cash-generative businesses — which is fine if you have accepted that trade-off explicitly.
+
+**ESG Integration** incorporates ESG scores as inputs into security selection or factor tilts without hard exclusions. A manager might tilt toward higher-governance firms within each sector, or use carbon intensity as a risk input alongside standard financial metrics. This preserves diversification better than screening and is increasingly the default approach among large institutional managers.
+
+**Thematic and Impact Investing** starts with a well-specified objective — renewable energy infrastructure, affordable housing, gender diversity in management — and builds a portfolio around it. This is the purest implementation of non-financial preferences, but it typically concentrates exposure significantly. The financial cost is potentially large; the non-financial benefit is potentially direct.
+
+**Engagement and Active Ownership** uses shareholder voting rights and direct dialogue to push companies toward better practices. The evidence on engagement effectiveness is mixed, but the basic logic is sound: a major institutional shareholder has leverage that an individual investor does not. The Norwegian GPFG's three-pronged approach — exclusion, observation, and active ownership — represents a sophisticated version of this. BlackRock's Larry Fink famously used annual letters to push portfolio companies on climate strategy, though critics note that voting records have not always matched the rhetoric.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+Engagement has a portfolio logic that exclusion does not. When you exclude a company, you give up your voice in its governance. A major shareholder that remains invested and actively votes against management on ESG resolutions may produce more real-world change than one that sells and declares victory. The question of whether asset managers who claim ESG mandates actually vote their shares accordingly is a legitimate empirical question — and the answer is often no.
+:::
+
+## The Evidence on Returns
+
+What does the data actually say?
+
+**Green Bonds** trade at a small but consistent premium over conventional bonds — roughly 1 to 6 basis points lower yield at issuance, and 2 to 4 basis points lower yield in secondary markets. The premium is larger for corporate issuers than sovereigns, larger in euro markets than dollar markets, and larger when third-party verification is attached. This greenium is real but small. Investors are accepting lower yield in exchange for the non-financial benefit of directing capital to labeled green projects.
+
+**Stocks** tell a more nuanced story. High ESG-rated stocks show lower expected returns of roughly 20 to 40 basis points per month in cross-sectional studies, though this is correlated with other return predictors. The important paper here is Pastor, Stambaugh, and Taylor (2021), which establishes the equilibrium framework: green stocks should underperform in expectation because they are priced higher by ESG-conscious investors. The realized outperformance during 2012–2020 reflects an unexpected shift in climate preferences, not a violation of the theory.
+
+**Sin stocks** (tobacco, alcohol, gambling, weapons) tend to earn above-average returns — Hong and Kacperczyk (2009) document this carefully. The mechanism is exclusion-driven mispricing: because many institutions refuse to hold sin stocks for non-financial reasons, these stocks require a higher return to clear the market. This is exactly what the cost-of-capital framework predicts.
+
+::: {.callout-note}
+## Academic Reference
+
+Pastor, Stambaugh, and Taylor's (2021) *Sustainable Investing in Equilibrium* is the key theoretical paper. It derives what ESG-driven demand implies for equilibrium returns: green assets have lower expected returns, brown assets have higher expected returns, and realized returns can deviate from expectations when ESG preferences shift unexpectedly. The subsequent *Dissecting Green Returns* (2022) paper decomposes the 2012–2020 outperformance into expected and unexpected components — the former is negative, the latter is positive and explains the full measured result.
+:::
+
+The factor story matters here too. Quality stocks — high profitability, conservative investment, strong governance — tend to perform well. The quality factor (RMW, or robust-minus-weak profitability) in the Fama-French framework captures some of what composite ESG scores capture, particularly the governance component. This means some of the apparent return advantage of ESG investing is not ESG per se — it is exposure to quality. You can get that exposure without the rest of the ESG framework if you want it.
+
+## Non-Financial Objectives and the Honest Trade-Off
+
+The most important practical question for any investor pursuing ESG is: what exactly are you willing to give up, and for what?
+
+The framing that investment success equals returns plus peace of mind is actually serious, not just marketing copy. Portfolios that investors cannot maintain during downturns — because the holdings conflict with their values in ways they find intolerable — produce worse outcomes than portfolios with a slightly lower Sharpe ratio but sustainable conviction. An investor who sold everything in March 2020 because holding oil companies felt morally wrong during a market crash made a worse financial decision than one who held a slightly dirtier portfolio without flinching.
+
+But the peace-of-mind value has to be made explicit. A reasonable investment policy statement for an ESG-oriented investor might say:
+
+> "I am willing to accept up to X% lower annual returns or Y% higher portfolio volatility to maintain alignment with my environmental priorities, because I believe this reflects my values and I will not abandon this strategy during underperformance."
+
+Without specifying X and Y, the ESG preference is a marketing statement, not an investment policy. Making it concrete forces clarity about the actual trade-off being made, which is what separates serious ESG integration from greenwashing.
+
+::: {.callout-warning}
+## Exam/Career Relevance
+
+Greenwashing — labeling a product as sustainable without substantive portfolio differences from a conventional fund — is increasingly a regulatory enforcement target. The SEC's ESG fund naming rules and the EU's SFDR classification requirements are both attempts to impose accountability on sustainability labels. As a practitioner, understanding the difference between Article 8 and Article 9 funds under SFDR, or knowing what the SEC requires in an ESG-labeled fund's prospectus, is a compliance requirement in addition to being a portfolio management judgment. The reputational and legal costs of mis-labeling are real.
+:::
+
+## Key Takeaways
+
+- ESG is not a single thing. Environmental, social, and governance dimensions have different levels of financial materiality, different measurability, and different mechanisms by which they affect firm value. Governance is the most consistently financially material. Treating a composite ESG score as a unified signal is analytically lazy.
+
+- In equilibrium, widespread ESG preferences should produce lower expected returns on green assets and higher expected returns on brown assets. The historical outperformance of ESG stocks during 2012–2020 reflects an unexpected shift in climate concern, not evidence against this theory. Do not confuse one-time revaluations with persistent return premia.
+
+- ESG rating divergence is severe — correlations between major raters are 0.3 to 0.6. The data source you use matters enormously. S&P Trucost is stronger for environmental measurement; governance data from traditional financial sources is often better than composite ESG scores.
+
+- Implementation choice has real financial consequences. Exclusion sacrifices diversification and gives up shareholder voice. Engagement preserves both but requires genuine institutional leverage to be effective. Thematic investing maximizes non-financial impact but concentrates risk.
+
+- Be honest about the trade-off. If you want to hold ESG-aligned assets, quantify what you are willing to give up in terms of expected return and volatility. A stated preference without a stated cost tolerance is a marketing claim, not an investment policy.
+
+## Further Reading
+
+### Mandatory
+
+- Ang, A. *Asset Management: A Systematic Approach to Factor Investing.* Chapter 16 (ESG Investing). Oxford University Press.
+
+- Pastor, L., Stambaugh, R. F., & Taylor, L. A. (2021). Sustainable investing in equilibrium. *Journal of Financial Economics*, 142(2), 550–571.
+
+### Recommended
+
+- Berg, F., Koelbel, J. F., & Rigobon, R. (2022). Aggregate confusion: The divergence of ESG ratings. *Review of Finance*, 26(6), 1315–1344.
+
+- Hong, H., & Kacperczyk, M. (2009). The price of sin: The effects of social norms on markets. *Journal of Financial Economics*, 93(1), 15–36.
+
+- Hartzmark, S. M., & Sussman, A. B. (2019). Do investors value sustainability? A natural experiment examining ranking and fund flows. *The Journal of Finance*, 74(6), 2789–2837.

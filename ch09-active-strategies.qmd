@@ -1,0 +1,151 @@
+# Session 09: Active Strategies and Finding an Edge
+
+Everyone wants alpha. The problem is that alpha — genuinely superior risk-adjusted returns that cannot be explained by exposure to known factors — is definitionally scarce. If everyone could systematically outperform, the benchmark would just move up, and you are back to square one. This session is about what it actually takes to generate investment returns above what you would get from buying a diversified portfolio of factor exposures and going to sleep. We are moving from Theme 2, where we treated investing as a science of building portfolios from known risks, into Theme 3, where we confront the harder question: can human judgment and organizational capability add value on top of that?
+
+The honest starting point is to acknowledge that the bar has risen substantially. Everything we covered in the factor investing session — value, momentum, quality, low volatility — was once called "manager skill." Now it is a cheap ETF. That is the nature of the discovery process in financial economics: the moment a return premium is published and documented, it starts getting arbitraged, and what was once proprietary becomes commoditized. Active management cannot stand still.
+
+## What Factor Investing Did to the Active Management Business
+
+The rise of factor investing did not just create new products — it fundamentally changed the evidentiary standard for claiming skill. Before Fama-French, a manager who beat the market by tilting toward small, cheap companies could plausibly sell that as stock-picking ability. Post-Fama-French, that same tilt is a mechanical factor exposure you can buy for eight basis points a year. What used to be "magic" is increasingly attributable to known strategies.
+
+This means that when you evaluate an active manager today, you need to do the work of stripping out systematic factor exposures before claiming anything about skill. A manager running a value-heavy portfolio in a year when value does well is not demonstrating skill — they are harvesting a well-documented risk premium that you could access yourself far more cheaply. The skill question is whether there is something left over after you account for all of that.
+
+::: {.callout-note}
+## Academic Reference
+
+Ang's Chapter 10 provides the foundational decomposition of returns into alpha and beta. The critical point is that beta — factor exposure — has a price in the market (the risk premium), while alpha by definition does not persist once it is discovered and traded upon. The Grossman-Stiglitz (1980) paradox formalizes why: if markets were perfectly efficient, there would be no incentive to collect information, so markets cannot be perfectly efficient. Some alpha must exist to compensate informed traders for their effort. The question is how much, and who gets it.
+:::
+
+This creates a genuine puzzle. If active managers mostly just harvest beta, why does active management survive? The answer is a combination of things: some managers genuinely do have skill; many investors cannot distinguish skill from luck ex ante; marketing and distribution advantages persist even when investment performance does not; and for certain strategies, particularly in less liquid or less covered markets, there are real informational advantages available that the factor literature has not yet systematically documented.
+
+## A Taxonomy of Investment Edges
+
+Let us be precise about what we mean by "edge." The slides identify four distinct types, and understanding which type you are claiming matters enormously for how durable that edge will be.
+
+**Informational edge** is the classic picture of active management — you know something the market does not. This is increasingly difficult and legally constrained. Insider trading law is the obvious constraint, but even non-material information asymmetries have narrowed dramatically as data has become commoditized and analytical capabilities have democratized. What was once a Goldman analyst calling up a CFO contact is now an alternative data vendor selling satellite imagery of parking lots to five hundred funds simultaneously. When the same information is sold to everyone, no one has an edge.
+
+**Analytical edge** is subtler and more durable. Everyone sees the same earnings release, but not everyone draws the same conclusions from it. Superior forecasting — better models of how an industry is evolving, better frameworks for valuing optionality in a business, a more sophisticated understanding of cross-asset relationships — can generate persistent outperformance without access to private information. This is what most discretionary fundamental managers are actually selling, whether they frame it that way or not.
+
+**Infrastructural edge** is where quantitative shops and high-frequency traders operate. Speed, execution quality, and the ability to trade with minimal market impact are genuine moats. But they are moats that require constant capital investment to maintain, and they are most relevant in highly liquid markets with thin spreads where milliseconds matter.
+
+**Access edge** — privileged access to specific trading venues, deal flow in private markets, or allocations to oversubscribed funds — is real but fragile. It depends on relationships that can erode, regulations that can change, and competitive dynamics that can shift.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+The taxonomy above is not just conceptual tidying — it has direct implications for due diligence on external managers. When a manager claims superior returns, the first question should be: what type of edge are you claiming, and why should it be durable? An analytical edge story requires evidence of the underlying analytical process. An informational edge story in today's regulatory environment requires scrutiny. An access edge story is only as good as the specific access, and needs verification that the access is not simply the result of being low in the food chain of deal allocation.
+:::
+
+## The Grossman-Stiglitz Paradox and Why Markets Stay Inefficient Enough
+
+The theoretical underpinning of why active management can exist at all is the Grossman-Stiglitz (1980) argument. Their logic is essentially a no-arbitrage condition applied to information rather than prices. Collecting information is costly — it requires time, data, analytical infrastructure, and talent. Rational agents will only incur those costs if doing so generates returns sufficient to compensate for the effort. Therefore, prices cannot fully reflect all available information, because if they did, no one would bother to collect it.
+
+The equilibrium is not one of "efficient markets" in the strong sense. It is an equilibrium with a wedge: informed traders earn just enough alpha to make information collection worthwhile, and that alpha compensates exactly for the cost of acquiring the information. Markets are efficient enough that naive investors cannot systematically beat them, but inefficient enough that sophisticated, well-resourced investors can earn their costs of information production.
+
+The practical implication is that the question is never "is the market efficient?" but rather "is the market efficient enough to make my information collection uneconomic?" For a retail investor trying to pick individual stocks, the answer is almost certainly yes. For a sophisticated quantitative fund running hundreds of signals with low-cost infrastructure, the answer is plausibly no — there are small inefficiencies worth harvesting systematically even if each one is individually negligible.
+
+## Types of Market Inefficiency Worth Targeting
+
+Not all inefficiencies are created equal. The slides identify three categories that have distinct implications for persistence:
+
+**Structural inefficiencies** arise from constraints on specific market participants — forced selling by index funds when a stock gets removed from an index, regulatory restrictions that prevent certain investors from holding certain securities, or the mechanical behavior of passive rebalancing. These are durable precisely because they are not driven by irrationality but by institutional constraints that change slowly. The most exploitable version is the asymmetry: if you can be a patient, unconstrained buyer when others are forced sellers, you extract a liquidity premium.
+
+**Behavioral inefficiencies** arise from systematic cognitive errors — overreaction, under-reaction, overconfidence, loss aversion. Momentum and the post-earnings announcement drift are the canonical examples. The challenge is that these are increasingly well-documented, which means they are increasingly crowded. When everyone knows about the overreaction anomaly, the trades that exploit it become correlated, and a crowded unwind can generate significant short-term losses even if the long-run case remains intact.
+
+**Technical inefficiencies** are more transitory — tax-loss selling in December, window dressing by fund managers before quarter-end, predictable flows from option expiration. They can be exploited but require precise timing and carry their own implementation risks.
+
+::: {.callout-important}
+## Common Misconception
+
+Identifying a market inefficiency in the data is not the same as having a tradeable edge. The standard academic test of whether an anomaly is economically significant asks: does it survive realistic transaction costs? A large number of documented anomalies do not. Novy-Marx and Velikov (2016) showed that among a broad cross-section of published anomalies, many generate attractive gross returns that evaporate once you account for the bid-ask spread and market impact of trading them. The gap between gross and net alpha is where most claimed edges go to die.
+:::
+
+## Capacity Constraints: The Scale Problem
+
+This brings us to one of the most important practical constraints in active management: capacity. Returns to scale in active management are not uniform. Some aspects benefit from scale; most of the alpha-generating activity does not.
+
+The market impact cost of a trade grows with the square root of trade size. A fund that doubles in assets does not double its transaction costs — it increases them by more, because larger positions require more liquidity and move prices further against you. This means that strategies which generate attractive returns at small scale become economically unattractive at large scale.
+
+> "What could >100,000 investors teach you?"
+
+The eToro data — covering retail trading behavior across a large population — illustrates this empirically. The collective behavior of many small investors, none of whom individually moves markets, is a source of signal. The moment any individual fund tries to scale that signal, it starts to move the prices it is trying to exploit.
+
+Pastor, Stambaugh, and Taylor (2015) formalize this. Industry-level skill can be increasing over time — better data, better models, more sophisticated practitioners — while returns to active management are declining, precisely because the industry grows and capacity constraints bind. The individual manager might be getting more skilled while extracting less alpha, simply because there is more competition for the same opportunities.
+
+The practical lesson is that capacity is part of the investment thesis for any strategy. A quant fund running fifty basis points of AUM in a micro-cap momentum strategy faces a very different scaling problem than the same strategy run at twenty billion. The manager that fails to understand the capacity ceiling of their own strategy will, over time, manage their way out of outperformance.
+
+::: {.callout-warning}
+## Exam/Career Relevance
+
+This is a frequently tested concept in CFA exams and comes up constantly in portfolio manager interviews. If you are evaluating a fund's track record, ask: at what AUM was this track record generated? If the fund has since grown fivefold, the historical performance may be irrelevant to what is achievable going forward. Similarly, if you are joining an asset manager, the scale of AUM relative to the capacity of the strategy is a leading indicator of how much alpha runway the fund has left.
+:::
+
+## Combining Small Edges: The Ensemble Approach
+
+Here is something that professional quantitative managers know but that rarely gets discussed explicitly: almost no individual trading signal is large enough to be worth trading on its own. After transaction costs, the expected alpha from any single well-known anomaly is small — often within the noise. But the combination of many small, uncorrelated signals can generate meaningful net alpha, for the same reason diversification works in portfolio construction.
+
+The intuition is identical to what we covered in asset allocation. If you have three signals each with 2% expected gross alpha, and they are perfectly correlated, combining them gives you the same 2% alpha at roughly the same trading costs — no benefit from combination. But if those signals are genuinely uncorrelated, combining them gives you a higher Sharpe ratio and, critically, allows you to implement them with shared transaction cost budgets rather than paying the full cost separately for each signal.
+
+Blitz, Hanauer, Honarvar, Huisman, and van Vliet (forthcoming, *Journal of Financial Economics*) document this explicitly. Individual short-term signals — reversals, industry momentum, analyst revisions, seasonality, idiosyncratic volatility — generate roughly 6% gross alpha when traded individually. Combined, they generate approximately 12% gross alpha. The doubling is not from some mysterious synergy; it is pure diversification. The combined portfolio has lower turnover per unit of signal than the sum of individual portfolios, and the combined signal strength is more robust to any single signal decaying.
+
+The implementation details matter as much as the signal selection. Sophisticated buy/sell rules — for example, only initiating a position when a stock is at the 10th percentile of combined signal rank, but holding it until it reaches the 50th — substantially reduce turnover and thus transaction costs, while preserving most of the alpha. Trading only when the combined signal strength exceeds a transaction cost threshold prevents you from churning positions for marginal gains that do not cover the round-trip cost.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+The ensemble approach is why the distinction between systematic and discretionary active management is meaningful but not absolute. A systematic fund running hundreds of signals is essentially doing mechanically what the best fundamental managers do intuitively — combining multiple independent views on a stock into a single aggregate signal. The difference is that the systematic fund can do it at scale across thousands of securities simultaneously, with explicit control over position sizing and trading costs. The discretionary fund can incorporate qualitative and non-quantifiable information that the systematic fund cannot. The frontier between the two approaches has blurred significantly as fundamental shops build quantitative screens and quant shops add qualitative overlays.
+:::
+
+## The Signal-to-Noise Problem and Information Structure
+
+The slides touch on a subtle but important result about how sophisticated market participants process information. When a trader receives a positive signal about a stock, the informativeness of that signal depends on what prices have done recently. If the stock has already risen, the signal is more likely to reflect information that others have already acted upon — stale news. If the stock has fallen despite the positive signal, the signal is more likely to be genuinely novel.
+
+The implication is that rational traders should not simply act on raw signals — they should condition their trading aggressiveness on the prior price path. After a price increase, buy orders from informed traders generate smaller price adjustments (prices already reflect some of the information), while sell orders generate larger adjustments (new information coming in from the downside is more surprising). This asymmetry generates a testable prediction: returns should be negatively skewed after price increases and positively skewed after price decreases.
+
+This is not just a theoretical curiosity. It has direct implications for how you design a systematic trading strategy. The raw signal matters less than the *residual* information content of that signal — what you know that the current price does not already reflect. Building that conditioning structure into a strategy is what separates a thoughtful systematic approach from a naive factor screen.
+
+## Costs of Pursuing an Edge — Including the Non-Financial Ones
+
+One of the more unusual aspects of the slides is a reference to the Hindenburg Research farewell letter, where the firm's founder reflects on the personal costs of running an intense investment research operation. It is worth taking seriously.
+
+Active management — particularly the short-selling and activist research that Hindenburg did — is not just financially costly in terms of data, infrastructure, and talent. It consumes attention, relationships, and in some cases, safety. The slide's inclusion of this quote is a reminder that the decision to pursue active management professionally is not purely an expected-value calculation. The distribution of outcomes matters, the path matters, and the personal costs are real.
+
+> "I probably could have had it all along had I let myself, but I needed to put myself through a bit of hell first."
+
+For MBA students entering investment management, the lesson is this: only invest when the odds are genuinely in your favor. Develop and maintain a real edge before taking concentrated bets. Know when the edge has eroded. And never bet so much on any single position or strategy that a bad draw takes you out of the game permanently. Preservation of capital — both financial and human — is the prerequisite for compounding over the long run.
+
+## AI and the Next Round of Edge Erosion
+
+The final topic is one with a long arc. Artificial intelligence is already reshaping the information-processing capacity of active managers. Large language models can read and synthesize earnings calls, analyst reports, and news at a scale no human team can match. Computer vision can extract signals from satellite and sensor data. Graph neural networks can map relationship structures across supply chains and ownership networks.
+
+The competitive dynamic, however, is familiar. AI tools are not proprietary by default. If you are using publicly available AI tools in the same way as every other fund, you do not have an edge — you have kept pace with the median. The edge comes from building specialized models trained on proprietary data that others do not have, from developing novel ways of framing the investment question that AI can then help answer, or from moving faster than competitors in adopting and adapting new capabilities.
+
+There is also a genuine domain where human judgment remains irreplaceable for now: the unknown unknowns. A well-calibrated quantitative model can exploit patterns in historical data extremely effectively. It cannot anticipate a pandemic, a war, a bank run, or a regulatory regime change before those events appear in the training data. The human overlay — experienced practitioners who have seen multiple cycles and can recognize when the current environment does not match the model's training conditions — still adds value. For how long, and in what form, is an open empirical question.
+
+::: {.callout-note}
+## Academic Reference
+
+Kacperczyk, Nieuwerburgh, and Veldkamp (2014) document that fund manager skill is time-varying — managers who outperform in recessions tend to underperform in booms, and vice versa. This suggests that different information environments reward different types of edge, and that a track record built in one market regime may not predict performance in a different one. The implication for evaluating managers: look for evidence of skill in the specific environment the manager is likely to face going forward, not just in historical periods that may not recur.
+:::
+
+## Key Takeaways
+
+- The rise of factor investing raised the bar for active management. What used to count as skill is now a cheap factor ETF; genuine alpha requires demonstrating returns above fully-loaded factor exposure.
+- There are four types of investment edge — informational, analytical, infrastructural, and access. They differ in durability and in the resources required to maintain them. Most claims of informational edge deserve scrutiny.
+- Capacity constraints are structural, not incidental. Strategies that work at small scale often fail to scale, because market impact costs grow faster than AUM. Track records must be evaluated in the context of the AUM at which they were generated.
+- Combining multiple small, uncorrelated signals generates disproportionately more net alpha than trading any single signal independently, for the same reason diversification improves portfolio efficiency — the diversification benefit applies to signal risk, not just asset risk.
+- AI is the newest frontier of edge erosion. Using public AI tools the same way as everyone else maintains parity; sustainable edge requires proprietary data, specialized models, or faster adoption than competitors. Human judgment over unknown unknowns retains value for now.
+
+## Further Reading
+
+### Mandatory
+
+- Ang, A. *Asset Management: A Systematic Approach to Factor Investing*, Chapter 10 (Alpha and Beta).
+- Grossman, S. J., & Stiglitz, J. E. (1980). On the impossibility of informationally efficient markets. *American Economic Review*, 70(3), 393--408.
+
+### Recommended
+
+- Kacperczyk, M., Nieuwerburgh, S. V., & Veldkamp, L. (2014). Time-varying fund manager skill. *The Journal of Finance*, 69(4), 1455--1484.
+- Pastor, L., Stambaugh, R. F., & Taylor, L. A. (2015). Scale and skill in active management. *Journal of Financial Economics*, 116(1), 23--45.
+- Blitz, D., Hanauer, M. X., Honarvar, I., Huisman, R., & van Vliet, P. (2024). Beyond Fama-French factors: Alpha from short-term signals. *Journal of Financial Economics*, forthcoming.
+- Novy-Marx, R., & Velikov, M. (2016). A taxonomy of anomalies and their trading costs. *Review of Financial Studies*, 29(1), 104--147.

@@ -1,0 +1,247 @@
+# Session 13: Alternative Investments: Beyond Stocks and Bonds
+
+When Robinhood announced it would offer "entertainment investing" — letting users bet on soccer games and the Super Bowl through its app — the SEC moved quickly. You cannot rebrand gambling as an asset class simply by calling it one. Robinhood backed down. Crypto.com did not. They launched sports betting through their platform anyway. The episode captures something essential about the alternative investments landscape: it sits at the intersection of financial innovation, regulatory arbitrage, and, occasionally, outright sleight of hand. Understanding which is which is one of the most valuable skills an investor can develop.
+
+## What Counts as an Alternative Investment
+
+Alternative investments are financial assets that do not fall into the conventional categories of stocks, bonds, or cash. They share three general characteristics: lower liquidity than public market equivalents, lower correlation with traditional asset classes, and lighter regulatory oversight. That third characteristic is not incidental — it is structural. Financial innovation tends to concentrate in unregulated spaces, so as regulators expand their reach into one area, the frontier of innovation moves to another. The boundaries of "alternative" shift over time.
+
+The major categories today include hedge funds, private equity, private credit, venture capital, real estate, infrastructure, commodities, collectibles, and digital assets. The global alternatives market is estimated at roughly $20 trillion — large in absolute terms, but considerably smaller than public equity markets, global fixed income, and the private real estate market (which includes residential housing).
+
+::: {.callout-note}
+## Academic Reference
+The CAIA Institute's research on alternative investments provides a comprehensive taxonomy and market sizing. The key observation is that alternatives are not a single asset class but a heterogeneous collection of strategies unified primarily by their departure from public market structures.
+:::
+
+Each category carries distinct risk and return characteristics. Hedge funds can pursue long/short equity, global macro, arbitrage, and countless other strategies — with monthly or quarterly valuation and, at least in principle, meaningful liquidity. Private equity funds typically lock up capital for five to ten years, execute a handful of deals, and report valuations that reflect manager discretion more than continuous market pricing. Venture capital operates similarly but with even more concentrated and illiquid positions. Private credit fills the gap left by banks that face increasingly stringent regulatory capital requirements under frameworks like Basel III, which have largely killed direct bank lending for working capital finance. Infrastructure and commodities round out the real asset categories.
+
+To put buyout PE in particular in perspective: over the last five years, buyout firms have raised capital commitments equal to roughly 4% of the stock market. Assuming a typical investment lasts five years — a rough estimate of the investment stock at any point in time — and that the typical deal uses 50% equity, the value of PE-owned portfolio companies amounts to approximately 8% of the stock market. Co-investment has increased markedly in recent years, with perhaps another 25% of equity in any deal now coming from co-investors alongside the GP, pushing the estimated portfolio company value closer to 10% of public equity market capitalization — and that is before including infrastructure and venture capital. Private equity is no longer a niche asset class.
+
+Private debt has grown alongside private equity, driven by the same regulatory constraints on bank lending. The private credit market now spans direct lending, mezzanine finance, distressed debt, and specialty finance — each with its own seniority, covenant package, and expected return. The defining characteristic of the asset class is that loans are originated and held rather than syndicated and traded, which means pricing is opaque and liquidity is episodic at best.
+
+## The Measurement Problem: Fat Tails, Illiquidity, and Self-Reporting
+
+The practical difficulty with alternative investments is not just accessing them — it is measuring them. Portfolio construction depends on knowing how assets co-move. But if you only have one annual valuation for a private equity fund that runs five to ten years, you have five to ten data points. You cannot estimate a covariance matrix from five data points. This is not a statistical inconvenience; it is a fundamental obstacle to integrating alternatives into a standard mean-variance framework.
+
+The workaround in practice is scenario analysis rather than optimization. Instead of feeding alternatives into an optimizer, practitioners stress-test their portfolios under different macro scenarios and assess whether the alternatives provide the diversification or return enhancement they were intended to provide. Beyond scenario analysis, other approaches include liquidity budgeting — sometimes called liquidity laddering — which schedules capital calls and expected distributions over time to ensure the overall portfolio always retains sufficient liquid assets; resampling techniques that bootstrap from the limited available return history to simulate a distribution of possible outcomes; and modified optimization models that penalize illiquid positions by imposing an explicit haircut to reflect the cost of locked-up capital.
+
+Three additional measurement problems compound the difficulty.
+
+**Fat tails.** Alternative investment return distributions are not normal. Many strategies, particularly those involving leverage or illiquid positions, exhibit significant negative skewness and excess kurtosis. Standard deviation understates the true risk because it ignores the shape of the tails. Drawdown analysis and Value-at-Risk metrics calibrated to non-normal distributions are more informative, but they require more data than is typically available.
+
+**Self-reporting bias.** Hedge funds and private equity managers choose whether and when to report returns to commercial databases. Smaller funds often pay to have their data included — the cost can run to $30,000 per year for a small manager — while large funds like Citadel are paid for their data. The result is a sample that skews toward funds with resources and incentives to report. Funds with poor early returns have no incentive to begin reporting. Funds that later blow up exit the database. Neither the entry nor exit is random.
+
+**Survivorship bias.** Performance databases capture only funds that survived long enough to be included. Failed funds disappear. The measured average return across the surviving population overstates the true average return that an investor would have earned by allocating randomly to the asset class.
+
+::: {.callout-important}
+## Common Misconception
+The reported historical performance of private equity and hedge funds reflects the survivors. An investor who allocated capital ten years ago to a randomly selected fund would have earned meaningfully less than the database average suggests. Always ask for evidence that performance persists — not just that the average looks attractive.
+:::
+
+## The Valuation Illusion in Private Markets
+
+The Norwegian Government Pension Fund Global offers a vivid illustration of how private market valuations can mislead. In 2020, the fund reported overall returns of 10.9%. Dig into the real estate segment and the numbers tell an interesting story: listed real estate investment trusts (REITs) — publicly traded vehicles that must distribute at least 95% of rental income to shareholders — fell roughly 15% during the year. The fund's unlisted private real estate, by contrast, reported a loss of only 0.1%.
+
+The math is hard to take at face value. When listed real estate falls 15%, the underlying properties do not remain unaffected. What actually happens in private markets during stress is that liquidity disappears before prices move. No one wants to buy, and no one is forced to sell at a market-clearing price, so the reported book value stays flat. The losses are real — they are just deferred.
+
+This dynamic has a name: the valuation smoothing effect. It makes private market returns look less volatile and less correlated with public markets than they truly are. The correlation benefits that make alternatives appealing in a portfolio optimization context are partly a measurement artifact.
+
+> "What are the chances that the unlisted real estate was actually just down 0.1%? When you don't want your house, not many other people really want it either."
+
+The private credit market has an analogous problem. A venture capital fund that reports its portfolio at cost — or at the last round valuation — is not lying in a legal sense. But that valuation has nothing to do with what the assets would fetch in a transaction. Managers continue raising new funds on the back of "on track" performance from prior funds whose distributions have been repeatedly delayed. The distributed-to-paid-in (DPI) ratio — actual cash returned to investors relative to capital invested — is the number that cuts through the noise. Everything else is a mark.
+
+::: {.callout-tip}
+## Practitioner Insight
+When evaluating a private equity or venture capital fund, always ask for DPI, not just IRR or total value to paid-in (TVPI). Unrealized marks are manager estimates. Distributed cash is real. A fund with a high TVPI and a low DPI has, in the words of the market, "lots of markups but no money out."
+:::
+
+## IRR: The Standard Benchmark and Its Manipulation
+
+Internal rate of return is the discount rate that sets the net present value of a project's cash flows to zero. It is the lingua franca of private equity performance — and, like most widely-used benchmarks, it is subject to gaming.
+
+::: {.callout-note}
+## Quick Refresher — GP, LP, and Carried Interest
+In private equity, the **general partner (GP)** is the fund manager who makes investment decisions and bears unlimited liability. **Limited partners (LPs)** are the investors who commit capital — pension funds, endowments, family offices — and face liability only up to their investment. **Carried interest ("carry")** is the GP's share of investment profits, typically 20%. If a fund returns $120M on $100M invested, the carry is 20% of the $20M profit ($4M to the GP, $16M to LPs). The **hurdle rate** is the minimum return LPs must receive before carry kicks in — typically 8%. These terms recur throughout this chapter.
+:::
+
+The Asian private equity market has historically used a hurdle rate of around 30-35% as the threshold for deal-by-deal returns. That number reflects the illiquidity premium, leverage, and the operational improvements GPs claim they can deliver. As markets have matured and competition has increased, hurdle rates at some large funds have compressed.
+
+A simple two-period example illustrates the basic mechanics. Suppose a project costs $100 million at time zero and returns $130 million at time one. The unlevered IRR is 30%. Now suppose the equipment manufacturer financing the project is willing to lend $80 million at zero coupon, requiring $100 million repayment at time one. The investor need only contribute $20 million of equity. When the project pays off, $100 million retires the loan and the investor pockets $30 million. IRR on the equity invested: 50%.
+
+The leverage has not changed the project's economics — the total payoff is the same $130 million — but it has dramatically changed the equity IRR. This is the fundamental arithmetic of leveraged buyouts. The mechanics generalize: so long as the cost of debt is below the unlevered return on equity, adding leverage mechanically increases the IRR. The reverse is equally mechanical and less well-advertised: when the project's return falls below the cost of debt, leverage amplifies losses, and the equity can be wiped out entirely.
+
+$$
+\text{Unlevered IRR: } 0 = -100 + \frac{130}{1+r} \implies r = 30\%
+$$
+
+$$
+\text{Levered IRR: } 0 = -20 + \frac{30}{1+r} \implies r = 50\%
+$$
+
+Consider a more practical exercise: a mid-market PE fund targets a 43% IRR on an SME acquisition priced at $10 million. The SME generates predictable cash flows, and DBS is willing to provide financing at 18% — junk status for this type of borrower, but available. The unlevered IRR on the deal is 24%. Since the cost of debt (18%) is below the unlevered equity return (24%), the investor can increase the levered IRR by borrowing more. The math works out to: borrow at least $7.6 million, and the 43% target is achievable.
+
+::: {.callout-note}
+## Derivation: Levered IRR and the Borrowing Threshold
+
+Start from the project economics. The SME costs $I = \$10\text{M}$ and generates a one-period payoff of $V = I \times (1 + r_u) = \$12.4\text{M}$ where $r_u = 24\%$ is the unlevered IRR.
+
+**Step 1 — Set up the equity cash flows.** If the investor borrows $D$ at rate $r_d = 18\%$, the equity contribution is $(I - D)$ and the residual payoff after debt repayment is:
+
+$$
+\text{Equity payoff} = V - D(1 + r_d) = 12.4 - 1.18D
+$$
+
+**Step 2 — Define the levered IRR.** The levered IRR $r_e$ satisfies:
+
+$$
+0 = -(I - D) + \frac{12.4 - 1.18D}{1 + r_e}
+$$
+
+Solving:
+
+$$
+r_e = \frac{12.4 - 1.18D}{10 - D} - 1
+$$
+
+**Step 3 — Solve for the borrowing threshold.** Set $r_e = 43\%$ and solve for $D$:
+
+$$
+1.43 = \frac{12.4 - 1.18D}{10 - D}
+$$
+
+$$
+1.43(10 - D) = 12.4 - 1.18D
+$$
+
+$$
+14.3 - 1.43D = 12.4 - 1.18D
+$$
+
+$$
+1.9 = 0.25D \implies D = \$7.6\text{M}
+$$
+
+The investor contributes $\$2.4\text{M}$ in equity. The payoff is $12.4 - 1.18 \times 7.6 = \$3.432\text{M}$, yielding $3.432/2.4 - 1 = 43\%$.
+
+**Key insight:** This works only because $r_u > r_d$ (24% > 18%). If the cost of debt exceeded the unlevered return, leverage would *reduce* the equity IRR. The general formula is:
+
+$$
+r_e = r_u + \frac{D}{E}(r_u - r_d)
+$$
+
+which is the Modigliani-Miller leverage amplification result applied to a single deal.
+:::
+
+::: {.callout-warning}
+## Exam/Career Relevance
+In private equity interviews, you will be asked to calculate and interpret IRR under different leverage scenarios. The key insight is mechanical: (1) check whether the unlevered IRR exceeds the cost of debt; (2) if yes, maximum leverage maximizes IRR; (3) if no, leverage destroys value. Know how to set up the NPV equation and solve for the unknown borrowing amount.
+:::
+
+IRR can also be manipulated downward — to make a deal look less attractive to a competitor, or to manage expectations. Overestimating upfront capital expenditures shifts cash outflows earlier, reducing IRR. Adding transaction or finder fees (typically around 5% of deal size) to the initial outlay has the same effect. Conversely, delaying fee recognition or pushing closing costs into later periods inflates IRR. All of these represent changes to the timing of cash flows, which is what IRR is ultimately measuring.
+
+The **J-curve effect** is the characteristic return pattern of PE funds: negative returns in the early years (as management fees are charged on committed capital before investments generate returns), followed by positive returns as portfolio companies mature and are exited. A fund that is three years old and showing a -5% IRR is not necessarily performing poorly — it may simply be in the trough of the J-curve. Evaluating PE fund performance before the fund has had time to deploy capital and realize exits is like judging a wine before it has finished fermenting.
+
+## The Public Market Equivalent: A Better Benchmark
+
+IRR in isolation is an incomplete performance measure for a limited partner. The relevant question is not whether a fund delivered 24% — it is whether that 24% was better than what the LP could have earned in liquid public markets over the same period, bearing comparable risk.
+
+The Public Market Equivalent (PME), developed by Steve Kaplan (University of Chicago) and Antoinette Schoar (MIT), addresses this directly. The PME computes the ratio of the present value of all distributions from the fund to the present value of all capital calls, where both are discounted using the return of a public market index:
+
+$$
+\text{PME} = \frac{\text{PV of distributions from fund}}{\text{PV of capital calls to fund}}
+$$
+
+where both present values are calculated using the public benchmark return.
+
+::: {.callout-note}
+## Derivation: Computing the Public Market Equivalent
+
+Suppose a fund makes capital calls $C_1, C_2, \ldots, C_T$ and distributions $D_1, D_2, \ldots, D_T$ at dates $t_1, t_2, \ldots, t_T$. Let $R_{t,T}$ denote the cumulative return of the benchmark index from date $t$ to the final date $T$.
+
+**Step 1 — Future-value each cash flow.** Compound each capital call and distribution to the terminal date using the benchmark return:
+
+$$
+\text{FV of calls} = \sum_{t} C_t \times R_{t,T}, \qquad \text{FV of distributions} = \sum_{t} D_t \times R_{t,T}
+$$
+
+**Step 2 — Compute the ratio.** The PME is:
+
+$$
+\text{PME} = \frac{\sum_t D_t \times R_{t,T}}{\sum_t C_t \times R_{t,T}}
+$$
+
+**Interpretation:** PME > 1 means the fund outperformed a strategy of investing each capital call in the public benchmark. PME < 1 means the LP would have been better off in the index. The key advantage over IRR is that PME accounts for the *opportunity cost* of locked-up capital — it asks "what else could I have done with this money?"
+:::
+
+A PME greater than 1 means the LP did better than the benchmark after accounting for the opportunity cost of locked-up capital. A PME below 1 means the public market would have been a better choice.
+
+The choice of benchmark matters. A PME using the S&P 500 is appropriate for a US large-cap buyout fund. An ASEAN PE fund should be benchmarked against ASEAN public equity — the relevant opportunity set for the LP making the allocation decision. The risk adjustment matters too. The average PE fund has a market beta of approximately 1.0, so the S&P 500 is a reasonable risk-equivalent benchmark. The average VC fund has a beta closer to 1.4, meaning a straight S&P comparison flatters the VC's performance — the appropriate benchmark is a levered version of the index.
+
+Consider two investments, each requiring $100 million:
+
+- **Investment 1 (2011–2015):** Returns $200 million. Gross PME = 200/185 = 1.08 (the S&P 500 grew $100M to $185M over that period). Apply a 20% carried interest on the $100M gain: net return to LP is $80M, for a net PME of roughly 0.97. The LP underperformed the S&P after fees, despite a strong nominal return.
+
+- **Investment 2 (2007–2011):** Returns $100 million — zero nominal gain. But the S&P fell from $100M to $82M over that period. PME = 100/82 = 1.22. No carry is charged (no profit), so the LP outperformed the market by 22% simply by avoiding the financial crisis while keeping capital protected.
+
+The second investment, which looks like a disaster by IRR (zero return), is actually the better outcome for the LP in a PME framework. The first investment, which generated a 15%+ IRR, actually destroyed value relative to the opportunity cost.
+
+This is not an argument against private equity. It is an argument for measuring private equity correctly.
+
+## The Endowment Model: What It Is and What It Requires
+
+The canonical institutional approach to alternatives is the endowment model — sometimes called the Yale model after David Swensen's pioneering work at Yale's Investment Office. The idea is straightforward: institutions with long time horizons and no near-term liquidity needs can capture illiquidity premia by tilting heavily toward private equity, venture capital, real estate, and other illiquid assets.
+
+The model works well for the institutions it was designed for. A university endowment with a perpetual horizon, a diversified pool of restricted and unrestricted capital, and a sophisticated staff with deep manager networks is genuinely different from a retail investor or even most pension funds. The question worth asking — and the subject of substantial academic debate — is whether the model is appropriate for investors who do not share those characteristics.
+
+For individual investors, the checklist is more constrained. The prerequisites can be summarized as the **5-10-5 Rule**: allocate to alternatives only after you have (1) built an emergency fund covering five to six months of expenses, (2) accumulated at least $10,000 in liquid investments such as stocks and bonds, and (3) confirmed you can commit at least 5% of your portfolio without disrupting other financial goals. More formally, the prerequisites include:
+
+1. A fully funded emergency reserve.
+2. Approximately $10,000 in liquid savings that can be accessed without disruption to other goals.
+3. The ability to commit at least 5% of portfolio value without affecting other financial objectives — meaning the allocation comes from surplus, not from necessities.
+4. Accredited investor status (the regulatory threshold varies by jurisdiction; in the United States, the standard threshold is approximately $200,000 in annual income or $1 million in net worth; in Singapore, the minimum subscription for many funds can be structured as low as SGD 20,000, compared to the USD 100,000 minimum common in Cayman-domiciled vehicles).
+5. A time horizon of three to seven years or longer, matching the lock-up periods typical of PE and VC funds.
+
+The conventional rule of thumb is that alternatives should constitute no more than 10-20% of a portfolio, with 20% considered aggressive. Critically, this calculation should include all illiquid exposures — a founding equity stake in a startup counts. An investor who is already exposed to a single illiquid venture should generally not compound that with additional private market allocations; defensive, liquid assets are a better complement.
+
+::: {.callout-important}
+## Common Misconception
+The endowment model's success at Yale and Harvard reflects decades of relationship-building, proprietary deal flow, and access to top-quartile managers that most investors cannot replicate. When an endowment model fund is available to any retail investor through a feeder vehicle, the alpha has likely already been competed away. The model's outperformance is inseparable from access advantages that do not democratize easily.
+:::
+
+## Evaluating Alternative Investment Opportunities
+
+The most common mistakes in alternatives allocation come from conflating headline returns with net-of-fees, risk-adjusted outcomes. The framework for evaluation should consistently apply three lenses.
+
+**Manager selection.** In public equity, manager selection matters but the dispersion of outcomes across managers is moderate. In private equity and venture capital, the dispersion is enormous. Top-quartile and bottom-quartile PE returns are separated by 15-20 percentage points or more. And unlike public equity funds, persistence in PE and VC returns is real — top managers in one vintage tend to remain top managers in subsequent vintages. This makes access to established managers valuable and makes entry into emerging managers high-risk.
+
+**Operational value-add.** The most credible source of PE returns beyond financial engineering is genuine operational improvement. In the mid-market Asian PE space, this often looks unglamorous: installing basic accounting software, introducing management checklists, professionalizing a family-owned business before a succession-driven sale. The flip cycle — buying, improving, and exiting within 12-18 months — can generate 20%+ unlevered returns in this segment when executed well.
+
+**Proprietary deal flow.** When KKR announces a fund open to all qualified investors, the competitive alpha embedded in that deal has already been competed away. The highest-returning opportunities are those that are not broadly marketed — deals that come through relationships, alumni networks, and industry expertise. This is not an argument against institutional-quality funds; it is an argument for being skeptical of any alternative product that is being actively sold to you.
+
+::: {.callout-tip}
+## Practitioner Insight
+An often-overlooked source of proprietary deal flow for MBA graduates is the alumni network itself. Deal flow that comes through a relationship — not a fund placement agent — is precisely the kind of flow that does not show up in marketed products. Building and maintaining a network in the industries where you have genuine expertise is a legitimate source of investment edge.
+:::
+
+**Investment vehicle due diligence.** When evaluating any alternative investment vehicle — whether a fund, a co-investment, or a structured product — four dimensions warrant particular scrutiny. *Organization stability* covers key-person risk, ownership structure, and whether the team generating the track record is still in place. *Investment process* asks whether the strategy is well-defined, repeatable, and executed consistently; a great track record built by an undocumented process cannot be replicated. *Risk management* examines whether the fund has independent risk and compliance infrastructure, how it prices positions, and whether it has ever gated redemptions or side-pocketed assets. *Fee structure* encompasses management fees, carried interest, preferred return hurdles, fee offsets from portfolio company monitoring fees, and any embedded costs in structured products. In private equity, the standard structure is 2% management fee and 20% carry above an 8% hurdle, but deviations in any direction are common and their economic impact compounds over the fund's life.
+
+## Key Takeaways
+
+- Alternative investments expand the opportunity set beyond public markets in four specific ways: access to skill-based returns (alpha) in markets where prices are less efficiently set; exploitation of information advantages that do not exist in widely followed public securities; an illiquidity premium paid to investors willing to commit capital for multi-year lock-up periods; and additional return levers such as activist intervention and direct operational improvements that are unavailable in passive public market strategies.
+- Alternative investments are defined primarily by illiquidity, lower regulation, and lower correlation with public markets — but the correlation benefits are partly a measurement artifact of infrequent and manager-controlled valuations.
+- Fat tails, survivorship bias, self-reporting bias, and short histories make alternative investment returns inherently difficult to measure. Standard deviation understates true risk; DPI is a more reliable performance indicator than IRR or TVPI.
+- IRR is the industry standard performance benchmark for private markets, but it can be mechanically inflated through leverage and manipulated through cash flow timing. The public market equivalent (PME) provides a more meaningful comparison by accounting for opportunity cost.
+- The endowment model's success depends critically on access advantages — top-quartile manager relationships, proprietary deal flow — that most investors cannot replicate simply by allocating to alternatives.
+- For individual investors, alternatives should constitute no more than 10-20% of the portfolio, require a three-to-seven year time horizon, and come only after liquid reserves are fully established. All illiquid exposures, including founding equity in startups, count toward this limit. The 5-10-5 Rule provides a practical sequencing: emergency fund first, liquid investment base second, alternative allocation third.
+
+## Further Reading
+
+**Mandatory**
+
+- CAIA Institute. *CAIA Level I: An Introduction to Core Topics in Alternative Investments.*
+- AQR Capital Management. "Do Hedge Funds Add Value?"
+- Greifeld, K. "Should You Invest Like a University Endowment?" *Forbes.*
+
+**Recommended**
+
+- UBS Asset Management. *Alternative Investments.* 2020.

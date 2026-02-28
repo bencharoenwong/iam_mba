@@ -1,0 +1,7 @@
+/_book/
+/.quarto/
+.DS_Store
+*.html
+!index.qmd
+.Rhistory
+.Rproj.user

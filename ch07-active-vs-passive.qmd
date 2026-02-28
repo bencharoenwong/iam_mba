@@ -1,0 +1,399 @@
+# Session 07: Active vs. Passive Management
+
+Cathie Wood's ARK Innovation ETF made headlines for years. During the post-COVID bull run, its returns were extraordinary. Commentators called her a visionary. Financial media ran profiles. Retail investors poured money in. Then the air came out. If you run a single regression — ARK's excess return on the market's excess return — the story becomes much less flattering. The beta comes in around 1.7. The alpha? Essentially zero, or slightly negative after fees. What ARK delivered was not visionary stock-picking. It was leveraged exposure to the S&P 500, packaged in a way that made it look like something more. Understanding why requires working through the arithmetic of active management — and the arithmetic does not lie.
+
+## From Portfolio Theory to the Market Portfolio
+
+To understand the active-passive debate, we need to start where the last session ended: portfolio theory and what it implies about how rational investors should allocate capital.
+
+Recall the punchline from the portfolio optimization exercise. When we fed twenty years of historical return data into the optimizer and let it run, the result was approximately 100% equity, mostly S&P 500. A big driver of that outcome is the extraordinary performance of US equities over the past decade — post-2008 has been one of the best runs for equities in modern history. COVID looked like it might derail everything, and the market ended the year up 10%. 2022 was down 20%, but that recovered quickly. On a twenty-year horizon relevant to most investors in this class, the optimizer basically said: US equities, full stop.
+
+One important caveat about mean-variance optimization in practice: it is sensitive to the quality of inputs, particularly the covariance matrix. Covariance matrices estimated from historical data are extremely unstable over time. An input that looks reasonable over one period can flip dramatically in another. This is why applying the optimizer to single stocks tends to produce garbage — single-name return distributions are far from normal, and the covariance structure between individual stocks shifts constantly. The optimizer works somewhat better for funds, because fund return distributions are more reasonable and the assumption of normality is less egregious, though still not literally true.
+
+There is active research — including in the machine learning literature — aimed at producing more stable covariance estimates. One approach, used at the author's hedge fund, is to project returns into a factor space rather than estimating covariance between individual assets directly. The idea is that factors have much more stable covariance structures than the underlying securities, which is one reason we will spend the next session discussing factor investing.
+
+### The Two-Fund Separation Theorem
+
+Setting aside estimation problems, portfolio theory generates a striking implication when we take it seriously as a description of market equilibrium. If all investors are rational, mean-variance optimizers with the same information, then all of them will hold the same risky portfolio — the market portfolio. The only dimension of differentiation is how much risk each investor takes, which is determined by their risk aversion. A risk-tolerant investor levers up the market. A risk-averse investor blends the market with the risk-free asset.
+
+This result is called the two-fund separation theorem. Every investor holds some combination of just two funds: the risk-free asset and the market portfolio. The implication is slightly absurd in a good way: if everyone is doing mean-variance optimization, no one needs to. The market portfolio emerges as the optimal risky allocation precisely because prices adjust until it is. All the heavy engineering in the spreadsheet collapses into a single answer: hold the market.
+
+The efficient frontier traced out by these combinations has a name in the classical literature: the Capital Market Line (CML). Every investor ends up somewhere on this line. An investor with low risk tolerance parks most of their wealth in the risk-free asset and holds a small weight in the market — Point A, below M on the CML. An investor who puts 100% in equities sits at Point M, the market portfolio itself. An investor willing to lever up borrows at the risk-free rate and holds more than 100% in the market — Point B, above M. The only decision is where on that line to sit, and that is entirely determined by risk appetite.
+
+The Capital Asset Pricing Model (CAPM) is the asset pricing counterpart of this result. If everyone holds the market, then the only dimension of risk that gets compensated is market risk — the covariance of an asset's return with the market return, scaled by the market variance. This is captured by beta, $\beta$:
+
+$$
+E[R_i] - R_f = \beta_i \cdot (E[R_m] - R_f)
+$$
+
+where $R_i$ is the return on asset $i$, $R_f$ is the risk-free rate, $R_m$ is the market return, and $\beta_i = \text{Cov}(R_i, R_m) / \text{Var}(R_m)$.
+
+If the market goes up 1%, a stock with $\beta = 2$ is expected to go up 2%. The beta captures how sensitive the asset is to market movements. In practice, betas tend to be more sensitive on the downside than the upside — a stock with $\beta = 2$ might gain 1.5% when the market gains 1%, but lose 2.5% when the market falls 1%. That asymmetry is part of why high-beta stocks are riskier than the simple number suggests.
+
+The CAPM delivers a clean prescription: if you want to justify holding anything other than the market portfolio, you need a reason why you are different from the average investor. Your human capital, your liquidity needs, your specific risk exposures — these can all shift the optimal allocation away from the market. A finance professor whose income tends to rise when markets fall (students flood back to business school in downturns) has a negative human capital beta, meaning their equity risk capacity is higher than average. Pension funds with unusual liability structures may similarly deviate. But for most people, the market is the right benchmark.
+
+## Why Dislocations Persist: Risk Capacity and the Limits of Arbitrage
+
+The observation that high prices predict low returns raises an obvious question: if informed investors know this, why don't they trade against it and arbitrage away the pattern?
+
+The answer is that trading against mispricing requires risk capacity — the ability to absorb losses in the interim between recognizing an opportunity and realizing the profit. Risk capacity varies enormously across investors, and those constraints are precisely what allow dislocations to persist.
+
+Consider the COVID crash of March 2020. By any standard metric, prices had overshot to the downside. Expected returns spiked. The right trade, from a purely analytical perspective, was obvious: buy. But consider who was in the market at that moment. Mutual funds constrained by mandates to remain at least 90% invested could not raise cash to buy the dip — they were forced to hold through the decline. Retail investors facing genuine financial stress — job losses, medical bills, loan repayments — could not afford to lock in losses by holding further. The investors with the capacity to step in were precisely those who did not need to: long-horizon endowments, patient capital, and the occasional Warren Buffett sitting on a hundred-billion-dollar war chest.
+
+This is not irrationality; it is heterogeneity in constraints. When an investor knows the market will recover but genuinely needs the money within three months, selling at a loss is the rational choice. The resulting price depression is the compensation paid to the patient investor — the "good returns when no one is there to buy them."
+
+A related phenomenon operates on the way up. When markets are rising and times are good, investors who are flush with liquidity and confident about the future are willing to pay high prices for assets that are not providing insurance — they don't need insurance. Risk appetite is high, expected returns compress. The cycle is self-reinforcing until something painful enough forces a reset.
+
+## Passive vs. Active: The Basic Parameters
+
+Before working through the arithmetic, it helps to fix the defining characteristics of each approach in concrete terms.
+
+**Passive management** — also called indexing — is a long-term buy-and-hold strategy whose objective is to track a benchmark index with minimum deviation. The defining metric is tracking error: how far does the portfolio's return stray from the benchmark? Fees are typically around 0.2% annually (20 basis points), and portfolio turnover is low, around 2% per year, because holdings change only when the index itself changes.
+
+**Active management** sets out to outperform a passive benchmark on a risk-adjusted basis. Higher fees — often around 2% annually — and higher turnover, roughly 75% per year, reflect the research, trading, and analyst infrastructure required. The objective is not to minimize tracking error but to generate alpha: return above the benchmark after adjusting for the risk taken.
+
+::: {.callout-note}
+## Defining Tracking Error
+
+For an index portfolio with $N$ stocks, tracking error is defined as the standard deviation of the difference between the portfolio return and the benchmark return:
+
+$$
+\text{TE} = \sigma(R_{\text{portfolio}} - R_{\text{benchmark}})
+$$
+
+where $R_{\text{benchmark}} = \sum_{i=1}^{N} w_i R_i$ and $R_{\text{portfolio}}$ is the return on the held securities.
+
+Index managers face a fundamental trade-off: **full replication** — buying every security in the benchmark at exact index weights — achieves minimal tracking error but incurs higher transaction costs, particularly for large, illiquid benchmarks. **Sampling** — holding a representative subset — reduces transaction costs but accepts higher tracking error. The right point on that trade-off depends on the benchmark's liquidity, the fund's size, and how tightly the mandate requires the fund to hug the index.
+:::
+
+## Active Management Is a Zero-Sum Game
+
+With the CAPM as a benchmark, we can ask the central question of this session directly: does active management add value?
+
+William Sharpe's 1991 paper, "The Arithmetic of Active Management," establishes the baseline with pure logic, requiring no assumptions about rationality or market efficiency. The argument is accounting:
+
+- All assets are held by someone.
+- The market return is the aggregate return of all investors, weighted by holdings.
+- Passive investors, by definition, earn the market return before costs.
+- Active investors collectively must also earn the market return before costs, because together they hold everything the passive investors do not.
+- After costs, active investors collectively underperform passive investors.
+
+This is arithmetic, not statistics. The aggregate active investor cannot outperform the aggregate passive investor before fees, and must underperform after fees. What the data confirm is not a theoretical prediction but a measurement: does the evidence match the implication? Roughly 90 to 95% of mutual funds deliver zero or negative alpha net of fees. The exact fraction depends on the sample and the benchmark, but the direction is consistent.
+
+The qualifier "aggregate" matters. Individual active managers can and do beat the market — but for every winner, there must be a loser. The market for active management is a redistribution, not a source of new returns. The winners tend to be what we call smart money: hedge funds, sophisticated institutional investors, those with genuine informational or analytical edges. Retail-facing mutual funds are generally not in this category.
+
+The algebraic statement of Sharpe's argument is compact. Let $w_a$ be the aggregate weight of active management in the market. Then:
+
+$$
+R_m = w_a R_a + (1 - w_a) R_p
+$$
+
+where $R_a$ is the aggregate active return and $R_p$ is the aggregate passive return. Since passive investors earn exactly $R_m$ by construction, the equation implies $R_a = R_m$ as well — active managers collectively cannot do better or worse than the market before costs. Stated as an identity:
+
+$$
+\bar{R}_{\text{active}} = \bar{R}_{\text{market}} \quad \text{(before costs)}
+$$
+
+$$
+\bar{R}_{\text{active}} - \text{fees}_{\text{active}} < \bar{R}_{\text{market}} - \text{fees}_{\text{passive}} \quad \text{(after costs)}
+$$
+
+This is an arithmetic identity, not an empirical finding. The dollar-weighted return of all active managers equals the market return minus their collective fees. The only way for active managers as a group to outperform is if passive investors as a group underperform — which they cannot, because they hold the market.
+
+Pedersen's extension adds nuance for the case where index investors are not perfectly passive. When the benchmark portfolio deviates from the market portfolio (due to index inclusions, exclusions, rebalancing, and flows), a fund's return can be decomposed as:
+
+$$
+R = R_i + (\beta - 1) R_u + \alpha
+$$
+
+where $R_i$ is the return on the index, $R_u$ is the return of the underlying securities that differ between the active portfolio and the index, and $\beta - 1$ captures the active share tilt. The $\alpha$ here is what remains after accounting for both market exposure and the active share deviation — a stricter hurdle than the simple CAPM alpha. This decomposition matters because a fund can look like it has alpha relative to the market while simply being positioned differently from the index, not because of genuine stock-picking skill.
+
+::: {.callout-note}
+## Quick Refresher — Active Share
+**Active share** measures how different a portfolio is from its benchmark. A fund with 0% active share holds exactly the benchmark; 100% means no overlap at all. A fund with only 30% active share that charges active management fees is largely a **closet index fund** — you are paying active prices for passive exposure. When evaluating any active manager, ask for their active share. If it is below 50%, you are likely overpaying for what is mostly factor exposure.
+:::
+
+::: {.callout-note}
+## Academic Reference
+
+Pedersen (2018), "Sharpening the Arithmetic of Active Management," extends Sharpe's framework to handle the fact that passive investors are not perfectly passive — index funds must trade to rebalance, handle corporate actions, and accommodate flows. This creates room for active managers to earn returns by providing liquidity, even in a world where Sharpe's arithmetic holds. The key insight is that passive is a spectrum, not a binary.
+:::
+
+## Why Mutual Fund Alpha Disappears
+
+If some managers genuinely have skill, why do we observe so few with persistent alpha? The answer is not that skilled managers do not exist — it is that the industry's economics drive alpha to zero.
+
+Suppose a fund generates 3% alpha after costs. Word gets out. Investors pour capital in. The fund now manages thirty times what it did before. The manager's three great ideas — the ones generating the alpha — cannot absorb thirty times the capital at the same terms. The manager must deploy capital into progressively less attractive opportunities. Trading costs rise as position sizes grow. The fund has to hire analysts; the fourth-best hire is by definition worse than the first three. Mechanically, alpha erodes.
+
+The equilibrium result, formalized by Berk and Green (2004), is that funds with genuine alpha attract inflows until the alpha is exactly equal to the management fee. Investors earn zero net alpha in expectation, even though some managers have real skill. The skilled managers capture their skill in the form of fees, not in excess returns to investors.
+
+> "In equilibrium, funds that have been around a long time that have high fees generally have no alpha. But if you add back the management fee, that's their alpha. They are earning their keep — because if they don't, the fund will disappear."
+
+This also explains why the fraction with zero or negative net alpha is so high. Beyond the Berk-Green mechanism, a large fraction of fund flows are captive: investors at banks like JPMorgan Chase who hold checking accounts, mortgages, and investment accounts at the same institution face high switching costs and may not actively monitor fund performance. Captive flows allow underperforming funds to persist far longer than they would in a perfectly competitive market. In the data, banks with captive depositor relationships tend to run funds that underperform systematically.
+
+### The Full Cost of Active Management
+
+One implication of the Berk-Green mechanism is that the right way to think about the economics of active management is not just management fees but the full cost stack. For an institutional investor, net alpha is:
+
+$$
+\text{Net Alpha} = \text{Gross Alpha} - \text{Management Fees} - \text{Trading Costs} - \text{Market Impact} - \text{Opportunity Costs}
+$$
+
+Each of these components scales differently with fund size. Management fees are roughly proportional to AUM. Trading costs and market impact increase faster than linearly — large funds move prices when they trade, so their execution price is worse than the theoretical price. Opportunity costs arise because not every position can be entered or exited at the desired size. This cost structure explains why strategies with excellent paper performance often fail to deliver once implemented at institutional scale.
+
+For retail investors, the cost structure looks different but the math is similarly punishing. Explicit fees are visible — management expense ratios, loads, advisory fees. But hidden costs are harder to see: the tax drag from frequent turnover inside the fund, the search costs of monitoring manager performance, and the behavioral cost of reacting to short-term performance by switching managers. Retail investors also face access constraints — the highest-capacity, capacity-limited strategies (certain hedge fund structures, private credit, etc.) require minimum investments that preclude most individuals. The compounding effect of fees on long-run wealth is dramatic: at 10% gross return, a $10,000 investment over thirty years grows to roughly $174,000 at 0.2% fees, $132,000 at 1% fees, and under $100,000 at 2% fees. The difference between a 0.2% index fund and a 2% actively managed fund is not the 1.8 percentage points of annual fee — it is the roughly 75% difference in terminal wealth.
+
+::: {.callout-warning}
+## Behavioral Pitfalls for Retail Investors
+
+Retail investors evaluating active managers face three well-documented behavioral traps beyond the pure economics. **Overconfidence in manager selection**: most people believe they are above-average at picking skilled managers, which is arithmetically impossible. **Performance chasing**: investors systematically allocate to funds that have recently outperformed, exactly when expected future alpha is lowest (Berk-Green implies mean-reversion in net alpha). **Home bias**: a persistent preference for domestic assets that cannot be justified by CAPM or most factor models — it simply reduces diversification.
+
+Recognizing these tendencies does not eliminate them. But an investor who accounts for them explicitly — by defaulting to rules rather than discretion, and by committing in advance to not reacting to short-term performance — is likely to do better than one who does not.
+:::
+
+::: {.callout-note}
+## The Scale of the Problem
+
+US investors spend approximately $100 billion per year trying to beat the market — through management fees, trading costs, and advisory expenses. This is not wasted if the active strategies identify genuine mispricings and improve market efficiency. But as Sharpe's arithmetic implies, the aggregate active investor cannot collect more than the market return before costs. The $100 billion is effectively a transfer from active investors to the fund management industry.
+:::
+
+::: {.callout-tip}
+## Practitioner Insight
+
+Most funds do not disclose their beta prominently in marketing materials, for obvious reasons. If a fund generated 20% last year and the market was up 15%, the headline number looks impressive. The number looks much less impressive once you discover the fund had a beta of 2.5 — in which case the market-adjusted alpha is negative. Learning to run this regression yourself is one of the most practically valuable skills you can take from this course.
+:::
+
+## What Active Managers Actually Do
+
+Before evaluating active managers, it helps to map what "active management" encompasses, because the category is heterogeneous. Three broad strategy types operate very differently:
+
+**Fundamental strategies** rely on valuation analysis. They include:
+
+- *Tactical asset allocation*: timing the market by shifting capital across asset classes based on forecasts of relative risk premia
+- *Sector allocation*: overweighting or underweighting sectors relative to a benchmark, or rotating across sectors
+- *Stock picking*: identifying securities above or below the Security Market Line (SML) through analysis — discounted cash flow models, dividend discount models, comparable-company multiples, and qualitative judgment
+
+**Quantitative strategies** — including the factor investing we will cover in the next session — use systematic signals derived from financial data. This includes the well-documented anomalies (value, size, quality, momentum) and more exotic strategies such as market-neutral long-short portfolios targeting absolute returns.
+
+**Technical strategies** rely on price and volume patterns: charts, filter rules, momentum signals, and related approaches. These do not rely on fundamental analysis but on the hypothesis that price history contains predictive information.
+
+Most large institutional funds combine elements of all three, though the dominant flavor varies by fund type.
+
+## How to Evaluate an Active Manager: The Regression Framework
+
+The correct way to evaluate an active manager is not to look at raw returns. It is to decompose those returns into what can be attributed to market exposure (or factor exposure more broadly) and what is genuinely excess — the alpha.
+
+The regression framework is:
+
+$$
+R_{fund,t} - R_f = \alpha + \beta (R_m - R_f) + \varepsilon_t
+$$
+
+where:
+
+- $R_{fund,t}$ is the fund's return in period $t$
+- $R_f$ is the risk-free rate (proxied in practice by a short-term bond ETF)
+- $R_m$ is the market return (proxied by the S&P 500 total return index)
+- $\alpha$ is the intercept — the fund's average return unexplained by market exposure
+- $\beta$ is the fund's market loading
+- $\varepsilon_t$ is the residual
+
+The $R^2$ of this regression tells you how much of the fund's return variation is explained by the market. The residual standard error $\sigma_\varepsilon$ tells you how much idiosyncratic noise the fund is adding. The information ratio — the Sharpe ratio of the alpha component — is defined as:
+
+$$
+\text{IR} = \frac{\alpha}{\sigma(\varepsilon)}
+$$
+
+where $\alpha$ is the fund's alpha from the benchmark regression and $\sigma(\varepsilon)$ is the standard deviation of the residual (tracking error). The information ratio is distinct from the t-statistic of alpha. The t-statistic of alpha equals $\text{IR} \times \sqrt{T}$ where $T$ is the number of periods — so a fund with IR = 0.5 needs 16 years of data to achieve statistical significance at the 5% level ($0.5 \times \sqrt{16} = 2.0$). This is why distinguishing skill from luck in fund management is so difficult: even genuinely skilled managers need long track records before the evidence becomes statistically convincing.
+
+### The ARK Case Study
+
+The in-class exercise applies this framework to two funds: ARK Innovation ETF (managed by Cathie Wood) and either a triple-leveraged S&P ETF or a Singapore equity ETF, depending on the group.
+
+For ARK, running the regression over the available sample yields:
+
+- $\hat{\beta} \approx 1.7$ — ARK loads on the market at 1.7 times. When the S&P goes up 1%, ARK is expected to go up 1.7%.
+- $\hat{\alpha} \approx 0$ (slightly negative before accounting for fees)
+- $R^2 \approx 0.53$ — roughly half of ARK's return variation is explained by the market
+
+What does an $R^2$ of 0.53 mean? It means that almost half of ARK's return variation is not explained by the market — ARK is taking a large amount of idiosyncratic risk on top of its market exposure. Is that idiosyncratic risk compensated? No: the alpha is approximately zero or negative. Investors are paying for exposure to idiosyncratic volatility that generates no return.
+
+The practical implication is direct: if you want ARK's average return, you can replicate it by levering the S&P 500 by 1.7 times. That replication would carry less risk (you eliminate the uncompensated idiosyncratic component), charge lower fees, and deliver the same expected return. ARK's information ratio — the Sharpe ratio of the alpha component — comes in at approximately -0.2 annualized. The non-market component of ARK's performance has a negative risk-adjusted return, driven entirely by the management fee.
+
+For the triple-leveraged ETF (3x S&P), the expected beta is approximately 2.8. The alpha should again be near zero or slightly negative (management fees). This is a useful pedagogical comparison: the triple-leveraged fund is transparently just levered market exposure. ARK markets itself as something more — stock-picking skill — but the regression reveals otherwise.
+
+::: {.callout-warning}
+## Exam/Career Relevance
+
+The ability to run this regression and interpret the output is tested in investment management interviews. "Walk me through how you'd evaluate a fund manager" is a standard question. The right answer is: run the CAPM regression, examine alpha, beta, $R^2$, and the information ratio. Do not evaluate a manager on raw returns without adjusting for market exposure and risk. This is the single most important technical skill from this session.
+:::
+
+## The Market Efficiency Question
+
+A natural reaction to all of this is to ask: if most funds cannot beat the market, does that mean the market is informationally efficient?
+
+The answer is more subtle than a simple yes or no. The Grossman-Stiglitz paradox (1980) establishes that perfectly efficient markets are logically impossible. If markets were fully efficient — all information already reflected in prices — then no one would have an incentive to acquire costly information. But if no one acquires information, prices cannot become efficient in the first place. The paradox implies that some degree of inefficiency must persist as compensation for information acquisition costs.
+
+The Grossman-Stiglitz (1980) equilibrium resolves the apparent contradiction. In their model, acquiring information is costly. If prices were fully efficient, no one would pay the cost to become informed, and prices would cease to be efficient. The equilibrium requires that prices be *just inefficient enough* to compensate informed traders for the cost of their research:
+
+$$
+E[R_{\text{informed}}] - E[R_{\text{uninformed}}] = c
+$$
+
+where $c$ is the per-period cost of acquiring information. Active management adds value in aggregate — it is the mechanism by which prices become informative — but the net return to active management, after costs, equals the return to passive management. The "paradox" dissolves once you recognize that efficiency is a matter of degree, not a binary state.
+
+The practical implication is that active strategies can and do work — but most of them do not, and the ones that work tend to serve sophisticated, well-resourced investors. The information advantage in a fund that tracks satellite data on retail parking lots, or freight flight patterns to detect unreported merger discussions, is real. But it is expensive to produce, hard to scale, and unlikely to be accessible to retail investors through conventional mutual fund vehicles.
+
+Information acquisition speed also matters. Different investors process and receive information at very different rates. By the time information reaches a retail investor and is acted upon, institutional traders may have already incorporated it into prices. This does not mean markets are perfectly efficient; it means the information edge degrades rapidly from the most to the least sophisticated participants.
+
+The view worth holding is that active strategies can add value in principle, but the value is captured by a small number of skilled practitioners, mostly at the institutional level, and competition erodes alpha quickly. For a retail investor with access only to publicly available mutual funds and ETFs, passive investing is the rational default.
+
+Three structural features of the equilibrium are worth naming explicitly, because they help explain why the inefficiency persists without predicting that it will be easy to exploit. First, active managers are best understood as information producers: they do the research, form views, and trade on them, embedding their private information into prices. Passive managers free-ride on this price signal without contributing to it. Second, even when a mispricing is clearly identified, arbitrage is limited by capital constraints — slow-moving capital and position size limits mean that the smart money cannot always correct prices quickly. Third, market segmentation (institutional mandates, geographic restrictions, asset class silos) prevents capital from flowing freely to the highest expected return. These frictions are what keep the equilibrium from fully resolving: the compensation for information acquisition must be positive, so some mispricing must persist.
+
+## ETFs: Mechanics, Implications, and Risks
+
+The dominant vehicle for passive investing today is the exchange-traded fund (ETF). ETFs are superficially similar to mutual funds — both pool investor capital and hold a portfolio of securities — but their structure is fundamentally different in ways that have consequential implications for pricing and market dynamics.
+
+### How ETFs Work: The Creation/Redemption Mechanism
+
+An ETF trades on an exchange like a stock, so its market price can in principle deviate from the value of the underlying securities it holds (the net asset value, or NAV). The mechanism that keeps ETF prices close to NAV is the creation/redemption process, which operates through a set of designated intermediaries called **authorized participants** (APs) — typically large broker-dealers.
+
+When an ETF trades at a premium to NAV, an AP can profit by assembling the underlying basket of securities, delivering them to the ETF in exchange for newly created ETF shares, and then selling those shares on the exchange at the premium price. This arbitrage compresses the premium. When an ETF trades at a discount, the reverse occurs: the AP buys ETF shares cheaply on the exchange, redeems them with the ETF provider for the underlying basket, and sells the basket at fair value. This creation/redemption cycle maintains a tight arbitrage bound around NAV under normal market conditions.
+
+The arbitrage bound depends on the liquidity and transparency of the underlying basket. For ETFs holding large-cap, liquid US equities, the spread between ETF price and NAV is typically a few cents. For ETFs holding illiquid bonds or less transparent international equities, the bound can widen significantly. During the COVID crash of March 2020, several fixed income ETFs traded at sustained discounts of 5–7% to NAV — not because the ETF mechanism failed, but because the ETF market price was arguably a more accurate real-time estimate of fair value than the stale prices used to calculate NAV from infrequently-traded bond positions.
+
+### Market Making and Bid-Ask Spreads
+
+ETF market makers continuously quote bid and ask prices around the estimated fair value. The spread they charge reflects three components:
+
+$$
+\text{Spread} = f(\text{Volatility}, \text{Volume}, \text{Competition})
+$$
+
+Higher underlying volatility increases the risk of holding inventory and widens spreads. Lower trading volume means the market maker cannot turn over inventory quickly, also widening spreads. Greater competition among market makers compresses spreads. For the most liquid equity ETFs (SPY, IVV), spreads are fractions of a cent; for thinly-traded thematic or leveraged ETFs, spreads can be several percent.
+
+::: {.callout-warning}
+## Flash Crash Risks
+
+The ETF creation/redemption mechanism requires the AP to hold the underlying securities as inventory or hedge their exposure. In market stress events — particularly those involving rapid price dislocations — APs can pull back from market making, eliminating the arbitrage capital that normally keeps ETF prices close to NAV. The August 2015 and March 2020 events both saw brief but dramatic ETF price dislocations that had nothing to do with the ETFs' underlying holdings. This is a structural feature of market-making under stress, not a defect unique to ETFs, but it means that ETF "liquidity" during normal times is not guaranteed during crises.
+:::
+
+### Price Discovery and Systemic Effects
+
+Beyond the mechanics, ETF ownership has measurable effects on the prices of the securities they hold. The research literature identifies several:
+
+- **Enhanced price discovery**: When an ETF bundles economically or conceptually linked firms, it makes it easier for investors to express views and information across that group simultaneously, potentially improving how quickly prices incorporate relevant news.
+- **Increased non-fundamental volatility and correlation**: ETF trading introduces a common factor into the returns of all securities held in the same ETF. When investors buy or sell the ETF for reasons unrelated to the fundamentals of individual holdings, those holdings move together. This correlation is not diversifiable if ETF ownership is widespread — it earns a risk premium.
+- **Negative autocorrelation**: ETF arbitrage introduces a "bid-ask bounce" not just at the stock level but at the ETF level, increasing negative autocorrelation in prices. This can affect strategies built on short-horizon price patterns.
+
+### ETF Product Evolution: Not All ETFs Are Created Equal
+
+Early ETFs were broad-based, low-cost index products. The dominant example, Vanguard's index funds (now ETFs), compressed fees across the industry and genuinely benefited retail investors. The "Vanguard effect" — the secular fee compression driven by the index revolution — is one of the more clearly welfare-improving developments in financial markets over the past thirty years.
+
+More recent ETF product development has moved in a different direction: specialized, high-fee, thematic products catering to investor attention rather than diversification needs. Academic research (Ben-David et al., 2023) documents that thematic ETFs — products organized around specific investment themes (cloud computing, clean energy, genomics, etc.) — deliver, on average, 30% risk-adjusted losses within five years of launch. This underperformance is not explained by the fees charged or by hedging demand; it is driven primarily by initial overvaluation at launch. Providers time their launches to periods when the theme is attracting investor attention, and the underlying stocks are richest in price. Investors buying at launch are paying for the story, not the fundamentals.
+
+::: {.callout-important}
+## Common Misconception
+
+The proliferation of ETF products does not mean investors have more good options. It means they have more options, some of which are excellent (broad index ETFs with 2–5 bps fees) and many of which are not (thematic products at 60–75 bps launched at peak enthusiasm for the theme). Evaluating an ETF requires the same framework as evaluating any active fund: what is the benchmark, what is the fee, and is the strategy replicable more cheaply elsewhere?
+:::
+
+## Passive Investing and the Market Equilibrium Problem
+
+If passive investing dominates for most investors, a natural question arises: what happens if everyone goes passive? Howard's point in class is exactly right — someone has to do the information discovery. If no active investor is doing fundamental research, prices drift away from fundamentals and the active strategy becomes more profitable, which attracts active capital back in. The system self-regulates.
+
+The implication is that the right fraction of passive investing in aggregate is less than 100%. We need active investors to keep prices reasonably informative. The question is what equilibrium fraction of active versus passive produces market prices that are good signals for capital allocation. That fraction is not known with precision, but most estimates suggest we are nowhere near the point where passive saturation becomes a problem.
+
+For individual investors, none of this changes the prescription: unless you have reason to believe you have an informational or analytical advantage unavailable to other market participants, the rational baseline is to hold a low-cost diversified index fund. Deviations from the market portfolio need to be justified by something specific — your human capital exposures, your liquidity situation, your tax circumstances, or genuinely private information about opportunities the broader market cannot access.
+
+### The Technology Frontier of Active Management
+
+The nature of the information edge has shifted substantially over the past decade. The most competitive segment of active management today exploits **alternative data** — non-traditional data sources that give a window into economic activity before it is reflected in public financial statements. Examples include satellite imagery of retail parking lots to nowcast store traffic, credit card transaction data to estimate revenue before earnings releases, social media sentiment to anticipate consumer demand shifts, and freight flight pattern data to detect unreported merger discussions. These inputs are expensive to source, require significant analytical infrastructure to process, and are available only to large, well-capitalized institutions.
+
+**Market microstructure** has also become a central battleground. High-frequency trading firms invest in low-latency infrastructure to execute in microseconds, capturing mispricings that persist for milliseconds. Dark pools — private trading venues that match buyers and sellers away from public exchanges — offer large institutional investors the ability to trade blocks without moving market prices. **Payment for order flow** arrangements, where retail brokers route customer orders to market makers in exchange for compensation, raise questions about best execution: are retail orders filled at the best available price, or at the best price for the broker?
+
+These developments mean that the information environment facing a retail investor is not the same as the one facing a well-resourced institutional fund. The informational disadvantage is real, though it is partially offset by the retail investor's freedom from the short-term performance pressures and mandate constraints that force institutional managers to make suboptimal decisions.
+
+## Factor Investing as a Bridge
+
+The next session will extend this framework by expanding the benchmark. The CAPM gives us one "Lego brick" — market exposure. Factor models give us three to five bricks. Most active funds, when benchmarked against a factor model rather than just the market, show even less alpha than the CAPM regression suggests. Warren Buffett's Berkshire Hathaway, analyzed against a factor model, turns out to be largely a combination of value, quality, and low-volatility exposures — systematic factors that can be replicated cheaply rather than evidence of stock-picking genius.
+
+This reframing does not diminish Buffett's achievement — he identified these factors decades before academics formalized them. But it does change how we should evaluate active managers. The question is not just "did you beat the S&P 500?" but "did you beat a passive portfolio with the same factor exposures?" That is a much harder hurdle to clear.
+
+The concept extends to the benchmarking of entire asset management products. A private equity fund earning 12% annualized when the market is up 15% is underperforming, not outperforming. A hedge fund earning 8% with a Sharpe of 0.4 is not impressive if a simple combination of value and momentum factors achieves the same with lower fees. The regression framework we used for ARK is just the beginning.
+
+## Addendum: CAGR and Volatility Drag
+
+A technical point that trips up many investors comparing fund performance is the difference between the arithmetic mean return and the compound annual growth rate (CAGR). They are not the same, and the difference matters for evaluating both active and passive strategies.
+
+If an asset earns returns drawn from a log-normal distribution — the standard continuous-time model — the CAGR is related to the arithmetic mean $\mu$ and volatility $\sigma$ by:
+
+$$
+\text{CAGR} \approx \mu - \frac{1}{2}\sigma^2
+$$
+
+This relationship is exact in continuous time and an approximation in discrete time. The term $\frac{1}{2}\sigma^2$ is called the **volatility drag**: higher volatility reduces the long-run growth rate even if the arithmetic average return is unchanged.
+
+A numerical example makes this concrete. Suppose an asset has an arithmetic mean return of 10% per year and annual volatility of 20% (so $\sigma^2 = 0.04$):
+
+$$
+\text{CAGR} \approx 10\% - \frac{1}{2}(0.04) = 8\%
+$$
+
+The 2 percentage point gap between the headline average return and the actual growth rate is the volatility drag. This has direct implications for comparing strategies:
+
+- A lower-volatility version of the same expected return (say, a strategy with $\frac{1}{2}\sigma_m$ instead of $\sigma_m$) incurs smaller volatility drag, but also earns a lower risk premium — the net effect on CAGR is not automatic.
+- A higher-volatility strategy (say, $2\sigma_m$) has a higher arithmetic return due to the higher risk premium but also higher drag; CAGR rises but by less than the arithmetic return.
+- Leveraged ETFs are an extreme case: their arithmetic return can look attractive relative to the market, but the compounding of daily resets generates volatility drag that systematically destroys long-run value compared to holding the unleveraged index.
+
+::: {.callout-note}
+## Derivation: Why Volatility Destroys Compound Returns
+
+The compound annual growth rate (CAGR) relates to the arithmetic mean return $\bar{r}$ and volatility $\sigma$ approximately as:
+
+$$
+\text{CAGR} \approx \bar{r} - \frac{\sigma^2}{2}
+$$
+
+**Why this matters:** A fund with 20% arithmetic mean return and 40% volatility has an expected CAGR of $20\% - \frac{0.40^2}{2} = 12\%$. A fund with 15% mean return and 20% volatility has CAGR $\approx 15\% - \frac{0.20^2}{2} = 13\%$. The lower-return, lower-volatility fund compounds faster.
+
+**The ARK example:** ARK Innovation ETF's beta of ~1.7 means its volatility is roughly 1.7 times the market's. If the market has 16% annual volatility, ARK's is roughly 27%. The volatility drag — the $\sigma^2/2$ penalty — is $0.27^2/2 \approx 3.6\%$ per year, versus $0.16^2/2 \approx 1.3\%$ for the market. ARK pays an extra ~2.3% per year in volatility drag, before fees, just for being a leveraged version of the market.
+:::
+
+::: {.callout-note}
+## Practical Implication
+
+When comparing fund performance, always verify whether the reported figures are time-weighted (arithmetic average) or money-weighted (closer to CAGR). For buy-and-hold investors, CAGR is the economically relevant number. A fund that reports "average annual returns of 12%" but has 40% annual volatility may be delivering CAGR well below 10%. This discrepancy is not a disclosure error — it is a mathematical fact — but it is routinely overlooked in fund marketing.
+:::
+
+## Key Takeaways
+
+- The two-fund separation theorem implies that if investors are rational and markets are efficient, the optimal portfolio for any investor is a combination of the risk-free asset and the market portfolio. Deviations from the market require a specific justification tied to how an investor differs from the average.
+
+- Active management is a zero-sum game in aggregate before fees and a negative-sum game after fees. Roughly 90-95% of mutual funds deliver zero or negative alpha net of costs. This is arithmetic before it is an empirical claim.
+
+- Alpha disappears in equilibrium because skilled managers attract inflows until their alpha is competed away or exactly offset by fees. Investors pay for skill in the form of fees, not excess returns.
+
+- The correct way to evaluate a manager is via regression: decompose returns into market exposure (beta), genuine outperformance (alpha), and unexplained noise. A fund with high raw returns and a beta of 2.5 may be delivering negative alpha — something the headline number conceals.
+
+- Market efficiency is not binary. Costly information acquisition implies some active management must pay — but only for the investors doing the work, not for the average mutual fund holder.
+- **For you as an investor or client:** Default to low-cost index funds. If you hire an active manager, demand the regression output showing their alpha, beta, and R-squared against a factor benchmark — not just raw returns. Ask what their active share is, and whether their fees are justified by genuine alpha or simply factor exposure you could replicate for a fraction of the cost.
+
+## How Retail Investors Actually Pick Funds
+
+A final practical note: how do most retail investors actually evaluate active managers? Two mechanisms dominate. The first is Morningstar ratings — a star-rating system that functions, as one characterization puts it, as "Yelp for funds." Morningstar ratings are based primarily on past risk-adjusted returns, which means they are backward-looking. The evidence that high Morningstar ratings predict future outperformance is weak: funds rated five stars do modestly better than one-star funds in subsequent periods, but most of the difference reflects factor exposures rather than manager skill, and the persistence is too small to justify the higher fees that four- and five-star funds typically charge.
+
+The second mechanism is financial advisers. Advisers face their own incentive structures — some are compensated through commissions on fund sales, creating an obvious conflict of interest. Fee-only advisers (who charge a flat fee or percentage of assets rather than commissions) have stronger incentives to recommend products in their clients' interest, but even fee-only advisers can be subject to performance-chasing and overconfidence in manager selection. The practical advice is straightforward: understand how your adviser is compensated and what benchmark they use to evaluate the funds they recommend.
+
+## Further Reading
+
+**Mandatory**
+
+- Sharpe, W. F. (1991). The arithmetic of active management. *Financial Analysts Journal*, 47(1), 7–9.
+- Pedersen, L. H. (2018). Sharpening the arithmetic of active management. *Financial Analysts Journal*, 74(1), 21–36.
+- Fidelity. What are actively managed ETFs? *(Available at fidelity.com)*
+
+**Recommended**
+
+- Berk, J. B., & Green, R. C. (2004). Mutual fund flows and performance in rational markets. *Journal of Political Economy*, 112(6), 1269–1295.
+- Ben-David, I., Franzoni, F., Kim, B., & Moussawi, R. (2023). Competition for Attention in the ETF Space. *Review of Financial Studies*, 36(3), 987–1042. *(Documents 30% risk-adjusted underperformance of thematic ETFs within five years of launch.)*

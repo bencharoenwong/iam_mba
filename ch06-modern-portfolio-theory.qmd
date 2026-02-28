@@ -1,0 +1,174 @@
+# Session 06: Modern Portfolio Theory
+
+In 1952, Harry Markowitz published a paper called "Portfolio Selection" in the *Journal of Finance*. It was 14 pages. It won him the Nobel Prize. The core insight — that what matters is not how risky each individual asset is, but how they move together — seems obvious in retrospect. Most good ideas do. Before Markowitz, portfolio management was essentially glorified stock picking: find good companies, buy them, hope for the best. What Markowitz did was reframe the entire question. The problem is not "find the best asset." The problem is "find the best portfolio." That shift in perspective is the foundation of everything in this session.
+
+We are now formalizing the diversification intuition from Session 05 into a framework you can actually use. The math is not terribly hard — mostly linear algebra and some calculus — but the economic logic underneath it is what you need to internalize.
+
+## The Investment Opportunity Set
+
+Start by imagining a world with only two risky assets. Plot every possible portfolio combination on a graph with expected return $E(r)$ on the vertical axis and standard deviation $\sigma$ on the horizontal axis. What you get is a curve — the **investment opportunity set** — showing all achievable risk-return combinations depending on how you divide your money between the two assets.
+
+For any two-asset portfolio with weights $w_1$ and $w_2 = 1 - w_1$:
+
+$$E(r_p) = w_1 E(r_1) + w_2 E(r_2)$$
+
+$$\sigma_p^2 = w_1^2 \sigma_1^2 + w_2^2 \sigma_2^2 + 2 w_1 w_2 \sigma_{12}$$
+
+where $\sigma_{12} = \rho_{12} \sigma_1 \sigma_2$ is the covariance between the two assets. The correlation $\rho_{12}$ is what controls how much the curve bends inward. When $\rho = 1$, you get a straight line — no benefit to combining the assets. When $\rho < 1$, the curve bows to the left, meaning you can achieve lower risk without sacrificing expected return. When $\rho = -1$, perfect hedging is theoretically possible — you can drive portfolio variance to zero. Real assets never have perfect negative correlation, but correlations well below 1 are common, and that is enough to make diversification powerful.
+
+The **efficient frontier** is the upper portion of this curve. Rational investors only want portfolios on the efficient frontier — for any given level of risk, why accept a lower expected return than you have to? The lower portion of the opportunity set is dominated: you can get the same volatility with higher return by moving up the curve. We throw it away.
+
+With $N$ assets rather than two, the math becomes more involved — you now need an $N \times N$ variance-covariance matrix — but the concept is identical. Every possible portfolio is a point in $E(r)$-$\sigma$ space, and the efficient frontier traces out the upper-left boundary.
+
+::: {.callout-note}
+## Academic Reference
+
+Markowitz (1952) is worth reading directly — it is only 14 pages and much of it is still pedagogically clear. The key conceptual contribution is recognizing that the portfolio optimization problem is separable: define the set of efficient risky portfolios first, then optimize allocation across risk and return based on individual preferences. Bodie, Kane, and Marcus (Chapter 8) provides the standard textbook treatment with numerical examples.
+:::
+
+## Adding a Risk-Free Asset: The Capital Allocation Line
+
+The efficient frontier is all well and good, but most investors have access to something the two-asset risky world ignores: a risk-free asset. In practice, we use the yield on short-term government bonds — one-month or three-month T-bills — as a proxy for the risk-free rate $r_f$.
+
+Introducing a risk-free asset changes the problem dramatically. Now an investor can combine any risky portfolio $P$ with the risk-free asset in any proportion. If you put fraction $y$ in portfolio $P$ and $(1-y)$ in the risk-free asset:
+
+$$E(r_c) = r_f + y [E(r_P) - r_f]$$
+
+$$\sigma_c = y \cdot \sigma_P$$
+
+These two equations together describe a straight line in $E(r)$-$\sigma$ space, emanating from the risk-free rate on the vertical axis and passing through portfolio $P$. This line is the **Capital Allocation Line (CAL)**.
+
+Here is the key question: which risky portfolio $P$ should we use? The answer is the one that gives us the steepest possible CAL — that is, the portfolio that maximizes the slope of the line, which is the **Sharpe ratio**:
+
+$$\text{Sharpe ratio} = \frac{E(r_P) - r_f}{\sigma_P}$$
+
+The risky portfolio that maximizes the Sharpe ratio is called the **tangency portfolio** — geometrically, it is the point where a line from the risk-free rate is tangent to the efficient frontier of risky assets. Every rational investor, regardless of their risk preferences, should hold the same tangency portfolio as their risky allocation. This is a strong and counterintuitive result: your risk tolerance does not affect *which* risky assets you hold, only *how much* of your wealth you put into risky assets versus the risk-free asset. Because any allocation between the tangency portfolio and the risk-free rate lies on the same line, the risk-averse investor who allocates 20% to the tangency portfolio and the aggressive investor who allocates 120% face the same tradeoff per unit of risk — so both prefer the steepest possible line, regardless of where on it they choose to sit.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+This two-step structure — identify the tangency portfolio, then allocate between it and cash — maps directly onto how the industry is actually organized. Step 1 (finding the tangency portfolio) is what investment managers do: they construct the optimal mix of risky assets. Step 2 (allocating between risky and risk-free) is what financial advisors do: they determine how much risk a client should take given their goals, time horizon, and stomach for volatility. The same theoretical separation shows up in organizational form. A 60/40 fund essentially bundles both steps, but understanding the separation helps you see what each part of the industry is actually selling.
+:::
+
+## Optimal Allocation: The Role of Risk Aversion
+
+Once we have the tangency portfolio, the second step is straightforward. Suppose investor utility can be approximated by:
+
+$$U = E(r) - \frac{1}{2} A \sigma^2$$
+
+where $A$ is a parameter capturing risk aversion. Higher $A$ means the investor penalizes variance more heavily. Maximizing this utility over the allocation $y$ to the risky portfolio gives:
+
+$$y^* = \frac{E(r_P) - r_f}{A \cdot \sigma_P^2}$$
+
+This is just the equity risk premium divided by the product of risk aversion and variance. Consider a concrete example: an equity risk premium of 6%, equity volatility of 15%, so $\sigma^2 = 0.0225$.
+
+- For $A = 3$: $y^* = 0.06 / (3 \times 0.0225) \approx 89\%$ in equities
+- For $A = 6$: $y^* = 0.06 / (6 \times 0.0225) \approx 44\%$ in equities
+
+A rough empirical calibration: typical investors in the population seem to exhibit $A$ somewhere between 2 and 4 (common estimates from portfolio choice studies). The formula also says something important about how equity allocations should respond to market conditions: as volatility rises (as it did in 2008, 2020, and various other episodes), the optimal allocation to equities falls mechanically. This is one reason target-date funds that mechanically rebalance to a fixed equity weight are theoretically suboptimal — they ignore the time-variation in the risk-return tradeoff.
+
+::: {.callout-warning}
+## Exam/Career Relevance
+
+The risk aversion parameter $A$ shows up again in factor investing, derivatives pricing, and portfolio construction. Know the formula, but more importantly understand what it implies: risk appetite, expected returns, and volatility all interact. A client who says "I want high returns but low risk" is not expressing a preference — they are expressing a wish. The optimization is a constraint, not a menu.
+:::
+
+## CAPM: What Happens in Equilibrium
+
+So far we have been solving the problem of a single investor choosing optimally. Now ask: what if *all* investors do this simultaneously? This is where the **Capital Asset Pricing Model (CAPM)** comes from.
+
+CAPM adds one assumption to the portfolio theory framework: all investors have the same beliefs about expected returns, variances, and covariances. Under this assumption, every investor's tangency portfolio is identical. In equilibrium, the supply of assets must equal demand. Each asset must be held by someone, and since all investors hold the same proportions, the tangency portfolio must be the **market portfolio** — the portfolio that holds every available asset weighted by its market capitalization.
+
+::: {.callout-note}
+## Derivation: From Tangency Portfolio to Market Portfolio
+**Step 1:** All investors solve the same mean-variance problem (homogeneous expectations).
+
+**Step 2:** Every investor holds the tangency portfolio $T$ as their risky allocation, varying only the split between $T$ and the risk-free asset.
+
+**Step 3:** In aggregate, total demand for risky assets equals total supply. Since every investor holds $T$ in some proportion, aggregate demand mirrors $T$'s composition.
+
+**Step 4:** The supply of each asset is its share of total market capitalization. Therefore:
+
+$$T = M$$
+
+where $M$ is the market-capitalization-weighted portfolio of all risky assets. The tangency portfolio *is* the market portfolio.
+:::
+
+This gives us the CAPM's central prediction. The expected return of any asset $i$ must satisfy:
+
+$$E(r_i) = r_f + \beta_i [E(r_M) - r_f]$$
+
+where:
+
+$$\beta_i = \frac{\text{Cov}(r_i, r_M)}{\sigma_M^2}$$
+
+Beta measures how much systematic risk asset $i$ contributes to the market portfolio. An asset with $\beta = 1.5$ moves, on average, 1.5% when the market moves 1%. An asset with $\beta = 0.5$ is defensively low-volatility relative to the market. An asset with negative beta is a hedge — it tends to go up when the market falls.
+
+The **Security Market Line (SML)** plots expected return against beta. Every asset should lie on this line in CAPM equilibrium. Assets above the line are underpriced (higher expected return than their risk warrants) — buy them. Assets below the line are overpriced. "Alpha" is simply the vertical distance from the SML: the return earned in excess of what beta exposure predicts.
+
+Formally, alpha is estimated from the time-series regression:
+
+$$r_i - r_f = \alpha_i + \beta_i (r_M - r_f) + \varepsilon_i$$
+
+where $\alpha_i$ is the intercept. CAPM predicts $\alpha_i = 0$ for all assets. A systematic positive $\alpha_i$ — after controlling for factor exposures — is the definition of active management skill.
+
+::: {.callout-important}
+## Common Misconception
+
+Beta and volatility are not the same thing. A very volatile small-cap stock might have low beta if its volatility is mostly idiosyncratic — unrelated to market movements. CAPM says you should not be compensated for idiosyncratic risk, because you can diversify it away. You only get compensated for systematic risk (beta). This is the model's fundamental pricing statement: undiversifiable risk earns a premium; diversifiable risk does not.
+:::
+
+## The Nobel Lineage of Modern Portfolio Theory
+
+Markowitz gave us the portfolio selection framework. William Sharpe generalized it to the CAPM and gave us beta. Eugene Fama built the case that markets price in available information efficiently — so the expected returns the CAPM predicts are reasonable because markets are competitive. Robert Shiller showed that expected returns are nonetheless time-varying and predictable at long horizons, particularly using valuation ratios. These four perspectives are not mutually exclusive; they are different answers to slightly different questions about the same phenomenon.
+
+Robert Merton extended the single-period framework to multiple periods and introduced the concept of **hedging demand**: in a dynamic setting, investors do not just maximize expected utility of terminal wealth — they also care about hedging against changes in future investment opportunities (e.g., changes in interest rates or the equity premium). This generates additional portfolio components beyond the simple tangency portfolio, which is one reason real-world asset allocation looks more complicated than a basic mean-variance optimization implies.
+
+The CAPM is clean in theory and troubled in practice: empirical tests consistently find that average returns of low-beta stocks exceed the model's prediction and high-beta stocks underperform it, suggesting that beta alone does not explain the cross-section of expected returns.
+
+::: {.callout-note}
+## Academic Reference
+
+Sharpe (1964), Lintner (1965), and Mossin (1966) derived CAPM more or less simultaneously. The model is elegant but empirically troubled — the market portfolio is unobservable, beta alone explains cross-sectional return differences poorly, and average returns of low-beta stocks are too high relative to the prediction. These failures motivate the factor investing literature in Session 08.
+:::
+
+## Practical Limitations of Mean-Variance Optimization
+
+Mean-variance optimization rests on a coherent theoretical foundation, but its practical implementation is fragile in ways that are well-documented and consequential. The issues are worth knowing before you run your first optimizer:
+
+**Input sensitivity.** Small changes in expected return estimates produce large and sometimes absurd changes in optimal portfolio weights. The optimizer is, in a sense, an error-maximizer: it concentrates heavily in assets where your return estimates happen to be optimistic and your variance estimates happen to be low. Since both are estimated with noise, you end up overweighting the assets where you made the largest estimation errors.
+
+**Negative weights.** A naive mean-variance optimizer will almost always recommend shorting some assets. Unless you have a long-short mandate, these are impractical recommendations.
+
+**Covariance matrix instability.** With $N$ assets, you need to estimate $N(N+1)/2$ parameters. For $N = 100$ assets, that is 5,050 parameters — estimated from, say, 60 months of data. This is a classic high-dimension, low-sample problem, and the resulting estimates are noisy. Worse, if $N > T$ (more assets than time periods), the matrix is not even invertible without regularization.
+
+**The 1/N puzzle.** Victor DeMiguel and co-authors (2009) showed that a naive equal-weight portfolio ("1/N") outperforms most mean-variance optimal portfolios out-of-sample across 14 empirical datasets. The reason is simple: the estimation errors in sophisticated optimizers are large enough to offset the theoretical gains from optimization. This is a humbling result. We will return to it when discussing passive management.
+
+The result does not imply that optimization is always inferior — it implies that reducing estimation error is the critical challenge. When expected return inputs are shrunk toward equal expectations and covariance matrices are regularized, optimized portfolios can outperform 1/N.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+In practice, portfolio optimizers are used with significant constraints and shrinkage — imposing limits on position sizes, constraining sector weights, and pulling expected return estimates toward historical averages rather than allowing raw statistical forecasts. The Black-Litterman model is the most widely used approach for incorporating views in a way that is less sensitive to input noise. The key lesson is that the optimizer is a tool, not an oracle. The difficulty is that input errors in expected returns are not detectable from the outputs alone — a portfolio with extreme weights may look like a confident bet when it is actually the result of compounded estimation error.
+:::
+
+## Key Takeaways
+
+- Mean-variance optimization finds the portfolio that maximizes expected return for a given level of risk. The efficient frontier traces out all optimal risky portfolios.
+- Adding a risk-free asset produces the Capital Allocation Line. The optimal risky portfolio is the tangency portfolio — the one with the highest Sharpe ratio — and every rational investor holds it regardless of risk aversion; risk aversion only determines how much to invest in risky assets versus cash.
+- In equilibrium under homogeneous expectations, the tangency portfolio is the market portfolio, and expected returns are linear in beta. This is CAPM.
+- Beta measures systematic (non-diversifiable) risk. Idiosyncratic risk earns no premium in CAPM because investors can eliminate it through diversification.
+- In practice, mean-variance optimization is fragile: it is highly sensitive to input assumptions, often recommends shorting, and frequently underperforms simple equal-weight portfolios out of sample. These failures motivate factor investing and other practical approaches.
+- **For you as an investor or client:** The tangency portfolio result means you should hold a diversified market index fund as your risky allocation, and adjust risk by varying the split between that fund and cash — not by picking individual stocks. When evaluating a fund manager, the Sharpe ratio is the right metric: it tells you whether the manager's risky portfolio is actually better than the market index you could hold for free.
+
+## Further Reading
+
+### Mandatory
+
+- Bodie, Z., Kane, A., and Marcus, A. *Investments*, Chapter 8. Standard textbook treatment of mean-variance optimization, the efficient frontier, and CAPM.
+- Ang, A. *Asset Management: A Systematic Approach to Factor Investing*, Chapter 6 (Mean-Variance Investing). More rigorous treatment with emphasis on implementation challenges and factor exposures.
+
+### Recommended
+
+- Markowitz, H. (1952). Portfolio selection. *The Journal of Finance*, 7(1), 77--91. The original paper. Brief, readable, and worth going back to.
+- DeMiguel, V., Garlappi, L., & Uppal, R. (2009). Optimal versus naive diversification: How inefficient is the 1/N portfolio strategy? *The Review of Financial Studies*, 22(5), 1915--1953. A sobering empirical assessment of how poorly mean-variance optimization performs out of sample relative to equal weighting.

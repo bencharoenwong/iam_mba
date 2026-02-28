@@ -1,0 +1,27 @@
+# Preface {.unnumbered}
+
+These lecture notes are adapted from the **Investments and Asset Management** course taught at INSEAD's Singapore campus during January--February 2025. The course is designed for MBA students and covers 14 sessions organized around four themes:
+
+1. **Investing as a Human Problem** --- the asset management industry, financial planning, behavioral biases, market efficiency, and the democratization of finance
+2. **Investing as a Science** --- diversification, modern portfolio theory, active vs. passive management, factor investing
+3. **Investing as an Art** --- active strategies, security selection, risk management, and the role of practitioner judgment
+4. **State of the Art** --- ESG and sustainability, alternative investments, AI in asset management
+
+Each chapter corresponds to one lecture session, covering all 14 sessions in the course. Chapters built from lecture transcripts preserve the conversational style, real-world examples, and class discussions from the original lectures. Chapters derived primarily from lecture slides present the same frameworks and concepts in a more structured format.
+
+## How to Use This Book
+
+Each chapter corresponds to one lecture session. The chapter numbers match the original session numbers for easy cross-referencing with course materials. Within each chapter you will find:
+
+- **Core concepts** structured around the session's guiding questions
+- **Practical examples** drawn from real markets, funds, and current events
+- **Key takeaways** summarizing the most important points
+- **Further reading** for those who want to go deeper
+
+::: {.callout-note}
+These notes are meant to complement---not replace---the original course materials, readings, and in-class exercises. They work best as a review resource alongside the assigned readings listed at the end of each chapter.
+:::
+
+## About the Instructor
+
+Ben Charoenwong is an Associate Professor of Finance at INSEAD. His research spans financial regulation, investment management, and the intersection of technology and finance. He also runs a quantitative hedge fund, which informs much of the practical perspective in these lectures.

@@ -1,0 +1,347 @@
+# Session 02: Financial Planning and Investor Needs
+
+The entire financial services industry — $112 trillion in assets under management, thousands of products, decades of academic research — exists to solve a problem that sounds deceptively simple: matching what investors have today with what they need in the future. Session 01 showed you the machinery: the industry structure, the fee models, the principal-agent dynamics. This session asks a prior question. Before we worry about which stocks to buy or which fund to hire, what does the investor actually need? It turns out that question is harder to answer than almost anyone admits. Getting it wrong is also one of the most reliable ways to end up financially worse off despite doing everything else right.
+
+## What Does "Successful" Mean?
+
+Most people can tell you what a successful investment looks like after the fact. The stock went up; the fund beat its benchmark; the retirement portfolio lasted long enough. But that is the wrong starting point, because success is defined by your goals, not by the market. A portfolio that returned 15% last year was a failure if you needed 4% real income and the sequence of returns left you drawing down principal at the wrong moment. A portfolio that returned 4% may have been a complete success.
+
+We need to be precise about this. A successful investment outcome has at least the following properties:
+
+- It meets the target goal at the target time
+- It maintains real purchasing power where relevant
+- The investor did not abandon the strategy in a panic before getting there
+
+Notice that none of these criteria mention beating a benchmark. The benchmark comparison is relevant for evaluating asset managers, which we will do later. It is not the right criterion for evaluating whether an individual investor's financial plan worked.
+
+Start with the simplest example: an emergency fund. This is not an investment in the return-maximization sense. It is a store of real liquidity. The correct question is not "what return am I earning on my savings account?" but rather "how many months of real expenses does this cover, and is that enough given my personal risk profile?"
+
+::: {.callout-note}
+## Academic Reference
+
+Economists distinguish between *nominal* and *real* liquidity demand. Real liquidity demand measures your buffer in terms of goods and services — the actual consumption you need to sustain — rather than in currency units. This distinction matters in high-inflation environments and for international investors managing across multiple currencies. It is also the correct way to think about emergency fund sizing: you are not protecting a dollar balance; you are protecting your consumption floor.
+:::
+
+The sizing of an emergency fund is not arbitrary. A corporate employee in a stable industry with marketable skills can get by with three to six months of expenses. Someone in a cyclical industry or a specialized role needs six months at minimum. Self-employed professionals — who have no unemployment benefits, irregular cash flow, and potentially need to rebuild client relationships — should hold six to twelve months. Entrepreneurs should plan for twelve to twenty-four months, given business cash flow volatility, personal guarantee obligations, and the time required to exit or pivot a business.
+
+If you are an international career professional — which describes most INSEAD alumni — add further adjustments. You face multiple currency exposures, visa and relocation costs with limited advance notice, limited access to the social safety nets of any particular country, and potential emergency travel requirements. The baseline fund needs to reflect that profile, not the lifestyle of someone who has lived in one city for twenty years with a stable employer.
+
+## The Financial Planning Framework
+
+Here is the key insight that tends to be lost in the product-focused discussions that dominate financial services marketing: at no point in this session do we discuss which stock to buy. That conversation comes later. The planning process has to happen first, and it involves a specific sequence.
+
+Define goals. Develop a financial plan. Formulate an investment strategy. Then, and only then, choose products.
+
+Working backwards from products — which is what most retail investors do, and which is precisely what commission-based advisors have every incentive to encourage — scrambles this sequence and produces decisions that are coherent at the product level and incoherent at the goal level. You end up with a diversified portfolio of investment-linked insurance products, which is a category error: the vehicle chosen before the destination was set.
+
+**Goals** exist at multiple horizons and multiple levels of abstraction. Quantitative goals include a target retirement age, a desired income level, major purchases, and any legacy intentions. Qualitative goals — desired lifestyle changes, career flexibility, geographic preferences, family obligations — matter equally but are harder to put into a spreadsheet. Both need to be explicit and written down. A financial plan that exists only in someone's head is not a plan; it is an intention.
+
+Time horizons structure how goals map to financial decisions:
+
+- **Short-term (0–2 years):** Goals here need to be funded from assets that are liquid and safe. Do not take equity risk with money you need in eighteen months.
+- **Medium-term (2–7 years):** Some volatility is tolerable; you have time to recover from moderate drawdowns.
+- **Long-term (7+ years):** This is where equity risk makes sense and where the compounding arithmetic works in your favor.
+
+The gap analysis is the honest part of the process: what do you have, what do you need, and how large is the shortfall? Gap analysis forces you to confront the difference between your current savings trajectory and your stated goals. Most people do not like this exercise, which is why most people do not do it systematically.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+Financial planning tools, including Monte Carlo simulators, let you stress-test your plan against thousands of simulated market scenarios. Use them. Historical averages are useful anchors, but they mask the variance that matters most in retirement — particularly the sequence-of-returns risk that can devastate a portfolio early in the drawdown phase even if long-run average returns are fine. The [Growth Graph Financial Planner](https://bencharoenwong.github.io/financial_planner/) runs 15,000 Monte Carlo paths across different risk profiles, estimates the probability of meeting your target corpus, and supports both goal-based and FIRE planning modes. Try it with your own numbers — the gap between your "expected" outcome and the range of plausible outcomes is the single most important thing to internalize before we discuss investment strategy.
+:::
+
+## Retirement Arithmetic: The 4% Rule
+
+The 4% rule is the most widely cited guideline in retirement income planning. It was developed by financial planner William Bengen in 1994, based on historical US equity and bond return data, and the core result is this: a retiree with a 50/50 stock-bond portfolio could withdraw 4% of the initial portfolio value in year one, adjust that dollar amount for inflation each subsequent year, and have the portfolio last at least 30 years across virtually all historical market environments.
+
+Working backwards from an income target is intuitive. Suppose you need $50,000 per year in real income. At a 4% withdrawal rate, the required portfolio is:
+
+$$ \text{Required Portfolio} = \frac{\$50{,}000}{0.04} = \$1{,}250{,}000 $$
+
+In general, if the withdrawal rate is $w$, the required portfolio is $\frac{1}{w}$ times your target annual income. At 4%, that multiplier is 25. At 3%, it is 33. At 5%, it is 20.
+
+The inflation adjustment is not optional. If inflation runs at 3%, your year-two withdrawal is $51,500; year three is $53,045. Even if a market correction drops the portfolio to $1 million, you continue withdrawing the inflation-adjusted amount — that is the design of the rule. The portfolio is sized to absorb that.
+
+::: {.callout-important}
+## Common Misconception
+
+The 4% rule is a US-centric result. It was calibrated on US historical returns, which are among the highest in the world over the relevant period. The survivorship bias problem here is severe: we are looking at one of the few countries that avoided major war damage to capital stock, expropriation, hyperinflation, or market closure during the twentieth century. For most other countries, the sustainable withdrawal rate historically sits at 2.5–3.5%. If your retirement assets will be invested globally or you plan to retire outside the United States, treat 4% as an upper bound, not a baseline.
+:::
+
+The sustainable withdrawal rate in practice depends on six determinants, only three of which are under your direct control:
+
+| Determinant | Under Your Control? |
+|---|---|
+| Initial portfolio size | Yes |
+| Investment returns (real) | Partially |
+| Volatility and sequence risk | Partially |
+| Inflation rate | No |
+| Time horizon | Roughly |
+| Portfolio composition | Yes |
+
+The sequence of returns risk deserves special attention because it is not obvious from the arithmetic. Two retirees with identical 30-year average returns can have dramatically different outcomes if one experiences large losses early in retirement and the other experiences them late. The early retiree is selling assets at depressed prices to fund current consumption, locking in losses and reducing the asset base available for the eventual recovery. The late retiree still has most of their assets when the drawdown hits and benefits more from the recovery. Same average return; very different terminal wealth. This is why the portfolio allocation in the first decade of retirement matters disproportionately.
+
+Dynamic withdrawal strategies exist precisely to manage this problem. The guardrail strategy, for instance, sets a floor and ceiling on withdrawal rates: if the portfolio grows significantly, you can increase withdrawals; if it contracts, you reduce them. Floor-and-ceiling rules accomplish the same thing more mechanically. Bucketing strategies — holding short-term needs in cash or bonds, intermediate needs in balanced assets, and long-term needs in equity — separate the time horizons explicitly. These are all reasonable approaches; they share the common feature of building flexibility into the drawdown phase rather than committing to a fixed dollar amount regardless of market conditions.
+
+The FIRE movement — Financial Independence, Retire Early — takes these calculations and applies them to earlier retirement targets, sometimes in one's thirties or forties. The arithmetic is the same; what changes is the time horizon. Retire at 35 and you may need the portfolio to last 60 years, not 30. At that horizon, a 4% withdrawal rate has substantially higher failure probabilities. The movement has generated useful tools and community infrastructure for thinking through this problem carefully. <!-- REVIEW: slide references campfirefinance.com and engaging-data.com fire-calculator — consider adding as footnote references -->
+
+## Try It Yourself: Retirement Monte Carlo
+
+The discussion above gives you the logic of retirement planning. The interactive tool below lets you *experience* it. Adjust the sliders — your portfolio size, withdrawal rate, expected return, and market volatility — and watch how the distribution of outcomes and the probability of your plan surviving change. Pay particular attention to what happens when you increase volatility while holding the expected return constant: this is the sequence-of-returns risk in action.
+
+::: {.content-visible when-format="html"}
+
+```{ojs}
+//| echo: false
+viewof initialPortfolio = Inputs.range([100000, 5000000], {
+  value: 1250000, step: 50000, label: "Initial portfolio ($)",
+  format: x => "$" + x.toLocaleString()
+})
+viewof withdrawalRate = Inputs.range([0.02, 0.08], {
+  value: 0.04, step: 0.005, label: "Annual withdrawal rate",
+  format: x => (x * 100).toFixed(1) + "%"
+})
+viewof expectedReturn = Inputs.range([0.02, 0.12], {
+  value: 0.07, step: 0.005, label: "Expected nominal return",
+  format: x => (x * 100).toFixed(1) + "%"
+})
+viewof volatility = Inputs.range([0.05, 0.30], {
+  value: 0.15, step: 0.01, label: "Annual volatility (σ)",
+  format: x => (x * 100).toFixed(0) + "%"
+})
+viewof horizonYears = Inputs.range([10, 50], {
+  value: 30, step: 1, label: "Retirement horizon (years)"
+})
+```
+
+```{ojs}
+//| echo: false
+simulation = {
+  const nSim = 1000;
+  const allBalances = Array.from({length: horizonYears + 1}, () => []);
+  let successes = 0;
+
+  for (let i = 0; i < nSim; i++) {
+    let balance = initialPortfolio;
+    let withdrawal = initialPortfolio * withdrawalRate;
+    allBalances[0].push(balance);
+    let survived = true;
+
+    for (let t = 1; t <= horizonYears; t++) {
+      let u = 0, v = 0;
+      while (u === 0) u = Math.random();
+      while (v === 0) v = Math.random();
+      const z = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+
+      const r = expectedReturn + volatility * z;
+      balance = balance * (1 + r) - withdrawal;
+      withdrawal *= 1.03;
+      if (balance < 0) { balance = 0; survived = false; }
+      allBalances[t].push(balance);
+    }
+    if (survived && balance > 0) successes++;
+  }
+
+  function pct(arr, p) {
+    const s = arr.slice().sort((a, b) => a - b);
+    const i = (s.length - 1) * p;
+    const lo = Math.floor(i), hi = Math.ceil(i);
+    return lo === hi ? s[lo] : s[lo] * (hi - i) + s[hi] * (i - lo);
+  }
+
+  const bands = [];
+  for (let t = 0; t <= horizonYears; t++) {
+    bands.push({
+      year: t,
+      p10: pct(allBalances[t], 0.10),
+      p25: pct(allBalances[t], 0.25),
+      p50: pct(allBalances[t], 0.50),
+      p75: pct(allBalances[t], 0.75),
+      p90: pct(allBalances[t], 0.90)
+    });
+  }
+
+  return { bands, successRate: (successes / nSim * 100).toFixed(1) };
+}
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width: 680,
+  height: 400,
+  y: { label: "Portfolio Value ($)", grid: true, tickFormat: "$,.0s" },
+  x: { label: "Year of Retirement" },
+  marks: [
+    Plot.areaY(simulation.bands, {
+      x: "year", y1: "p10", y2: "p90",
+      fill: "steelblue", fillOpacity: 0.15
+    }),
+    Plot.areaY(simulation.bands, {
+      x: "year", y1: "p25", y2: "p75",
+      fill: "steelblue", fillOpacity: 0.25
+    }),
+    Plot.line(simulation.bands, {
+      x: "year", y: "p50",
+      stroke: "steelblue", strokeWidth: 2.5
+    }),
+    Plot.ruleY([0], { stroke: "red", strokeDasharray: "4,4", strokeOpacity: 0.6 })
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+html`<div style="font-size: 1.05em; margin-top: 8px;">
+<strong>Probability of success:</strong> ${simulation.successRate}% of 1,000 simulated paths survived ${horizonYears} years.<br>
+<span style="color: #666; font-size: 0.9em;">Light band: 10th–90th percentile. Dark band: 25th–75th percentile. Blue line: median path.</span>
+</div>`
+```
+
+:::
+
+::: {.content-visible when-format="pdf"}
+*The HTML version of this chapter includes an interactive Monte Carlo retirement simulator. Visit the online book to adjust parameters and see how portfolio survival probabilities change with different assumptions.*
+:::
+
+The simulation uses geometric returns with a fixed volatility — each year's return is drawn independently from a normal distribution with mean equal to your expected return and standard deviation equal to your chosen volatility. The 3% annual inflation adjustment on withdrawals is built in. Notice that with the default parameters ($1.25M portfolio, 4% withdrawal, 7% return, 15% volatility, 30 years), the median path looks comfortable — but the 10th percentile can hit zero well before year 30. That is the entire point of Monte Carlo analysis: the average outcome is not the relevant planning metric. The *distribution* of outcomes is.
+
+::: {.callout-note collapse="true"}
+## Python Implementation
+
+The simulation above runs in JavaScript for browser interactivity. Here is the equivalent Python code you can adapt for your own analysis:
+
+```python
+import numpy as np
+
+def monte_carlo_retirement(
+    initial_portfolio=1_250_000,
+    withdrawal_rate=0.04,
+    expected_return=0.07,
+    volatility=0.15,
+    years=30,
+    n_simulations=10_000,
+    inflation=0.03
+):
+    """Simulate retirement portfolio paths with Monte Carlo."""
+    np.random.seed(42)
+    balances = np.zeros((n_simulations, years + 1))
+    balances[:, 0] = initial_portfolio
+
+    for t in range(1, years + 1):
+        returns = np.random.normal(expected_return, volatility, n_simulations)
+        withdrawal = initial_portfolio * withdrawal_rate * (1 + inflation) ** t
+        balances[:, t] = np.maximum(
+            balances[:, t - 1] * (1 + returns) - withdrawal, 0
+        )
+
+    success_rate = np.mean(balances[:, -1] > 0)
+    percentiles = np.percentile(balances, [10, 25, 50, 75, 90], axis=0)
+
+    print(f"Success rate: {success_rate:.1%}")
+    print(f"Median terminal value: ${percentiles[2, -1]:,.0f}")
+
+    return balances, success_rate, percentiles
+
+balances, success_rate, percentiles = monte_carlo_retirement()
+```
+:::
+
+For a more comprehensive planning tool that incorporates Monte Carlo simulation with goal-based planning, FIRE analysis, risk profiles, and exportable projections, see the [Growth Graph Financial Planner](https://bencharoenwong.github.io/financial_planner/).
+
+## Risk: Three Distinct Concepts
+
+When financial planners talk about risk, they are actually talking about three separate things that frequently get conflated:
+
+**Risk capacity** is your *ability* to absorb losses without jeopardizing your financial goals. It is determined by your time horizon, income stability, existing wealth, and financial obligations. A 30-year-old with stable employment, no dependents, and a 35-year horizon has high risk capacity regardless of how they feel about volatility.
+
+**Risk tolerance** is your *willingness* to accept volatility and uncertainty. It is psychological, not mathematical. Someone with high risk capacity but low risk tolerance will sleep poorly through a 30% drawdown and may sell at the bottom — which is worse than holding a more conservative portfolio in the first place.
+
+**Risk need** is the *required return* to meet your financial goals. If your retirement plan works at 3% real returns, your risk need is low. If it requires 8% real returns, your risk need is high, and the investment strategy has to reflect that regardless of your capacity or tolerance.
+
+All three matter, and the relationship between them drives portfolio construction. The practical problem is that most risk-profiling questionnaires measure tolerance only. They ask whether you would sell if your portfolio fell 20%, which is measuring your emotional response to a hypothetical — a poor predictor of actual behavior under stress. Capacity and need require quantitative financial analysis, not a ten-question survey.
+
+::: {.callout-warning}
+## Exam/Career Relevance
+
+The three-part risk framework — capacity, tolerance, need — appears in the CFA curriculum and in most wealth management frameworks. When a client relationship manager presents you with a risk questionnaire, you now understand what it is measuring (tolerance) and what it is not measuring (capacity and need). In a private banking or wealth management interview, demonstrating that you understand this distinction immediately signals that you have thought seriously about client advisory.
+:::
+
+## Human Capital and the Life-Cycle View
+
+An INSEAD MBA student typically has a relatively small financial portfolio and a very large quantity of something that does not appear on any balance sheet: human capital. Human capital is the present value of your future labor income, and for most people in their twenties and thirties, it dwarfs their financial wealth.
+
+This changes the optimal investment strategy in a way that is counterintuitive relative to naive diversification advice. If your human capital is bond-like — stable, predictable, government-backed, as it is for many academics and civil servants — then your financial portfolio should tilt toward equity. You are already holding a lot of fixed-income-like risk in your career. If your human capital is equity-like — volatile, correlated with market cycles, as it is for investment bankers, consultants, or entrepreneurs — then your financial portfolio should be more conservative, because you already have substantial economic exposure to market conditions through your employment income.
+
+The life-cycle view formalizes this intuition. Early in your career, human capital is large relative to financial wealth. As you age, you convert human capital into financial capital through saving. The proportion of your total wealth that is illiquid and labor-income-dependent falls. This naturally supports the standard advice to hold more equity when young and gradually shift toward bonds as retirement approaches — but the *reason* is portfolio theory applied to total wealth, not a rule of thumb.
+
+::: {.callout-note}
+## Academic Reference
+
+Robert Merton's work on life-cycle investing is the theoretical foundation here. His 2014 *Harvard Business Review* piece, "The Crisis in Retirement Planning," argues that the conventional focus on portfolio return as the objective is misguided. The real objective is maintaining consumption in retirement — specifically, the ability to sustain a target real income stream for an uncertain lifespan. This reframing has practical implications: the right risk metric for a retiree is not portfolio volatility but the probability of ruin — the probability that the portfolio is depleted before death.
+:::
+
+## International and Compensation Complexity
+
+Since most INSEAD graduates will have international careers, a few complications deserve explicit treatment.
+
+**Currency and mobility.** If you are likely to move between countries — and the base rate for INSEAD alumni is high — your financial planning needs a base currency anchor for long-term planning while managing short-term expenses in whatever local currency you happen to be earning. The practical implication: hold your long-term savings in hard currencies, maintain liquidity in the currencies of your likely near-term locations, and budget explicitly for relocation costs and the periods of labor market transition that accompany moves.
+
+Tax planning across jurisdictions is non-trivial. Retirement and healthcare systems vary enormously: what the Singapore government provides versus what a French retiree can expect from social security versus what an American gets from Social Security and Medicare are entirely different calculations. A financial plan that assumes one country's social safety net and then crosses borders is underspecified.
+
+**Equity compensation.** Modern senior compensation at large firms involves equity: restricted stock units (RSUs), stock options, or both. This creates concentration risk. An employee who holds company stock, works for the company, and has their human capital tied to the company's fortunes has correlated exposure in three dimensions. A reasonable rule is that no single employer's stock should represent more than 5–10% of your total financial portfolio. The psychological resistance to this — it feels disloyal, or you believe in the company — is real but irrational from a portfolio perspective. Diversifying away from employer stock is not a prediction that the company will fail; it is recognizing that you are already heavily long the company through your employment.
+
+Lumpy compensation — large bonuses in good years, smaller in bad years — requires a deliberate policy on savings rates. The common failure mode is lifestyle inflation: each year's bonus gets absorbed into a higher spending level, and the savings rate does not increase even as income does. The rational approach is to establish a rule in advance: a fixed fraction of any bonus above a baseline goes to long-term savings, before the money hits the current account and becomes mentally available.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+Decision rules imposed in advance work better than in-the-moment discretion because they remove the cognitive load at the moment of temptation. Behavioral finance calls this commitment device behavior. If you decide now that 50% of every bonus goes to your investment account on the day it arrives, you do not have to fight that decision when the bonus hits and you are also looking at a new car or an apartment upgrade. The policy is already made.
+:::
+
+## Common Failure Modes
+
+The mistakes that derail financial plans cluster into three categories.
+
+**Planning mistakes** are the structural failures: starting to save without written goals, making unrealistic assumptions about income growth or investment returns, ignoring inflation in long-term projections, failing to stress-test the plan, and not updating it as life circumstances change. The most pernicious is assuming that your current high income trajectory will continue indefinitely. MBA graduates who design financial plans around a linear extrapolation of their post-graduation salary — accounting for rapid promotion but no career transitions, no voluntary sabbaticals, no entrepreneurial detours — are building on a foundation that will not match the actual path.
+
+**Behavioral mistakes** include lifestyle inflation with every pay raise, overestimating your ability to cut expenses in retirement (most people spend roughly the same percentage of their prior income in retirement as they expected, which tends to be more than they planned), procrastination on starting to save, and emotional selling during drawdowns. Mental accounting — treating a bonus as "house money" that can be spent freely while saving the salary — is particularly common among high earners and particularly harmful to wealth accumulation.
+
+**Investment mistakes** are the most discussed but perhaps the least fatal: not rebalancing, inappropriate asset location, over-concentration in employer stock, trying to time the market, focusing on gross returns while ignoring fees and taxes. These are problems, but they are problems that compound on top of a financial plan. If the financial plan itself is wrong — wrong goals, wrong time horizon, wrong savings rate — optimizing the investment strategy within that plan does not save you.
+
+::: {.callout-important}
+## Common Misconception
+
+MBA graduates are at elevated risk for a specific cluster of mistakes: overconfidence about income trajectory, excessive risk-taking with "windfall" money (bonuses, stock grants), underplanning for career transitions, and ignoring geographic mobility in financial projections. The very confidence that makes people effective in high-intensity careers generates overoptimism in financial planning. Being good at your job does not make your financial plan more likely to be correct; if anything, the correlation runs the other way.
+:::
+
+The technical mistakes — inappropriate asset location, poor estate planning documentation, out-of-date beneficiary designations, missing tax advantages across jurisdictions — are largely solved by service providers. This is actually a good argument for hiring competent professionals for the implementation layer, even if you do the planning yourself.
+
+## The Asset Manager's Actual Role
+
+One last point that bridges back to Session 01. Most asset managers, including many that market themselves as wealth managers, do not provide financial planning. What they provide is investment management: portfolio construction, risk management, and execution. Those are valuable services, but they sit in the third and fourth stages of the planning process (formulate investment strategy, choose products), not in the first two.
+
+A client who arrives at an asset manager with no written financial goals is asking the manager to skip ahead to the product layer. The manager, whose revenue model is tied to assets under management and product sales, has limited incentive to push back. The result is what you see across the retail financial services industry: clients with well-constructed portfolios optimized for benchmarks that have no relationship to their actual financial goals.
+
+The asset manager's behavioral coaching function is arguably the most underrated value-add in the entire relationship. An individual who holds a diversified equity portfolio through a 40% drawdown and rebalances into it will dramatically outperform one who sells at the bottom. The manager who prevents panic selling during the COVID crash of March 2020, or the financial crisis of 2008–2009, earns their fee many times over — not through any investment insight, but through the management of one variable: client behavior.
+
+## Key Takeaways
+
+- A successful investment outcome is defined by meeting specific goals, not by beating a benchmark. The planning sequence is: define goals, develop a plan, formulate a strategy, then select products. Working backwards from products is the most common expensive mistake.
+- Emergency fund sizing is a function of personal risk profile, not a universal number. Corporate employees need three to six months; self-employed professionals need six to twelve; entrepreneurs need twelve to twenty-four; international career professionals need to add buffers for currency, relocation, and limited social safety net access.
+- The 4% withdrawal rule provides a useful starting framework for retirement income planning, but it is US-centric, assumes a 30-year horizon, and requires adjustment for longer retirements, non-US investment environments, and variable spending patterns.
+- Risk has three distinct components — capacity (ability), tolerance (willingness), and need (required return) — and all three must be assessed separately. Most risk profiling tools measure only tolerance.
+- Human capital is the largest asset on most people's total balance sheet in their working years. Its characteristics — stable or volatile, correlated with market cycles or not — should inform the composition of the financial portfolio.
+
+## Further Reading
+
+### Mandatory
+
+- Bodie, Kane, and Marcus, *Investments*, Chapters 5–6
+- Vanguard, *Principles for Investing Success*
+
+### Recommended
+
+- Merton, R. C. (2014). The crisis in retirement planning. *Harvard Business Review*.
+- Campbell, J. Y. (2006). Household finance. *The Journal of Finance*, 61(4), 1553–1604.
+- Benartzi, S., & Thaler, R. H. (2007). Heuristics and biases in retirement savings behavior. *Journal of Economic Perspectives*, 21(3), 81–104.

@@ -1,0 +1,209 @@
+# Further Reading {.unnumbered}
+
+## Textbooks
+
+- **Andrew Ang** (2014). *Asset Management: A Systematic Approach to Factor Investing*. Oxford University Press.
+- **Zvi Bodie, Alex Kane, and Alan Marcus** (2014). *Investments*, 10th Edition (Global Edition). McGraw-Hill.
+- **Jonathan Berk and Peter DeMarzo** (2017). *Corporate Finance*, 4th Edition. Pearson.
+
+---
+
+## Session 01: The Asset Management Industry
+
+### Mandatory
+
+- The Future of Asset Management --- BNY Mellon
+- Asset Management: Past, Present, and Future of Modern Finance (JPM Series) --- Rob Arnott
+
+### Recommended
+
+- Ang: Chapter 15
+- Charoenwong, B., Kwan, A., & Umar, T. (2019). Does regulatory jurisdiction affect the quality of investment-adviser regulation? *American Economic Review*, 109(10), 3681--3712.
+- Charoenwong, B., Kowaleski, Z. T., Kwan, A., & Sutherland, A. G. (2024). RegTech: Technology-driven compliance and its effects on profitability, operations, and market structure. *Journal of Financial Economics*.
+
+---
+
+## Session 02: Financial Planning and Investor Needs
+
+### Mandatory
+
+- Bodie, Kane, and Marcus: Chapters 5--6
+- Vanguard: Principles for Investing Success
+
+### Recommended
+
+- Merton, R. C. (2014). The crisis in retirement planning. *Harvard Business Review*.
+- Campbell, J. Y. (2006). Household finance. *The Journal of Finance*, 61(4), 1553--1604.
+- Benartzi, S., & Thaler, R. H. (2007). Heuristics and biases in retirement savings behavior. *Journal of Economic Perspectives*, 21(3), 81--104.
+
+---
+
+## Session 03: Market Efficiency and Its Challenges
+
+### Mandatory
+
+- Vanguard Case
+- Two Pillars of Asset Pricing --- Eugene Fama (Nobel Prize Lecture)
+
+### Recommended
+
+- Asness, C. S. (2024). The Less-Efficient Market Hypothesis. *Journal of Portfolio Management* (50th Anniversary Issue).
+- Gromb, D., & Vayanos, D. (2010). Limits of arbitrage. *Annual Review of Financial Economics*, 2(1), 251--275.
+- Charoenwong, B., Morck, R., & Wiwattanakantang, Y. (2021). Bank of Japan equity purchases: The (non-)effects of extreme quantitative easing. *Review of Finance*, 25(3), 713--743.
+
+---
+
+## Session 04: Democratization of Finance
+
+### Mandatory
+
+- SEC Investor Bulletin: Meme Stocks
+- Barber, B. M., Huang, X., Odean, T., & Schwarz, C. (2022). Attention-induced trading and returns: Evidence from Robinhood users. *The Journal of Finance*, 77(6), 3141--3190.
+
+### Recommended
+
+- Welch, I. (2022). The wisdom of the Robinhood crowd. *The Journal of Finance*, 77(3), 1489--1527.
+- Eaton, G. W., Green, T. C., Roseman, B., & Wu, Y. (2022). Retail trader sophistication and stock market quality: Evidence from brokerage outages. *Journal of Financial Economics*, 146(2), 502--528.
+
+---
+
+## Session 05: Diversification
+
+### Mandatory
+
+- Bodie, Kane, and Marcus: Chapter 7
+- Ang: Chapter 3 (Risk Factors)
+
+### Recommended
+
+- Statman, M. (1987). How many stocks make a diversified portfolio? *Journal of Financial and Quantitative Analysis*, 22(3), 353--363.
+- Goetzmann, W. N., & Kumar, A. (2008). Equity portfolio diversification. *Review of Finance*, 12(3), 433--463.
+
+---
+
+## Session 06: Modern Portfolio Theory
+
+### Mandatory
+
+- Bodie, Kane, and Marcus: Chapter 8
+- Ang: Chapter 6 (Mean-Variance Investing)
+
+### Recommended
+
+- Markowitz, H. (1952). Portfolio selection. *The Journal of Finance*, 7(1), 77--91.
+- DeMiguel, V., Garlappi, L., & Uppal, R. (2009). Optimal versus naive diversification: How inefficient is the 1/N portfolio strategy? *The Review of Financial Studies*, 22(5), 1915--1953.
+
+---
+
+## Session 07: Active vs. Passive Management
+
+### Mandatory
+
+- Sharpe, W. F. (1991). The arithmetic of active management. *Financial Analysts Journal*, 47(1), 7--9.
+- Pedersen, L. H. (2018). Sharpening the arithmetic of active management. *Financial Analysts Journal*, 74(1), 21--36.
+- Fidelity Investments: What are Actively Managed ETFs?
+
+### Recommended
+
+- Berk, J. B., & Green, R. C. (2004). Mutual fund flows and performance in rational markets. *Journal of Political Economy*, 112(6), 1269--1295.
+
+---
+
+## Session 08: Factor Investing
+
+### Mandatory
+
+- What is factor investing? --- BlackRock
+- Factor Investing: The Third Pillar of Investing --- Invesco
+
+### Recommended
+
+- Dimson, E., Marsh, P., & Staunton, M. (2017). Factor-based investing: The long-term evidence. *Journal of Portfolio Management*, 43(5), 15.
+- Ilmanen, A., Israel, R., Moskowitz, T. J., Thapar, A. K., & Lee, R. (2021). How do factor premia vary over time? A century of evidence. *Journal of Investment Management*.
+
+---
+
+## Session 09: Active Strategies and Finding an Edge
+
+### Mandatory
+
+- Ang: Chapter 10 (Alpha and Beta)
+- Grossman, S. J., & Stiglitz, J. E. (1980). On the impossibility of informationally efficient markets. *American Economic Review*, 70(3), 393--408.
+
+### Recommended
+
+- Kacperczyk, M., Nieuwerburgh, S. V., & Veldkamp, L. (2014). Time-varying fund manager skill. *The Journal of Finance*, 69(4), 1455--1484.
+- Pastor, L., Stambaugh, R. F., & Taylor, L. A. (2015). Scale and skill in active management. *Journal of Financial Economics*, 116(1), 23--45.
+
+---
+
+## Session 10: The Art of Security Selection
+
+### Mandatory
+
+- The Economist: "Why investors are reaching for the astrology of finance"
+
+### Recommended
+
+- Lo, A. W., Mamaysky, H., & Wang, J. (2000). Foundations of technical analysis. *The Journal of Finance*, 55(4), 1705--1765.
+- Jiang, J., Kelly, B., & Xiu, D. (2023). (Re-)Imag(in)ing price trends. *The Journal of Finance*, 78(6), 3193--3249.
+- He, G., & Litterman, R. (2002). The intuition behind Black-Litterman model portfolios. SSRN 334304.
+
+---
+
+## Session 11: Risk Management in Practice
+
+### Mandatory
+
+- Risk Management: A Practical Guide --- MSCI
+- Understanding Risk Parity --- AQR
+
+### Recommended
+
+- Bodie, Kane, and Marcus: Chapter 1 "The Investment Environment"
+- Kaminski, K. M., & Lo, A. W. (2014). When do stop-loss rules stop losses? *Journal of Financial Markets*, 18, 234--254.
+- Charoenwong, B., & Feng, G. (2016). Does higher-frequency data always help to predict longer-horizon volatility? *Journal of Risk*.
+
+---
+
+## Session 12: ESG and Sustainability in Investing
+
+### Mandatory
+
+- Ang: Chapter 16 (ESG Investing)
+- Pastor, L., Stambaugh, R. F., & Taylor, L. A. (2021). Sustainable investing in equilibrium. *Journal of Financial Economics*, 142(2), 550--571.
+
+### Recommended
+
+- Berg, F., Koelbel, J. F., & Rigobon, R. (2022). Aggregate confusion: The divergence of ESG ratings. *Review of Finance*, 26(6), 1315--1344.
+- Hong, H., & Kacperczyk, M. (2009). The price of sin: The effects of social norms on markets. *Journal of Financial Economics*, 93(1), 15--36.
+- Hartzmark, S. M., & Sussman, A. B. (2019). Do investors value sustainability? A natural experiment examining ranking and fund flows. *The Journal of Finance*, 74(6), 2789--2837.
+
+---
+
+## Session 13: Alternative Investments
+
+### Mandatory
+
+- Chartered Alternative Investment Analyst report (CAIA)
+- Do Hedge Funds Add Value? --- AQR
+- Should You Invest Like a University Endowment? --- Forbes
+
+### Recommended
+
+- Alternative Investments --- UBS Asset Management (2020)
+
+---
+
+## Session 14: AI and Complexity in Asset Management
+
+### Mandatory
+
+- Cao, S., Jiang, W., Wang, J., & Yang, B. (2024). From man vs. machine to man + machine: The art and AI of stock analyses. *Journal of Financial Economics*, 160, 103910.
+- Goldstein, I., Jiang, W., & Karolyi, G. A. (2019). To FinTech and beyond. *The Review of Financial Studies*, 32(5), 1647--1661.
+
+### Recommended
+
+- Lopez de Prado, M. (2018). *Advances in Financial Machine Learning*. Wiley.
+- Israel, R., Kelly, B., & Moskowitz, T. (2020). Can machines "learn" finance? *Journal of Investment Management*, 18(2), 23--36.
+- Gu, S., Kelly, B., & Xiu, D. (2020). Empirical asset pricing via machine learning. *The Review of Financial Studies*, 33(5), 2223--2273.

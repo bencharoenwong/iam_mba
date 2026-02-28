@@ -1,0 +1,164 @@
+# Session 04: The Democratization of Finance
+
+In January 2021, a forum of retail investors on Reddit — posting under names like "DeepFuckingValue" and trading through a zero-commission app on their phones — moved the stock price of a struggling video game retailer by several hundred percent. Hedge funds that had shorted the stock lost billions. The story became a film. The protagonist was lionized on CNBC. A congressional hearing was convened. For a few weeks, it genuinely felt like the internet had figured out how to beat Wall Street at its own game.
+
+It had not. But the episode crystallized a set of questions that anyone serious about markets needs to answer: What actually happened when commissions went to zero? Does giving everyone access to trading tools improve outcomes? Who benefits when more people participate in financial markets — and who bears the costs? This session sits in uncomfortable territory, because the honest answers cut against both the "democratization is always good" narrative and the "retail investors are just dumb money" dismissal.
+
+## The Zero-Commission Revolution
+
+For most of financial market history, trading cost real money. Traditional brokerages charged $20 to $50 per trade, and private banks charged more. Those fees were not accidental — they served as a natural friction device that kept casual speculators from overtrading. If you want to buy 50 shares of a $20 stock, a $25 commission represents a 2.5% immediate drag on your position. That creates a useful pause.
+
+Robinhood eliminated this. When it launched zero-commission trading in 2013 and the major incumbents matched within a few years, the per-trade cost became zero. The pitch was obvious and compelling: why should ordinary people pay fees that institutions do not? Why should building wealth be gated behind minimum investment requirements and per-trade tolls?
+
+The question the industry asks quieter is: how does Robinhood actually make money?
+
+The answer is **payment for order flow (PFOF)** — a mechanism we covered in Session 03's discussion of market structure. In brief: Robinhood routes your order to a market maker (like Citadel Securities) who pays for the privilege of being your counterparty. The market maker profits from the spread; you pay zero commission but may receive a slightly worse execution price. Whether the net effect is good or bad for retail investors depends on trade size and liquidity — the details are in the previous session.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+Zero-commission trading did not make trading free — it shifted who pays and how. When you do not pay explicitly, you are often paying implicitly through the spread. Market makers are not charities; they need to make money on the flow they buy. The real question is whether the spread cost exceeds or falls below the old commission cost, which depends on trade size, stock liquidity, and market conditions. For small trades in liquid stocks, the deal is often genuinely better. For thinly traded stocks, less so.
+:::
+
+What zero commissions unambiguously did do is remove one of the last behavioral speed bumps in the system. The result was higher trading frequency, smaller average trade sizes, and a sharp increase in retail participation — particularly in options, leveraged instruments, and individual stocks. Whether those outcomes are welfare-improving is a separate question from whether they are commercially attractive.
+
+## Performance = f(Strategy, Behavior)
+
+Here is a formula worth internalizing before we go further:
+
+$$\text{Performance} = f(\text{Strategy}, \text{Behavior})$$
+
+Most of this course focuses on strategy — which assets to hold, how to diversify, how to evaluate fund managers, when factor exposures are priced or mispriced. But behavior is the other variable, and for retail investors it often dominates.
+
+The DALBAR research group tracks the returns that average equity fund investors actually earn versus what the funds themselves return. The gap is persistent and substantial. In 2023 — a good year for equities, with the S&P 500 returning 26.3% — the average equity fund investor earned 20.8%, a gap of 5.5 percentage points. This is not because the funds were bad. It is because investors bought high and sold low, timing their entries and exits poorly.
+
+The foundational academic work here is Barber and Odean (2000), who analyzed 66,465 households at a large discount broker between 1991 and 1996. The result was stark: households that traded most earned 11.4% annually while the market returned 17.9%. The average household earned 16.4% — below the market, but the real damage was concentrated in the most active traders. The conclusion was direct enough that Barber and Odean titled the paper "Trading is Hazardous to Your Wealth."
+
+::: {.callout-note}
+## Academic Reference
+
+Barber and Odean's 2000 Journal of Finance paper established the empirical case that retail trading activity is on average value-destroying for the trader. A companion paper — "Boys Will Be Boys" — found that single men trade 67% more than single women and perform significantly worse, with overconfidence as the primary explanation. This is perhaps the most replicated finding in behavioral finance.
+:::
+
+The pattern appears internationally. In Taiwan, individual investor losses amount to 2.2% of GDP annually. In Brazil, 97% of equity futures day traders lose money. On eToro, a social trading platform that publishes aggregate performance statistics, more than 80% of individual traders lose money. The 70% figure for FX traders comes from SEC comments during a rulemaking process.
+
+The natural interpretation is not that individual investors are uniquely irrational. It is that they are facing informed counterparties who have information advantages, faster technology, and in many cases are literally trading against retail order flow by design. When a market maker pays for your order, they are presumably getting something valuable from it.
+
+## The Phone Problem
+
+Mobile apps made trading not just cheaper but frictionless. You can now execute a trade in a few taps while waiting for a coffee. The question the slides pose is worth sitting with: is faster data retrieval and display necessarily better?
+
+If investors were fully rational, yes. More information, delivered faster, should improve decisions. But we have strong evidence that the access device matters in ways that pure rationality cannot explain.
+
+Grant (2020) studied how investors react to firm disclosures on computer screens versus small mobile screens. On a computer, having the ability to choose the order of information — to focus on what matters most — improved investor judgment. On a smaller mobile screen, the same flexibility caused cognitive overload and *impaired* judgment. The physical affordances of the device changed decision quality.
+
+Kalda, Loos, Previtero, and Hackethal (2021) went further, using transaction-level data from two German banks. Comparing the same investor making trades across different platforms in the same month — smartphone versus computer versus phone call — they found that smartphone trades were significantly more likely to be in riskier, lottery-type assets and more likely to chase recent past returns. The effect was not driven by screen size alone or by digital nudges. It persisted over time and appeared to reflect something about the mental mode that smartphone use induces.
+
+::: {.callout-important}
+## Common Misconception
+
+More financial information, delivered faster, is not unambiguously better for investors. Continuous portfolio monitoring — checking your account balance twenty times a day through an app — does not help you make better decisions. The evidence suggests it may actively make decisions worse by triggering emotional reactions to short-term noise. The question "is this information?" and the question "does acting on this information help?" have different answers.
+:::
+
+The broader point is that the platforms that retail investors now use were not designed with investor welfare as the primary objective. They were designed for engagement — the same metric that social media companies optimize for. Engagement and good financial decisions are not the same thing. A platform that shows you a confetti animation when you make your first trade and sends you push notifications about volatile stocks is optimizing for a particular behavior, and it is not "buy and hold a diversified index fund."
+
+## Meme Stocks and Social Coordination
+
+GameStop in early 2021 was simultaneously several things: a genuine short squeeze, a social media coordination phenomenon, a story about market structure, and — for many retail participants — a significant financial loss.
+
+The mechanics were not complicated. A group of retail investors coordinated on Reddit's WallStreetBets forum to buy a heavily shorted stock. As the price rose, short sellers faced mounting losses and were forced to buy shares to cover their positions, which pushed the price higher, which forced more covering. The gamma squeeze — options market makers hedging their short gamma exposure by buying the underlying — added fuel. Hedge funds including Melvin Capital lost billions. Robinhood temporarily restricted buying, which generated enormous controversy and regulatory attention.
+
+The question that matters for this course is not "who won?" The answer there is mostly: not the retail investors who bought at the peak. The question is what this episode reveals about market structure and investor behavior.
+
+Matt Levine made the relevant observation: disclosure requirements work because *somebody* reads the disclosures. The assumption built into securities law is that public markets have sophisticated participants — hedge funds, institutional investors, arbitrageurs — who will read 10-Ks, process the information, and compete to make prices rational. Retail investors benefit from this process without doing any of it themselves. But meme stocks challenged this model. In a heavily retail-owned, heavily shorted stock with significant attention from WallStreetBets, the usual price discovery mechanism was disrupted. The "sophisticated participants" providing the equilibrating force were overwhelmed.
+
+::: {.callout-warning}
+## Exam/Career Relevance
+
+Meme stocks are not just a pop culture curiosity — they are a live case study in what happens when social media creates information cascades and herding behavior at scale. For anyone who will work in trading, risk management, or portfolio construction: the lesson is that positioning information (short interest, options open interest, institutional ownership) needs to be considered alongside fundamental analysis. A technically correct short thesis can be mechanically destroyed if the stock becomes a coordination target.
+:::
+
+Bed Bath & Beyond provides an even starker case. The company issued explicit going-concern warnings in January 2023. A Morningstar analyst set a price target of $0. In February 2023, the stock price rose enough that the company was able to raise $225 million from retail investors through a secondary offering. On March 8, it raised another $135 million by exercising warrants at the elevated price. In April 2023 it filed for Chapter 11. The money went directly to creditors. Retail investors who participated in those offerings lost everything.
+
+This is not a story about market efficiency failing in some abstract sense. It is a story about people purchasing shares in a company that had publicly announced it was going bankrupt, apparently because the share price was going up. The company's management, for their part, was rationally exploiting the situation to raise capital they desperately needed.
+
+## Why People Do It: State-Dependent Utility
+
+The data on retail trading performance is damning enough that the natural question is: why do intelligent people keep doing it?
+
+One answer is ignorance — they do not know the odds. That explains some of it. But it does not explain all of it, and it particularly does not explain the people who clearly understand the odds and do it anyway. The Becker framework offers a more uncomfortable answer.
+
+::: {.callout-note}
+## Quick Refresher — Expected Value vs. Expected Utility
+**Expected value** is the probability-weighted average payout of a gamble. **Expected utility** accounts for the fact that people care not just about the dollar amount but about what that amount does for their wellbeing. A lottery ticket has negative expected value but can have positive expected utility for someone who needs a large sum to change their circumstances — this is the distinction that makes the framework below work.
+:::
+
+Gary Becker's work on state-dependent utility argues that the value of money is not constant — it depends on what state of the world you are in. Health, employment, social status, relationships all affect the marginal utility of an additional dollar. For someone in a comfortable middle-class situation, an extra $10,000 is nice but not life-changing. For someone who is in debt, unemployed, and facing genuine financial stress, $10,000 is transformative — it could change their housing situation, their relationship stability, their access to healthcare.
+
+If you are in a low state and a zero-expected-value gamble offers some probability of reaching a dramatically better state, taking the gamble can be individually rational even if it is negative expected value. You are not optimizing expected wealth — you are optimizing expected utility, and the utility function is nonlinear. This framework rationalizes why poor people buy lottery tickets: the expected financial return is terrible, but the possibility of a discontinuous improvement in life circumstances has real value.
+
+The same logic applies to day trading and meme stock speculation. If ordinary employment in a flat economy does not seem to offer a path to financial security, and a YOLO options trade offers a small probability of a very large payout — the decision to try it is not straightforwardly irrational. It is a rational response to a constrained choice set.
+
+This is worth holding in mind when evaluating retail trading behavior. The condescension embedded in "retail investors are dumb" misses the underlying economics.
+
+## Finfluencers, Gamification, and Regulatory Responses
+
+Social media has created a new category of financial influence. "Finfluencers" — financial influencers on YouTube, TikTok, Instagram, and X — command audiences of millions and move markets. Some are genuine educators. Many have conflicts of interest that are inadequately disclosed. The CFA Institute has catalogued the structural problems: hidden marketing relationships, misrepresented expertise, and outright scams.
+
+The regulatory response has been uneven. In 2021, FINRA fined Robinhood a record $70 million — $57 million in penalties plus $12.6 million in restitution — for providing false or misleading information, approving unsuitable options trading for users, and failing to report tens of thousands of customer complaints. In January 2024, Robinhood settled with the Massachusetts Securities Division for $7.5 million over "gamification" practices that allegedly encouraged frequent trading among inexperienced investors. As part of the settlement, Robinhood agreed to stop using celebratory imagery tied to trading frequency, end push notifications highlighting specific stock lists, and eliminate features that mimic games of chance. Robinhood, for the record, rejects the characterization that its app was ever gamified.
+
+::: {.callout-tip}
+## Practitioner Insight
+
+The "Certificate of Dumb Investor" thought experiment — attributed to financial writer Matt Levine — captures the philosophical tension perfectly. Imagine the SEC issuing a document that says: *I want to buy a dumb investment. I understand the person selling it will almost certainly steal my money, and that I would be better off in index funds. I agree never to complain when this goes wrong.* Sign it, and you can invest in whatever you want. The premise surfaces the real question: at what point does investor protection become paternalism, and whose job is it to stop informed adults from making bad decisions?
+:::
+
+There is no clean answer. The strongest case for restricting access is that many retail investors are not actually informed about the odds they are accepting. The strongest case against restriction is that paternalistic rules disproportionately protect existing wealth holders and entrench barriers to entry. Accredited investor rules in the US — which allow participation in private placements and hedge funds only for those with $1 million in net worth (excluding primary residence) or $200,000 in annual income — were nominally designed to protect retail investors. They also happen to keep the most lucrative investment opportunities behind an income wall.
+
+## Financial Nihilism and the Lottery-Stock Premium
+
+The state-dependent utility framework extends to a generational phenomenon that has become increasingly prominent. A growing share of retail investors — particularly younger investors locked out of housing markets, facing stagnant real wages, and unconvinced by conventional saving-and-investing advice — have adopted what might be called a financially nihilistic approach: if the conventional path is not accessible, take a low-probability bet on something transformative.
+
+This is one explanation for the persistent popularity of lottery stocks and cryptocurrency among retail investors. Lottery stocks — high-volatility, low-price stocks that could conceivably return multiples but on average perform poorly — offer a skewed payoff. In standard expected-return terms, they underperform. But for an investor who has concluded that conventional wealth accumulation is not a viable path to the lifestyle they want, the expected return is not the relevant metric. The question is whether the lottery ticket might pay off enough to matter.
+
+The logic is constrained optimization, not irrationality. If saving $500 a month for thirty years will not get you to house-ownership in Singapore or San Francisco, then the strategy with the best expected outcome — slow, steady compounding — does not solve the problem. A long-shot bet at least has a positive probability of solving it.
+
+This matters for asset pricing because it helps explain why certain assets — meme stocks, speculative cryptocurrencies — can trade at prices that look absurd from a discounted cash flow perspective. The marginal buyer is not solving a standard investment problem. They are buying a lottery ticket on the possibility of a materially different life outcome. And just as insurance buyers rationally accept negative expected returns in exchange for catastrophe protection, lottery buyers rationally accept negative expected returns in exchange for right-tail exposure.
+
+Whether this is a sustainable equilibrium or a temporary phenomenon is an open question. What is clear is that financial markets are not populated solely by mean-variance optimizers.
+
+## Should We Rely on Disclosure?
+
+The current regulatory framework for public securities is built around disclosure. Companies must file quarterly earnings reports, material event notices, and annual reports. The assumption is that this information reaches the market and is incorporated into prices.
+
+The logic, as Levine points out, is actually more subtle. It is not that retail investors are expected to read the disclosures. It is that *somebody* reads them — and the competitive pressure among sophisticated participants ensures that prices reflect the disclosed information. Retail investors benefit from this indirectly, by trading in markets where prices have been set by informed participants.
+
+This mechanism works reasonably well in normal liquid markets. It breaks down in three cases. First, when there are no sophisticated participants providing equilibrating pressure — thinly traded penny stocks and small caps where institutional coverage is sparse. Second, when sophisticated participants are themselves on the wrong side of a crowded trade and get squeezed out before prices can correct — as in GameStop. Third, when the dynamics of social media and retail coordination move faster than the mechanism can adapt.
+
+The Bed Bath & Beyond case is instructive on the limits of disclosure. The company disclosed everything. The going-concern warning was public. The debt burden was in the 10-K. Morningstar published a $0 price target. The retail investors who bought into the secondary offerings either did not read any of this, read it and did not understand what it meant, or read it, understood it, and decided to buy anyway on the theory that the meme momentum would carry them out before the collapse. Some portion of each.
+
+## Key Takeaways
+
+- Zero-commission trading removed a meaningful behavioral friction from markets. The result was higher trading frequency and worse average outcomes for retail investors — not because the commission savings were illusory, but because trading volume itself is the problem.
+
+- The behavioral gap in performance is not small. The average equity fund investor consistently underperforms the average equity fund by 3-5 percentage points annually, almost entirely through poor market timing decisions. This is the behavior term in Performance = f(Strategy, Behavior).
+
+- Meme stocks and social media coordination are not anomalies — they are a structural feature of a market where retail participation is high, attention is easily directed, and short sellers provide a ready-made "villain" narrative. Understanding herding dynamics and information cascades is practical knowledge for anyone working in markets.
+
+- State-dependent utility explains why some retail speculation is individually rational even when the expected return is negative. The dismissal of retail investors as simply irrational misses the underlying economics of why people with limited wealth seek lottery-like payoffs.
+
+- Regulatory approaches face a genuine tension between investor protection and paternalism. Disclosure rules work when sophisticated arbitrageurs provide the equilibrating force — but that mechanism can fail in specific market conditions.
+
+## Further Reading
+
+### Mandatory
+
+- SEC Investor Bulletin: Meme Stocks. U.S. Securities and Exchange Commission. Available at investor.gov.
+
+- Barber, B. M., Huang, X., Odean, T., & Schwarz, C. (2022). Attention-induced trading and returns: Evidence from Robinhood users. *The Journal of Finance*, 77(6), 3141–3190.
+
+### Recommended
+
+- Welch, I. (2022). The wisdom of the Robinhood crowd. *The Journal of Finance*, 77(3), 1489–1527.
+
+- Eaton, G. W., Green, T. C., Roseman, B., & Wu, Y. (2022). Retail trader sophistication and stock market quality: Evidence from brokerage outages. *Journal of Financial Economics*, 146(2), 502–528.

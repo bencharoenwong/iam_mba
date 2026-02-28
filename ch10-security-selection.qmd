@@ -1,0 +1,247 @@
+# Session 10: The Art of Security Selection
+
+On January 27, 2025, NVIDIA lost roughly 18% of its market value in a single trading day — wiping out hundreds of billions of dollars — after a Chinese AI startup called DeepSeek published results suggesting it had trained a competitive large language model for a fraction of what American firms had spent. The stock partially recovered the next day, then fell again. If you had been watching multiple asset classes simultaneously that morning, you would have seen something striking: correlations spiked across the board. Bitcoin fell with NVIDIA, then recovered faster once the market realized the correlation was probably spurious. Apple, which had been treated as an AI also-ran, actually rose 3% as capital rotated. All of this happened within half an hour of the open.
+
+This episode is an ideal entry point into the art of security selection, because it captures everything that makes the subject genuinely difficult. There was fundamental news, genuine uncertainty about its implications, market microstructure dynamics playing out in real time, behavioral overreaction, and then partial reversal. Deciding what to do — and when — required combining price pattern analysis, fundamental judgment about whether the price move was warranted, and an understanding of who else was trading and why. That combination of quantitative and qualitative reasoning is what this session is about.
+
+## What Price Patterns Can Actually Tell You
+
+The NVIDIA episode illustrates a regularity that shows up throughout market microstructure research: the overnight return predicts the next day's intraday return, but the intraday return does not predict the overnight return. The asymmetry is not accidental. Most earnings announcements and conference calls happen after the market closes — companies prefer this deliberately, giving investors time to read reports before trading resumes. When markets reopen, prices need to adjust to new information, and that adjustment process has a characteristic shape: a sharp move at the open, a partial reversal as slower market participants catch up, then continued directional pressure as order flow confirms the initial signal.
+
+Understanding why these patterns exist is what separates disciplined analysis from pattern-chasing. Price movements are informative because traders with information trade on it, and their trading moves prices. Market makers — the entities on the other side of most trades — cannot directly observe whether a given order is from an informed or uninformed trader. What they can observe is price history. And price history gives them a signal about whether the information behind incoming orders is likely to be fresh or stale.
+
+::: {.callout-note}
+## Academic Reference
+This logic formalizes into an equilibrium model: traders receive signals, and the prior price trend reveals something about whether others have already acted on similar information. When a trader has a positive signal but prices have already risen, the signal is probably stale — other informed traders have already acted on it. When prices have fallen despite a positive signal, the signal may be genuinely new, and trading aggressively is warranted. This framework, developed by faculty at INSEAD (Joelle Miffre's area of research), generates a testable prediction: returns should be negatively skewed after price increases and positively skewed after price declines. The recent winners that a momentum strategy goes long are more susceptible to crashes; the recent losers it shorts are more likely to experience sudden positive jumps.
+:::
+
+The practical implication is important. If you have a negative signal on a stock and the price has already tanked, you are trading against informed counterparties who have already moved the price in your direction. They know you are coming. Your price impact — the cost of executing your trade — will be smaller than usual after prices have moved with your signal, and larger when prices have moved against it. This asymmetry is not just theoretical; it determines how aggressively any systematic strategy should trade.
+
+A useful organizing framework for thinking about what prices can actually tell you distinguishes between two classes of explanations. The efficient-markets view holds that any observed return pattern reflects either information diffusion (prices catching up as news spreads), changes in systematic risk factors, or rational learning. Under this view, momentum is compensation for bearing risk that is simply not yet captured by standard models. The behavioral view holds that momentum persists because of underreaction — investors process information slowly — and because institutional frictions prevent arbitrageurs from eliminating the mispricing. Under this view, momentum is a genuine inefficiency, not a risk premium.
+
+The distinction matters practically. If momentum is a risk premium, you should expect it to be present everywhere rational risk-sharing occurs and to be particularly severe during market dislocations (when the underlying risk is worst). If it is behavioral, you should expect it to be stronger where information is complex and hard to process, where institutional constraints are binding but temporary, and where limits to arbitrage — such as high short-selling costs or benchmark-tracking mandates — prevent sophisticated investors from fully exploiting the anomaly. Behavioral does not mean risk-free; it means that the source of the premium is a persistent bias rather than a priced factor. This distinction guides where to look for the best opportunities: markets where information complexity is high but analyzable, where institutional constraints create predictable distortions, or where behavioral biases are well-documented and limits to arbitrage are binding.
+
+One more microstructure point worth internalizing: most trading volume is concentrated in the last half hour of the trading day, during the closing auction. What looks like a continuous, uniform price process on a chart is actually quite thin in the middle of the day. Abnormal volume during off-peak hours is a more reliable signal of genuine news than a price move on low volume. And if you are tempted to trade in extended hours — facilitated by brokers like Interactive Brokers and Robinhood — recognize that the bid-ask spreads widen substantially because market makers, knowing they are mostly dealing with retail (which is overwhelmingly uninformed), are happy to provide liquidity at worse prices. Whenever a counterparty seems unusually eager to trade with you, that is a reason for concern, not comfort.
+
+## Momentum: From Concept to Code
+
+Price momentum — the tendency for assets that have performed well over intermediate horizons to continue outperforming — is one of the most replicated findings in empirical finance. The stylized facts are worth stating precisely:
+
+- The relevant lookback window is approximately three to twelve months of prior returns
+- The most recent month must be excluded, because very short-horizon returns exhibit reversal rather than continuation
+- The historical excess return is roughly 3 to 5% per year in developed markets, before costs
+- The strategy requires near-100% annual turnover, making it highly tax-inefficient
+- Critically, the strategy is exposed to crash risk — it can lose 30 to 75% in sharp market reversals
+
+Implementing momentum is straightforward. We take weekly data covering roughly 40 markets from 2000 to 2023 — approximately 11 million rows — and construct the signal as follows. For each stock, compute the cumulative return from $t - 52$ weeks through $t - 4$ weeks (skipping the most recent month). Within each market and each date, rank stocks by this return and assign decile scores from 1 (recent losers) to 10 (recent winners). The portfolio takes long positions in the top decile and short positions in the bottom decile, rebalancing weekly.
+
+::: {.callout-note}
+## Quick Refresher — Short Selling
+To **short** a stock, you borrow shares from another investor, sell them in the market, and later buy them back. If the price falls, you profit — the shares you buy back cost less than what you received when you sold. If the price rises, you lose, with theoretically unlimited downside. Short selling is how a momentum strategy "sells" recent losers and how hedge funds express negative views. When you see "long-short portfolio," it means the strategy simultaneously buys assets it expects to rise and shorts assets it expects to fall.
+:::
+
+In code, this is genuinely two lines — long lines, but two. The critical points are the exclusion of the most recent month (the `t-4` shift) and the within-market ranking. Ranking within markets rather than globally ensures the signal captures relative performance in a comparable universe, not differences in market-level trends.
+
+The pseudocode captures the full logic:
+
+```python
+# Line 1: Compute the momentum signal (cumulative return, skip recent month)
+df['momentum'] = df.groupby('stock')['return'].apply(
+    lambda x: x.shift(4).rolling(48).apply(lambda w: (1+w).prod() - 1)
+)
+
+# Line 2: Rank within each market-date and assign decile portfolios
+df['decile'] = df.groupby(['market', 'date'])['momentum'].transform(
+    lambda x: pd.qcut(x, 10, labels=range(1, 11))
+)
+```
+
+The `shift(4)` skips the most recent four weeks (approximately one month). The `rolling(48)` computes the cumulative return over the prior 48 weeks. Everything else is ranking and portfolio assignment.
+
+::: {.callout-important}
+## Common Misconception
+The modal return in a dataset of 11 million stock-week observations is zero. If you randomly sample a stock, the most common outcome is no price change at all — because most stocks in a global dataset are illiquid and do not trade most days. Before running any momentum strategy on global data, filter for adequate liquidity. The signal also requires at least 12 months of history; newly listed stocks cannot be scored and should be excluded rather than imputed.
+:::
+
+What does the strategy actually find? The results vary substantially by market. The signal works well in Israel, Eastern Europe, Greater China (Hong Kong, China, Taiwan), Scandinavia, Singapore, Spain, Portugal, Italy, the UK, Ireland, and Canada. It does not work in the United States or Japan.
+
+Japan's failure is well-documented and partially understood — institutional cross-shareholdings, limited retail participation, and a pattern of corporate innovation that differs from the US and Europe all contribute. The US case is more interesting and more recent: momentum worked in America through the early 2000s, then its performance has increasingly been subsumed by the market factor itself. The US market is now essentially long momentum — the largest, most widely held stocks have been the recent winners for years. Running a separate momentum strategy in that environment captures market beta more than it captures a distinct momentum premium.
+
+> "Momentum in the US is gone. The market has gotten really difficult to trade. If you have a momentum fund that doesn't do well because of momentum, you start slotting in other stuff — large cap exposure, market beta — just to justify the strategy."
+
+This is not simply an academic finding. AQR's momentum funds, when subjected to factor regressions, show declining momentum loadings over time and increasing market beta. The implication for a portfolio manager is a real decision: do you run momentum everywhere except the US and Japan? If so, you need a principled reason — otherwise you are just curve-fitting to realized performance. The defensible argument is that momentum is behavioral in origin, driven by the slow diffusion of information and investor underreaction. In markets with sophisticated algorithmic traders who have already identified and traded these patterns, the premium has been arbitraged away. The US has more such participants than anywhere else. That is a reason, not a rationalization.
+
+::: {.callout-tip}
+## Practitioner Insight
+When a strategy stops working in one market but continues elsewhere, the standard temptation is to just turn it off for that market. But doing so requires a principled reason — otherwise you are data-mining. The test is whether you can articulate, before looking at the data, why the signal should behave differently in that specific market. Competition from sophisticated arbitrageurs explains the US. Institutional cross-shareholdings explain Japan. Korea, which has high retail participation, fits the behavioral explanation for why momentum should work — and it does.
+:::
+
+## Live Performance: Connecting the Signal to a Real Portfolio
+
+Rather than describing what a momentum strategy might look like in practice, we can examine what it actually produces. Running the global momentum strategy from 2000 to the financial crisis roughly tripled an initial investment. The strategy then lost approximately 75% of that gain during the crisis — the classic momentum crash. It recovered, earned steadily through the 2010s, and then lost approximately 35% during the COVID shock in March 2020, followed by a severe reversal in the second half of 2020 when market leadership rotated sharply away from the pandemic winners.
+
+The annualized return on a global momentum portfolio in USD is approximately 6%, compared to roughly 11% for the S&P 500. On a raw return basis, the S&P wins. But this comparison misses the point. The relevant question for portfolio construction is not "which has the higher expected return?" but "how does adding this strategy change the risk-return profile of my overall portfolio?"
+
+The answer, in this case, is striking. The global momentum strategy has a negative market beta. When the S&P rises, the strategy tends to underperform; when the S&P falls, it tends to hold up or gain. The covariance with essentially every other asset class in a standard portfolio is negative. A strategy with a positive expected return and negative covariance with your existing holdings is extraordinarily valuable — it is, in effect, insurance that pays you rather than costing you.
+
+$$
+w^* = \frac{\text{E}[R_p] - R_f}{\gamma \cdot \sigma_p^2}
+$$
+
+This is the optimal allocation to a single risky asset (or a pre-formed risky portfolio) for an investor with mean-variance utility $U = E[r] - \frac{1}{2}\gamma\sigma^2$. In the multi-asset case, the vector of optimal weights is $\mathbf{w}^* = \frac{1}{\gamma} \boldsymbol{\Sigma}^{-1} (\boldsymbol{\mu} - r_f \mathbf{1})$, where $\boldsymbol{\Sigma}$ is the covariance matrix and $\boldsymbol{\mu}$ is the vector of expected returns. The single-asset formula is the scalar special case.
+
+Where $\gamma$ is the risk aversion coefficient. Because adding momentum reduces the overall portfolio variance (via negative covariances), the optimal allocation to equities broadly increases. An investor who would otherwise hold 60% in equities might rationally hold 75 to 80% once a low-correlation momentum strategy is included. The efficient frontier shifts outward. The rule of thumb that emerges from mean-variance optimization is consistent with practitioner experience: allocate 10 to 30% of an equity portfolio to a momentum-type strategy.
+
+The Sharpe ratio of the strategy's alpha — after stripping out the negative market beta — is approximately 0.8, roughly double the market's Sharpe ratio on its own.
+
+More precisely, the factor regression decomposes the strategy return as:
+
+$$
+r_{\text{strategy}} - r_f = \alpha + \beta_{\text{MKT}}(r_M - r_f) + \beta_{\text{HML}} \cdot \text{HML} + \beta_{\text{MOM}} \cdot \text{MOM} + \varepsilon
+$$
+
+The strategy's total Sharpe ratio reflects both factor exposures and alpha. The *appraisal ratio* — $\alpha / \sigma(\varepsilon)$ — isolates the risk-adjusted value of the strategy's unique return, net of what could be replicated cheaply through factor ETFs. An appraisal ratio of 0.8 is exceptional by the standards of institutional asset management. The strategy also loads negatively on value (momentum and value are natural complements: what value calls cheap, momentum has often been selling; what momentum calls strong, value often calls expensive) and positively on the momentum factor. But after accounting for all of that, there is residual alpha that survives the full Fama-French regression.
+
+::: {.callout-warning}
+## Exam/Career Relevance
+When evaluating any strategy or fund, do not compare raw returns to a benchmark. Run the regression. Ask: how much of this return is market beta? How much is factor exposure? And is there any alpha after accounting for all of that? A fund that outperforms the S&P by 2% per year but has a beta of 1.3 and significant momentum loading is not adding value — it is selling you leverage and factor tilts dressed up as skill.
+:::
+
+## Combining Signals: The Portfolio Construction Problem
+
+Pure momentum is a single signal. Real portfolio management involves combining many signals — and the combination problem is at least as important as finding any individual signal.
+
+### The Ensemble Principle
+
+A regularity that practitioners learned the hard way — and that academic research has now documented rigorously — is that most individual trading signals are small. Individual anomalies, when examined in isolation, often appear unprofitable after realistic transaction costs. The traditional academic response was to treat this as evidence that the anomaly was illusory. The more productive practitioner response is to recognize that combination and proper implementation matter more than any single signal's standalone strength.
+
+The intuition is identical to asset allocation. When you diversify across assets, the combined portfolio's Sharpe ratio exceeds any individual asset's — provided the assets are not perfectly correlated. The same logic applies to trading signals. Consider three signals each with 2% expected alpha per year. If they are perfectly correlated, combining them yields 2% alpha with no reduction in risk — you have three versions of the same bet, so transaction costs are higher and diversification is zero. If they are uncorrelated, combining them yields approximately 3.5% alpha on similar risk, because idiosyncratic noise in each signal partially cancels out. The diversification benefit comes precisely from the independence of the signal errors, not from the signals themselves being uncorrelated in their fundamental claims about value.
+
+::: {.callout-note}
+## Derivation: Why Combining Uncorrelated Signals Multiplies Sharpe
+
+If each of $N$ signals has expected alpha $\alpha$ and residual volatility $\sigma_\varepsilon$, the individual Sharpe (appraisal) ratio is $\text{IR}_i = \alpha / \sigma_\varepsilon$.
+
+When combined with equal weights and the signals are uncorrelated:
+
+$$
+\text{IR}_{\text{combined}} = \sqrt{N} \times \text{IR}_i
+$$
+
+For $N = 3$ uncorrelated signals each with IR = 0.3: $\text{IR}_{\text{combined}} = \sqrt{3} \times 0.3 \approx 0.52$. The combined alpha is $3 \times 2\% / 3 = 2\%$ (unchanged per dollar), but the residual volatility falls by $\sqrt{3}$, so the risk-adjusted return improves by $\sqrt{3} \approx 1.73\times$.
+
+This is the "fundamental law of active management" (Grinold and Kahn): $\text{IR} = \text{IC} \times \sqrt{\text{Breadth}}$, where IC is the information coefficient (signal quality) and Breadth is the number of independent bets.
+:::
+
+::: {.callout-note}
+## Academic Reference
+Blitz, Hanauer, Honarvar, Huisman, and van Vliet (2024, *Journal of Financial Economics*) provide a systematic demonstration of this principle. They combine a set of short-term signals — including short-term reversal, industry momentum, analyst revision, seasonality, and idiosyncratic volatility — and find that individual signals generate roughly 6% gross alpha in isolation. The combined signal portfolio generates approximately 12% gross alpha, with significant alpha surviving after accounting for realistic trading costs. The doubling of alpha comes from diversification across signal errors, not from any individual signal improving. Novy-Marx and Velikov (2016, *Review of Financial Studies*) provide the complementary taxonomy: a systematic cataloguing of how transaction costs erode individual anomaly returns, reinforcing why combination strategies dominate.
+:::
+
+The implementation implication is that a serious multi-signal portfolio does not simply average signals. It requires monitoring signal correlations — if two signals are highly correlated, they add little diversification benefit but double the turnover — and designing trading rules that reduce unnecessary turnover. A particularly effective heuristic is the 10/50 rule: buy when a stock enters the top decile on the combined signal (signal score at the 10th percentile or better), but hold the position until the stock falls to the median (50th percentile), rather than trading it out the moment it exits the top decile. This dramatically reduces turnover — and therefore transaction costs — while preserving most of the alpha, because the signal persistence is long enough that a stock leaving the top decile is still likely to outperform the median stock over the near term.
+
+The fund's India portfolio illustrates what this looks like in practice. The strategy mixes value, defensive (profitability-based), and momentum signals. Each signal earns positive average returns; because they are often negatively correlated with each other (value tends to do well when momentum does poorly, and vice versa), combining them reduces portfolio volatility while preserving most of the expected return. The India portfolio has been live since 2019 and returned approximately 40% in its most recent year, with a Sharpe ratio roughly triple the market benchmark.
+
+The practical challenge is weighting. How much of the portfolio should go to value versus momentum versus defensive signals? Several approaches exist:
+
+- **Equal weighting**: Simple, robust to estimation error, but ignores the covariance structure
+- **Factor regression-based**: Weight signals to target specific factor exposures
+- **Mean-variance optimization**: Use the full covariance matrix of signal returns, subject to substantial estimation error in practice
+- **Risk parity**: Weight signals so each contributes equally to portfolio volatility
+
+None of these is universally correct. The honest answer is that the choice of signal weights is where practitioner judgment enters most directly — it is the layer where "art" genuinely supplements the science of signal construction.
+
+::: {.callout-warning}
+## Common Pitfalls in Multi-Signal Portfolio Construction
+The most common errors when combining signals are predictable and worth naming explicitly. Over-optimizing individual signals before combining them compounds estimation error — a signal that looks marginally better in-sample after twenty rounds of tuning is likely to look ordinary out-of-sample. Ignoring correlation between signals produces a false sense of diversification: two signals that both proxy for analyst overreaction are not two independent bets. Underestimating implementation costs leads to strategies that look strong on paper but erode in execution. Capacity constraints are almost always discovered too late — a signal that works with $100 million often does not scale to $1 billion because you become the marginal price-mover in the names you want. Finally, signal decay deserves continuous monitoring: a signal that was genuinely informative in 2005 may be crowded out by 2025 as competing strategies replicate it.
+:::
+
+What is not debatable is the discipline required to stay with a chosen allocation. In 2024, the fund took a position going into China that initially returned 35%, then gave it all back (and more) because two short positions exploded upward in price. One of them was a company the manager still regards as fundamentally weak. The position was sized at a small fraction of the portfolio, limiting the damage, but the episode illustrates the crash risk problem precisely: momentum strategies go long recent winners (more likely to crash) and short recent losers (more likely to spike). The tail risks are asymmetric.
+
+The discipline to hold small position sizes — even in names where you have conviction — is not a limitation of the approach. It is the approach. The goal is to maximize signal quality across many positions, not to make large bets on individual names. A hedge fund with $8 billion in AUM that takes a 0.2% position in NVIDIA has a very different relationship with that position than a retail investor who reads the same news and calls their broker.
+
+## Alternative Data and the Limits of Pure Price Analysis
+
+Price and volume are public. Every sophisticated market participant has access to the same OHLCV data. If momentum in the US has been arbitraged away, the natural response is to look for signals that have not yet been crowded out.
+
+Alternative data — non-traditional information sources that can be converted into trading signals — has become a major focus of systematic investment management. The Spotify example captures how this works in practice. Spotify classifies every song by valence (happiness), tempo, energy, and other acoustic features, and makes this data available through a public API. Spotify Charts publishes the top 200 songs played daily in each market. Merging these two sources gives a real-time measure of the emotional state of each market's population.
+
+The trading logic is straightforward. Emotional states are predictable — people are reliably happier on Fridays and sadder on Mondays. Once deseasonalized, sentiment still has residual time-series variation. Markets where sentiment is elevated today tend to have slightly lower returns tomorrow (investors pushed prices up while happy; they revert when sentiment normalizes). Markets where sentiment is depressed today may be approaching a reversal. If you are about to execute a momentum buy, prioritize markets where sentiment is low — prices are more likely to be at a discount.
+
+> "How did I find out about it? I just be a nerd, I guess."
+
+Other data sources the same logic applies to include satellite imagery (counting cars in retailer parking lots, estimating container ship traffic), emissions monitoring data (an indirect measure of industrial activity), and legal filings. Lawsuit data, in particular, has an information edge: firms have a grace period before material legal exposure must be publicly disclosed, and the pattern of filings can predict subsequent price moves. The technical overhead of collecting and cleaning these sources is real — you need servers, automated pipelines, and the ability to merge lawsuit records to firm identifiers. But once the infrastructure is in place, the marginal cost of adding a new signal is low.
+
+::: {.callout-note}
+## Academic Reference
+The broader project of connecting non-price signals to asset returns is formalized in Lo, Mamaysky, and Wang (2000), who provide a statistical framework for identifying price patterns and evaluating their predictive content. Jiang, Kelly, and Xiu (2023) extend this to machine-learning-based pattern recognition, showing that image-based price trend features contain information beyond standard factor exposures. The He and Litterman (2002) Black-Litterman paper addresses the complementary problem: how do you incorporate subjective views (from any signal source, including alternative data) into a coherent portfolio when the prior is the market equilibrium?
+:::
+
+The important caveat — which gets obscured in marketing pitches — is capacity. DeepSeek, which began as a quant hedge fund building AI models to process transcript sentiment, found that the signal helped trading but faced a fundamental limit: with $8 billion in AUM, even finding three great stocks is not enough. You cannot fully execute the trade you want. The market moves against you as you try to build the position. This is why DeepSeek pivoted to building AI models as a standalone product rather than continuing to scale the trading operation. Scale is the enemy of alpha.
+
+The costs of active management are not only financial. Nate Anderson, the founder of Hindenburg Research — known for high-profile short-selling campaigns — wrote in his retirement announcement: "Someone once told me that at a certain point a successful career becomes a selfish act. Early on, I felt I needed to prove some things to myself. I have now finally found some comfort with myself, probably for the first time in my life. I probably could have had it all along had I let myself, but I needed to put myself through a bit of hell first. The intensity and focus has come at the cost of missing a lot of the rest of the world and the people I care about." The infrastructure, the edge, and the alpha are only part of the calculus. A strategy that requires relentless adversarial attention — and short-selling in particular, with its indefinite downside risk — extracts a price that does not appear in any Sharpe ratio.
+
+## Technical Analysis: Systematic vs. Discretionary
+
+The Economist ran an article characterizing technical analysis as "the astrology of finance." The characterization is not entirely unfair when applied to the discretionary, chart-reading variety — the practice of one analyst staring at five stocks and drawing support and resistance lines. That version of technical analysis has no rigorous statistical foundation and is not defensible as an investment methodology.
+
+The systematic version is different. What we have been doing throughout this session is technical analysis: extracting signals from price and volume data, testing them across large cross-sections of stocks over long time periods, and evaluating their statistical and economic significance. The distinction is not in the inputs — both versions use price history — but in the method of evaluation.
+
+When you run momentum on 11 million stock-week observations across 40 markets, you are not staring at charts and drawing lines. You are asking whether a measurable, replicable sorting of stocks by past return predicts future return, controlling for reasonable alternative explanations. That is an empirical question with a tractable answer. When you find that momentum works in 35 of 40 markets but not in the US and Japan, that is a falsifiable pattern with a testable explanation (competition from sophisticated arbitrageurs).
+
+The practitioner position is this: for long-term investing in broadly diversified portfolios, the efficient markets assumption is a reasonable starting point. But if you want to go beyond that assumption, the right way to do technical analysis is systematically — large cross-sections, rigorous testing, honest assessment of where signals do and do not work. Individual stock chart reading, applied without that discipline, is astrology. Systematic pattern recognition, applied with it, is something closer to science.
+
+::: {.callout-important}
+## Common Misconception
+Students often conflate the question "does technical analysis work?" with the question "can I make money staring at my five favorite stock charts?" These are different questions with different answers. The first has a qualified yes for momentum and certain price/volume patterns in specific markets. The second is almost certainly no — you cannot get statistical power from five stocks, you will over-fit to recent history, and you will not know whether your pattern is robust or an artifact.
+:::
+
+## Technology, AI, and the Future of Security Selection
+
+The NVIDIA crash created by DeepSeek is instructive about the relationship between AI and investment management. The most visible interpretation — AI reduces compute demand, therefore NVIDIA's value should fall — turned out to be incomplete. The more sophisticated view was that reducing the cost of model training would increase the scale of model deployment, ultimately driving more demand for inference compute, not less. Apple rose 3% as the market rotated toward companies that benefit from cheap AI inference rather than expensive AI training.
+
+Who got this right? Not necessarily the most sophisticated algorithmic traders. The fast money that sold NVIDIA at the open likely made money on the initial move. The investors who bought the dip at -18% and held through the partial recovery made money on the reversal. The retail buyers who pushed the price back up after reading about the drop helped close the gap. And the market largely figured out the differential impact on Apple versus NVIDIA within 30 minutes of trading. That is the market doing what it does: aggregating dispersed information quickly, though imperfectly.
+
+For practitioners, the practical question is what technology actually changes about security selection. The answer is several things:
+
+**Data processing**: The volume of potentially relevant data has increased faster than human capacity to analyze it. Alternative data sources — satellite imagery, web traffic, credit card transactions, employment postings — require computational infrastructure to collect, clean, and merge. A signal that would have required years of manual work to construct in 2000 can be built in weeks with modern tooling.
+
+**Pattern recognition**: Machine learning methods can identify price pattern features that a human analyst would never think to look for. Jiang, Kelly, and Xiu (2023) demonstrate this concretely: treating price chart images as inputs to a convolutional neural network identifies trend features that predict returns beyond what standard factor models capture.
+
+**Execution**: Algorithmic execution has reduced market impact costs substantially for large trades. Strategies that would have been impractical at scale because of execution costs are now viable. This cuts both ways — it has also made the US equity market more competitive and more efficient, contributing to the death of simple momentum there.
+
+**Idea generation**: AI-assisted code writing has compressed the time from idea to backtest. The momentum strategy in this session was implemented live in approximately 10 minutes of coding. A decade ago, the same analysis would have taken a day. This changes the economics of research — more ideas can be tested, which is good, but it also increases the risk of overfitting because the barrier to running the next test has fallen.
+
+What technology has not changed — and probably cannot change — is the fundamental challenge of distinguishing signal from noise in finite data, the problem of determining whether a backtest reflects genuine predictability or data mining, and the judgment required to decide whether a signal that has stopped working reflects a structural break or a temporary drawdown. Those remain art.
+
+## Key Takeaways
+
+- Price momentum (buying recent winners, shorting recent losers, measured over three to twelve months excluding the most recent month) earns 3 to 5% annually in most developed markets, but the US premium has been largely arbitraged away by sophisticated participants.
+
+- The theoretical foundation for momentum involves asymmetric price impact: informed traders condition their aggressiveness on recent prices, creating predictable patterns in return skewness. Winners are more crash-prone; losers are more likely to spike. This crash risk is the price you pay for the premium.
+
+- A momentum strategy with a negative market beta and positive expected return improves a diversified portfolio's risk-return tradeoff substantially — not by replacing equity exposure but by allowing more of it at lower risk. The optimal allocation is typically 10 to 30% of equity exposure.
+
+- Alternative data (Spotify sentiment, satellite data, legal filings) can enhance price-based signals, but extracting value requires infrastructure, automation, and careful deseasonalization. Capacity constraints limit alpha harvesting at large AUM.
+
+- The distinction between "technical analysis as astrology" and "technical analysis as empirical science" is methodology, not inputs. Systematic testing across large cross-sections is defensible. Drawing lines on five charts is not.
+
+- Technology has accelerated data processing, pattern recognition, and execution — but has not eliminated the core challenges of distinguishing genuine predictability from overfitting, or the judgment required to know when a signal has structurally broken versus temporarily underperformed.
+
+## Further Reading
+
+**Mandatory:**
+
+- The Economist. "Why investors are reaching for the astrology of finance." *(Contextualized critique of technical analysis and its practitioners)*
+
+**Recommended:**
+
+- Lo, A. W., Mamaysky, H., & Wang, J. (2000). Foundations of technical analysis: Computational algorithms, statistical inference, and empirical implementation. *Journal of Finance, 55*(4), 1705–1765.
+
+- Jiang, J., Kelly, B. T., & Xiu, D. (2023). (Re-)Imag(in)ing price trends. *Journal of Finance, 78*(6), 3193–3249.
+
+- He, G., & Litterman, R. (2002). The intuition behind Black-Litterman model portfolios. *Goldman Sachs Investment Management Research.* *(On incorporating views into a market-equilibrium portfolio framework)*
+
+- Blitz, D., Hanauer, M. X., Honarvar, I., Huisman, R., & van Vliet, P. (2024). Beyond Fama-French factors: Alpha from short-term signals. *Journal of Financial Economics, forthcoming.* *(On ensemble signal combination and the gap between individual and combined signal alpha)*
+
+- Novy-Marx, R., & Velikov, M. (2016). A taxonomy of anomalies and their trading costs. *Review of Financial Studies, 29*(1), 104–147. *(On how transaction costs erode individual anomaly returns and the case for combined implementation)*

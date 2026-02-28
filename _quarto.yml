@@ -1,0 +1,56 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Investments and Asset Management"
+  subtitle: "Lecture Notes — INSEAD MBA, Singapore 2025"
+  author: "Ben Charoenwong"
+  date: "2025"
+  date-format: "YYYY"
+  chapters:
+    - index.qmd
+    - part: "Theme 1: Investing as a Human Problem"
+      chapters:
+        - ch01-asset-management-industry.qmd
+        - ch02-financial-planning.qmd
+        - ch03-market-efficiency.qmd
+        - ch04-democratization.qmd
+    - part: "Theme 2: Investing as a Science"
+      chapters:
+        - ch05-diversification.qmd
+        - ch06-modern-portfolio-theory.qmd
+        - ch07-active-vs-passive.qmd
+        - ch08-factor-investing.qmd
+    - part: "Theme 3: Investing as an Art"
+      chapters:
+        - ch09-active-strategies.qmd
+        - ch10-security-selection.qmd
+        - ch11-risk-management.qmd
+    - part: "Theme 4: State of the Art"
+      chapters:
+        - ch12-esg-sustainability.qmd
+        - ch13-alternative-investments.qmd
+        - ch14-ai-asset-management.qmd
+    - references.qmd
+
+format:
+  html:
+    theme: cosmo
+    title-block-banner: true
+    mainfont: "Georgia, serif"
+    fontsize: "1.05em"
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    code-fold: true
+  pdf:
+    documentclass: scrbook
+    papersize: letter
+    mainfont: "Palatino"
+    fontsize: 11pt
+    margin-left: 1in
+    margin-right: 1in
+    include-in-header:
+      text: |
+        \usepackage{booktabs}
