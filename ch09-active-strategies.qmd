@@ -1,3 +1,8 @@
+---
+abstract: "This chapter defines what it takes to find a genuine investment edge in an increasingly commoditized market, categorizing edges into informational, analytical, infrastructural, and access-based. It explores the Grossman-Stiglitz paradox to explain why markets must remain slightly inefficient to reward information collection, setting a high bar for claiming true manager skill."
+keywords: ["Investment Edge", "Grossman-Stiglitz Paradox", "Alpha Generation", "Manager Selection", "Market Inefficiency", "Active Strategies"]
+---
+
 # Session 09: Active Strategies and Finding an Edge
 
 Everyone wants alpha. The problem is that alpha — genuinely superior risk-adjusted returns that cannot be explained by exposure to known factors — is definitionally scarce. If everyone could systematically outperform, the benchmark would just move up, and you are back to square one. This chapter is about what it actually takes to generate investment returns above what you would get from buying a diversified portfolio of factor exposures and going to sleep. We are moving from Theme 2, where we treated investing as a science of building portfolios from known risks, into Theme 3, where we confront the harder question: can human judgment and organizational capability add value on top of that?

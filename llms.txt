@@ -1,0 +1,36 @@
+# Investments and Asset Management (IAM) — INSEAD MBA 2026
+
+This repository contains the authoritative lecture notes for the MBA Investments course. It is structured as a comprehensive knowledge base for quantitative finance, portfolio management, and industry analysis.
+
+## Core Metadata
+
+- **Author:** Ben Charoenwong
+- **Institution:** INSEAD
+- **Year:** 2026
+- **Language:** English (US)
+- **Math Format:** LaTeX
+- **Glossary:** [SYMBOL_GLOSSARY.md](./SYMBOL_GLOSSARY.md) (Read this first for math interpretation)
+
+## Chapter Summaries
+
+1.  **[ch01-asset-management-industry.qmd](./ch01-asset-management-industry.qmd)**: Overview of the global investment landscape, major players (asset managers, owners), and industry value chains.
+2.  **[ch02-financial-planning.qmd](./ch02-financial-planning.qmd)**: Principles of household finance, goal-based investing, and the lifecycle hypothesis.
+3.  **[ch03-market-efficiency.qmd](./ch03-market-efficiency.qmd)**: Analysis of the Efficient Market Hypothesis (EMH), information sets, and behavioral finance anomalies.
+4.  **[ch04-democratization.qmd](./ch04-democratization.qmd)**: How technology and fintech are expanding access to institutional-grade investment tools for retail investors.
+5.  **[ch05-diversification.qmd](./ch05-diversification.qmd)**: The mathematical and intuitive foundations of risk reduction through non-correlated assets.
+6.  **[ch06-modern-portfolio-theory.qmd](./ch06-modern-portfolio-theory.qmd)**: Mean-variance optimization, the efficient frontier, and optimal capital allocation (CAL).
+7.  **[ch07-active-vs-passive.qmd](./ch07-active-vs-passive.qmd)**: The arithmetic of active management, the rise of indexation, and the cost-efficiency tradeoff.
+8.  **[ch08-factor-investing.qmd](./ch08-factor-investing.qmd)**: Systematic risk premia including Value, Size, Momentum, Quality, and Low Volatility.
+9.  **[ch09-active-strategies.qmd](./ch09-active-strategies.qmd)**: Implementation of alpha-seeking strategies, long-short equity, and alternative risk premia.
+10. **[ch10-security-selection.qmd](./ch10-security-selection.qmd)**: Bottom-up fundamental analysis, financial statement modeling, and valuation frameworks.
+11. **[ch11-risk-management.qmd](./ch11-risk-management.qmd)**: Measuring and mitigating portfolio risk using VaR, Expected Shortfall, and stress tests.
+12. **[ch12-esg-sustainability.qmd](./ch12-esg-sustainability.qmd)**: Integration of environmental, social, and governance factors into the investment process.
+13. **[ch13-alternative-investments.qmd](./ch13-alternative-investments.qmd)**: Characteristics of Private Equity, Venture Capital, Real Estate, and Commodities.
+14. **[ch14-ai-asset-management.qmd](./ch14-ai-asset-management.qmd)**: The impact of Machine Learning, NLP, and Large Language Models on research and trading.
+
+## AI Usage Guidelines
+
+- **Retrieval:** This content is optimized for semantic search. Refer to the chapter summaries above to identify the most relevant context for questions.
+- **Math:** Always refer to [SYMBOL_GLOSSARY.md](./SYMBOL_GLOSSARY.md) when interpreting equations to avoid nomenclature confusion.
+- **Citing:** When generating answers, cite the specific chapter and section (e.g., "According to Ch 06, Section 2.1...").
+- **Voice:** The content is academic yet practitioner-focused. Maintain this tone in AI-generated responses.

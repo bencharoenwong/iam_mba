@@ -1,3 +1,8 @@
+---
+abstract: "This chapter formalizes the principles of portfolio selection introduced by Harry Markowitz, focusing on the efficient frontier and the Capital Allocation Line (CAL). It explains the 'tangency portfolio' and the counterintuitive result that risk tolerance determines only the allocation to risky assets, not the choice of risky assets themselves."
+keywords: ["Modern Portfolio Theory", "Efficient Frontier", "Sharpe Ratio", "Tangency Portfolio", "Capital Allocation Line", "Risk-Free Asset"]
+---
+
 # Session 06: Modern Portfolio Theory
 
 In 1952, Harry Markowitz published a paper called "Portfolio Selection" in the *Journal of Finance*. It was 14 pages. It won him the Nobel Prize. The core insight — that what matters is not how risky each individual asset is, but how they move together — seems obvious in retrospect. Most good ideas do. Before Markowitz, portfolio management was essentially glorified stock picking: find good companies, buy them, hope for the best. What Markowitz did was reframe the entire question. The problem is not "find the best asset." The problem is "find the best portfolio." That shift in perspective is the foundation of everything in this chapter.

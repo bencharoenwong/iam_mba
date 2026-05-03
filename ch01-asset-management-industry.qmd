@@ -1,3 +1,8 @@
+---
+abstract: "This chapter establishes the foundational framework of the global asset management industry, exploring its structure, the principal-agent problems in financial advisory, and the historical evolution of an industry managing over $112 trillion. It introduces the core concept of investing as moving resources through time while accounting for opportunity costs and legal definitions like the Howey Test."
+keywords: ["Asset Management", "Principal-Agent Problem", "Investing", "Opportunity Cost", "Financial Markets", "Howey Test"]
+---
+
 # Session 01: The Asset Management Industry
 
 When you open a bank account in Singapore and look at the investment products on offer, the options can be genuinely bad. Not "slightly suboptimal" bad — bad in a way that reveals something fundamental about how the asset management industry works, and whose interests it actually serves. That observation is what pushed one finance professor to set up his own fund. It is also a useful entry point into this book, which is less about learning to pick stocks and more about understanding the institutional machinery that sits between you and your money.

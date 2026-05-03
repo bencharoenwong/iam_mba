@@ -1,3 +1,8 @@
+---
+abstract: "This chapter examines the rise of ESG (Environmental, Social, and Governance) investing, separating marketing claims from economic reality. It analyzes competing frameworks for how sustainability affects returns—risk mitigation versus cost of capital—and addresses the agency problems inherent in corporate social responsibility."
+keywords: ["ESG", "Sustainability", "Impact Investing", "Agency Theory", "Divestment", "Socially Responsible Investing"]
+---
+
 # Session 12: Non-Financial Considerations — ESG and Sustainability in Investing
 
 Every few years, an idea captures the asset management industry's imagination so completely that it becomes impossible to ignore, whether you believe in it or not. ESG investing is the current version of that phenomenon. Assets managed under some version of an ESG mandate have surged to the tens of trillions globally. Regulatory frameworks in Europe now require funds to classify themselves by sustainability intent. BlackRock — the largest asset manager in the world, with over $10 trillion under management — made climate risk a central investment thesis. And yet, ESG ratings from competing agencies disagree with each other so thoroughly that a single company can simultaneously receive a top score from one rater and near-bottom from another.

@@ -1,3 +1,8 @@
+---
+abstract: "Moving beyond simple market exposure, this chapter introduces factor investing as a systematic framework for decomposing and harvesting returns through known drivers like value, momentum, and quality. It provides practical guidance on reading regression output to identify true alpha versus compensated risk, while addressing the costs and mechanics of leveraged ETFs."
+keywords: ["Factor Investing", "Regression Analysis", "Leveraged ETFs", "Risk Premia", "Smart Beta", "Systematic Investing"]
+---
+
 # Session 08: Factor Investing — Systematic Approaches to Investments
 
 If you handed a portfolio manager tomorrow's headlines and asked them to trade on the information, most retail investors would still lose money. Give that same information to a macro fund manager and they print money. The difference is not access to information — it is knowing how to structure the trade, how to size it, and how to think systematically about what drives returns. That gap between information and execution is exactly where factor investing lives. It is a framework that asks a deceptively simple question: what actually explains the returns we observe, and can we access those return drivers cheaply, transparently, and at scale?

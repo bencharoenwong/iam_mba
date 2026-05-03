@@ -1,3 +1,8 @@
+---
+abstract: "Building on the mathematical foundation of risk and return, this chapter explains why diversification is the 'only free lunch' in finance, allowing for risk reduction without sacrificing expected return. It introduces the mean-variance utility framework and the core role of correlation in portfolio construction."
+keywords: ["Diversification", "Risk Management", "Correlation", "Utility Theory", "Portfolio Construction", "Markowitz"]
+---
+
 # Session 05: Diversification — The Only Free Lunch
 
 Harry Markowitz called diversification the only free lunch in finance. That is not a throwaway line. In most markets, getting more of something good requires paying for it — higher expected return means accepting more risk. Diversification is the rare exception: you can reduce risk without giving up expected return, simply by combining assets that do not move together perfectly. The math is elementary; what is remarkable is how consistently investors fail to act on it. Most retail portfolios are badly underdiversified. Many professional portfolios are less diversified than their managers believe. And even sophisticated institutions routinely confuse holding a large number of positions with actually being diversified. This chapter builds the conceptual and mathematical foundation for understanding why diversification works, what its limits are, and what "properly diversified" actually means in practice.

@@ -1,3 +1,8 @@
+---
+abstract: "This chapter examines the impact of zero-commission trading and mobile apps on financial markets, using the 2021 GameStop short squeeze as a case study. It explores the hidden costs of 'free' trading through payment for order flow (PFOF) and the persistent behavioral gap between fund returns and what retail investors actually earn."
+keywords: ["Democratization", "Zero-Commission", "Retail Trading", "Behavioral Finance", "Robinhood", "PFOF"]
+---
+
 # Session 04: The Democratization of Finance
 
 In January 2021, a forum of retail investors on Reddit — posting under names like "DeepFuckingValue" and trading through a zero-commission app on their phones — moved the stock price of a struggling video game retailer by several hundred percent. Hedge funds that had shorted the stock lost billions. The story became a film. The protagonist was lionized on CNBC. A congressional hearing was convened. For a few weeks, it genuinely felt like the internet had figured out how to beat Wall Street at its own game.

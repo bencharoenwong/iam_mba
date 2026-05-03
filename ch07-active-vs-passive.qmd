@@ -1,3 +1,8 @@
+---
+abstract: "This chapter evaluates the ongoing debate between active and passive investment management through the lens of the Capital Asset Pricing Model (CAPM) and the two-fund separation theorem. It explains why the market portfolio is a powerful benchmark and discusses how heterogeneity in investor constraints and risk capacity allows market dislocations to persist."
+keywords: ["Active Management", "Passive Management", "CAPM", "Market Portfolio", "Alpha", "Beta"]
+---
+
 # Session 07: Active vs. Passive Management
 
 Cathie Wood's ARK Innovation ETF made headlines for years. During the post-COVID bull run, its returns were extraordinary. Commentators called her a visionary. Financial media ran profiles. Retail investors poured money in. Then the air came out. If you run a single regression — ARK's excess return on the market's excess return — the story becomes much less flattering. The beta comes in around 1.7. The alpha? Essentially zero, or slightly negative after fees. What ARK delivered was not visionary stock-picking. It was leveraged exposure to the S&P 500, packaged in a way that made it look like something more. Understanding why requires working through the arithmetic of active management — and the arithmetic does not lie.

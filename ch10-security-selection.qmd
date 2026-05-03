@@ -1,3 +1,8 @@
+---
+abstract: "This chapter explores the nuances of security selection by analyzing market microstructure, price patterns, and the momentum effect. It distinguishes between efficient-market and behavioral explanations for return patterns, providing a practical framework for implementing momentum strategies while accounting for liquidity and crash risks."
+keywords: ["Security Selection", "Momentum", "Market Microstructure", "Short Selling", "Price Patterns", "Behavioral Finance"]
+---
+
 # Session 10: The Art of Security Selection
 
 On January 27, 2025, NVIDIA lost roughly 18% of its market value in a single trading day — wiping out hundreds of billions of dollars — after a Chinese AI startup called DeepSeek published results suggesting it had trained a competitive large language model for a fraction of what American firms had spent. The stock partially recovered the next day, then fell again. If you had been watching multiple asset classes simultaneously that morning, you would have seen something striking: correlations spiked across the board. Bitcoin fell with NVIDIA, then recovered faster once the market realized the correlation was probably spurious. Apple, which had been treated as an AI also-ran, actually rose 3% as capital rotated. All of this happened within half an hour of the open.

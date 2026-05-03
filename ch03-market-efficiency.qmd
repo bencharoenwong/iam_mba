@@ -1,3 +1,8 @@
+---
+abstract: "Exploring the Efficient Market Hypothesis (EMH), this chapter examines how information is processed and reflected in market prices through competition among participants. It contrasts theoretical efficiency with practical investor behaviors like home bias, illustrating market logic through historical cases like the Challenger disaster response."
+keywords: ["Market Efficiency", "EMH", "Information Processing", "Home Bias", "Eugene Fama", "Behavioral Finance"]
+---
+
 # Session 03: Market Efficiency and Its Challenges
 
 On January 7th, 2025, the U.S. economy reported a blowout jobs number — far more positions added in December than analysts expected. The stock market fell. If you had been handed that headline the night before and asked to position your portfolio, what would you have done? Most people would have gone long. Most people would have lost money. In a controlled experiment, non-professionals given tomorrow's financial headlines get the direction of the market wrong roughly 70% of the time. Hedge fund managers, given the same headlines, make money consistently. The difference is not information — it is the framework for interpreting it. A strong jobs report means rates stay higher for longer, which compresses equity valuations. The economy and the stock market are not the same thing, and understanding why is the starting point for understanding market efficiency.

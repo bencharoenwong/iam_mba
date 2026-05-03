@@ -1,3 +1,8 @@
+---
+abstract: "This chapter shifts focus from market machinery to the individual investor, defining success through personal goals rather than market benchmarks. It introduces a systematic financial planning framework that prioritizes goal definition and gap analysis before product selection, emphasizing the importance of emergency funds and Monte Carlo simulations."
+keywords: ["Financial Planning", "Investor Needs", "Goal-Based Investing", "Emergency Fund", "Monte Carlo Simulation", "Gap Analysis"]
+---
+
 # Session 02: Financial Planning and Investor Needs
 
 The entire financial services industry — $112 trillion in assets under management, thousands of products, decades of academic research — exists to solve a problem that sounds deceptively simple: matching what investors have today with what they need in the future. Chapter 1 showed you the machinery: the industry structure, the fee models, the principal-agent dynamics. This chapter asks a prior question. Before we worry about which stocks to buy or which fund to hire, what does the investor actually need? It turns out that question is harder to answer than almost anyone admits. Getting it wrong is also one of the most reliable ways to end up financially worse off despite doing everything else right.

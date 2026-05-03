@@ -1,3 +1,8 @@
+---
+abstract: "Moving beyond simple volatility, this chapter redefines risk as the deviation of realizations from an investor's specific consumption goals. It presents a comprehensive taxonomy of risks—including sequence of returns, liquidity, and currency risks—illustrating how formal models often fail to capture the most critical threats to long-term wealth."
+keywords: ["Risk Management", "Sequence of Returns", "Liquidity Risk", "Currency Risk", "Consumption-Based Asset Pricing", "Tail Risk"]
+---
+
 # Session 11: Risk Management in Practice
 
 Long Term Capital Management had two Nobel laureates on its team. It had Myron Scholes, Fischer Black's co-author. It had Robert Merton, who will remind you he figured out the formula first. Armed with the most sophisticated risk models of their era, they built one of the most profitable hedge funds of the 1990s. Then, in 1998, it collapsed. The firm that was supposed to have quantified risk better than anyone turned out to have missed almost everything that mattered. A decade later, nearly identical mistakes — wrong distributional assumptions, underestimated correlations — blew up the mortgage-backed securities market. We keep re-learning the same lesson: formal risk models capture only a slice of the risk landscape, and often not the most important slice.

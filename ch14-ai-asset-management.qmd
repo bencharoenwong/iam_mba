@@ -1,3 +1,8 @@
+---
+abstract: "Examining the intersection of artificial intelligence and finance, this chapter defines complexity through the lens of machine learning and the bias-variance tradeoff. It explores how sophisticated models can generate economic value even with low statistical accuracy, while cautioning against the risks of overfitting in-sample noise."
+keywords: ["AI in Finance", "Machine Learning", "Complexity", "Bias-Variance Tradeoff", "Quantitative Finance", "Algorithmic Trading"]
+---
+
 # Session 14: AI and Complexity in Asset Management
 
 Marc Andreessen declared in 2011 that software is eating the world. Satya Nadella — a Chicago Booth graduate, incidentally — recently declared that SaaS is dead, implying something is eating software. Hype or not, the underlying observation matters for finance: the tools we use to manage money are being rebuilt from scratch, and that has consequences for every concept we have covered in this course. The question we end on is deceptively simple: can machines invest?

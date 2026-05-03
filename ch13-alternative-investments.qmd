@@ -1,3 +1,8 @@
+---
+abstract: "This chapter explores the diverse world of alternative investments, including hedge funds, private equity, and private credit, while highlighting the unique measurement challenges they present. It addresses issues of illiquidity, valuation illusions, and the persistent biases in self-reported performance data."
+keywords: ["Alternative Investments", "Private Equity", "Hedge Funds", "Private Credit", "Illiquidity", "Valuation"]
+---
+
 # Session 13: Alternative Investments: Beyond Stocks and Bonds
 
 When Robinhood announced it would offer "entertainment investing" — letting users bet on soccer games and the Super Bowl through its app — the CFTC moved quickly. You cannot rebrand gambling as an asset class simply by calling it one. Robinhood backed down. Crypto.com did not. They launched sports betting through their platform anyway. The episode captures something essential about the alternative investments landscape: it sits at the intersection of financial innovation, regulatory arbitrage, and, occasionally, outright sleight of hand. Understanding which is which is one of the most valuable skills an investor can develop.
