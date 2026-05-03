@@ -5,6 +5,12 @@ keywords: ["Active Management", "Passive Management", "CAPM", "Market Portfolio"
 
 # Session 07: Active vs. Passive Management
 
+## Guiding Questions
+- Should we expect active management to add value?
+- How should investors evaluate active manager performance?
+- What role should passive investments play in portfolios?
+- How is the active-passive debate evolving with new investment vehicles?
+
 Cathie Wood's ARK Innovation ETF made headlines for years. During the post-COVID bull run, its returns were extraordinary. Commentators called her a visionary. Financial media ran profiles. Retail investors poured money in. Then the air came out. If you run a single regression — ARK's excess return on the market's excess return — the story becomes much less flattering. The beta comes in around 1.7. The alpha? Essentially zero, or slightly negative after fees. What ARK delivered was not visionary stock-picking. It was leveraged exposure to the S&P 500, packaged in a way that made it look like something more. Understanding why requires working through the arithmetic of active management — and the arithmetic does not lie.
 
 ## From Portfolio Theory to the Market Portfolio
@@ -225,10 +231,12 @@ The practical implication is direct: if you want ARK's average return, you can r
 
 For the triple-leveraged ETF (3x S&P), the expected beta is approximately 2.8. The alpha should again be near zero or slightly negative (management fees). This is a useful pedagogical comparison: the triple-leveraged fund is transparently just levered market exposure. ARK markets itself as something more — stock-picking skill — but the regression reveals otherwise.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 The ability to run this regression and interpret the output is tested in investment management interviews. "Walk me through how you'd evaluate a fund manager" is a standard question. The right answer is: run the CAPM regression, examine alpha, beta, $R^2$, and the information ratio. Do not evaluate a manager on raw returns without adjusting for market exposure and risk. This is the single most important technical skill from this chapter.
+:::
 :::
 
 ## The Market Efficiency Question

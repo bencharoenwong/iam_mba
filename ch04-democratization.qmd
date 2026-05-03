@@ -5,6 +5,12 @@ keywords: ["Democratization", "Zero-Commission", "Retail Trading", "Behavioral F
 
 # Session 04: The Democratization of Finance
 
+## Guiding Questions
+- How has technology changed retail investor participation in markets?
+- What are the benefits and risks of commission-free trading platforms?
+- How does social media influence market behavior and sentiment?
+- What regulatory challenges arise from the democratization of investing?
+
 In January 2021, a forum of retail investors on Reddit — posting under names like "DeepFuckingValue" and trading through a zero-commission app on their phones — moved the stock price of a struggling video game retailer by several hundred percent. Hedge funds that had shorted the stock lost billions. The story became a film. The protagonist was lionized on CNBC. A congressional hearing was convened. For a few weeks, it genuinely felt like the internet had figured out how to beat Wall Street at its own game.
 
 It had not. But the episode crystallized a set of questions that anyone serious about markets needs to answer: What actually happened when commissions went to zero? Does giving everyone access to trading tools improve outcomes? Who benefits when more people participate in financial markets — and who bears the costs? This chapter sits in uncomfortable territory, because the honest answers cut against both the "democratization is always good" narrative and the "retail investors are just dumb money" dismissal.
@@ -77,10 +83,12 @@ The question that matters is not "who won?" The answer there is mostly: not the 
 
 Matt Levine made the relevant observation: disclosure requirements work because *somebody* reads the disclosures. The assumption built into securities law is that public markets have sophisticated participants — hedge funds, institutional investors, arbitrageurs — who will read 10-Ks, process the information, and compete to make prices rational. Retail investors benefit from this process without doing any of it themselves. But meme stocks challenged this model. In a heavily retail-owned, heavily shorted stock with significant attention from WallStreetBets, the usual price discovery mechanism was disrupted. The "sophisticated participants" providing the equilibrating force were overwhelmed.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 Meme stocks are not just a pop culture curiosity — they are a live case study in what happens when social media creates information cascades and herding behavior at scale. For anyone who will work in trading, risk management, or portfolio construction: the lesson is that positioning information (short interest, options open interest, institutional ownership) needs to be considered alongside fundamental analysis. A technically correct short thesis can be mechanically destroyed if the stock becomes a coordination target.
+:::
 :::
 
 Bed Bath & Beyond provides an even starker case. The company issued explicit going-concern warnings in January 2023. A Morningstar analyst set a price target of $0. In February 2023, the stock price rose enough that the company was able to raise $225 million from retail investors through a secondary offering. On March 8, it raised another $135 million by exercising warrants at the elevated price. In April 2023 it filed for Chapter 11. The money went directly to creditors. Retail investors who participated in those offerings lost everything.

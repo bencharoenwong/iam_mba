@@ -3,7 +3,13 @@ abstract: "Examining the intersection of artificial intelligence and finance, th
 keywords: ["AI in Finance", "Machine Learning", "Complexity", "Bias-Variance Tradeoff", "Quantitative Finance", "Algorithmic Trading"]
 ---
 
-# Session 14: AI and Complexity in Asset Management
+# Session 14: Impact of AI on Asset Management
+
+## Guiding Questions
+- How is AI changing investment decision-making?
+- What are the opportunities and limitations of alternative data?
+- How will technology reshape the role of investment professionals?
+- What skills will future investment professionals need to succeed?
 
 Marc Andreessen declared in 2011 that software is eating the world. Satya Nadella — a Chicago Booth graduate, incidentally — recently declared that SaaS is dead, implying something is eating software. Hype or not, the underlying observation matters for finance: the tools we use to manage money are being rebuilt from scratch, and that has consequences for every concept we have covered in this course. The question we end on is deceptively simple: can machines invest?
 
@@ -106,10 +112,12 @@ The genuine benefits are threefold. **Cost reduction**: robo-advisors execute pa
 
 But here is what technology did not fix: the principal-agent problem.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 The SEC enforcement actions against Schwab and Betterment are not footnotes — they are case studies in how the structural conflicts in financial advisory relationships survive the automation of the underlying service. Schwab's robo-advisor allocated to cash in ways that benefited Schwab's banking affiliate while advertising "no hidden fees." Betterment's tax-loss harvesting algorithm had coding errors that failed to harvest losses for some clients, which went undisclosed. Neither failure required a human acting in bad faith. They emerged from the business model and the software.
+:::
 :::
 
 The robo-advisor literature presents an apparent paradox. Technology should reduce information asymmetry — the algorithms are transparent, the fees are disclosed, the holdings are visible in real time. But information asymmetry in financial services is not primarily about what the algorithm holds. It is about what the advisor knows about you — your actual risk tolerance, your liquidity needs, your tax situation, the behavioral biases you have that you have not disclosed — and whether they are using that information for you or against you. Robo-advisors know less about their clients than good human advisors do, and the information they do collect is used to segment and monetize, not necessarily to serve.
@@ -164,10 +172,12 @@ What the analyst no longer needs to spend time on: reading and processing the 10
 
 This is not a comfortable story for everyone in the industry. Roles that are primarily about information aggregation and formatting are genuinely at risk. Roles that require relationship capital, contextual judgment, or creative structuring of complex transactions are more durable. The skill premium shifts toward people who can formulate the right questions, evaluate the outputs of quantitative models critically, and communicate nuanced conclusions to clients who do not care about model architecture.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 The course has traced a consistent arc: markets are mostly efficient, active management mostly underperforms, costs matter enormously, and behavioral biases cause individual investors to destroy value. AI does not overturn any of these findings. What it does is sharpen the edges. The bar for generating genuine alpha is rising because the competition now includes machines processing the same data faster and more consistently than humans. Your comparative advantage in investment management is not going to be faster information processing. It is going to be judgment, creativity, and knowing which questions to ask.
+:::
 :::
 
 ## Key Takeaways

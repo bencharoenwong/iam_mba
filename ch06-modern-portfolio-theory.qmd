@@ -3,7 +3,20 @@ abstract: "This chapter formalizes the principles of portfolio selection introdu
 keywords: ["Modern Portfolio Theory", "Efficient Frontier", "Sharpe Ratio", "Tangency Portfolio", "Capital Allocation Line", "Risk-Free Asset"]
 ---
 
-# Session 06: Modern Portfolio Theory
+# Session 06: Modern Portfolio Theory and Its Evolution
+
+## Guiding Questions
+- How has portfolio theory evolved to address real-world challenges?
+- What are the practical limitations of mean-variance optimization?
+- How do practitioners implement portfolio theory in the real world?
+- What innovations have improved upon traditional portfolio theory?
+
+::: {.content-visible when-profile="course"}
+::: {.callout-important}
+## Major Project: Optimal Portfolios
+Following Session 10, you will be assigned the **Optimal Portfolios Project**. This week-long assignment requires you to apply the mean-variance optimization and Capital Allocation Line concepts covered in this chapter and Session 5 to construct and justify an optimal portfolio using real market data.
+:::
+:::
 
 In 1952, Harry Markowitz published a paper called "Portfolio Selection" in the *Journal of Finance*. It was 14 pages. It won him the Nobel Prize. The core insight — that what matters is not how risky each individual asset is, but how they move together — seems obvious in retrospect. Most good ideas do. Before Markowitz, portfolio management was essentially glorified stock picking: find good companies, buy them, hope for the best. What Markowitz did was reframe the entire question. The problem is not "find the best asset." The problem is "find the best portfolio." That shift in perspective is the foundation of everything in this chapter.
 
@@ -72,10 +85,12 @@ This is just the equity risk premium divided by the product of risk aversion and
 
 A rough empirical calibration: typical investors in the population seem to exhibit $A$ somewhere between 2 and 4 (common estimates from portfolio choice studies). The formula also says something important about how equity allocations should respond to market conditions: as volatility rises (as it did in 2008, 2020, and various other episodes), the optimal allocation to equities falls mechanically. This is one reason target-date funds that mechanically rebalance to a fixed equity weight are theoretically suboptimal — they ignore the time-variation in the risk-return tradeoff.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 The risk aversion parameter $A$ shows up again in factor investing, derivatives pricing, and portfolio construction. Know the formula, but more importantly understand what it implies: risk appetite, expected returns, and volatility all interact. A client who says "I want high returns but low risk" is not expressing a preference — they are expressing a wish. The optimization is a constraint, not a menu.
+:::
 :::
 
 ::: {.callout-note collapse="true"}

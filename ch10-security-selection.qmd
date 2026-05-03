@@ -5,6 +5,12 @@ keywords: ["Security Selection", "Momentum", "Market Microstructure", "Short Sel
 
 # Session 10: The Art of Security Selection
 
+## Guiding Questions
+- How do successful managers combine different analytical approaches?
+- What role should technical analysis play in modern investing?
+- How has technology changed the practice of security selection?
+- What aspects of security selection remain more art than science?
+
 On January 27, 2025, NVIDIA lost roughly 18% of its market value in a single trading day — wiping out hundreds of billions of dollars — after a Chinese AI startup called DeepSeek published results suggesting it had trained a competitive large language model for a fraction of what American firms had spent. The stock partially recovered the next day, then fell again. If you had been watching multiple asset classes simultaneously that morning, you would have seen something striking: correlations spiked across the board. Bitcoin fell with NVIDIA, then recovered faster once the market realized the correlation was probably spurious. Apple, which had been treated as an AI also-ran, actually rose 3% as capital rotated. All of this happened within half an hour of the open.
 
 This episode is an ideal entry point into the art of security selection, because it captures everything that makes the subject genuinely difficult. There was fundamental news, genuine uncertainty about its implications, market microstructure dynamics playing out in real time, behavioral overreaction, and then partial reversal. Deciding what to do — and when — required combining price pattern analysis, fundamental judgment about whether the price move was warranted, and an understanding of who else was trading and why. That combination of quantitative and qualitative reasoning is what this chapter is about.
@@ -17,7 +23,7 @@ Understanding why these patterns exist is what separates disciplined analysis fr
 
 ::: {.callout-note}
 ## Academic Reference
-This logic formalizes into an equilibrium model: traders receive signals, and the prior price trend reveals something about whether others have already acted on similar information. When a trader has a positive signal but prices have already risen, the signal is probably stale — other informed traders have already acted on it. When prices have fallen despite a positive signal, the signal may be genuinely new, and trading aggressively is warranted. This framework, developed by faculty at INSEAD (Joelle Miffre's area of research), generates a testable prediction: returns should be negatively skewed after price increases and positively skewed after price declines. The recent winners that a momentum strategy goes long are more susceptible to crashes; the recent losers it shorts are more likely to experience sudden positive jumps.
+This logic formalizes into an equilibrium model: traders receive signals, and the prior price trend reveals something about whether others have already acted on similar information. When a trader has a positive signal but prices have already risen, the signal is probably stale — other informed traders have already acted on it. When prices have fallen despite a positive signal, the signal may be genuinely new, and trading aggressively is warranted. This framework, developed by faculty at [INSEAD (Joelle Miffre's area of research),]{.content-visible when-profile="course"} [leading research institutions,]{.content-visible when-profile="book"} generates a testable prediction: returns should be negatively skewed after price increases and positively skewed after price declines. The recent winners that a momentum strategy goes long are more susceptible to crashes; the recent losers it shorts are more likely to experience sudden positive jumps.
 :::
 
 The practical implication is important. If you have a negative signal on a stock and the price has already tanked, you are trading against informed counterparties who have already moved the price in your direction. They know you are coming. Your price impact — the cost of executing your trade — will be smaller than usual after prices have moved with your signal, and larger when prices have moved against it. This asymmetry is not just theoretical; it determines how aggressively any systematic strategy should trade.
@@ -107,9 +113,12 @@ $$
 
 The strategy's total Sharpe ratio reflects both factor exposures and alpha. The *appraisal ratio* — $\alpha / \sigma(\varepsilon)$ — isolates the risk-adjusted value of the strategy's unique return, net of what could be replicated cheaply through factor ETFs. An appraisal ratio of 0.8 is exceptional by the standards of institutional asset management. The strategy also loads negatively on value (momentum and value are natural complements: what value calls cheap, momentum has often been selling; what momentum calls strong, value often calls expensive) and positively on the momentum factor. But after accounting for all of that, there is residual alpha that survives the full Fama-French regression.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
+
 When evaluating any strategy or fund, do not compare raw returns to a benchmark. Run the regression. Ask: how much of this return is market beta? How much is factor exposure? And is there any alpha after accounting for all of that? A fund that outperforms the S&P by 2% per year but has a beta of 1.3 and significant momentum loading is not adding value — it is selling you leverage and factor tilts dressed up as skill.
+:::
 :::
 
 ## Combining Signals: The Portfolio Construction Problem

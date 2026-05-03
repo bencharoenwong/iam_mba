@@ -3,7 +3,13 @@ abstract: "Building on the mathematical foundation of risk and return, this chap
 keywords: ["Diversification", "Risk Management", "Correlation", "Utility Theory", "Portfolio Construction", "Markowitz"]
 ---
 
-# Session 05: Diversification — The Only Free Lunch
+# Session 05: Asset Allocation and Diversification
+
+## Guiding Questions
+- What makes an effectively diversified portfolio in today's markets?
+- How should investors approach international diversification?
+- What are the key differences between strategic and tactical asset allocation?
+- How should investors incorporate alternative assets into their portfolios?
 
 Harry Markowitz called diversification the only free lunch in finance. That is not a throwaway line. In most markets, getting more of something good requires paying for it — higher expected return means accepting more risk. Diversification is the rare exception: you can reduce risk without giving up expected return, simply by combining assets that do not move together perfectly. The math is elementary; what is remarkable is how consistently investors fail to act on it. Most retail portfolios are badly underdiversified. Many professional portfolios are less diversified than their managers believe. And even sophisticated institutions routinely confuse holding a large number of positions with actually being diversified. This chapter builds the conceptual and mathematical foundation for understanding why diversification works, what its limits are, and what "properly diversified" actually means in practice.
 
@@ -212,10 +218,12 @@ In theory, this is straightforward. In practice, international diversification c
 
 **Correlation dynamics.** Emerging market correlations with developed market equities were consistently lower through the 1990s. As global capital flows grew and financial integration deepened, those correlations increased. They jumped sharply during the 1997 Asian financial crisis, the 1998 LTCM crisis, the 2008 global financial crisis, and the 2020 pandemic selloff. Global diversification provides genuine benefits in normal times but less benefit precisely when you most need it.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 A common interview question at asset management firms: "How would you advise a client who holds most of their wealth in the stock of the company they work for?" This is a concentrated, undiversified position with correlated human capital risk — if the company fails, the client loses both their job and their savings simultaneously. The right answer requires explaining idiosyncratic versus systematic risk, the psychological barriers to diversifying concentrated positions (tax bills, anchoring, emotional attachment), and practical implementation strategies (collars, exchange funds, staged liquidation). Be prepared to walk through the mathematical reasoning clearly.
+:::
 :::
 
 ## The Limits of Diversification

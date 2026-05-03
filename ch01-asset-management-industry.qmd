@@ -5,6 +5,12 @@ keywords: ["Asset Management", "Principal-Agent Problem", "Investing", "Opportun
 
 # Session 01: The Asset Management Industry
 
+## Guiding Questions
+- What are the key differences between traditional asset managers and alternative investment managers?
+- How do principal-agent problems manifest in the asset management industry?
+- What evidence exists on retail investor performance, and what are the implications for financial intermediaries?
+- How has the asset management industry evolved over the past decades, and what are the key drivers of change?
+
 When you open a bank account in Singapore and look at the investment products on offer, the options can be genuinely bad. Not "slightly suboptimal" bad — bad in a way that reveals something fundamental about how the asset management industry works, and whose interests it actually serves. That observation is what pushed one finance professor to set up his own fund. It is also a useful entry point into this book, which is less about learning to pick stocks and more about understanding the institutional machinery that sits between you and your money.
 
 This chapter establishes the foundational framework. We start with a question that sounds deceptively simple — what is investing? — and use it to unpack the structure of the global asset management industry, the principal-agent problems embedded in financial advisory relationships, and the historical evolution of an industry that now manages roughly $112 trillion in assets.
@@ -15,7 +21,13 @@ Investing, at its most basic, involves moving resources through time. You give s
 
 This observation extends to any portfolio decision. If you hold cash, you are making an investment choice. Sitting on cash is not the absence of a strategy — it is a strategy, and generally not a good one when inflation is running. As one student put it during the opening discussion: there is always an opportunity cost if you do not invest in something.
 
+::: {.content-visible when-profile="course"}
 To make the opportunity cost concrete: the slides for this chapter include a full DCF of the INSEAD MBA itself. With tuition of roughly €107,600, living expenses of €30,000, and ten months of forgone pre-MBA salary of approximately €58,000, the all-in Year 0 investment is around €195,000. Assuming a pre-MBA salary of €70,000 growing at 3% annually and a post-MBA median salary of €111,400 growing at 5% annually, discounted at 8% over a 20-year horizon, the NPV is roughly €550,000–€650,000, with an IRR of 25–30% and a payback period of four to five years.
+:::
+
+::: {.content-visible when-profile="book"}
+To make the opportunity cost concrete, consider a Discounted Cash Flow (DCF) analysis of a professional degree. The investment includes not just tuition and living expenses, but the significant opportunity cost of forgone salary during the period of study. For a typical top-tier MBA, the total Year 0 investment can exceed $200,000. However, assuming the degree leads to a higher salary growth trajectory, the Net Present Value (NPV) over a 20-year career horizon often justifies the initial outlay, frequently delivering internal rates of return (IRR) in the range of 20-30%.
+:::
 
 ::: {.callout-note}
 ## Quick Refresher — NPV, IRR, and DCF
@@ -154,7 +166,7 @@ In chronological terms, the asset management industry as we know it is surprisin
 - **1774**: The first pooled investment vehicle created in Amsterdam — arguably the earliest precursor to the modern mutual fund.
 - **1868**: The first formal investment trust — the Foreign and Colonial Government Trust — established in London.
 - **1924**: The first mutual funds created in the United States. All were actively managed — there was no concept of simply buying the market.
-- **1930s**: Capital Group founded. (The firm is currently led by INSEAD alumni.)
+- **1930s**: Capital Group founded. [(The firm is currently led by INSEAD alumni.)]{.content-visible when-profile="course"}
 - **1940**: The Investment Company Act passed in the United States, establishing the foundational regulatory framework for pooled investment vehicles.
 - **1949**: Alfred Jones launches the first hedge fund, introducing the 2-and-20 fee arrangement (2% management fee, 20% of profits).
 - **1952**: Harry Markowitz publishes "Portfolio Selection" in the *Journal of Finance*, founding Modern Portfolio Theory.

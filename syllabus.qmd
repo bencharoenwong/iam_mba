@@ -1,0 +1,40 @@
+# Syllabus and Logistics {.unnumbered}
+
+::: {.content-visible when-profile="course"}
+
+## Course Overview
+
+This course provides a comprehensive exploration of investment and asset management, covering their real-world applications, with a special focus on how technology and social trends are reshaping the asset management landscape. We examine traditional investment strategies alongside emerging approaches, preparing students to navigate the rapidly evolving world of finance.
+
+## Use of AI
+This course embraces the responsible use of artificial intelligence as a learning and productivity tool. 
+
+**For the Instructor:**
+The goal for my use of AI is solely to improve the quality of the class and its delivery, and mainly centers around making sure students receive appropriate feedback. I may use AI to draft and send emails, but I commit that the key points and bullet points are from me, not automatically generated without oversight. I may also use AI to help determine (by coding up alternatives) what may have gone wrong in analyses for each group, aiding in grading and allocating appropriate scores.
+
+**For Students:**
+You are welcome to use AI tools to support your learning and work in this course. However, you own the output and must be ready to discuss and defend any specific output you submit. This means you should understand the content thoroughly and be able to explain your reasoning and methodology (including specific prompts) in class or during office hours. Note that if you choose to use AI, the prompt may become part of what is graded as well.
+
+## Grading Scheme
+This is a concept as well as skills-based course. Grading emphasizes applied understanding and critical thinking as well as the ability to apply concepts rigorously in a real-life situation.
+
+| Component | Percentage | Graded out of |
+|-----------|------------|---------------|
+| Assignments | 70% | 70 |
+| Participation | 30% | 30 |
+| **Total** | **100%** | **100** |
+
+- **Participation:** Active engagement in class discussions, quality of contributions, and demonstration of preparedness.
+- **In-Class Activity:** All in-class activities and calculations will be due the day of class at 11:59 PM local time.
+- **LiveCase:** An AI-driven interactive simulation placing you in realistic client-adviser scenarios. Three episodes assigned progressively:
+    - **Episode 1:** Assigned after Session 2.
+    - **Episode 2:** Assigned after Session 8.
+    - **Episode 3:** Assigned after Session 11.
+- **Project: Optimal Portfolios:** A week-long project assigned after Session 10 where you will apply portfolio optimization concepts to construct and justify an optimal portfolio using real market data.
+
+## Specific Requirements
+The course relies on basic equity, bond, and option concepts from Period 1 and 2. You are expected to know basic algebra and statistical concepts (mean, variance, covariance) and be able to perform simple linear regressions.
+
+Attendance is mandatory. In accordance with school policy, if you arrive after class has started, please do not enter. Absence for more than three sessions will automatically result in a failing grade.
+
+:::

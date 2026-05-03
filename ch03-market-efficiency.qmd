@@ -5,6 +5,12 @@ keywords: ["Market Efficiency", "EMH", "Information Processing", "Home Bias", "E
 
 # Session 03: Market Efficiency and Its Challenges
 
+## Guiding Questions
+- How has the concept of market efficiency evolved over time?
+- What explains the persistence of certain market anomalies?
+- How is technology changing the nature of market efficiency?
+- What are the practical implications of market efficiency for different types of investors?
+
 On January 7th, 2025, the U.S. economy reported a blowout jobs number — far more positions added in December than analysts expected. The stock market fell. If you had been handed that headline the night before and asked to position your portfolio, what would you have done? Most people would have gone long. Most people would have lost money. In a controlled experiment, non-professionals given tomorrow's financial headlines get the direction of the market wrong roughly 70% of the time. Hedge fund managers, given the same headlines, make money consistently. The difference is not information — it is the framework for interpreting it. A strong jobs report means rates stay higher for longer, which compresses equity valuations. The economy and the stock market are not the same thing, and understanding why is the starting point for understanding market efficiency.
 
 This chapter covers two related but distinct problems. The first is theoretical: what does it mean for markets to be efficient, and what evidence do we have that they are? The second is practical: if markets are largely efficient, why do so many investors — retail and professional alike — fail to earn even the market return? The answer to both questions turns out to hinge on the same underlying mechanism: how information gets produced, distributed, and ultimately reflected in prices.

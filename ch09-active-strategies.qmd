@@ -3,7 +3,13 @@ abstract: "This chapter defines what it takes to find a genuine investment edge 
 keywords: ["Investment Edge", "Grossman-Stiglitz Paradox", "Alpha Generation", "Manager Selection", "Market Inefficiency", "Active Strategies"]
 ---
 
-# Session 09: Active Strategies and Finding an Edge
+# Session 09: Active Management Strategies & Evaluation
+
+## Guiding Questions
+- How do successful active managers create persistent value?
+- What role does investment process play in active management?
+- How should investors evaluate active managers beyond performance?
+- What are the scalability challenges in active management?
 
 Everyone wants alpha. The problem is that alpha — genuinely superior risk-adjusted returns that cannot be explained by exposure to known factors — is definitionally scarce. If everyone could systematically outperform, the benchmark would just move up, and you are back to square one. This chapter is about what it actually takes to generate investment returns above what you would get from buying a diversified portfolio of factor exposures and going to sleep. We are moving from Theme 2, where we treated investing as a science of building portfolios from known risks, into Theme 3, where we confront the harder question: can human judgment and organizational capability add value on top of that?
 
@@ -79,10 +85,12 @@ Pastor, Stambaugh, and Taylor (2015) formalize this. Industry-level skill can be
 
 The practical lesson is that capacity is part of the investment thesis for any strategy. A quant fund running fifty basis points of AUM in a micro-cap momentum strategy faces a very different scaling problem than the same strategy run at twenty billion. The manager that fails to understand the capacity ceiling of their own strategy will, over time, manage their way out of outperformance.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 This is a frequently tested concept in CFA exams and comes up constantly in portfolio manager interviews. If you are evaluating a fund's track record, ask: at what AUM was this track record generated? If the fund has since grown fivefold, the historical performance may be irrelevant to what is achievable going forward. Similarly, if you are joining an asset manager, the scale of AUM relative to the capacity of the strategy is a leading indicator of how much alpha runway the fund has left.
+:::
 :::
 
 ## Combining Small Edges: The Ensemble Approach

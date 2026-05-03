@@ -5,6 +5,12 @@ keywords: ["Alternative Investments", "Private Equity", "Hedge Funds", "Private 
 
 # Session 13: Alternative Investments: Beyond Stocks and Bonds
 
+## Guiding Questions
+- What role should alternatives play in institutional portfolios?
+- How should investors evaluate alternative investment opportunities?
+- What are the key considerations in implementing the endowment model?
+- How should investors think about newer alternative assets like cryptocurrencies?
+
 When Robinhood announced it would offer "entertainment investing" — letting users bet on soccer games and the Super Bowl through its app — the CFTC moved quickly. You cannot rebrand gambling as an asset class simply by calling it one. Robinhood backed down. Crypto.com did not. They launched sports betting through their platform anyway. The episode captures something essential about the alternative investments landscape: it sits at the intersection of financial innovation, regulatory arbitrage, and, occasionally, outright sleight of hand. Understanding which is which is one of the most valuable skills an investor can develop.
 
 ## What Counts as an Alternative Investment
@@ -141,9 +147,12 @@ $$
 which is the Modigliani-Miller leverage amplification result applied to a single deal.
 :::
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
+
 In private equity interviews, you will be asked to calculate and interpret IRR under different leverage scenarios. The key insight is mechanical: (1) check whether the unlevered IRR exceeds the cost of debt; (2) if yes, maximum leverage maximizes IRR; (3) if no, leverage destroys value. Know how to set up the NPV equation and solve for the unknown borrowing amount.
+:::
 :::
 
 IRR can also be manipulated downward — to make a deal look less attractive to a competitor, or to manage expectations. Overestimating upfront capital expenditures shifts cash outflows earlier, reducing IRR. Adding transaction or finder fees (typically around 5% of deal size) to the initial outlay has the same effect. Conversely, delaying fee recognition or pushing closing costs into later periods inflates IRR. All of these represent changes to the timing of cash flows, which is what IRR is ultimately measuring.

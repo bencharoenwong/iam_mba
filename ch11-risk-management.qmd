@@ -5,6 +5,20 @@ keywords: ["Risk Management", "Sequence of Returns", "Liquidity Risk", "Currency
 
 # Session 11: Risk Management in Practice
 
+## Guiding Questions
+- How should investors identify and prioritize different types of risk?
+- How do institutional investors approach risk management?
+- What are the practical challenges in implementing risk management systems?
+- What lessons can be learned from historical risk management failures?
+- Why do documentation and disclosure requirements exist, and how do they function as risk management tools for investors?
+
+::: {.content-visible when-profile="course"}
+::: {.callout-important}
+## LiveCase Assignment
+Following this session, you will complete **LiveCase Episode 3**, which illustrates why documentation and disclosure requirements exist as risk management tools, and what happens when advisers deliberately circumvent them.
+:::
+:::
+
 Long Term Capital Management had two Nobel laureates on its team. It had Myron Scholes, Fischer Black's co-author. It had Robert Merton, who will remind you he figured out the formula first. Armed with the most sophisticated risk models of their era, they built one of the most profitable hedge funds of the 1990s. Then, in 1998, it collapsed. The firm that was supposed to have quantified risk better than anyone turned out to have missed almost everything that mattered. A decade later, nearly identical mistakes — wrong distributional assumptions, underestimated correlations — blew up the mortgage-backed securities market. We keep re-learning the same lesson: formal risk models capture only a slice of the risk landscape, and often not the most important slice.
 
 The definition of risk extends well beyond portfolio volatility and factor betas. Investors face intrinsic risks embedded in the assets themselves, consumption-relative risks that depend entirely on who they are, and institutional and behavioral risks that destroy returns without showing up in any covariance matrix.

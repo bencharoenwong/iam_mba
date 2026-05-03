@@ -3,7 +3,13 @@ abstract: "This chapter examines the rise of ESG (Environmental, Social, and Gov
 keywords: ["ESG", "Sustainability", "Impact Investing", "Agency Theory", "Divestment", "Socially Responsible Investing"]
 ---
 
-# Session 12: Non-Financial Considerations — ESG and Sustainability in Investing
+# Session 12: Non-Financial Considerations: of Faith and Sustainability - Aligning Profits with Purpose
+
+## Guiding Questions
+- How does ESG integration affect portfolio construction?
+- What evidence exists on the relationship between ESG and performance?
+- How should investors measure and report ESG impacts?
+- What are the key challenges in ESG integration?
 
 Every few years, an idea captures the asset management industry's imagination so completely that it becomes impossible to ignore, whether you believe in it or not. ESG investing is the current version of that phenomenon. Assets managed under some version of an ESG mandate have surged to the tens of trillions globally. Regulatory frameworks in Europe now require funds to classify themselves by sustainability intent. BlackRock — the largest asset manager in the world, with over $10 trillion under management — made climate risk a central investment thesis. And yet, ESG ratings from competing agencies disagree with each other so thoroughly that a single company can simultaneously receive a top score from one rater and near-bottom from another.
 
@@ -75,10 +81,12 @@ The disagreement comes from three sources:
 
 The third source is the most pernicious, because it embeds value judgments into what looks like objective scoring. A company that scores well on climate metrics but poorly on labor practices will get a very different aggregate score depending on how the rater weights those dimensions — and there is no obvious "correct" answer to how to weigh them.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 If you end up running a sustainable portfolio, or advising clients who want ESG exposure, the first practical question is: which ESG data source are you using and why? MSCI ESG Ratings have wide coverage and industry-specific materiality weighting. S&P Trucost is widely regarded as the strongest source specifically for environmental data (carbon and resource usage), though their estimates for non-disclosing companies are model-based and correlate mechanically with company size and industry. Sustainalytics tends to emphasize governance more heavily. Understanding what your data actually measures — and what it does not — is not a data science detail. It is a core investment judgment.
+:::
 :::
 
 ## ESG Is an Unfortunate Acronym
@@ -151,10 +159,12 @@ But the peace-of-mind value has to be made explicit. A reasonable investment pol
 
 Without specifying X and Y, the ESG preference is a marketing statement, not an investment policy. Making it concrete forces clarity about the actual trade-off being made, which is what separates serious ESG integration from greenwashing.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 Greenwashing — labeling a product as sustainable without substantive portfolio differences from a conventional fund — is increasingly a regulatory enforcement target. The SEC's ESG fund naming rules and the EU's SFDR classification requirements are both attempts to impose accountability on sustainability labels. As a practitioner, understanding the difference between Article 8 and Article 9 funds under SFDR, or knowing what the SEC requires in an ESG-labeled fund's prospectus, is a compliance requirement in addition to being a portfolio management judgment.
+:::
 :::
 
 ## Key Takeaways

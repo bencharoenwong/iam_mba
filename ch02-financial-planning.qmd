@@ -5,6 +5,20 @@ keywords: ["Financial Planning", "Investor Needs", "Goal-Based Investing", "Emer
 
 # Session 02: Financial Planning and Investor Needs
 
+## Guiding Questions
+- How do cognitive biases impact individual investment decisions?
+- What solutions have investment managers developed to address behavioral biases?
+- How effective are target-date funds in addressing behavioral challenges?
+- What role should financial advisors play in helping clients overcome behavioral biases?
+- How might financial advisers exploit behavioral biases rather than help clients overcome them?
+
+::: {.content-visible when-profile="course"}
+::: {.callout-important}
+## LiveCase Assignment
+Following this session, you will complete **LiveCase Episode 1**, where you will experience firsthand how a financial adviser might exploit the behavioral biases and principal-agent dynamics discussed in class.
+:::
+:::
+
 The entire financial services industry — $112 trillion in assets under management, thousands of products, decades of academic research — exists to solve a problem that sounds deceptively simple: matching what investors have today with what they need in the future. Chapter 1 showed you the machinery: the industry structure, the fee models, the principal-agent dynamics. This chapter asks a prior question. Before we worry about which stocks to buy or which fund to hire, what does the investor actually need? It turns out that question is harder to answer than almost anyone admits. Getting it wrong is also one of the most reliable ways to end up financially worse off despite doing everything else right.
 
 ## What Does "Successful" Mean?
@@ -29,7 +43,7 @@ Economists distinguish between *nominal* and *real* liquidity demand. Real liqui
 
 The sizing of an emergency fund is not arbitrary. A corporate employee in a stable industry with marketable skills can get by with three to six months of expenses. Someone in a cyclical industry or a specialized role needs six months at minimum. Self-employed professionals — who have no unemployment benefits, irregular cash flow, and potentially need to rebuild client relationships — should hold six to twelve months. Entrepreneurs should plan for twelve to twenty-four months, given business cash flow volatility, personal guarantee obligations, and the time required to exit or pivot a business.
 
-If you are an international career professional — which describes most INSEAD alumni — add further adjustments. You face multiple currency exposures, visa and relocation costs with limited advance notice, limited access to the social safety nets of any particular country, and potential emergency travel requirements. The baseline fund needs to reflect that profile, not the lifestyle of someone who has lived in one city for twenty years with a stable employer.
+If you are an international career professional [— which describes most INSEAD alumni —]{.content-visible when-profile="course"} add further adjustments. You face multiple currency exposures, visa and relocation costs with limited advance notice, limited access to the social safety nets of any particular country, and potential emergency travel requirements. The baseline fund needs to reflect that profile, not the lifestyle of someone who has lived in one city for twenty years with a stable employer.
 
 ## The Financial Planning Framework
 
@@ -290,15 +304,25 @@ When financial planners talk about risk, they are actually talking about three s
 
 All three matter, and the relationship between them drives portfolio construction. The practical problem is that most risk-profiling questionnaires measure tolerance only. They ask whether you would sell if your portfolio fell 20%, which is measuring your emotional response to a hypothetical — a poor predictor of actual behavior under stress. Capacity and need require quantitative financial analysis, not a ten-question survey.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 The three-part risk framework — capacity, tolerance, need — appears in the CFA curriculum and in most wealth management frameworks. When a client relationship manager presents you with a risk questionnaire, you now understand what it is measuring (tolerance) and what it is not measuring (capacity and need). In a private banking or wealth management interview, demonstrating that you understand this distinction immediately signals that you have thought seriously about client advisory.
 :::
+:::
 
 ## Human Capital and the Life-Cycle View
 
-An INSEAD MBA student typically has a relatively small financial portfolio and a very large quantity of something that does not appear on any balance sheet: human capital. Human capital is the present value of your future labor income, and for most people in their twenties and thirties, it dwarfs their financial wealth.
+::: {.content-visible when-profile="course"}
+An INSEAD MBA student typically has a relatively small financial portfolio and a very large quantity of something that does not appear on any balance sheet: human capital.
+:::
+
+::: {.content-visible when-profile="book"}
+A professional early in their career typically has a relatively small financial portfolio and a very large quantity of something that does not appear on any balance sheet: human capital.
+:::
+
+Human capital is the present value of your future labor income, and for most people in their twenties and thirties, it dwarfs their financial wealth.
 
 This changes the optimal investment strategy in a way that is counterintuitive relative to naive diversification advice. If your human capital is bond-like — stable, predictable, government-backed, as it is for many academics and civil servants — then your financial portfolio should tilt toward equity. You are already holding a lot of fixed-income-like risk in your career. If your human capital is equity-like — volatile, correlated with market cycles, as it is for investment bankers, consultants, or entrepreneurs — then your financial portfolio should be more conservative, because you already have substantial economic exposure to market conditions through your employment income.
 
@@ -312,9 +336,19 @@ Robert Merton's work on life-cycle investing is the theoretical foundation here.
 
 ## International and Compensation Complexity
 
+::: {.content-visible when-profile="course"}
 Since most INSEAD graduates will have international careers, a few complications deserve explicit treatment.
 
-**Currency and mobility.** If you are likely to move between countries — and the base rate for INSEAD alumni is high — your financial planning needs a base currency anchor for long-term planning while managing short-term expenses in whatever local currency you happen to be earning. The practical implication: hold your long-term savings in hard currencies, maintain liquidity in the currencies of your likely near-term locations, and budget explicitly for relocation costs and the periods of labor market transition that accompany moves.
+**Currency and mobility.** If you are likely to move between countries — and the base rate for INSEAD alumni is high — your financial planning needs a base currency anchor for long-term planning while managing short-term expenses in whatever local currency you happen to be earning.
+:::
+
+::: {.content-visible when-profile="book"}
+For those with international careers, a few complications deserve explicit treatment.
+
+**Currency and mobility.** If you are likely to move between countries, your financial planning needs a base currency anchor for long-term planning while managing short-term expenses in whatever local currency you happen to be earning.
+:::
+
+The practical implication: hold your long-term savings in hard currencies, maintain liquidity in the currencies of your likely near-term locations, and budget explicitly for relocation costs and the periods of labor market transition that accompany moves.
 
 Tax planning across jurisdictions is non-trivial. Retirement and healthcare systems vary enormously: what the Singapore government provides versus what a French retiree can expect from social security versus what an American gets from Social Security and Medicare are entirely different calculations. A financial plan that assumes one country's social safety net and then crosses borders is underspecified.
 

@@ -5,7 +5,7 @@ These lecture notes are adapted from the **Investments and Asset Management** co
 1. **Investing as a Human Problem** --- the asset management industry, financial planning, behavioral biases, market efficiency, and the democratization of finance
 2. **Investing as a Science** --- diversification, modern portfolio theory, active vs. passive management, factor investing
 3. **Investing as an Art** --- active strategies, security selection, risk management, and the role of practitioner judgment
-4. **State of the Art** --- ESG and sustainability, alternative investments, AI in asset management
+4. **State of the Art of Investments** --- ESG and sustainability, alternative investments, AI in asset management
 
 Each chapter corresponds to one lecture session, covering all 14 sessions in the course. Chapters built from lecture transcripts preserve the conversational style, real-world examples, and class discussions from the original lectures. Chapters derived primarily from lecture slides present the same frameworks and concepts in a more structured format.
 
@@ -13,7 +13,7 @@ Each chapter corresponds to one lecture session, covering all 14 sessions in the
 
 This course provides a comprehensive exploration of investment and asset management, covering their real-world applications, with a special focus on how technology and social trends are reshaping the asset management landscape. We examine traditional investment strategies alongside emerging approaches, preparing students to navigate the rapidly evolving world of finance.
 
-The course aims to equip students with the knowledge and skills to critically evaluate investment theories and apply them to real-world scenarios beyond a textbook treatment. By engaging with current market issues and debates, students develop the ability to make informed investment decisions and navigate the asset management industry effectively.
+The course aims to equip students with the knowledge and skills to critically evaluate investment theories and apply them to real-world scenarios beyond a textbook treatment. By engaging with current market issues and debates, students develop the ability to make informed investment decisions and navigate the asset management industry effectively. We use a variety of approaches to explore these concepts: Excel calculations, data visualizations, composing Twitter threads, creating videos, listening to technical podcasts, presenting in class, classroom lectures and discussions, and numerical problem sets.
 
 ## Learning Objectives
 
@@ -32,19 +32,9 @@ This book is suitable for MBA and MiM students with diverse career aspirations a
 
 **Prerequisites:** Basic equity, bond, and option concepts. Basic algebra and statistical concepts such as mean, variance, covariance, and simple linear regression.
 
-## How to Use This Book
-
-Each chapter corresponds to one lecture session. The chapter numbers match the original session numbers for easy cross-referencing with course materials. Within each chapter you will find:
-
-- **Core concepts** structured around the session's guiding questions
-- **Practical examples** drawn from real markets, funds, and current events
-- **Worked numerical examples** in collapsible boxes you can expand for step-by-step calculations
-- **Real-world case studies** connecting theory to actual events and decisions
-- **Key takeaways** summarizing the most important points
-- **Further reading** --- mandatory and recommended --- for those who want to go deeper
-
-::: {.callout-note}
-These notes are meant to complement---not replace---the original course materials, readings, and in-class exercises. They work best as a review resource alongside the assigned readings listed at the end of each chapter.
+::: {.content-visible when-profile="course"}
+## Attendance Policy
+In accordance with school policy, if you arrive after class has started, please do not enter the classroom. Absence for more than three sessions of a full credit course will automatically result in a failing grade.
 :::
 
 ## Reference Texts

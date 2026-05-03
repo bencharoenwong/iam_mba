@@ -5,6 +5,19 @@ keywords: ["Factor Investing", "Regression Analysis", "Leveraged ETFs", "Risk Pr
 
 # Session 08: Factor Investing — Systematic Approaches to Investments
 
+## Guiding Questions
+- What explains the persistence of factor premiums?
+- How should investors combine multiple factors in portfolios?
+- What are the main implementation challenges in factor investing?
+- How can investment jargon and complex fee structures be used to exploit rather than inform clients?
+
+::: {.content-visible when-profile="course"}
+::: {.callout-important}
+## LiveCase Assignment
+Following this session, you will complete **LiveCase Episode 2**, which demonstrates how factor investing terminology and fee structures can be used to obscure rather than clarify, putting Sharpe's arithmetic of active management into stark relief.
+:::
+:::
+
 If you handed a portfolio manager tomorrow's headlines and asked them to trade on the information, most retail investors would still lose money. Give that same information to a macro fund manager and they print money. The difference is not access to information — it is knowing how to structure the trade, how to size it, and how to think systematically about what drives returns. That gap between information and execution is exactly where factor investing lives. It is a framework that asks a deceptively simple question: what actually explains the returns we observe, and can we access those return drivers cheaply, transparently, and at scale?
 
 This chapter builds the analytical infrastructure to answer that question. We start with how to read regression output — the tool used to decompose any return series — and then use that foundation to understand the major factor premiums, how they are combined in practice, and why the standard story of "alpha" keeps shrinking as the toolkit expands.
@@ -262,10 +275,12 @@ Second, the rules-based structure forces transparency. When a manager says they 
 
 Third, the framework provides the language for risk management. Once you know a manager's factor loadings, you know when they will perform and when they will not. A manager who loads heavily on value will struggle during periods when growth dominates, as it did from 2010 through 2020. That is not bad management — it is the expected behavior of a value portfolio. The factor framework makes that predictable rather than surprising.
 
+::: {.content-visible when-profile="course"}
 ::: {.callout-warning}
 ## Exam/Career Relevance
 
 When interviewing at asset management firms, expect to be asked how you would evaluate whether a fund manager is adding alpha or simply delivering factor exposure. The answer involves: (1) identifying the relevant factor benchmarks for the strategy, (2) running a time-series regression of fund returns on those factors, (3) interpreting the alpha, beta, and R-squared, and (4) assessing whether residual alpha is economically meaningful and statistically significant. Being able to walk through this exercise fluently — and explain what it means in plain language — is expected at any serious firm.
+:::
 :::
 
 ## Combining Factors: Multi-Factor Approaches and Their Limits

@@ -7,9 +7,10 @@ This repository contains the source files for the *Investments and Asset Managem
 
 ## Course Themes
 
-1.  **Investing as a Human Problem:** Industry structure, financial planning, market efficiency, and democratization.
-2.  **Investing as a Science:** Diversification, Modern Portfolio Theory (MPT), Factor Investing, and Security Selection.
-3.  **Advanced Topics:** Risk Management, ESG/Sustainability, Alternatives, and AI in Asset Management.
+1.  **Investing as a Human Problem:** The asset management industry, financial planning, market efficiency, and the democratization of finance (Sessions 1-4).
+2.  **Investing as a Science:** Diversification, Modern Portfolio Theory (MPT), active vs. passive management, and factor investing (Sessions 5-8).
+3.  **Investing as an Art:** Active strategies, security selection, and risk management (Sessions 9-11).
+4.  **State of the Art of Investments:** ESG/Sustainability, alternative investments, and AI in asset management (Sessions 12-14).
 
 ## Structure
 
