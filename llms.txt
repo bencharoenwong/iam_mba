@@ -1,43 +1,42 @@
-# Investments and Asset Management (IAM) — INSEAD MBA 2026
+# Investments and Asset Management (IAM-SG)
 
-This repository contains the authoritative lecture notes for the MBA Investments course. It is structured as a comprehensive knowledge base for quantitative finance, portfolio management, and industry analysis.
+> Lecture notes for the INSEAD MBA *Investments and Asset Management* course (Singapore, 2026), by Ben Charoenwong. Fourteen sessions across four themes — asset management as a human problem, as a science, as an art, and the state of the art (ESG, alternatives, AI). Math is in LaTeX; symbols are documented in the glossary. License: see repository.
 
-## Core Metadata
+The deployed website is at <https://bencharoenwong.github.io/iam_mba/>. The full source is on GitHub at <https://github.com/bencharoenwong/iam_mba>. For LLM ingestion, prefer `llms-full.txt` (the entire textbook concatenated as a single markdown file, regenerated on every build).
 
-- **Author:** Ben Charoenwong
-- **Institution:** INSEAD
-- **Year:** 2026
-- **Language:** English (US)
-- **Math Format:** LaTeX
-- **Glossary:** [SYMBOL_GLOSSARY.md](./SYMBOL_GLOSSARY.md) (Read this first for math interpretation)
+## Core resources
 
-## Chapter Summaries
+- [Full text (concatenated)](llms-full.txt): every chapter in one markdown file — the canonical LLM-ingestion artifact.
+- [Symbol glossary](SYMBOL_GLOSSARY.md): standard mathematical notation for returns, risk, portfolio construction, factor models, and option pricing. Read first before interpreting equations.
+- [Preface and instructor bio](index.html): course overview, learning objectives, prerequisites, revision history.
 
-### Theme 1: Investing as a Human Problem
-1.  **[ch01-asset-management-industry.qmd](./ch01-asset-management-industry.qmd)**: Overview of the global investment landscape, major players (asset managers, owners), and industry value chains.
-2.  **[ch02-financial-planning.qmd](./ch02-financial-planning.qmd)**: Principles of household finance, goal-based investing, and the lifecycle hypothesis.
-3.  **[ch03-market-efficiency.qmd](./ch03-market-efficiency.qmd)**: Analysis of the Efficient Market Hypothesis (EMH), information sets, and behavioral finance anomalies.
-4.  **[ch04-democratization.qmd](./ch04-democratization.qmd)**: How technology and fintech are expanding access to institutional-grade investment tools for retail investors.
+## Theme 1 — Investing as a Human Problem
 
-### Theme 2: Investing as a Science
-5.  **[ch05-diversification.qmd](./ch05-diversification.qmd)**: The mathematical and intuitive foundations of risk reduction through non-correlated assets.
-6.  **[ch06-modern-portfolio-theory.qmd](./ch06-modern-portfolio-theory.qmd)**: Mean-variance optimization, the efficient frontier, and optimal capital allocation (CAL).
-7.  **[ch07-active-vs-passive.qmd](./ch07-active-vs-passive.qmd)**: The arithmetic of active management, the rise of indexation, and the cost-efficiency tradeoff.
-8.  **[ch08-factor-investing.qmd](./ch08-factor-investing.qmd)**: Systematic risk premia including Value, Size, Momentum, Quality, and Low Volatility.
+- [Ch 01 — The Asset Management Industry](ch01-asset-management-industry.html): structure of the global $112T industry, principal–agent problems, retail investor performance evidence.
+- [Ch 02 — Financial Planning](ch02-financial-planning.html): household finance, goal-based investing, lifecycle hypothesis, opportunity cost.
+- [Ch 03 — Market Efficiency](ch03-market-efficiency.html): EMH, information sets, behavioural anomalies, joint-hypothesis problem.
+- [Ch 04 — Democratization of Finance](ch04-democratization.html): fintech, robo-advisors, retail access to institutional tools.
 
-### Theme 3: Investing as an Art
-9.  **[ch09-active-strategies.qmd](./ch09-active-strategies.qmd)**: Implementation of alpha-seeking strategies, long-short equity, and alternative risk premia.
-10. **[ch10-security-selection.qmd](./ch10-security-selection.qmd)**: Bottom-up fundamental analysis, financial statement modeling, and valuation frameworks.
-11. **[ch11-risk-management.qmd](./ch11-risk-management.qmd)**: Measuring and mitigating portfolio risk using VaR, Expected Shortfall, and stress tests.
+## Theme 2 — Investing as a Science
 
-### Theme 4: State of the Art of Investments
-12. **[ch12-esg-sustainability.qmd](./ch12-esg-sustainability.qmd)**: Integration of environmental, social, and governance factors into the investment process.
-13. **[ch13-alternative-investments.qmd](./ch13-alternative-investments.qmd)**: Characteristics of Private Equity, Venture Capital, Real Estate, and Commodities.
-14. **[ch14-ai-asset-management.qmd](./ch14-ai-asset-management.qmd)**: The impact of Machine Learning, NLP, and Large Language Models on research and trading.
+- [Ch 05 — Diversification](ch05-diversification.html): risk reduction through imperfectly correlated assets, idiosyncratic vs. systematic risk.
+- [Ch 06 — Modern Portfolio Theory](ch06-modern-portfolio-theory.html): mean-variance optimization, efficient frontier, capital allocation line.
+- [Ch 07 — Active vs. Passive](ch07-active-vs-passive.html): the arithmetic of active management, indexation, cost-efficiency tradeoff.
+- [Ch 08 — Factor Investing](ch08-factor-investing.html): value, size, momentum, quality, low-volatility — risk premia and implementation.
 
-## AI Usage Guidelines
+## Theme 3 — Investing as an Art
 
-- **Retrieval:** This content is optimized for semantic search. Refer to the chapter summaries above to identify the most relevant context for questions.
-- **Math:** Always refer to [SYMBOL_GLOSSARY.md](./SYMBOL_GLOSSARY.md) when interpreting equations to avoid nomenclature confusion.
-- **Citing:** When generating answers, cite the specific chapter and section (e.g., "According to Ch 06, Section 2.1...").
-- **Voice:** The content is academic yet practitioner-focused. Maintain this tone in AI-generated responses.
+- [Ch 09 — Active Strategies](ch09-active-strategies.html): alpha-seeking, long–short equity, alternative risk premia.
+- [Ch 10 — Security Selection](ch10-security-selection.html): bottom-up fundamental analysis, financial-statement modelling, valuation.
+- [Ch 11 — Risk Management](ch11-risk-management.html): VaR, expected shortfall, stress tests, drawdown control.
+
+## Theme 4 — State of the Art
+
+- [Ch 12 — ESG and Sustainability](ch12-esg-sustainability.html): integrating environmental, social, governance factors into the investment process.
+- [Ch 13 — Alternative Investments](ch13-alternative-investments.html): private equity, venture capital, real estate, commodities.
+- [Ch 14 — AI in Asset Management](ch14-ai-asset-management.html): machine learning, NLP, LLMs in research and trading.
+
+## Optional
+
+- [References](references.html): full bibliography.
+- [GitHub repository](https://github.com/bencharoenwong/iam_mba): Quarto sources, build pipeline, issue tracker.

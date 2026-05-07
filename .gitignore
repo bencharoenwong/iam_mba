@@ -1,5 +1,6 @@
 /_book/
 /.quarto/
+/llms-full.txt
 .DS_Store
 *.html
 !index.qmd

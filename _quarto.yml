@@ -1,6 +1,12 @@
 project:
   type: book
   output-dir: _book
+  pre-render:
+    - scripts/build-llms-full.sh
+  resources:
+    - llms.txt
+    - llms-full.txt
+    - SYMBOL_GLOSSARY.md
 
 profile:
   default: book
