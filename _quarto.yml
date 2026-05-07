@@ -2,6 +2,9 @@ project:
   type: book
   output-dir: _book
 
+profile:
+  default: book
+
 book:
   author: "Ben Charoenwong"
   date: "May 7, 2026"
