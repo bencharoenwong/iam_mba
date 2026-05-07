@@ -4,7 +4,8 @@ project:
 
 book:
   author: "Ben Charoenwong"
-  date: "February 28, 2026"
+  date: "May 7, 2026"
+  date-format: "MMMM D, YYYY"
 
 format:
   html:
